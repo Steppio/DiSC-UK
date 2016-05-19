@@ -1,0 +1,1423 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <auit_all>
+            <label>SNM-Portal</label>
+            <sort_order>300</sort_order>
+        </auit_all>
+    </tabs>
+    <sections>
+        <auit_pdf translate="label" module="auit_pdf">
+            <label>PDF Print-outs</label>
+            <tab>auit_all</tab>
+            <frontend_model>auit_pdf/adminhtml_form</frontend_model>
+            <sort_order>300</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+			<groups>
+				<general translate="label" module="auit_pdf">
+                    <label>General</label>
+                    <sort_order>40</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<version translate="label" module="auit_pdf">
+                            <label>Version</label>
+							<frontend_model>auit_pdf/adminhtml_versioninfo</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </version>
+						<license translate="label" module="auit_pdf">
+                            <label>License</label>
+                            <frontend_model>auit_pdf/adminhtml_info</frontend_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>License from SNM-Portal (see your invoice)</comment>
+                        </license>
+						<trace_html_output translate="label" module="auit_pdf">
+                            <label>Trace html output</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>(see var/log/auit.log)</comment>
+                        </trace_html_output>
+
+						<attach_to_email_offer_label translate="label" module="auit_pdf">
+                            <label><![CDATA[<b>Order</b>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </attach_to_email_offer_label>
+
+						<print_pdf_frontend_offer translate="label" >
+                            <label>Use PDF in frontend</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </print_pdf_frontend_offer>
+
+						<attach_to_email_offer translate="label" module="auit_pdf">
+                            <label>Attach PDF to email</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </attach_to_email_offer>
+						<fname_to_email_offer translate="label" module="auit_pdf">
+                            <label>Prefix Filename</label>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fname_to_email_offer>
+						<fname_to_email_offer_name translate="label" module="auit_pdf">
+                            <label>Filename</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>auit_pdf/adminhtml_system_config_source_templates_fname</source_model>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fname_to_email_offer_name>
+
+						<attach_to_email_invoice_label translate="label" module="auit_pdf">
+                            <label><![CDATA[<b>Invoice</b>]]></label>
+                            <frontend_type>label</frontend_type>
+
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </attach_to_email_invoice_label>
+						<print_pdf_frontend_invoice translate="label" >
+                            <label>Use PDF in frontend</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </print_pdf_frontend_invoice>
+
+						<attach_to_email translate="label" module="auit_pdf">
+                            <label>Attach PDF to email</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>22</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </attach_to_email>
+						<fname_to_email translate="label" module="auit_pdf">
+                            <label>Prefix Filename</label>
+                            <sort_order>23</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fname_to_email>
+						<fname_to_email_name translate="label" module="auit_pdf">
+                            <label>Filename</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>auit_pdf/adminhtml_system_config_source_templates_fname</source_model>
+                            <sort_order>24</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fname_to_email_name>
+
+
+						<attach_to_email_shipment_label translate="label" module="auit_pdf">
+                            <label><![CDATA[<b>Packing Slip</b>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </attach_to_email_shipment_label>
+						<print_pdf_frontend_shipment translate="label" >
+                            <label>Use PDF in frontend</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>31</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </print_pdf_frontend_shipment>
+						<attach_to_email_shipment translate="label" module="auit_pdf">
+                            <label>Attach PDF to email</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>32</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </attach_to_email_shipment>
+
+						<fname_to_email_shipment translate="label" module="auit_pdf">
+                            <label>Prefix Filename</label>
+                            <sort_order>33</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fname_to_email_shipment>
+						<fname_to_email_shipment_name translate="label" module="auit_pdf">
+                            <label>Filename</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>auit_pdf/adminhtml_system_config_source_templates_fname</source_model>
+                            <sort_order>34</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fname_to_email_shipment_name>
+
+
+
+						<attach_to_email_creditmemo_label translate="label" module="auit_pdf">
+                            <label><![CDATA[<b>Credit Memo</b>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </attach_to_email_creditmemo_label>
+						<print_pdf_frontend_creditmemo translate="label" >
+                            <label>Use PDF in frontend</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>41</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </print_pdf_frontend_creditmemo>
+						<attach_to_email_creditmemo translate="label" module="auit_pdf">
+                            <label>Attach PDF to email</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>42</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </attach_to_email_creditmemo>
+
+
+						<fname_to_email_creditmemo translate="label" module="auit_pdf">
+                            <label>Prefix Filename</label>
+                            <sort_order>43</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fname_to_email_creditmemo>
+						<fname_to_email_creditmemo_name translate="label" module="auit_pdf">
+                            <label>Filename</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>auit_pdf/adminhtml_system_config_source_templates_fname</source_model>
+                            <sort_order>44</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </fname_to_email_creditmemo_name>
+
+
+						<label_1 translate="label" module="auit_pdf">
+                            <label>&#160;</label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </label_1>
+						<show_bundle_price_row_one translate="label" >
+                            <label>Price presentation for bundle products with dynamic prices only on the first line</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>51</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_bundle_price_row_one>
+						<show_bundle_qty_row_one translate="label" >
+                            <label>Qty presentation for bundle products with dynamic prices only on the first line by shipment</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>52</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_bundle_qty_row_one>
+						<amount_prefix translate="label" >
+                            <label>Discount amount prefix</label>
+                            <sort_order>55</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </amount_prefix>
+
+					</fields>
+                </general>
+				<auit_offer translate="label">
+                    <label>PDF Offer</label>
+                    <!--
+                    <frontend_type>text</frontend_type>
+                     -->
+                    <sort_order>49</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+                        <template translate="label">
+                            <label>PDF template (pdf file)</label>
+                            <frontend_type>auitfile</frontend_type>
+                            <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
+                            <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </template>
+                        <append translate="label">
+                            <label>PDF Appendix (pdf file)</label>
+                            <frontend_type>auitfile</frontend_type>
+                            <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
+                            <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </append>
+
+						<title_1 translate="label">
+                            <label><![CDATA[<strong>Layout</strong>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>10</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+                        </title_1>
+
+						<billingaddress translate="label">
+							<label>Billing Address</label>
+	                          <frontend_model>auit_pdf/adminhtml_styleframe</frontend_model>
+	                          <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>11</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</billingaddress>
+						<shippingaddress translate="label">
+							<label>Shipping Address</label>
+	                          <frontend_model>auit_pdf/adminhtml_styleframe</frontend_model>
+	                          <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</shippingaddress>
+
+                        <free_page_1>
+							<label>Free Items (Page 1)</label>
+                            <frontend_model>auit_pdf/adminhtml_items</frontend_model>
+                            <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </free_page_1>
+                        <free_page_n>
+							<label>Free Items (Page 2-n)</label>
+                            <frontend_model>auit_pdf/adminhtml_items</frontend_model>
+                            <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </free_page_n>
+						<title_2 translate="label">
+                            <label><![CDATA[<strong>Text blocks</strong>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>40</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+                        </title_2>
+
+                        <text_billingaddress>
+                            <label>Billing Address</label>
+                            <frontend_type>textarea</frontend_type>
+                            <frontend_model>auit_pdf/adminhtml_textarea</frontend_model>
+                            <sort_order>41</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_billingaddress>
+                        <text_shippingaddress>
+                            <label>Shipping Address</label>
+                            <frontend_type>textarea</frontend_type>
+                            <frontend_model>auit_pdf/adminhtml_textarea</frontend_model>
+                            <sort_order>42</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_shippingaddress>
+						<show_shippingaddress translate="label" >
+                            <label>Show no shipping address, when same billing address</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>43</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_shippingaddress>
+
+                        <text_before_table>
+                            <label>Text before table</label>
+                            <frontend_type>textarea</frontend_type>
+                            <frontend_model>auit_pdf/adminhtml_textarea</frontend_model>
+                            <sort_order>49</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_before_table>
+                        <text_after_table>
+                            <label>Text after table</label>
+                            <frontend_type>textarea</frontend_type>
+                            <frontend_model>auit_pdf/adminhtml_textarea</frontend_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_after_table>
+
+
+						<title_3 translate="label">
+                            <label><![CDATA[<strong>Table</strong>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>100</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+                        </title_3>
+
+                        <table_margins translate="label">
+							<label>Margins</label>
+                            <frontend_model>auit_pdf/adminhtml_margins</frontend_model>
+                            <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>101</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </table_margins>
+                        <table_margins2 translate="label">
+							<label>Margins (Page 2-n)</label>
+                            <frontend_model>auit_pdf/adminhtml_margins2</frontend_model>
+                            <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>102</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </table_margins2>
+
+						<table_template translate="label">
+							<label>Table template</label>
+			                <frontend_type>select</frontend_type>
+  		                    <source_model>auit_pdf/adminhtml_system_config_source_templates_offer</source_model>
+  		                    <sort_order>105</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</table_template>
+						<table_show_pos translate="label">
+							<label>Show Position colum</label>
+			                <frontend_type>select</frontend_type>
+  		                    <source_model>adminhtml/system_config_source_yesno</source_model>
+  		                    <sort_order>110</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</table_show_pos>
+						<table_add_sku translate="label">
+							<label>Add SKU colum to Product Name</label>
+			                <frontend_type>select</frontend_type>
+  		                    <source_model>adminhtml/system_config_source_yesno</source_model>
+  		                    <sort_order>120</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</table_add_sku>
+						<table_show_sku translate="label">
+							<label>Show SKU colum</label>
+			                <frontend_type>select</frontend_type>
+  		                    <source_model>adminhtml/system_config_source_yesno</source_model>
+  		                    <sort_order>130</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</table_show_sku>
+						<table_show_qty_number translate="label" >
+                            <label>Qty as number</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </table_show_qty_number>
+					</fields>
+				</auit_offer>
+
+				<invoice translate="label">
+                    <label>PDF Invoices</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+                        <template translate="label">
+                            <label>PDF template (pdf file)</label>
+                            <frontend_type>auitfile</frontend_type>
+                            <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
+                            <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </template>
+                        <append translate="label">
+                            <label>PDF Appendix (pdf file)</label>
+                            <frontend_type>auitfile</frontend_type>
+                            <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
+                            <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </append>
+
+						<title_1 translate="label">
+                            <label><![CDATA[<strong>Layout</strong>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>10</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+                        </title_1>
+
+						<billingaddress translate="label">
+							<label>Billing Address</label>
+	                          <frontend_model>auit_pdf/adminhtml_styleframe</frontend_model>
+	                          <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>11</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</billingaddress>
+						<shippingaddress translate="label">
+							<label>Shipping Address</label>
+	                          <frontend_model>auit_pdf/adminhtml_styleframe</frontend_model>
+	                          <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</shippingaddress>
+
+                        <free_page_1>
+							<label>Free Items (Page 1)</label>
+                            <frontend_model>auit_pdf/adminhtml_items</frontend_model>
+                            <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </free_page_1>
+                        <free_page_n>
+							<label>Free Items (Page 2-n)</label>
+                            <frontend_model>auit_pdf/adminhtml_items</frontend_model>
+                            <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </free_page_n>
+						<title_2 translate="label">
+                            <label><![CDATA[<strong>Text blocks</strong>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>40</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+                        </title_2>
+
+                        <text_billingaddress>
+                            <label>Billing Address</label>
+                            <frontend_type>textarea</frontend_type>
+                            <frontend_model>auit_pdf/adminhtml_textarea</frontend_model>
+                            <sort_order>41</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_billingaddress>
+                        <text_shippingaddress>
+                            <label>Shipping Address</label>
+                            <frontend_type>textarea</frontend_type>
+                            <frontend_model>auit_pdf/adminhtml_textarea</frontend_model>
+                            <sort_order>42</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_shippingaddress>
+						<show_shippingaddress translate="label" >
+                            <label>Show no shipping address, when same billing address</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>43</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_shippingaddress>
+
+                        <text_before_table>
+                            <label>Text before table</label>
+                            <frontend_type>textarea</frontend_type>
+                            <frontend_model>auit_pdf/adminhtml_textarea</frontend_model>
+                            <sort_order>49</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_before_table>
+                        <text_after_table>
+                            <label>Text after table</label>
+                            <frontend_type>textarea</frontend_type>
+                            <frontend_model>auit_pdf/adminhtml_textarea</frontend_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_after_table>
+
+
+						<title_3 translate="label">
+                            <label><![CDATA[<strong>Table</strong>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>100</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+                        </title_3>
+
+                        <table_margins translate="label">
+							<label>Margins (Page 1)</label>
+                            <frontend_model>auit_pdf/adminhtml_margins</frontend_model>
+                            <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>101</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </table_margins>
+                        <table_margins2 translate="label">
+							<label>Margins (Page 2-n)</label>
+                            <frontend_model>auit_pdf/adminhtml_margins2</frontend_model>
+                            <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>102</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </table_margins2>
+
+						<table_template translate="label">
+							<label>Table template</label>
+			                <frontend_type>select</frontend_type>
+  		                    <source_model>auit_pdf/adminhtml_system_config_source_templates_invoice</source_model>
+  		                    <sort_order>105</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</table_template>
+						<table_show_pos translate="label">
+							<label>Show Position colum</label>
+			                <frontend_type>select</frontend_type>
+  		                    <source_model>adminhtml/system_config_source_yesno</source_model>
+  		                    <sort_order>110</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</table_show_pos>
+						<table_add_sku translate="label">
+							<label>Add SKU colum to Product Name</label>
+			                <frontend_type>select</frontend_type>
+  		                    <source_model>adminhtml/system_config_source_yesno</source_model>
+  		                    <sort_order>120</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</table_add_sku>
+						<table_show_sku translate="label">
+							<label>Show SKU colum</label>
+			                <frontend_type>select</frontend_type>
+  		                    <source_model>adminhtml/system_config_source_yesno</source_model>
+  		                    <sort_order>130</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</table_show_sku>
+						<bundle_template translate="label" module="auit_pdf">
+                            <label>Use special template for bundle items</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bundle_template>
+
+					</fields>
+				</invoice>
+
+
+
+
+				<shipment translate="label">
+                    <label>PDF Packingslips</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>60</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+
+					<fields>
+                        <template translate="label">
+                            <label>PDF template (pdf file)</label>
+                            <frontend_type>auitfile</frontend_type>
+                            <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
+                            <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </template>
+                        <append translate="label">
+                            <label>PDF Appendix (pdf file)</label>
+                            <frontend_type>auitfile</frontend_type>
+                            <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
+                            <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </append>
+
+						<title_1 translate="label">
+                            <label><![CDATA[<strong>Layout</strong>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>10</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+                        </title_1>
+
+						<billingaddress translate="label">
+							<label>Billing address</label>
+	                          <frontend_model>auit_pdf/adminhtml_styleframe</frontend_model>
+	                          <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>11</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</billingaddress>
+						<shippingaddress translate="label">
+							<label>Shipping address</label>
+	                          <frontend_model>auit_pdf/adminhtml_styleframe</frontend_model>
+	                          <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</shippingaddress>
+
+                        <free_page_1>
+							<label>Free Items (Page 1)</label>
+                            <frontend_model>auit_pdf/adminhtml_items</frontend_model>
+                            <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </free_page_1>
+                        <free_page_n>
+							<label>Free Items (Page 2-n)</label>
+                            <frontend_model>auit_pdf/adminhtml_items</frontend_model>
+                            <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </free_page_n>
+						<title_2 translate="label">
+                            <label><![CDATA[<strong>Text blocks</strong>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>40</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+                        </title_2>
+
+                        <text_billingaddress>
+                            <label>Billing Address</label>
+                            <frontend_type>textarea</frontend_type>
+                            <frontend_model>auit_pdf/adminhtml_textarea</frontend_model>
+                            <sort_order>41</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_billingaddress>
+                        <text_shippingaddress>
+                            <label>Shipping Address</label>
+                            <frontend_type>textarea</frontend_type>
+                            <frontend_model>auit_pdf/adminhtml_textarea</frontend_model>
+                            <sort_order>42</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_shippingaddress>
+						<show_shippingaddress translate="label" >
+                            <label>Show no shipping address, when same billing address</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>43</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_shippingaddress>
+
+                        <text_before_table>
+                            <label>Text before table</label>
+                            <frontend_type>textarea</frontend_type>
+                            <frontend_model>auit_pdf/adminhtml_textarea</frontend_model>
+                            <sort_order>49</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_before_table>
+                        <text_after_table>
+                            <label>Text after table</label>
+                            <frontend_type>textarea</frontend_type>
+                            <frontend_model>auit_pdf/adminhtml_textarea</frontend_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_after_table>
+
+
+						<title_3 translate="label">
+                            <label><![CDATA[<strong>Table</strong>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>100</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+                        </title_3>
+                        <table_margins translate="label">
+							<label>Margins</label>
+                            <frontend_model>auit_pdf/adminhtml_margins</frontend_model>
+                            <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>101</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </table_margins>
+                        <table_margins2 translate="label">
+							<label>Margins (Page 2-n)</label>
+                            <frontend_model>auit_pdf/adminhtml_margins2</frontend_model>
+                            <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>102</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </table_margins2>
+
+						<table_template translate="label">
+							<label>Table template</label>
+			                <frontend_type>select</frontend_type>
+  		                    <source_model>auit_pdf/adminhtml_system_config_source_templates_shipment</source_model>
+  		                    <sort_order>105</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</table_template>
+
+						<table_show_pos translate="label">
+							<label>Show Position colum</label>
+			                <frontend_type>select</frontend_type>
+  		                    <source_model>adminhtml/system_config_source_yesno</source_model>
+  		                    <sort_order>110</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</table_show_pos>
+						<table_add_sku translate="label">
+							<label>Add SKU colum to Product Name</label>
+			                <frontend_type>select</frontend_type>
+  		                    <source_model>adminhtml/system_config_source_yesno</source_model>
+  		                    <sort_order>120</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</table_add_sku>
+						<table_show_sku translate="label">
+							<label>Show SKU colum</label>
+			                <frontend_type>select</frontend_type>
+  		                    <source_model>adminhtml/system_config_source_yesno</source_model>
+  		                    <sort_order>130</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</table_show_sku>
+						<bundle_template translate="label" module="auit_pdf">
+                            <label>Use special template for bundle items</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bundle_template>
+
+					</fields>
+				</shipment>
+
+				<creditmemo translate="label">
+                    <label>PDF Credit Memos</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>70</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+                        <template translate="label">
+                            <label>PDF template (pdf file)</label>
+                            <frontend_type>auitfile</frontend_type>
+                            <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
+                            <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </template>
+                        <append translate="label">
+                            <label>PDF Appendix (pdf file)</label>
+                            <frontend_type>auitfile</frontend_type>
+                            <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
+                            <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </append>
+						<title_1 translate="label">
+                            <label><![CDATA[<strong>Layout</strong>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>10</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+                        </title_1>
+
+						<billingaddress translate="label">
+							<label>Billing address</label>
+	                          <frontend_model>auit_pdf/adminhtml_styleframe</frontend_model>
+	                          <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>11</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</billingaddress>
+						<shippingaddress translate="label">
+							<label>Shipping address</label>
+	                          <frontend_model>auit_pdf/adminhtml_styleframe</frontend_model>
+	                          <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>15</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</shippingaddress>
+
+                        <free_page_1>
+							<label>Free Items (Page 1)</label>
+                            <frontend_model>auit_pdf/adminhtml_items</frontend_model>
+                            <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </free_page_1>
+                        <free_page_n>
+							<label>Free Items (Page 2-n)</label>
+                            <frontend_model>auit_pdf/adminhtml_items</frontend_model>
+                            <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </free_page_n>
+						<title_2 translate="label">
+                            <label><![CDATA[<strong>Text blocks</strong>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>40</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+                        </title_2>
+
+                        <text_billingaddress>
+                            <label>Billing Address</label>
+                            <frontend_type>textarea</frontend_type>
+                            <frontend_model>auit_pdf/adminhtml_textarea</frontend_model>
+                            <sort_order>41</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_billingaddress>
+                        <text_shippingaddress>
+                            <label>Shipping Address</label>
+                            <frontend_type>textarea</frontend_type>
+                            <frontend_model>auit_pdf/adminhtml_textarea</frontend_model>
+                            <sort_order>42</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_shippingaddress>
+						<show_shippingaddress translate="label" >
+                            <label>Show no shipping address, when same billing address</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>43</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_shippingaddress>
+
+                        <text_before_table>
+                            <label>Text before table</label>
+                            <frontend_type>textarea</frontend_type>
+                            <frontend_model>auit_pdf/adminhtml_textarea</frontend_model>
+                            <sort_order>49</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_before_table>
+                        <text_after_table>
+                            <label>Text after table</label>
+                            <frontend_type>textarea</frontend_type>
+                            <frontend_model>auit_pdf/adminhtml_textarea</frontend_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_after_table>
+
+
+						<title_3 translate="label">
+                            <label><![CDATA[<strong>Table</strong>]]></label>
+                            <frontend_type>label</frontend_type>
+                            <sort_order>100</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+                        </title_3>
+                        <table_margins translate="label">
+							<label>Margins</label>
+                            <frontend_model>auit_pdf/adminhtml_margins</frontend_model>
+                            <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>101</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </table_margins>
+                        <table_margins2 translate="label">
+							<label>Margins (Page 2-n)</label>
+                            <frontend_model>auit_pdf/adminhtml_margins2</frontend_model>
+                            <backend_model>auit_pdf/adminhtml_idtemplate</backend_model>
+							<sort_order>102</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </table_margins2>
+
+						<table_template translate="label">
+							<label>Table template</label>
+			                <frontend_type>select</frontend_type>
+  		                    <source_model>auit_pdf/adminhtml_system_config_source_templates_creditmemo</source_model>
+  		                    <sort_order>105</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</table_template>
+
+						<table_show_pos translate="label">
+							<label>Show Position colum</label>
+			                <frontend_type>select</frontend_type>
+  		                    <source_model>adminhtml/system_config_source_yesno</source_model>
+  		                    <sort_order>110</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</table_show_pos>
+						<table_add_sku translate="label">
+							<label>Add SKU colum to Product Name</label>
+			                <frontend_type>select</frontend_type>
+  		                    <source_model>adminhtml/system_config_source_yesno</source_model>
+  		                    <sort_order>120</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</table_add_sku>
+						<table_show_sku translate="label">
+							<label>Show SKU colum</label>
+			                <frontend_type>select</frontend_type>
+  		                    <source_model>adminhtml/system_config_source_yesno</source_model>
+  		                    <sort_order>130</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</table_show_sku>
+						<bundle_template translate="label" module="auit_pdf">
+                            <label>Use special template for bundle items</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bundle_template>
+
+					</fields>
+				</creditmemo>
+                <style>
+					<label>Styles</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>140</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+						<list_ident translate="label" module="auit_pdf">
+                            <label>List Ident (mm)</label>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment></comment>
+                        </list_ident>
+                        <global>
+                            <label>CSS-Styles</label>
+                            <frontend_type>textarea</frontend_type>
+                            <frontend_model>auit_pdf/adminhtml_textarea</frontend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </global>
+					</fields>
+                </style>
+                
+				<email_attachments_order translate="label">
+                    <label>Email Order Attachments</label>
+                    <sort_order>150</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+						<pdf_1_enabled translate="label" >
+                            <label>Use PDF Attachment 1</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_1_enabled>
+                        <pdf_1 translate="label">
+                            <label>PDF Attachment 1</label>
+                            <frontend_type>auitfile</frontend_type>
+                            <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
+                            <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_1>
+						<pdf_2_enabled translate="label" >
+                            <label>Use PDF Attachment 2</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_2_enabled>
+                        <pdf_2 translate="label">
+                            <label>PDF Attachment 2</label>
+                            <frontend_type>auitfile</frontend_type>
+                            <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
+                            <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
+                            <sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_2>
+                        <pdf_1_filename translate="label">
+                            <label>PDF Filename 1</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_1_filename>
+                        <pdf_2_filename translate="label">
+                            <label>PDF Filename 2</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>22</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_2_filename>
+                        <!-- 
+                        <offer_text_1>
+                            <label>Dynamic Text </label>
+                            <frontend_type>textarea</frontend_type>
+                            <frontend_model>auit_pdf/adminhtml_textarea</frontend_model>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </offer_text_1>
+                         -->
+					</fields>
+				</email_attachments_order>
+				<email_attachments_invoice translate="label">
+                    <label>Email Invoice Attachments</label>
+                    <sort_order>160</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+						<pdf_1_enabled translate="label" >
+                            <label>Use PDF Attachment 1</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_1_enabled>
+                        <pdf_1 translate="label">
+                            <label>PDF Attachment 1</label>
+                            <frontend_type>auitfile</frontend_type>
+                            <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
+                            <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_1>
+						<pdf_2_enabled translate="label" >
+                            <label>Use PDF Attachment 2</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_2_enabled>
+                        <pdf_2 translate="label">
+                            <label>PDF Attachment 2</label>
+                            <frontend_type>auitfile</frontend_type>
+                            <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
+                            <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
+                            <sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_2>
+                        <pdf_1_filename translate="label">
+                            <label>PDF Filename 1</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_1_filename>
+                        <pdf_2_filename translate="label">
+                            <label>PDF Filename 2</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>22</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_2_filename>
+					</fields>
+				</email_attachments_invoice>
+				<email_attachments_shipment translate="label">
+                    <label>Email Packingslips Attachments</label>
+                    <sort_order>170</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+						<pdf_1_enabled translate="label" >
+                            <label>Use PDF Attachment 1</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_1_enabled>
+                        <pdf_1 translate="label">
+                            <label>PDF Attachment 1</label>
+                            <frontend_type>auitfile</frontend_type>
+                            <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
+                            <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_1>
+						<pdf_2_enabled translate="label" >
+                            <label>Use PDF Attachment 2</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_2_enabled>
+                        <pdf_2 translate="label">
+                            <label>PDF Attachment 2</label>
+                            <frontend_type>auitfile</frontend_type>
+                            <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
+                            <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
+                            <sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_2>
+                        <pdf_1_filename translate="label">
+                            <label>PDF Filename 1</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_1_filename>
+                        <pdf_2_filename translate="label">
+                            <label>PDF Filename 2</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>22</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_2_filename>
+					</fields>
+				</email_attachments_shipment>
+				<email_attachments_creditmemo translate="label">
+                    <label>Email Credit Memo Attachments</label>
+                    <sort_order>180</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+						<pdf_1_enabled translate="label" >
+                            <label>Use PDF Attachment 1</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_1_enabled>
+                        <pdf_1 translate="label">
+                            <label>PDF Attachment 1</label>
+                            <frontend_type>auitfile</frontend_type>
+                            <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
+                            <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_1>
+						<pdf_2_enabled translate="label" >
+                            <label>Use PDF Attachment 2</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_2_enabled>
+                        <pdf_2 translate="label">
+                            <label>PDF Attachment 2</label>
+                            <frontend_type>auitfile</frontend_type>
+                            <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
+                            <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
+                            <sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_2>
+                        <pdf_1_filename translate="label">
+                            <label>PDF Filename 1</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_1_filename>
+                        <pdf_2_filename translate="label">
+                            <label>PDF Filename 2</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>22</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </pdf_2_filename>
+					</fields>
+				</email_attachments_creditmemo>
+				
+			</groups>
+		</auit_pdf>
+    </sections>
+</config>

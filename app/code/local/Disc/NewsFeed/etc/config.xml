@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Disc_NewsFeed>
+			<version>0.0.1</version>
+		</Disc_NewsFeed>
+	</modules>
+	<global>
+		<helpers>
+			<newsfeed>
+				<class>Disc_NewsFeed_Helper</class>
+			</newsfeed>
+		</helpers>
+		<blocks>
+			<newsfeed>
+				<class>Disc_NewsFeed_Block</class>
+			</newsfeed>
+		</blocks>		
+		<models>
+			<newsfeed>
+				<class>Disc_NewsFeed_Model</class>
+			</newsfeed>
+		</models>	
+	</global>
+</config>			

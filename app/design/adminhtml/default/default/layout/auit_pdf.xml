@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+<!-- 
+    <adminhtml_sales_order_view>
+        <reference name="order_tab_info" >
+        	<block type="core/template" name="order_info_print" template="auit/pdf/print_order.phtml"></block>
+        </reference>
+    </adminhtml_sales_order_view>
+     -->
+</layout>

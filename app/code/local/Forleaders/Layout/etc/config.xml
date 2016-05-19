@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<forleaders_Layout>
+			<version>0.0.1</version>
+		</forleaders_Layout>
+	</modules>
+	<global>
+		<page>
+			<layouts>
+				<forleaders module="page" translate="label">
+					<label>Forleaders</label>
+					<template>page/1column-forleaders.phtml</template>
+					<layout_handle>forleaders</layout_handle>
+				</forleaders>
+			</layouts>
+		</page>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<forleaders_layout>
+					<file>forleaders_layout.xml</file>
+				</forleaders_layout>
+			</updates>
+		</layout>
+	</frontend>
+</config>

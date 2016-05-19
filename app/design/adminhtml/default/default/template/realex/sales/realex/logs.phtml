@@ -1,0 +1,7 @@
+<div id="realex-log-view-cont">
+    <?php echo $this->getLogFilesSelect(); ?>
+
+    <iframe id="realex-log-view" src="<?php echo $this->getTailUrl(); ?>">
+        <p><?php echo $this->__('Your browser does not support iframes.'); ?></p>
+    </iframe>
+</div>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Aboutdisc_Layout>
+			<version>0.0.1</version>
+		</Aboutdisc_Layout>
+	</modules>
+	<global>
+		<page>
+			<layouts>
+				<aboutdisc module="page" translate="label">
+					<label>aboutdisc</label>
+					<template>page/1column-aboutdisc.phtml</template>
+					<layout_handle>aboutdisc</layout_handle>
+				</aboutdisc>
+			</layouts>
+		</page>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<aboutdisc_layout>
+					<file>aboutdisc_layout.xml</file>
+				</aboutdisc_layout>
+			</updates>
+		</layout>
+	</frontend>
+</config>

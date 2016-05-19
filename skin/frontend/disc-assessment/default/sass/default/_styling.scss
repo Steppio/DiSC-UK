@@ -1,0 +1,217 @@
+.global-site-notice.demo-notice {
+	display: none;
+}
+
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+// Home
+
+
+
+#nav {
+	.nav-primary {
+		display: inline-block;
+		margin: 0 auto;
+	}	
+	text-align: center;
+}  	
+
+// EPIC CREDITS SECTION
+
+
+
+.epic_credits, .disc_definition {
+	clear: both;
+}
+
+
+// CERTIFICATION AND BENEFITS SECTIONS
+.certification {
+	a {
+		margin: 20px 40px 0;
+  		float: right;
+	}	
+}
+.benefits {
+	a {
+		margin: 20px 0 0;
+  		float: right;
+	}	
+}
+
+.block-subscribe {
+	display: none;
+}
+
+// Frontpage Testimonials 
+.frontpage-testimonials {
+	.testimonials {
+		.testimonial > div:not(.testimonial-image) {
+			margin-left: 0px !important;
+		}
+		.testimonial {
+			.message-wrapper {
+				.message {
+					margin: 0px;
+					padding: 0px;
+					border: 0px;
+				}
+				.message::after, .message::before {
+					display: none;
+				}
+			}
+		}
+		margin: 0px;
+	}
+	.submit-testimonial button, .testimonial-date, .rating-wrapper, .copyright {
+		display: none;
+	}	
+	padding: 50px 0;
+	clear: both;	
+}
+
+// Footer section
+.footer {
+	.links {
+		ul {
+			li {
+				em {
+					font-size: 2em;
+				}
+				width: 20%;
+				float: left;
+			}
+			margin: 0 auto;
+		}
+		padding: 0px;
+		width: 100%;
+	  	text-align: center;	
+  	}
+	a.terms-conditions {
+		text-align: center;
+		display: block;
+		margin: 10px 0 5px;
+	}
+}
+.footer-description {
+	p {
+		color: white;
+		font-size: 0.9em;
+		text-align: center;
+		text-transform: none;			
+	}
+}
+
+.footer .links.social-media em {
+	background-image: none;
+}
+
+.footer-container {
+	h2 {
+		text-align: center;
+	}
+}
+
+// About Us CMS section
+.about-us-section {
+	#sidebar-nav {
+		.block-title, li.parent > a, .nav-1 {
+			display: none;
+		}
+	}
+}
+
+// Resets from RWD
+/* Reset the .std styles */
+.std ul.products-grid li {
+    list-style: none;
+    margin-left: 0;
+}
+.std ul.products-grid li .product-info {
+    padding-bottom: 0 !important;
+    min-height: 0 !important;
+}
+.widget-new-products h2 {
+    text-align: center;
+}
+
+// overrides
+.page {
+	#header-nav {
+		border-bottom: 0px;
+	}
+	.skip-link {
+		background: none;
+		color: $disc-blue;
+		font-weight: 600;
+	}
+	.header-minicart .icon {
+		-moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+		color: $disc-blue;
+		float: right;
+		background-position: -50px -95px;
+		margin: 3px 0px 5px 10px;
+	}
+	.skip-account {
+		.icon {
+			display: none;
+		}
+	}
+	#search {
+		border-radius: 5px;
+		border: 0px;
+	}
+	#search_mini_form .search-button {
+	    background-color: $search-yellow;
+	    border-radius: 0px 5px 5px 0px;		
+	    text-indent: -5px;
+	    color: #003054;
+	}
+	#search_mini_form .search-button::before {
+		display: none;
+	}
+	input, select, textarea {
+		color: #003054 !important;
+	}
+	.page-header {
+		border-bottom: 0px;
+	}
+}
+
+input::-webkit-input-placeholder { color: #003054; }
+input::-moz-placeholder { color: #003054; }
+input:-ms-input-placeholder { color: #003054; }
+input:-moz-placeholder { color: #003054; }
+
+input.other::-webkit-input-placeholder { color: #003054; }
+input.other::-moz-placeholder { color: #003054; }
+input.other:-ms-input-placeholder { color: #003054; }
+input.other:-moz-placeholder { color: #003054; }

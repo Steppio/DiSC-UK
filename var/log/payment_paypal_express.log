@@ -1,0 +1,4542 @@
+2016-03-14T16:41:50+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 31.50
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004708
+            [SOLUTIONTYPE] => Mark
+            [NOSHIPPING] => 1
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [ITEMAMT] => 31.50
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 30
+            [L_AMT0] => 1.05
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-2EJ77518GK8374829
+            [TIMESTAMP] => 2016-03-14T16:40:21Z
+            [CORRELATIONID] => 6fe1e7c290a28
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 18316154
+        )
+
+    [__pid] => 16355
+)
+
+2016-03-14T16:42:28+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [GetExpressCheckoutDetails] => Array
+        (
+            [TOKEN] => EC-2EJ77518GK8374829
+            [METHOD] => GetExpressCheckoutDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-2EJ77518GK8374829
+            [PHONENUM] => +52 5535064357
+            [BILLINGAGREEMENTACCEPTEDSTATUS] => 0
+            [CHECKOUTSTATUS] => PaymentActionNotInitiated
+            [TIMESTAMP] => 2016-03-14T16:41:00Z
+            [CORRELATIONID] => 743dc370d1622
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 18316154
+            [EMAIL] => edgarramirez@ologycoaching.com.mx
+            [PAYERID] => VWTREZBE5C8NS
+            [PAYERSTATUS] => verified
+            [FIRSTNAME] => EDGAR
+            [LASTNAME] => RAMIREZ
+            [COUNTRYCODE] => MX
+            [ADDRESSSTATUS] => Confirmed
+            [CURRENCYCODE] => GBP
+            [AMT] => 31.50
+            [ITEMAMT] => 31.50
+            [SHIPPINGAMT] => 0.00
+            [HANDLINGAMT] => 0.00
+            [TAXAMT] => 0.00
+            [INVNUM] => 100004708
+            [INSURANCEAMT] => 0.00
+            [SHIPDISCAMT] => 0.00
+            [INSURANCEOPTIONOFFERED] => false
+            [L_NAME0] => EPIC Credits
+            [L_NUMBER0] => EPIC1
+            [L_QTY0] => 30
+            [L_TAXAMT0] => 0.00
+            [L_AMT0] => 1.05
+            [PAYMENTREQUEST_0_CURRENCYCODE] => GBP
+            [PAYMENTREQUEST_0_AMT] => 31.50
+            [PAYMENTREQUEST_0_ITEMAMT] => 31.50
+            [PAYMENTREQUEST_0_SHIPPINGAMT] => 0.00
+            [PAYMENTREQUEST_0_HANDLINGAMT] => 0.00
+            [PAYMENTREQUEST_0_TAXAMT] => 0.00
+            [PAYMENTREQUEST_0_INVNUM] => 100004708
+            [PAYMENTREQUEST_0_INSURANCEAMT] => 0.00
+            [PAYMENTREQUEST_0_SHIPDISCAMT] => 0.00
+            [PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID] => david@disc-uk.co.uk
+            [PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED] => false
+            [PAYMENTREQUEST_0_ADDRESSSTATUS] => Confirmed
+            [L_PAYMENTREQUEST_0_NAME0] => EPIC Credits
+            [L_PAYMENTREQUEST_0_NUMBER0] => EPIC1
+            [L_PAYMENTREQUEST_0_QTY0] => 30
+            [L_PAYMENTREQUEST_0_TAXAMT0] => 0.00
+            [L_PAYMENTREQUEST_0_AMT0] => 1.05
+            [PAYMENTREQUESTINFO_0_ERRORCODE] => 0
+        )
+
+    [__pid] => 29302
+)
+
+2016-03-14T16:42:44+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [DoExpressCheckoutPayment] => Array
+        (
+            [TOKEN] => EC-2EJ77518GK8374829
+            [PAYERID] => VWTREZBE5C8NS
+            [PAYMENTACTION] => Authorization
+            [AMT] => 31.50
+            [CURRENCYCODE] => GBP
+            [BUTTONSOURCE] => Magento_Cart_Community
+            [NOTIFYURL] => https://www.discassessment.co.uk/paypal/ipn/
+            [RETURNFMFDETAILS] => 1
+            [ITEMAMT] => 31.50
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 30
+            [L_AMT0] => 1.05
+            [METHOD] => DoExpressCheckoutPayment
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-2EJ77518GK8374829
+            [SUCCESSPAGEREDIRECTREQUESTED] => false
+            [TIMESTAMP] => 2016-03-14T16:41:16Z
+            [CORRELATIONID] => d8129c5b4a7c1
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 18316154
+            [TRANSACTIONID] => 1NP586888X5335136
+            [TRANSACTIONTYPE] => cart
+            [PAYMENTTYPE] => instant
+            [ORDERTIME] => 2016-03-14T16:41:16Z
+            [AMT] => 31.50
+            [TAXAMT] => 0.00
+            [CURRENCYCODE] => GBP
+            [PAYMENTSTATUS] => Pending
+            [PENDINGREASON] => authorization
+            [REASONCODE] => None
+            [PROTECTIONELIGIBILITY] => Ineligible
+            [INSURANCEOPTIONSELECTED] => false
+            [SHIPPINGOPTIONISDEFAULT] => false
+            [PAYMENTINFO_0_TRANSACTIONID] => 1NP586888X5335136
+            [PAYMENTINFO_0_TRANSACTIONTYPE] => cart
+            [PAYMENTINFO_0_PAYMENTTYPE] => instant
+            [PAYMENTINFO_0_ORDERTIME] => 2016-03-14T16:41:16Z
+            [PAYMENTINFO_0_AMT] => 31.50
+            [PAYMENTINFO_0_TAXAMT] => 0.00
+            [PAYMENTINFO_0_CURRENCYCODE] => GBP
+            [PAYMENTINFO_0_PAYMENTSTATUS] => Pending
+            [PAYMENTINFO_0_PENDINGREASON] => authorization
+            [PAYMENTINFO_0_REASONCODE] => None
+            [PAYMENTINFO_0_PROTECTIONELIGIBILITY] => Ineligible
+            [PAYMENTINFO_0_SECUREMERCHANTACCOUNTID] => 92ALXAB9W69TS
+            [PAYMENTINFO_0_ERRORCODE] => 0
+            [PAYMENTINFO_0_ACK] => Success
+        )
+
+    [__pid] => 29304
+)
+
+2016-03-14T16:42:53+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 31.50
+            [auth_exp] => 09:41:16 Apr 12, 2016 PDT
+            [auth_id] => 1NP586888X5335136
+            [auth_status] => Pending
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => EDGAR
+            [invoice] => 100004708
+            [ipn_track_id] => d8129c5b4a7c1
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => RAMIREZ
+            [mc_currency] => GBP
+            [mc_gross] => 31.50
+            [mc_gross_1] => 31.50
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 
+            [payer_email] => edgarramirez@ologycoaching.com.mx
+            [payer_id] => VWTREZBE5C8NS
+            [payer_status] => verified
+            [payment_date] => 09:41:16 Mar 14, 2016 PDT
+            [payment_gross] => 
+            [payment_status] => Pending
+            [payment_type] => instant
+            [pending_reason] => authorization
+            [protection_eligibility] => Ineligible
+            [quantity1] => 30
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 10
+            [residence_country] => MX
+            [tax] => 0.00
+            [tax1] => 0.00
+            [transaction_entity] => auth
+            [transaction_subject] => 
+            [txn_id] => 1NP586888X5335136
+            [txn_type] => cart
+            [verify_sign] => ATxHzMri5yXmtehlQPX5Y1zc7knrAj.N7J-DyORHZdclJg7z5sedzKro
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 28646
+)
+
+2016-03-15T11:23:15+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 31.50
+            [auth_exp] => 09:41:16 Apr 12, 2016 PDT
+            [auth_id] => 1NP586888X5335136
+            [auth_status] => Completed
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => EDGAR
+            [invoice] => 100004708
+            [ipn_track_id] => a50491ca11db2
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => RAMIREZ
+            [mc_currency] => GBP
+            [mc_fee] => 1.84
+            [mc_gross] => 31.50
+            [mc_gross_1] => 31.50
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 1NP586888X5335136
+            [payer_email] => edgarramirez@ologycoaching.com.mx
+            [payer_id] => VWTREZBE5C8NS
+            [payer_status] => verified
+            [payment_date] => 04:21:38 Mar 15, 2016 PDT
+            [payment_fee] => 
+            [payment_gross] => 
+            [payment_status] => Completed
+            [payment_type] => instant
+            [protection_eligibility] => Ineligible
+            [quantity1] => 30
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 0
+            [residence_country] => MX
+            [tax] => 0.00
+            [transaction_entity] => payment
+            [transaction_subject] => 
+            [txn_id] => 1HF39820SB177023D
+            [txn_type] => cart
+            [verify_sign] => ASyS9flVHpw.TVh9qeZ5ZvDRSbV4AojutHOWyO4Vg0Vfx22F2m68kNAK
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 15133
+)
+
+2016-03-15T11:24:18+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [address_city] => Preston
+            [address_country] => United Kingdom
+            [address_country_code] => GB
+            [address_name] => David Little
+            [address_state] => 
+            [address_status] => confirmed
+            [address_street] => Alston Lane Farm, Alston Lane
+Longridge
+            [address_zip] => PR33BN
+            [auth_amount] => 48.00
+            [auth_exp] => 03:55:47 Apr 08, 2016 PDT
+            [auth_id] => 7BF10190S11572202
+            [auth_status] => Completed
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => David
+            [invoice] => 100004693
+            [ipn_track_id] => 8bd1c5a78af5d
+            [item_name1] => Everything DiSC Workplace® Interaction Guides
+            [item_number1] => A-311-02
+            [last_name] => Little
+            [mc_currency] => GBP
+            [mc_fee] => 1.83
+            [mc_gross] => 48.00
+            [mc_gross_1] => 37.50
+            [mc_handling] => 0.00
+            [mc_shipping] => 2.50
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 7BF10190S11572202
+            [payer_email] => drlittle14@gmail.com
+            [payer_id] => WNTHXJ45ZWQYL
+            [payer_status] => verified
+            [payment_date] => 04:22:43 Mar 15, 2016 PDT
+            [payment_fee] => 
+            [payment_gross] => 
+            [payment_status] => Completed
+            [payment_type] => instant
+            [protection_eligibility] => Eligible
+            [quantity1] => 1
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 0
+            [residence_country] => GB
+            [tax] => 8.00
+            [transaction_entity] => payment
+            [transaction_subject] => 
+            [txn_id] => 29M59603VV0447327
+            [txn_type] => cart
+            [verify_sign] => AX7xh88kxCjAuHw-dWUQk7CApOZCAz1seJxh8ADgsc38WuL-wckuogDJ
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 15130
+)
+
+2016-03-15T11:27:18+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [address_city] => Preston
+            [address_country] => United Kingdom
+            [address_country_code] => GB
+            [address_name] => David Little
+            [address_state] => 
+            [address_status] => confirmed
+            [address_street] => Alston Lane Farm, Alston Lane
+Longridge
+            [address_zip] => PR33BN
+            [auth_amount] => 48.00
+            [auth_exp] => 04:50:19 Apr 08, 2016 PDT
+            [auth_id] => 83M9795875986200S
+            [auth_status] => Completed
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => David
+            [invoice] => 100004694
+            [ipn_track_id] => cb0a12bfd5033
+            [item_name1] => Everything DiSC Workplace® Interaction Guides
+            [item_number1] => A-311-02
+            [last_name] => Little
+            [mc_currency] => GBP
+            [mc_fee] => 1.83
+            [mc_gross] => 48.00
+            [mc_gross_1] => 37.50
+            [mc_handling] => 0.00
+            [mc_shipping] => 2.50
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 83M9795875986200S
+            [payer_email] => drlittle14@gmail.com
+            [payer_id] => WNTHXJ45ZWQYL
+            [payer_status] => verified
+            [payment_date] => 04:25:41 Mar 15, 2016 PDT
+            [payment_fee] => 
+            [payment_gross] => 
+            [payment_status] => Completed
+            [payment_type] => instant
+            [protection_eligibility] => Eligible
+            [quantity1] => 1
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 0
+            [residence_country] => GB
+            [tax] => 8.00
+            [transaction_entity] => payment
+            [transaction_subject] => 
+            [txn_id] => 5SW52863MJ396874W
+            [txn_type] => cart
+            [verify_sign] => Aq5laNfMA1jn2LiWpkqhx4ti3QXnAosvX-tHYhAUF2tczkMq1ZpfyZo1
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 16024
+)
+
+2016-03-18T18:57:13+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 105.00
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004713
+            [SOLUTIONTYPE] => Mark
+            [NOSHIPPING] => 1
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [ITEMAMT] => 105.00
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 100
+            [L_AMT0] => 1.05
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-0WN4980308756571E
+            [TIMESTAMP] => 2016-03-18T18:55:37Z
+            [CORRELATIONID] => 3460901c4dc5
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 18316154
+        )
+
+    [__pid] => 16023
+)
+
+2016-03-18T18:57:50+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [GetExpressCheckoutDetails] => Array
+        (
+            [TOKEN] => EC-0WN4980308756571E
+            [METHOD] => GetExpressCheckoutDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-0WN4980308756571E
+            [PHONENUM] => +52 5535064357
+            [BILLINGAGREEMENTACCEPTEDSTATUS] => 0
+            [CHECKOUTSTATUS] => PaymentActionNotInitiated
+            [TIMESTAMP] => 2016-03-18T18:56:14Z
+            [CORRELATIONID] => af03c057200db
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 18316154
+            [EMAIL] => edgarramirez@ologycoaching.com.mx
+            [PAYERID] => VWTREZBE5C8NS
+            [PAYERSTATUS] => verified
+            [FIRSTNAME] => EDGAR
+            [LASTNAME] => RAMIREZ
+            [COUNTRYCODE] => MX
+            [ADDRESSSTATUS] => Confirmed
+            [CURRENCYCODE] => GBP
+            [AMT] => 105.00
+            [ITEMAMT] => 105.00
+            [SHIPPINGAMT] => 0.00
+            [HANDLINGAMT] => 0.00
+            [TAXAMT] => 0.00
+            [INVNUM] => 100004713
+            [INSURANCEAMT] => 0.00
+            [SHIPDISCAMT] => 0.00
+            [INSURANCEOPTIONOFFERED] => false
+            [L_NAME0] => EPIC Credits
+            [L_NUMBER0] => EPIC1
+            [L_QTY0] => 100
+            [L_TAXAMT0] => 0.00
+            [L_AMT0] => 1.05
+            [PAYMENTREQUEST_0_CURRENCYCODE] => GBP
+            [PAYMENTREQUEST_0_AMT] => 105.00
+            [PAYMENTREQUEST_0_ITEMAMT] => 105.00
+            [PAYMENTREQUEST_0_SHIPPINGAMT] => 0.00
+            [PAYMENTREQUEST_0_HANDLINGAMT] => 0.00
+            [PAYMENTREQUEST_0_TAXAMT] => 0.00
+            [PAYMENTREQUEST_0_INVNUM] => 100004713
+            [PAYMENTREQUEST_0_INSURANCEAMT] => 0.00
+            [PAYMENTREQUEST_0_SHIPDISCAMT] => 0.00
+            [PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID] => david@disc-uk.co.uk
+            [PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED] => false
+            [PAYMENTREQUEST_0_ADDRESSSTATUS] => Confirmed
+            [L_PAYMENTREQUEST_0_NAME0] => EPIC Credits
+            [L_PAYMENTREQUEST_0_NUMBER0] => EPIC1
+            [L_PAYMENTREQUEST_0_QTY0] => 100
+            [L_PAYMENTREQUEST_0_TAXAMT0] => 0.00
+            [L_PAYMENTREQUEST_0_AMT0] => 1.05
+            [PAYMENTREQUESTINFO_0_ERRORCODE] => 0
+        )
+
+    [__pid] => 12951
+)
+
+2016-03-18T18:58:03+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [DoExpressCheckoutPayment] => Array
+        (
+            [TOKEN] => EC-0WN4980308756571E
+            [PAYERID] => VWTREZBE5C8NS
+            [PAYMENTACTION] => Authorization
+            [AMT] => 105.00
+            [CURRENCYCODE] => GBP
+            [BUTTONSOURCE] => Magento_Cart_Community
+            [NOTIFYURL] => https://www.discassessment.co.uk/paypal/ipn/
+            [RETURNFMFDETAILS] => 1
+            [ITEMAMT] => 105.00
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 100
+            [L_AMT0] => 1.05
+            [METHOD] => DoExpressCheckoutPayment
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-0WN4980308756571E
+            [SUCCESSPAGEREDIRECTREQUESTED] => false
+            [TIMESTAMP] => 2016-03-18T18:56:27Z
+            [CORRELATIONID] => f11d6a089a3bc
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 18316154
+            [TRANSACTIONID] => 9FH57900PH145870L
+            [TRANSACTIONTYPE] => cart
+            [PAYMENTTYPE] => instant
+            [ORDERTIME] => 2016-03-18T18:56:26Z
+            [AMT] => 105.00
+            [TAXAMT] => 0.00
+            [CURRENCYCODE] => GBP
+            [PAYMENTSTATUS] => Pending
+            [PENDINGREASON] => authorization
+            [REASONCODE] => None
+            [PROTECTIONELIGIBILITY] => Ineligible
+            [INSURANCEOPTIONSELECTED] => false
+            [SHIPPINGOPTIONISDEFAULT] => false
+            [PAYMENTINFO_0_TRANSACTIONID] => 9FH57900PH145870L
+            [PAYMENTINFO_0_TRANSACTIONTYPE] => cart
+            [PAYMENTINFO_0_PAYMENTTYPE] => instant
+            [PAYMENTINFO_0_ORDERTIME] => 2016-03-18T18:56:26Z
+            [PAYMENTINFO_0_AMT] => 105.00
+            [PAYMENTINFO_0_TAXAMT] => 0.00
+            [PAYMENTINFO_0_CURRENCYCODE] => GBP
+            [PAYMENTINFO_0_PAYMENTSTATUS] => Pending
+            [PAYMENTINFO_0_PENDINGREASON] => authorization
+            [PAYMENTINFO_0_REASONCODE] => None
+            [PAYMENTINFO_0_PROTECTIONELIGIBILITY] => Ineligible
+            [PAYMENTINFO_0_SECUREMERCHANTACCOUNTID] => 92ALXAB9W69TS
+            [PAYMENTINFO_0_ERRORCODE] => 0
+            [PAYMENTINFO_0_ACK] => Success
+        )
+
+    [__pid] => 15227
+)
+
+2016-03-18T18:58:12+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 105.00
+            [auth_exp] => 11:56:26 Apr 16, 2016 PDT
+            [auth_id] => 9FH57900PH145870L
+            [auth_status] => Pending
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => EDGAR
+            [invoice] => 100004713
+            [ipn_track_id] => f11d6a089a3bc
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => RAMIREZ
+            [mc_currency] => GBP
+            [mc_gross] => 105.00
+            [mc_gross_1] => 105.00
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 
+            [payer_email] => edgarramirez@ologycoaching.com.mx
+            [payer_id] => VWTREZBE5C8NS
+            [payer_status] => verified
+            [payment_date] => 11:56:26 Mar 18, 2016 PDT
+            [payment_gross] => 
+            [payment_status] => Pending
+            [payment_type] => instant
+            [pending_reason] => authorization
+            [protection_eligibility] => Ineligible
+            [quantity1] => 100
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 10
+            [residence_country] => MX
+            [tax] => 0.00
+            [tax1] => 0.00
+            [transaction_entity] => auth
+            [transaction_subject] => 
+            [txn_id] => 9FH57900PH145870L
+            [txn_type] => cart
+            [verify_sign] => AkgQb6Ohw5xH4skCbbZZeyFBRJNDAAvhqRECUuc42MeRmr4d01PMVpYt
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 16024
+)
+
+2016-03-21T04:27:10+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 120.75
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004714
+            [SOLUTIONTYPE] => Mark
+            [NOSHIPPING] => 1
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [ITEMAMT] => 120.75
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 115
+            [L_AMT0] => 1.05
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-3BU81889D2347320S
+            [TIMESTAMP] => 2016-03-21T04:25:29Z
+            [CORRELATIONID] => ef4d606f770f9
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 18316154
+        )
+
+    [__pid] => 10519
+)
+
+2016-03-21T04:27:43+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [GetExpressCheckoutDetails] => Array
+        (
+            [TOKEN] => EC-3BU81889D2347320S
+            [METHOD] => GetExpressCheckoutDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-3BU81889D2347320S
+            [PHONENUM] => +52 5535064357
+            [BILLINGAGREEMENTACCEPTEDSTATUS] => 0
+            [CHECKOUTSTATUS] => PaymentActionNotInitiated
+            [TIMESTAMP] => 2016-03-21T04:26:03Z
+            [CORRELATIONID] => 76037d20dea6e
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 18316154
+            [EMAIL] => edgarramirez@ologycoaching.com.mx
+            [PAYERID] => VWTREZBE5C8NS
+            [PAYERSTATUS] => verified
+            [FIRSTNAME] => EDGAR
+            [LASTNAME] => RAMIREZ
+            [COUNTRYCODE] => MX
+            [ADDRESSSTATUS] => Confirmed
+            [CURRENCYCODE] => GBP
+            [AMT] => 120.75
+            [ITEMAMT] => 120.75
+            [SHIPPINGAMT] => 0.00
+            [HANDLINGAMT] => 0.00
+            [TAXAMT] => 0.00
+            [INVNUM] => 100004714
+            [INSURANCEAMT] => 0.00
+            [SHIPDISCAMT] => 0.00
+            [INSURANCEOPTIONOFFERED] => false
+            [L_NAME0] => EPIC Credits
+            [L_NUMBER0] => EPIC1
+            [L_QTY0] => 115
+            [L_TAXAMT0] => 0.00
+            [L_AMT0] => 1.05
+            [PAYMENTREQUEST_0_CURRENCYCODE] => GBP
+            [PAYMENTREQUEST_0_AMT] => 120.75
+            [PAYMENTREQUEST_0_ITEMAMT] => 120.75
+            [PAYMENTREQUEST_0_SHIPPINGAMT] => 0.00
+            [PAYMENTREQUEST_0_HANDLINGAMT] => 0.00
+            [PAYMENTREQUEST_0_TAXAMT] => 0.00
+            [PAYMENTREQUEST_0_INVNUM] => 100004714
+            [PAYMENTREQUEST_0_INSURANCEAMT] => 0.00
+            [PAYMENTREQUEST_0_SHIPDISCAMT] => 0.00
+            [PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID] => david@disc-uk.co.uk
+            [PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED] => false
+            [PAYMENTREQUEST_0_ADDRESSSTATUS] => Confirmed
+            [L_PAYMENTREQUEST_0_NAME0] => EPIC Credits
+            [L_PAYMENTREQUEST_0_NUMBER0] => EPIC1
+            [L_PAYMENTREQUEST_0_QTY0] => 115
+            [L_PAYMENTREQUEST_0_TAXAMT0] => 0.00
+            [L_PAYMENTREQUEST_0_AMT0] => 1.05
+            [PAYMENTREQUESTINFO_0_ERRORCODE] => 0
+        )
+
+    [__pid] => 18596
+)
+
+2016-03-21T04:28:00+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [DoExpressCheckoutPayment] => Array
+        (
+            [TOKEN] => EC-3BU81889D2347320S
+            [PAYERID] => VWTREZBE5C8NS
+            [PAYMENTACTION] => Authorization
+            [AMT] => 120.75
+            [CURRENCYCODE] => GBP
+            [BUTTONSOURCE] => Magento_Cart_Community
+            [NOTIFYURL] => https://www.discassessment.co.uk/paypal/ipn/
+            [RETURNFMFDETAILS] => 1
+            [ITEMAMT] => 120.75
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 115
+            [L_AMT0] => 1.05
+            [METHOD] => DoExpressCheckoutPayment
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-3BU81889D2347320S
+            [SUCCESSPAGEREDIRECTREQUESTED] => false
+            [TIMESTAMP] => 2016-03-21T04:26:19Z
+            [CORRELATIONID] => ef78a4d7bfcd9
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 18316154
+            [TRANSACTIONID] => 5Y7575259M9865326
+            [TRANSACTIONTYPE] => cart
+            [PAYMENTTYPE] => instant
+            [ORDERTIME] => 2016-03-21T04:26:19Z
+            [AMT] => 120.75
+            [TAXAMT] => 0.00
+            [CURRENCYCODE] => GBP
+            [PAYMENTSTATUS] => Pending
+            [PENDINGREASON] => authorization
+            [REASONCODE] => None
+            [PROTECTIONELIGIBILITY] => Ineligible
+            [INSURANCEOPTIONSELECTED] => false
+            [SHIPPINGOPTIONISDEFAULT] => false
+            [PAYMENTINFO_0_TRANSACTIONID] => 5Y7575259M9865326
+            [PAYMENTINFO_0_TRANSACTIONTYPE] => cart
+            [PAYMENTINFO_0_PAYMENTTYPE] => instant
+            [PAYMENTINFO_0_ORDERTIME] => 2016-03-21T04:26:19Z
+            [PAYMENTINFO_0_AMT] => 120.75
+            [PAYMENTINFO_0_TAXAMT] => 0.00
+            [PAYMENTINFO_0_CURRENCYCODE] => GBP
+            [PAYMENTINFO_0_PAYMENTSTATUS] => Pending
+            [PAYMENTINFO_0_PENDINGREASON] => authorization
+            [PAYMENTINFO_0_REASONCODE] => None
+            [PAYMENTINFO_0_PROTECTIONELIGIBILITY] => Ineligible
+            [PAYMENTINFO_0_SECUREMERCHANTACCOUNTID] => 92ALXAB9W69TS
+            [PAYMENTINFO_0_ERRORCODE] => 0
+            [PAYMENTINFO_0_ACK] => Success
+        )
+
+    [__pid] => 10976
+)
+
+2016-03-21T04:28:09+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 120.75
+            [auth_exp] => 21:26:19 Apr 18, 2016 PDT
+            [auth_id] => 5Y7575259M9865326
+            [auth_status] => Pending
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => EDGAR
+            [invoice] => 100004714
+            [ipn_track_id] => ef78a4d7bfcd9
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => RAMIREZ
+            [mc_currency] => GBP
+            [mc_gross] => 120.75
+            [mc_gross_1] => 120.75
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 
+            [payer_email] => edgarramirez@ologycoaching.com.mx
+            [payer_id] => VWTREZBE5C8NS
+            [payer_status] => verified
+            [payment_date] => 21:26:19 Mar 20, 2016 PDT
+            [payment_gross] => 
+            [payment_status] => Pending
+            [payment_type] => instant
+            [pending_reason] => authorization
+            [protection_eligibility] => Ineligible
+            [quantity1] => 115
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 10
+            [residence_country] => MX
+            [tax] => 0.00
+            [tax1] => 0.00
+            [transaction_entity] => auth
+            [transaction_subject] => 
+            [txn_id] => 5Y7575259M9865326
+            [txn_type] => cart
+            [verify_sign] => AWtbsfOh.AspQBD5MxJnEc1oMg1HADlwm-KPKV3Jhu5zqf8w4cOrEHru
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 10538
+)
+
+2016-03-22T09:17:03+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 592.20
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004715
+            [SOLUTIONTYPE] => Mark
+            [NOSHIPPING] => 1
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [ITEMAMT] => 493.50
+            [TAXAMT] => 98.70
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 210
+            [L_AMT0] => 2.35
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-38295538A8144733D
+            [TIMESTAMP] => 2016-03-22T09:15:20Z
+            [CORRELATIONID] => 22c958bae23af
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 20987449
+        )
+
+    [__pid] => 4620
+)
+
+2016-03-22T09:17:48+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [GetExpressCheckoutDetails] => Array
+        (
+            [TOKEN] => EC-38295538A8144733D
+            [METHOD] => GetExpressCheckoutDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-38295538A8144733D
+            [PHONENUM] => +44 7796146346
+            [BILLINGAGREEMENTACCEPTEDSTATUS] => 0
+            [CHECKOUTSTATUS] => PaymentActionNotInitiated
+            [TIMESTAMP] => 2016-03-22T09:16:05Z
+            [CORRELATIONID] => c937a59b3a25
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 20987449
+            [EMAIL] => tara@leadershipskills.co.uk
+            [PAYERID] => PXB774XNB5JBU
+            [PAYERSTATUS] => verified
+            [FIRSTNAME] => Tara
+            [LASTNAME] => Fennessy
+            [COUNTRYCODE] => GB
+            [ADDRESSSTATUS] => Confirmed
+            [CURRENCYCODE] => GBP
+            [AMT] => 592.20
+            [ITEMAMT] => 493.50
+            [SHIPPINGAMT] => 0.00
+            [HANDLINGAMT] => 0.00
+            [TAXAMT] => 98.70
+            [INVNUM] => 100004715
+            [INSURANCEAMT] => 0.00
+            [SHIPDISCAMT] => 0.00
+            [INSURANCEOPTIONOFFERED] => false
+            [L_NAME0] => EPIC Credits
+            [L_NUMBER0] => EPIC1
+            [L_QTY0] => 210
+            [L_TAXAMT0] => 0.00
+            [L_AMT0] => 2.35
+            [PAYMENTREQUEST_0_CURRENCYCODE] => GBP
+            [PAYMENTREQUEST_0_AMT] => 592.20
+            [PAYMENTREQUEST_0_ITEMAMT] => 493.50
+            [PAYMENTREQUEST_0_SHIPPINGAMT] => 0.00
+            [PAYMENTREQUEST_0_HANDLINGAMT] => 0.00
+            [PAYMENTREQUEST_0_TAXAMT] => 98.70
+            [PAYMENTREQUEST_0_INVNUM] => 100004715
+            [PAYMENTREQUEST_0_INSURANCEAMT] => 0.00
+            [PAYMENTREQUEST_0_SHIPDISCAMT] => 0.00
+            [PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID] => david@disc-uk.co.uk
+            [PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED] => false
+            [PAYMENTREQUEST_0_ADDRESSSTATUS] => Confirmed
+            [L_PAYMENTREQUEST_0_NAME0] => EPIC Credits
+            [L_PAYMENTREQUEST_0_NUMBER0] => EPIC1
+            [L_PAYMENTREQUEST_0_QTY0] => 210
+            [L_PAYMENTREQUEST_0_TAXAMT0] => 0.00
+            [L_PAYMENTREQUEST_0_AMT0] => 2.35
+            [PAYMENTREQUESTINFO_0_ERRORCODE] => 0
+        )
+
+    [__pid] => 3944
+)
+
+2016-03-22T09:17:58+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [DoExpressCheckoutPayment] => Array
+        (
+            [TOKEN] => EC-38295538A8144733D
+            [PAYERID] => PXB774XNB5JBU
+            [PAYMENTACTION] => Authorization
+            [AMT] => 592.20
+            [CURRENCYCODE] => GBP
+            [BUTTONSOURCE] => Magento_Cart_Community
+            [NOTIFYURL] => https://www.discassessment.co.uk/paypal/ipn/
+            [RETURNFMFDETAILS] => 1
+            [ITEMAMT] => 493.50
+            [TAXAMT] => 98.70
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 210
+            [L_AMT0] => 2.35
+            [METHOD] => DoExpressCheckoutPayment
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-38295538A8144733D
+            [SUCCESSPAGEREDIRECTREQUESTED] => false
+            [TIMESTAMP] => 2016-03-22T09:16:15Z
+            [CORRELATIONID] => 3156dad99652
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 20987449
+            [TRANSACTIONID] => 6RR48474PL176634V
+            [TRANSACTIONTYPE] => cart
+            [PAYMENTTYPE] => instant
+            [ORDERTIME] => 2016-03-22T09:16:14Z
+            [AMT] => 592.20
+            [TAXAMT] => 98.70
+            [CURRENCYCODE] => GBP
+            [PAYMENTSTATUS] => Pending
+            [PENDINGREASON] => authorization
+            [REASONCODE] => None
+            [PROTECTIONELIGIBILITY] => Ineligible
+            [INSURANCEOPTIONSELECTED] => false
+            [SHIPPINGOPTIONISDEFAULT] => false
+            [PAYMENTINFO_0_TRANSACTIONID] => 6RR48474PL176634V
+            [PAYMENTINFO_0_TRANSACTIONTYPE] => cart
+            [PAYMENTINFO_0_PAYMENTTYPE] => instant
+            [PAYMENTINFO_0_ORDERTIME] => 2016-03-22T09:16:14Z
+            [PAYMENTINFO_0_AMT] => 592.20
+            [PAYMENTINFO_0_TAXAMT] => 98.70
+            [PAYMENTINFO_0_CURRENCYCODE] => GBP
+            [PAYMENTINFO_0_PAYMENTSTATUS] => Pending
+            [PAYMENTINFO_0_PENDINGREASON] => authorization
+            [PAYMENTINFO_0_REASONCODE] => None
+            [PAYMENTINFO_0_PROTECTIONELIGIBILITY] => Ineligible
+            [PAYMENTINFO_0_SECUREMERCHANTACCOUNTID] => 92ALXAB9W69TS
+            [PAYMENTINFO_0_ERRORCODE] => 0
+            [PAYMENTINFO_0_ACK] => Success
+        )
+
+    [__pid] => 23960
+)
+
+2016-03-22T09:18:05+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 592.20
+            [auth_exp] => 02:16:14 Apr 20, 2016 PDT
+            [auth_id] => 6RR48474PL176634V
+            [auth_status] => Pending
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => Tara
+            [invoice] => 100004715
+            [ipn_track_id] => 3156dad99652
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => Fennessy
+            [mc_currency] => GBP
+            [mc_gross] => 592.20
+            [mc_gross_1] => 493.50
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 
+            [payer_business_name] => Leadership Skills Training Limited
+            [payer_email] => tara@leadershipskills.co.uk
+            [payer_id] => PXB774XNB5JBU
+            [payer_status] => verified
+            [payment_date] => 02:16:14 Mar 22, 2016 PDT
+            [payment_gross] => 
+            [payment_status] => Pending
+            [payment_type] => instant
+            [pending_reason] => authorization
+            [protection_eligibility] => Ineligible
+            [quantity1] => 210
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 10
+            [residence_country] => GB
+            [tax] => 98.70
+            [tax1] => 0.00
+            [transaction_entity] => auth
+            [transaction_subject] => 
+            [txn_id] => 6RR48474PL176634V
+            [txn_type] => cart
+            [verify_sign] => Ak5z.evkFCcIpPkPZT02LCyvhFKMA--QDMCPWrrVw27ru.AkqKXXkqgm
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 3937
+)
+
+2016-04-08T08:14:52+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 90.00
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004731
+            [SOLUTIONTYPE] => Mark
+            [NOSHIPPING] => 1
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [ITEMAMT] => 75.00
+            [TAXAMT] => 15.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 30
+            [L_AMT0] => 2.50
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-43A19306SC007331G
+            [TIMESTAMP] => 2016-04-08T08:12:36Z
+            [CORRELATIONID] => d656db4d11457
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 000000
+        )
+
+    [__pid] => 15538
+)
+
+2016-04-08T08:15:40+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [GetExpressCheckoutDetails] => Array
+        (
+            [TOKEN] => EC-43A19306SC007331G
+            [METHOD] => GetExpressCheckoutDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-43A19306SC007331G
+            [PHONENUM] => +44 7796146346
+            [BILLINGAGREEMENTACCEPTEDSTATUS] => 0
+            [CHECKOUTSTATUS] => PaymentActionNotInitiated
+            [TIMESTAMP] => 2016-04-08T08:13:24Z
+            [CORRELATIONID] => 302a4306e12ae
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 000000
+            [EMAIL] => tara@leadershipskills.co.uk
+            [PAYERID] => PXB774XNB5JBU
+            [PAYERSTATUS] => verified
+            [BUSINESS] => Leadership Skills Training Limited
+            [FIRSTNAME] => Tara
+            [LASTNAME] => Fennessy
+            [COUNTRYCODE] => GB
+            [ADDRESSSTATUS] => Confirmed
+            [CURRENCYCODE] => GBP
+            [AMT] => 90.00
+            [ITEMAMT] => 75.00
+            [SHIPPINGAMT] => 0.00
+            [HANDLINGAMT] => 0.00
+            [TAXAMT] => 15.00
+            [INVNUM] => 100004731
+            [INSURANCEAMT] => 0.00
+            [SHIPDISCAMT] => 0.00
+            [INSURANCEOPTIONOFFERED] => false
+            [L_NAME0] => EPIC Credits
+            [L_NUMBER0] => EPIC1
+            [L_QTY0] => 30
+            [L_TAXAMT0] => 0.00
+            [L_AMT0] => 2.50
+            [PAYMENTREQUEST_0_CURRENCYCODE] => GBP
+            [PAYMENTREQUEST_0_AMT] => 90.00
+            [PAYMENTREQUEST_0_ITEMAMT] => 75.00
+            [PAYMENTREQUEST_0_SHIPPINGAMT] => 0.00
+            [PAYMENTREQUEST_0_HANDLINGAMT] => 0.00
+            [PAYMENTREQUEST_0_TAXAMT] => 15.00
+            [PAYMENTREQUEST_0_INVNUM] => 100004731
+            [PAYMENTREQUEST_0_INSURANCEAMT] => 0.00
+            [PAYMENTREQUEST_0_SHIPDISCAMT] => 0.00
+            [PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID] => david@disc-uk.co.uk
+            [PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED] => false
+            [PAYMENTREQUEST_0_ADDRESSSTATUS] => Confirmed
+            [L_PAYMENTREQUEST_0_NAME0] => EPIC Credits
+            [L_PAYMENTREQUEST_0_NUMBER0] => EPIC1
+            [L_PAYMENTREQUEST_0_QTY0] => 30
+            [L_PAYMENTREQUEST_0_TAXAMT0] => 0.00
+            [L_PAYMENTREQUEST_0_AMT0] => 2.50
+            [PAYMENTREQUESTINFO_0_ERRORCODE] => 0
+        )
+
+    [__pid] => 15591
+)
+
+2016-04-08T08:15:50+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [DoExpressCheckoutPayment] => Array
+        (
+            [TOKEN] => EC-43A19306SC007331G
+            [PAYERID] => PXB774XNB5JBU
+            [PAYMENTACTION] => Authorization
+            [AMT] => 90.00
+            [CURRENCYCODE] => GBP
+            [BUTTONSOURCE] => Magento_Cart_Community
+            [NOTIFYURL] => https://www.discassessment.co.uk/paypal/ipn/
+            [RETURNFMFDETAILS] => 1
+            [ITEMAMT] => 75.00
+            [TAXAMT] => 15.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 30
+            [L_AMT0] => 2.50
+            [METHOD] => DoExpressCheckoutPayment
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-43A19306SC007331G
+            [SUCCESSPAGEREDIRECTREQUESTED] => false
+            [TIMESTAMP] => 2016-04-08T08:13:33Z
+            [CORRELATIONID] => adccf16293c98
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 000000
+            [TRANSACTIONID] => 6M378666FJ708102N
+            [TRANSACTIONTYPE] => cart
+            [PAYMENTTYPE] => instant
+            [ORDERTIME] => 2016-04-08T08:13:33Z
+            [AMT] => 90.00
+            [TAXAMT] => 15.00
+            [CURRENCYCODE] => GBP
+            [PAYMENTSTATUS] => Pending
+            [PENDINGREASON] => authorization
+            [REASONCODE] => None
+            [PROTECTIONELIGIBILITY] => Ineligible
+            [INSURANCEOPTIONSELECTED] => false
+            [SHIPPINGOPTIONISDEFAULT] => false
+            [PAYMENTINFO_0_TRANSACTIONID] => 6M378666FJ708102N
+            [PAYMENTINFO_0_TRANSACTIONTYPE] => cart
+            [PAYMENTINFO_0_PAYMENTTYPE] => instant
+            [PAYMENTINFO_0_ORDERTIME] => 2016-04-08T08:13:33Z
+            [PAYMENTINFO_0_AMT] => 90.00
+            [PAYMENTINFO_0_TAXAMT] => 15.00
+            [PAYMENTINFO_0_CURRENCYCODE] => GBP
+            [PAYMENTINFO_0_PAYMENTSTATUS] => Pending
+            [PAYMENTINFO_0_PENDINGREASON] => authorization
+            [PAYMENTINFO_0_REASONCODE] => None
+            [PAYMENTINFO_0_PROTECTIONELIGIBILITY] => Ineligible
+            [PAYMENTINFO_0_SECUREMERCHANTACCOUNTID] => 92ALXAB9W69TS
+            [PAYMENTINFO_0_ERRORCODE] => 0
+            [PAYMENTINFO_0_ACK] => Success
+        )
+
+    [__pid] => 15520
+)
+
+2016-04-08T08:15:58+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 90.00
+            [auth_exp] => 01:13:33 May 07, 2016 PDT
+            [auth_id] => 6M378666FJ708102N
+            [auth_status] => Pending
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => Tara
+            [invoice] => 100004731
+            [ipn_track_id] => adccf16293c98
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => Fennessy
+            [mc_currency] => GBP
+            [mc_gross] => 90.00
+            [mc_gross_1] => 75.00
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 
+            [payer_business_name] => Leadership Skills Training Limited
+            [payer_email] => tara@leadershipskills.co.uk
+            [payer_id] => PXB774XNB5JBU
+            [payer_status] => verified
+            [payment_date] => 01:13:33 Apr 08, 2016 PDT
+            [payment_gross] => 
+            [payment_status] => Pending
+            [payment_type] => instant
+            [pending_reason] => authorization
+            [protection_eligibility] => Ineligible
+            [quantity1] => 30
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 10
+            [residence_country] => GB
+            [tax] => 15.00
+            [tax1] => 0.00
+            [transaction_entity] => auth
+            [transaction_subject] => 
+            [txn_id] => 6M378666FJ708102N
+            [txn_type] => cart
+            [verify_sign] => ADmPnIPY3I7Vr6t4FxyXGQRPk2D-AsOb50MuVgIF1fjeLgIurdNniVR5
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 32429
+)
+
+2016-04-08T14:09:47+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 954.00
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004733
+            [SOLUTIONTYPE] => Mark
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [ITEMAMT] => 795.00
+            [TAXAMT] => 159.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => A-321
+            [L_NAME0] => Everything DiSC® Workplace Facilitation Kit
+            [L_QTY0] => 1
+            [L_AMT0] => 795.00
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-4DY37904VW5489257
+            [TIMESTAMP] => 2016-04-08T14:07:30Z
+            [CORRELATIONID] => 566646b832a87
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 000000
+        )
+
+    [__pid] => 15570
+)
+
+2016-04-08T17:31:54+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 338.40
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004735
+            [SOLUTIONTYPE] => Mark
+            [NOSHIPPING] => 1
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [ITEMAMT] => 282.00
+            [TAXAMT] => 56.40
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 120
+            [L_AMT0] => 2.35
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-25X194398D5394615
+            [TIMESTAMP] => 2016-04-08T17:29:37Z
+            [CORRELATIONID] => d11456d38da83
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 000000
+        )
+
+    [__pid] => 32432
+)
+
+2016-04-08T17:32:29+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 338.40
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004735
+            [SOLUTIONTYPE] => Mark
+            [NOSHIPPING] => 1
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [ITEMAMT] => 282.00
+            [TAXAMT] => 56.40
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 120
+            [L_AMT0] => 2.35
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-48C5586316451840B
+            [TIMESTAMP] => 2016-04-08T17:30:13Z
+            [CORRELATIONID] => d9fea68bd8cd8
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 000000
+        )
+
+    [__pid] => 15538
+)
+
+2016-04-08T17:33:01+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [GetExpressCheckoutDetails] => Array
+        (
+            [TOKEN] => EC-48C5586316451840B
+            [METHOD] => GetExpressCheckoutDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-48C5586316451840B
+            [PHONENUM] => +44 1316236092
+            [BILLINGAGREEMENTACCEPTEDSTATUS] => 0
+            [CHECKOUTSTATUS] => PaymentActionNotInitiated
+            [TIMESTAMP] => 2016-04-08T17:30:45Z
+            [CORRELATIONID] => a9add52dd5483
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 000000
+            [EMAIL] => rdoyle@blueyonder.co.uk
+            [PAYERID] => SWA8PFCZS6H6Y
+            [PAYERSTATUS] => verified
+            [FIRSTNAME] => Rosemary
+            [LASTNAME] => Doyle
+            [COUNTRYCODE] => GB
+            [ADDRESSSTATUS] => Confirmed
+            [CURRENCYCODE] => GBP
+            [AMT] => 338.40
+            [ITEMAMT] => 282.00
+            [SHIPPINGAMT] => 0.00
+            [HANDLINGAMT] => 0.00
+            [TAXAMT] => 56.40
+            [INVNUM] => 100004735
+            [INSURANCEAMT] => 0.00
+            [SHIPDISCAMT] => 0.00
+            [INSURANCEOPTIONOFFERED] => false
+            [L_NAME0] => EPIC Credits
+            [L_NUMBER0] => EPIC1
+            [L_QTY0] => 120
+            [L_TAXAMT0] => 0.00
+            [L_AMT0] => 2.35
+            [PAYMENTREQUEST_0_CURRENCYCODE] => GBP
+            [PAYMENTREQUEST_0_AMT] => 338.40
+            [PAYMENTREQUEST_0_ITEMAMT] => 282.00
+            [PAYMENTREQUEST_0_SHIPPINGAMT] => 0.00
+            [PAYMENTREQUEST_0_HANDLINGAMT] => 0.00
+            [PAYMENTREQUEST_0_TAXAMT] => 56.40
+            [PAYMENTREQUEST_0_INVNUM] => 100004735
+            [PAYMENTREQUEST_0_INSURANCEAMT] => 0.00
+            [PAYMENTREQUEST_0_SHIPDISCAMT] => 0.00
+            [PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID] => david@disc-uk.co.uk
+            [PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED] => false
+            [PAYMENTREQUEST_0_ADDRESSSTATUS] => Confirmed
+            [L_PAYMENTREQUEST_0_NAME0] => EPIC Credits
+            [L_PAYMENTREQUEST_0_NUMBER0] => EPIC1
+            [L_PAYMENTREQUEST_0_QTY0] => 120
+            [L_PAYMENTREQUEST_0_TAXAMT0] => 0.00
+            [L_PAYMENTREQUEST_0_AMT0] => 2.35
+            [PAYMENTREQUESTINFO_0_ERRORCODE] => 0
+        )
+
+    [__pid] => 15520
+)
+
+2016-04-08T17:33:13+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [DoExpressCheckoutPayment] => Array
+        (
+            [TOKEN] => EC-48C5586316451840B
+            [PAYERID] => SWA8PFCZS6H6Y
+            [PAYMENTACTION] => Authorization
+            [AMT] => 338.40
+            [CURRENCYCODE] => GBP
+            [BUTTONSOURCE] => Magento_Cart_Community
+            [NOTIFYURL] => https://www.discassessment.co.uk/paypal/ipn/
+            [RETURNFMFDETAILS] => 1
+            [ITEMAMT] => 282.00
+            [TAXAMT] => 56.40
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 120
+            [L_AMT0] => 2.35
+            [METHOD] => DoExpressCheckoutPayment
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-48C5586316451840B
+            [SUCCESSPAGEREDIRECTREQUESTED] => false
+            [TIMESTAMP] => 2016-04-08T17:30:56Z
+            [CORRELATIONID] => cb41e0263bec1
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 000000
+            [TRANSACTIONID] => 3U814714GM490944E
+            [TRANSACTIONTYPE] => cart
+            [PAYMENTTYPE] => instant
+            [ORDERTIME] => 2016-04-08T17:30:56Z
+            [AMT] => 338.40
+            [TAXAMT] => 56.40
+            [CURRENCYCODE] => GBP
+            [PAYMENTSTATUS] => Pending
+            [PENDINGREASON] => authorization
+            [REASONCODE] => None
+            [PROTECTIONELIGIBILITY] => Ineligible
+            [INSURANCEOPTIONSELECTED] => false
+            [SHIPPINGOPTIONISDEFAULT] => false
+            [PAYMENTINFO_0_TRANSACTIONID] => 3U814714GM490944E
+            [PAYMENTINFO_0_TRANSACTIONTYPE] => cart
+            [PAYMENTINFO_0_PAYMENTTYPE] => instant
+            [PAYMENTINFO_0_ORDERTIME] => 2016-04-08T17:30:56Z
+            [PAYMENTINFO_0_AMT] => 338.40
+            [PAYMENTINFO_0_TAXAMT] => 56.40
+            [PAYMENTINFO_0_CURRENCYCODE] => GBP
+            [PAYMENTINFO_0_PAYMENTSTATUS] => Pending
+            [PAYMENTINFO_0_PENDINGREASON] => authorization
+            [PAYMENTINFO_0_REASONCODE] => None
+            [PAYMENTINFO_0_PROTECTIONELIGIBILITY] => Ineligible
+            [PAYMENTINFO_0_SECUREMERCHANTACCOUNTID] => 92ALXAB9W69TS
+            [PAYMENTINFO_0_ERRORCODE] => 0
+            [PAYMENTINFO_0_ACK] => Success
+        )
+
+    [__pid] => 15570
+)
+
+2016-04-08T17:33:22+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 338.40
+            [auth_exp] => 10:30:56 May 07, 2016 PDT
+            [auth_id] => 3U814714GM490944E
+            [auth_status] => Pending
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => Rosemary
+            [invoice] => 100004735
+            [ipn_track_id] => cb41e0263bec1
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => Doyle
+            [mc_currency] => GBP
+            [mc_gross] => 338.40
+            [mc_gross_1] => 282.00
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 
+            [payer_email] => rdoyle@blueyonder.co.uk
+            [payer_id] => SWA8PFCZS6H6Y
+            [payer_status] => verified
+            [payment_date] => 10:30:56 Apr 08, 2016 PDT
+            [payment_gross] => 
+            [payment_status] => Pending
+            [payment_type] => instant
+            [pending_reason] => authorization
+            [protection_eligibility] => Ineligible
+            [quantity1] => 120
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 10
+            [residence_country] => GB
+            [tax] => 56.40
+            [tax1] => 0.00
+            [transaction_entity] => auth
+            [transaction_subject] => 
+            [txn_id] => 3U814714GM490944E
+            [txn_type] => cart
+            [verify_sign] => AUvorEmUiGOU65AWwW1.qnhC0EqiAeSlbj3gz-uD8MRK4DAHPrdsOaG1
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 15518
+)
+
+2016-04-13T13:51:47+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 30.00
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004742
+            [SOLUTIONTYPE] => Mark
+            [NOSHIPPING] => 1
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [ITEMAMT] => 25.00
+            [TAXAMT] => 5.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 10
+            [L_AMT0] => 2.50
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-25A362978P737294V
+            [TIMESTAMP] => 2016-04-13T13:49:21Z
+            [CORRELATIONID] => 339c074f4fdaf
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 21463915
+        )
+
+    [__pid] => 29656
+)
+
+2016-04-13T13:52:24+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [GetExpressCheckoutDetails] => Array
+        (
+            [TOKEN] => EC-25A362978P737294V
+            [METHOD] => GetExpressCheckoutDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-25A362978P737294V
+            [PHONENUM] => +44 1257270181
+            [BILLINGAGREEMENTACCEPTEDSTATUS] => 0
+            [CHECKOUTSTATUS] => PaymentActionNotInitiated
+            [TIMESTAMP] => 2016-04-13T13:49:58Z
+            [CORRELATIONID] => 52f969b7161e
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 21463915
+            [EMAIL] => mikereece@coach4business.co.uk
+            [PAYERID] => 28D94L3Z5VE7Q
+            [PAYERSTATUS] => verified
+            [FIRSTNAME] => Michael
+            [LASTNAME] => Reece
+            [COUNTRYCODE] => GB
+            [ADDRESSSTATUS] => Confirmed
+            [CURRENCYCODE] => GBP
+            [AMT] => 30.00
+            [ITEMAMT] => 25.00
+            [SHIPPINGAMT] => 0.00
+            [HANDLINGAMT] => 0.00
+            [TAXAMT] => 5.00
+            [INVNUM] => 100004742
+            [INSURANCEAMT] => 0.00
+            [SHIPDISCAMT] => 0.00
+            [INSURANCEOPTIONOFFERED] => false
+            [L_NAME0] => EPIC Credits
+            [L_NUMBER0] => EPIC1
+            [L_QTY0] => 10
+            [L_TAXAMT0] => 0.00
+            [L_AMT0] => 2.50
+            [PAYMENTREQUEST_0_CURRENCYCODE] => GBP
+            [PAYMENTREQUEST_0_AMT] => 30.00
+            [PAYMENTREQUEST_0_ITEMAMT] => 25.00
+            [PAYMENTREQUEST_0_SHIPPINGAMT] => 0.00
+            [PAYMENTREQUEST_0_HANDLINGAMT] => 0.00
+            [PAYMENTREQUEST_0_TAXAMT] => 5.00
+            [PAYMENTREQUEST_0_INVNUM] => 100004742
+            [PAYMENTREQUEST_0_INSURANCEAMT] => 0.00
+            [PAYMENTREQUEST_0_SHIPDISCAMT] => 0.00
+            [PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID] => david@disc-uk.co.uk
+            [PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED] => false
+            [PAYMENTREQUEST_0_ADDRESSSTATUS] => Confirmed
+            [L_PAYMENTREQUEST_0_NAME0] => EPIC Credits
+            [L_PAYMENTREQUEST_0_NUMBER0] => EPIC1
+            [L_PAYMENTREQUEST_0_QTY0] => 10
+            [L_PAYMENTREQUEST_0_TAXAMT0] => 0.00
+            [L_PAYMENTREQUEST_0_AMT0] => 2.50
+            [PAYMENTREQUESTINFO_0_ERRORCODE] => 0
+        )
+
+    [__pid] => 22725
+)
+
+2016-04-13T13:52:38+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [DoExpressCheckoutPayment] => Array
+        (
+            [TOKEN] => EC-25A362978P737294V
+            [PAYERID] => 28D94L3Z5VE7Q
+            [PAYMENTACTION] => Authorization
+            [AMT] => 30.00
+            [CURRENCYCODE] => GBP
+            [BUTTONSOURCE] => Magento_Cart_Community
+            [NOTIFYURL] => https://www.discassessment.co.uk/paypal/ipn/
+            [RETURNFMFDETAILS] => 1
+            [ITEMAMT] => 25.00
+            [TAXAMT] => 5.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 10
+            [L_AMT0] => 2.50
+            [METHOD] => DoExpressCheckoutPayment
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-25A362978P737294V
+            [SUCCESSPAGEREDIRECTREQUESTED] => false
+            [TIMESTAMP] => 2016-04-13T13:50:11Z
+            [CORRELATIONID] => 5d62d2ea7f3a6
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 21463915
+            [TRANSACTIONID] => 9BT35572G5390032A
+            [TRANSACTIONTYPE] => cart
+            [PAYMENTTYPE] => instant
+            [ORDERTIME] => 2016-04-13T13:50:11Z
+            [AMT] => 30.00
+            [TAXAMT] => 5.00
+            [CURRENCYCODE] => GBP
+            [PAYMENTSTATUS] => Pending
+            [PENDINGREASON] => authorization
+            [REASONCODE] => None
+            [PROTECTIONELIGIBILITY] => Ineligible
+            [INSURANCEOPTIONSELECTED] => false
+            [SHIPPINGOPTIONISDEFAULT] => false
+            [PAYMENTINFO_0_TRANSACTIONID] => 9BT35572G5390032A
+            [PAYMENTINFO_0_TRANSACTIONTYPE] => cart
+            [PAYMENTINFO_0_PAYMENTTYPE] => instant
+            [PAYMENTINFO_0_ORDERTIME] => 2016-04-13T13:50:11Z
+            [PAYMENTINFO_0_AMT] => 30.00
+            [PAYMENTINFO_0_TAXAMT] => 5.00
+            [PAYMENTINFO_0_CURRENCYCODE] => GBP
+            [PAYMENTINFO_0_PAYMENTSTATUS] => Pending
+            [PAYMENTINFO_0_PENDINGREASON] => authorization
+            [PAYMENTINFO_0_REASONCODE] => None
+            [PAYMENTINFO_0_PROTECTIONELIGIBILITY] => Ineligible
+            [PAYMENTINFO_0_SECUREMERCHANTACCOUNTID] => 92ALXAB9W69TS
+            [PAYMENTINFO_0_ERRORCODE] => 0
+            [PAYMENTINFO_0_ACK] => Success
+        )
+
+    [__pid] => 16817
+)
+
+2016-04-13T13:52:46+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 30.00
+            [auth_exp] => 06:50:11 May 12, 2016 PDT
+            [auth_id] => 9BT35572G5390032A
+            [auth_status] => Pending
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => Michael
+            [invoice] => 100004742
+            [ipn_track_id] => 5d62d2ea7f3a6
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => Reece
+            [mc_currency] => GBP
+            [mc_gross] => 30.00
+            [mc_gross_1] => 25.00
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 
+            [payer_email] => mikereece@coach4business.co.uk
+            [payer_id] => 28D94L3Z5VE7Q
+            [payer_status] => verified
+            [payment_date] => 06:50:11 Apr 13, 2016 PDT
+            [payment_gross] => 
+            [payment_status] => Pending
+            [payment_type] => instant
+            [pending_reason] => authorization
+            [protection_eligibility] => Ineligible
+            [quantity1] => 10
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 10
+            [residence_country] => GB
+            [tax] => 5.00
+            [tax1] => 0.00
+            [transaction_entity] => auth
+            [transaction_subject] => 
+            [txn_id] => 9BT35572G5390032A
+            [txn_type] => cart
+            [verify_sign] => AZnF9fJU7Uybz8cttqSxuYMWGl6SA0MhRaTcTLsZI3BKXKesr0rKhAbz
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 13557
+)
+
+2016-04-14T07:24:11+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 282.00
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004743
+            [SOLUTIONTYPE] => Mark
+            [NOSHIPPING] => 1
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [ITEMAMT] => 235.00
+            [TAXAMT] => 47.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 100
+            [L_AMT0] => 2.35
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-06316044M1969935C
+            [TIMESTAMP] => 2016-04-14T07:21:44Z
+            [CORRELATIONID] => e4ab1599dc442
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 21463915
+        )
+
+    [__pid] => 29656
+)
+
+2016-04-16T18:59:22+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 105.00
+            [auth_exp] => 11:56:26 Apr 16, 2016 PDT
+            [auth_id] => 9FH57900PH145870L
+            [auth_status] => Expired
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => EDGAR
+            [invoice] => 100004713
+            [ipn_track_id] => f11d6a089a3bc
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => RAMIREZ
+            [mc_currency] => GBP
+            [mc_gross] => 105.00
+            [mc_gross_1] => 105.00
+            [mc_handling] => 0.00
+            [mc_handling1] => 0.00
+            [mc_shipping] => 0.00
+            [mc_shipping1] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 
+            [payer_email] => edgarramirez@ologycoaching.com.mx
+            [payer_id] => VWTREZBE5C8NS
+            [payer_status] => verified
+            [payment_date] => 11:56:26 Mar 18, 2016 PDT
+            [payment_gross] => 
+            [payment_status] => Expired
+            [payment_type] => instant
+            [protection_eligibility] => Ineligible
+            [quantity1] => 100
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 0
+            [residence_country] => MX
+            [tax] => 0.00
+            [tax1] => 0.00
+            [transaction_entity] => auth
+            [transaction_subject] => 
+            [txn_id] => 9FH57900PH145870L
+            [txn_type] => cart
+            [verify_sign] => An5ns1Kso7MWUdW4ErQKJJJ4qi4-AXcKrC4JD-VT3u.mDd-DIhWz-yXF
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 28203
+)
+
+2016-04-19T04:29:16+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 120.75
+            [auth_exp] => 21:26:19 Apr 18, 2016 PDT
+            [auth_id] => 5Y7575259M9865326
+            [auth_status] => Expired
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => EDGAR
+            [invoice] => 100004714
+            [ipn_track_id] => ef78a4d7bfcd9
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => RAMIREZ
+            [mc_currency] => GBP
+            [mc_gross] => 120.75
+            [mc_gross_1] => 120.75
+            [mc_handling] => 0.00
+            [mc_handling1] => 0.00
+            [mc_shipping] => 0.00
+            [mc_shipping1] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 
+            [payer_email] => edgarramirez@ologycoaching.com.mx
+            [payer_id] => VWTREZBE5C8NS
+            [payer_status] => verified
+            [payment_date] => 21:26:19 Mar 20, 2016 PDT
+            [payment_gross] => 
+            [payment_status] => Expired
+            [payment_type] => instant
+            [protection_eligibility] => Ineligible
+            [quantity1] => 115
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 0
+            [residence_country] => MX
+            [tax] => 0.00
+            [tax1] => 0.00
+            [transaction_entity] => auth
+            [transaction_subject] => 
+            [txn_id] => 5Y7575259M9865326
+            [txn_type] => cart
+            [verify_sign] => AFcWxV21C7fd0v3bYYYRCpSSRl31A8uzkF2i6pCGX2eqyRKSybcuMuCN
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 9997
+)
+
+2016-04-19T12:39:09+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 90.00
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004748
+            [SOLUTIONTYPE] => Mark
+            [NOSHIPPING] => 1
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [ITEMAMT] => 75.00
+            [TAXAMT] => 15.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 30
+            [L_AMT0] => 2.50
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-7DD544907U759220R
+            [TIMESTAMP] => 2016-04-19T12:36:31Z
+            [CORRELATIONID] => 7bd00ac4dd317
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 21463915
+        )
+
+    [__pid] => 9202
+)
+
+2016-04-19T12:39:47+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [GetExpressCheckoutDetails] => Array
+        (
+            [TOKEN] => EC-7DD544907U759220R
+            [METHOD] => GetExpressCheckoutDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-7DD544907U759220R
+            [PHONENUM] => +44 7796146346
+            [BILLINGAGREEMENTACCEPTEDSTATUS] => 0
+            [CHECKOUTSTATUS] => PaymentActionNotInitiated
+            [TIMESTAMP] => 2016-04-19T12:37:09Z
+            [CORRELATIONID] => a746fb36cce91
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 21463915
+            [EMAIL] => tara@leadershipskills.co.uk
+            [PAYERID] => PXB774XNB5JBU
+            [PAYERSTATUS] => verified
+            [BUSINESS] => Leadership Skills Training Limited
+            [FIRSTNAME] => Tara
+            [LASTNAME] => Fennessy
+            [COUNTRYCODE] => GB
+            [ADDRESSSTATUS] => Confirmed
+            [CURRENCYCODE] => GBP
+            [AMT] => 90.00
+            [ITEMAMT] => 75.00
+            [SHIPPINGAMT] => 0.00
+            [HANDLINGAMT] => 0.00
+            [TAXAMT] => 15.00
+            [INVNUM] => 100004748
+            [INSURANCEAMT] => 0.00
+            [SHIPDISCAMT] => 0.00
+            [INSURANCEOPTIONOFFERED] => false
+            [L_NAME0] => EPIC Credits
+            [L_NUMBER0] => EPIC1
+            [L_QTY0] => 30
+            [L_TAXAMT0] => 0.00
+            [L_AMT0] => 2.50
+            [PAYMENTREQUEST_0_CURRENCYCODE] => GBP
+            [PAYMENTREQUEST_0_AMT] => 90.00
+            [PAYMENTREQUEST_0_ITEMAMT] => 75.00
+            [PAYMENTREQUEST_0_SHIPPINGAMT] => 0.00
+            [PAYMENTREQUEST_0_HANDLINGAMT] => 0.00
+            [PAYMENTREQUEST_0_TAXAMT] => 15.00
+            [PAYMENTREQUEST_0_INVNUM] => 100004748
+            [PAYMENTREQUEST_0_INSURANCEAMT] => 0.00
+            [PAYMENTREQUEST_0_SHIPDISCAMT] => 0.00
+            [PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID] => david@disc-uk.co.uk
+            [PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED] => false
+            [PAYMENTREQUEST_0_ADDRESSSTATUS] => Confirmed
+            [L_PAYMENTREQUEST_0_NAME0] => EPIC Credits
+            [L_PAYMENTREQUEST_0_NUMBER0] => EPIC1
+            [L_PAYMENTREQUEST_0_QTY0] => 30
+            [L_PAYMENTREQUEST_0_TAXAMT0] => 0.00
+            [L_PAYMENTREQUEST_0_AMT0] => 2.50
+            [PAYMENTREQUESTINFO_0_ERRORCODE] => 0
+        )
+
+    [__pid] => 9257
+)
+
+2016-04-19T12:39:56+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [DoExpressCheckoutPayment] => Array
+        (
+            [TOKEN] => EC-7DD544907U759220R
+            [PAYERID] => PXB774XNB5JBU
+            [PAYMENTACTION] => Authorization
+            [AMT] => 90.00
+            [CURRENCYCODE] => GBP
+            [BUTTONSOURCE] => Magento_Cart_Community
+            [NOTIFYURL] => https://www.discassessment.co.uk/paypal/ipn/
+            [RETURNFMFDETAILS] => 1
+            [ITEMAMT] => 75.00
+            [TAXAMT] => 15.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 30
+            [L_AMT0] => 2.50
+            [METHOD] => DoExpressCheckoutPayment
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-7DD544907U759220R
+            [SUCCESSPAGEREDIRECTREQUESTED] => false
+            [TIMESTAMP] => 2016-04-19T12:37:18Z
+            [CORRELATIONID] => 7b5088d8a9563
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 21463915
+            [TRANSACTIONID] => 9AL94631WX138783C
+            [TRANSACTIONTYPE] => cart
+            [PAYMENTTYPE] => instant
+            [ORDERTIME] => 2016-04-19T12:37:17Z
+            [AMT] => 90.00
+            [TAXAMT] => 15.00
+            [CURRENCYCODE] => GBP
+            [PAYMENTSTATUS] => Pending
+            [PENDINGREASON] => authorization
+            [REASONCODE] => None
+            [PROTECTIONELIGIBILITY] => Ineligible
+            [INSURANCEOPTIONSELECTED] => false
+            [SHIPPINGOPTIONISDEFAULT] => false
+            [PAYMENTINFO_0_TRANSACTIONID] => 9AL94631WX138783C
+            [PAYMENTINFO_0_TRANSACTIONTYPE] => cart
+            [PAYMENTINFO_0_PAYMENTTYPE] => instant
+            [PAYMENTINFO_0_ORDERTIME] => 2016-04-19T12:37:17Z
+            [PAYMENTINFO_0_AMT] => 90.00
+            [PAYMENTINFO_0_TAXAMT] => 15.00
+            [PAYMENTINFO_0_CURRENCYCODE] => GBP
+            [PAYMENTINFO_0_PAYMENTSTATUS] => Pending
+            [PAYMENTINFO_0_PENDINGREASON] => authorization
+            [PAYMENTINFO_0_REASONCODE] => None
+            [PAYMENTINFO_0_PROTECTIONELIGIBILITY] => Ineligible
+            [PAYMENTINFO_0_SECUREMERCHANTACCOUNTID] => 92ALXAB9W69TS
+            [PAYMENTINFO_0_ERRORCODE] => 0
+            [PAYMENTINFO_0_ACK] => Success
+        )
+
+    [__pid] => 759
+)
+
+2016-04-19T12:40:04+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 90.00
+            [auth_exp] => 05:37:17 May 18, 2016 PDT
+            [auth_id] => 9AL94631WX138783C
+            [auth_status] => Pending
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => Tara
+            [invoice] => 100004748
+            [ipn_track_id] => 7b5088d8a9563
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => Fennessy
+            [mc_currency] => GBP
+            [mc_gross] => 90.00
+            [mc_gross_1] => 75.00
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 
+            [payer_business_name] => Leadership Skills Training Limited
+            [payer_email] => tara@leadershipskills.co.uk
+            [payer_id] => PXB774XNB5JBU
+            [payer_status] => verified
+            [payment_date] => 05:37:17 Apr 19, 2016 PDT
+            [payment_gross] => 
+            [payment_status] => Pending
+            [payment_type] => instant
+            [pending_reason] => authorization
+            [protection_eligibility] => Ineligible
+            [quantity1] => 30
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 10
+            [residence_country] => GB
+            [tax] => 15.00
+            [tax1] => 0.00
+            [transaction_entity] => auth
+            [transaction_subject] => 
+            [txn_id] => 9AL94631WX138783C
+            [txn_type] => cart
+            [verify_sign] => Ak6Qj1jpeYu7VBxie67MZzb1s41lAg6.qs0VgHNLAhpcCtg92ITxGpsH
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 25754
+)
+
+2016-04-19T23:18:30+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 330.75
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004750
+            [SOLUTIONTYPE] => Mark
+            [NOSHIPPING] => 1
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [ITEMAMT] => 330.75
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 315
+            [L_AMT0] => 1.05
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-2JB070662T780193X
+            [TIMESTAMP] => 2016-04-19T23:15:52Z
+            [CORRELATIONID] => 9dcbbbaec9fef
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 21463915
+        )
+
+    [__pid] => 25753
+)
+
+2016-04-19T23:19:03+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [GetExpressCheckoutDetails] => Array
+        (
+            [TOKEN] => EC-2JB070662T780193X
+            [METHOD] => GetExpressCheckoutDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-2JB070662T780193X
+            [PHONENUM] => +52 5535064357
+            [BILLINGAGREEMENTACCEPTEDSTATUS] => 0
+            [CHECKOUTSTATUS] => PaymentActionNotInitiated
+            [TIMESTAMP] => 2016-04-19T23:16:24Z
+            [CORRELATIONID] => 859e1f30ba85c
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 21463915
+            [EMAIL] => edgarramirez@ologycoaching.com.mx
+            [PAYERID] => VWTREZBE5C8NS
+            [PAYERSTATUS] => verified
+            [FIRSTNAME] => EDGAR
+            [LASTNAME] => RAMIREZ
+            [COUNTRYCODE] => MX
+            [ADDRESSSTATUS] => Confirmed
+            [CURRENCYCODE] => GBP
+            [AMT] => 330.75
+            [ITEMAMT] => 330.75
+            [SHIPPINGAMT] => 0.00
+            [HANDLINGAMT] => 0.00
+            [TAXAMT] => 0.00
+            [INVNUM] => 100004750
+            [INSURANCEAMT] => 0.00
+            [SHIPDISCAMT] => 0.00
+            [INSURANCEOPTIONOFFERED] => false
+            [L_NAME0] => EPIC Credits
+            [L_NUMBER0] => EPIC1
+            [L_QTY0] => 315
+            [L_TAXAMT0] => 0.00
+            [L_AMT0] => 1.05
+            [PAYMENTREQUEST_0_CURRENCYCODE] => GBP
+            [PAYMENTREQUEST_0_AMT] => 330.75
+            [PAYMENTREQUEST_0_ITEMAMT] => 330.75
+            [PAYMENTREQUEST_0_SHIPPINGAMT] => 0.00
+            [PAYMENTREQUEST_0_HANDLINGAMT] => 0.00
+            [PAYMENTREQUEST_0_TAXAMT] => 0.00
+            [PAYMENTREQUEST_0_INVNUM] => 100004750
+            [PAYMENTREQUEST_0_INSURANCEAMT] => 0.00
+            [PAYMENTREQUEST_0_SHIPDISCAMT] => 0.00
+            [PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID] => david@disc-uk.co.uk
+            [PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED] => false
+            [PAYMENTREQUEST_0_ADDRESSSTATUS] => Confirmed
+            [L_PAYMENTREQUEST_0_NAME0] => EPIC Credits
+            [L_PAYMENTREQUEST_0_NUMBER0] => EPIC1
+            [L_PAYMENTREQUEST_0_QTY0] => 315
+            [L_PAYMENTREQUEST_0_TAXAMT0] => 0.00
+            [L_PAYMENTREQUEST_0_AMT0] => 1.05
+            [PAYMENTREQUESTINFO_0_ERRORCODE] => 0
+        )
+
+    [__pid] => 6106
+)
+
+2016-04-19T23:19:24+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [DoExpressCheckoutPayment] => Array
+        (
+            [TOKEN] => EC-2JB070662T780193X
+            [PAYERID] => VWTREZBE5C8NS
+            [PAYMENTACTION] => Authorization
+            [AMT] => 330.75
+            [CURRENCYCODE] => GBP
+            [BUTTONSOURCE] => Magento_Cart_Community
+            [NOTIFYURL] => https://www.discassessment.co.uk/paypal/ipn/
+            [RETURNFMFDETAILS] => 1
+            [ITEMAMT] => 330.75
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 315
+            [L_AMT0] => 1.05
+            [METHOD] => DoExpressCheckoutPayment
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-2JB070662T780193X
+            [SUCCESSPAGEREDIRECTREQUESTED] => false
+            [TIMESTAMP] => 2016-04-19T23:16:45Z
+            [CORRELATIONID] => b63114e798720
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 21463915
+            [TRANSACTIONID] => 4WD11292RS9040518
+            [TRANSACTIONTYPE] => cart
+            [PAYMENTTYPE] => instant
+            [ORDERTIME] => 2016-04-19T23:16:45Z
+            [AMT] => 330.75
+            [TAXAMT] => 0.00
+            [CURRENCYCODE] => GBP
+            [PAYMENTSTATUS] => Pending
+            [PENDINGREASON] => authorization
+            [REASONCODE] => None
+            [PROTECTIONELIGIBILITY] => Ineligible
+            [INSURANCEOPTIONSELECTED] => false
+            [SHIPPINGOPTIONISDEFAULT] => false
+            [PAYMENTINFO_0_TRANSACTIONID] => 4WD11292RS9040518
+            [PAYMENTINFO_0_TRANSACTIONTYPE] => cart
+            [PAYMENTINFO_0_PAYMENTTYPE] => instant
+            [PAYMENTINFO_0_ORDERTIME] => 2016-04-19T23:16:45Z
+            [PAYMENTINFO_0_AMT] => 330.75
+            [PAYMENTINFO_0_TAXAMT] => 0.00
+            [PAYMENTINFO_0_CURRENCYCODE] => GBP
+            [PAYMENTINFO_0_PAYMENTSTATUS] => Pending
+            [PAYMENTINFO_0_PENDINGREASON] => authorization
+            [PAYMENTINFO_0_REASONCODE] => None
+            [PAYMENTINFO_0_PROTECTIONELIGIBILITY] => Ineligible
+            [PAYMENTINFO_0_SECUREMERCHANTACCOUNTID] => 92ALXAB9W69TS
+            [PAYMENTINFO_0_ERRORCODE] => 0
+            [PAYMENTINFO_0_ACK] => Success
+        )
+
+    [__pid] => 759
+)
+
+2016-04-19T23:19:33+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 330.75
+            [auth_exp] => 16:16:45 May 18, 2016 PDT
+            [auth_id] => 4WD11292RS9040518
+            [auth_status] => Pending
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => EDGAR
+            [invoice] => 100004750
+            [ipn_track_id] => b63114e798720
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => RAMIREZ
+            [mc_currency] => GBP
+            [mc_gross] => 330.75
+            [mc_gross_1] => 330.75
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 
+            [payer_email] => edgarramirez@ologycoaching.com.mx
+            [payer_id] => VWTREZBE5C8NS
+            [payer_status] => verified
+            [payment_date] => 16:16:45 Apr 19, 2016 PDT
+            [payment_gross] => 
+            [payment_status] => Pending
+            [payment_type] => instant
+            [pending_reason] => authorization
+            [protection_eligibility] => Ineligible
+            [quantity1] => 315
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 10
+            [residence_country] => MX
+            [tax] => 0.00
+            [tax1] => 0.00
+            [transaction_entity] => auth
+            [transaction_subject] => 
+            [txn_id] => 4WD11292RS9040518
+            [txn_type] => cart
+            [verify_sign] => AA8BxjB3Ch8MWNJRrWVnvlDe7S5aAyTy0yPpUGo.8-yW8aeOc-jgcDhW
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 1753
+)
+
+2016-04-20T09:19:18+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 592.20
+            [auth_exp] => 02:16:14 Apr 20, 2016 PDT
+            [auth_id] => 6RR48474PL176634V
+            [auth_status] => Expired
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => Tara
+            [invoice] => 100004715
+            [ipn_track_id] => 3156dad99652
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => Fennessy
+            [mc_currency] => GBP
+            [mc_gross] => 592.20
+            [mc_gross_1] => 493.50
+            [mc_handling] => 0.00
+            [mc_handling1] => 0.00
+            [mc_shipping] => 0.00
+            [mc_shipping1] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 
+            [payer_business_name] => Leadership Skills Training Limited
+            [payer_email] => tara@leadershipskills.co.uk
+            [payer_id] => PXB774XNB5JBU
+            [payer_status] => verified
+            [payment_date] => 02:16:14 Mar 22, 2016 PDT
+            [payment_gross] => 
+            [payment_status] => Expired
+            [payment_type] => instant
+            [protection_eligibility] => Ineligible
+            [quantity1] => 210
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 0
+            [residence_country] => GB
+            [tax] => 98.70
+            [tax1] => 0.00
+            [transaction_entity] => auth
+            [transaction_subject] => 
+            [txn_id] => 6RR48474PL176634V
+            [txn_type] => cart
+            [verify_sign] => AFcWxV21C7fd0v3bYYYRCpSSRl31AEXZCm7es8LVLKUqM5qLEIF0R01c
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 9996
+)
+
+2016-04-20T10:53:00+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 45.00
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004751
+            [SOLUTIONTYPE] => Mark
+            [NOSHIPPING] => 1
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [ITEMAMT] => 37.50
+            [TAXAMT] => 7.50
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 15
+            [L_AMT0] => 2.50
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-4F241823CW731293H
+            [TIMESTAMP] => 2016-04-20T10:50:21Z
+            [CORRELATIONID] => 2f258c50c8aba
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 21463915
+        )
+
+    [__pid] => 6102
+)
+
+2016-04-20T10:53:35+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [GetExpressCheckoutDetails] => Array
+        (
+            [TOKEN] => EC-4F241823CW731293H
+            [METHOD] => GetExpressCheckoutDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-4F241823CW731293H
+            [PHONENUM] => +44 7450997145
+            [BILLINGAGREEMENTACCEPTEDSTATUS] => 0
+            [CHECKOUTSTATUS] => PaymentActionNotInitiated
+            [TIMESTAMP] => 2016-04-20T10:50:55Z
+            [CORRELATIONID] => b00649b4c9c44
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 21463915
+            [EMAIL] => orlafeeney@hotmail.com
+            [PAYERID] => 8FXPK48ALHRWY
+            [PAYERSTATUS] => verified
+            [FIRSTNAME] => Orla
+            [LASTNAME] => Feeney
+            [COUNTRYCODE] => GB
+            [ADDRESSSTATUS] => Confirmed
+            [CURRENCYCODE] => GBP
+            [AMT] => 45.00
+            [ITEMAMT] => 37.50
+            [SHIPPINGAMT] => 0.00
+            [HANDLINGAMT] => 0.00
+            [TAXAMT] => 7.50
+            [INVNUM] => 100004751
+            [INSURANCEAMT] => 0.00
+            [SHIPDISCAMT] => 0.00
+            [INSURANCEOPTIONOFFERED] => false
+            [L_NAME0] => EPIC Credits
+            [L_NUMBER0] => EPIC1
+            [L_QTY0] => 15
+            [L_TAXAMT0] => 0.00
+            [L_AMT0] => 2.50
+            [PAYMENTREQUEST_0_CURRENCYCODE] => GBP
+            [PAYMENTREQUEST_0_AMT] => 45.00
+            [PAYMENTREQUEST_0_ITEMAMT] => 37.50
+            [PAYMENTREQUEST_0_SHIPPINGAMT] => 0.00
+            [PAYMENTREQUEST_0_HANDLINGAMT] => 0.00
+            [PAYMENTREQUEST_0_TAXAMT] => 7.50
+            [PAYMENTREQUEST_0_INVNUM] => 100004751
+            [PAYMENTREQUEST_0_INSURANCEAMT] => 0.00
+            [PAYMENTREQUEST_0_SHIPDISCAMT] => 0.00
+            [PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID] => david@disc-uk.co.uk
+            [PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED] => false
+            [PAYMENTREQUEST_0_ADDRESSSTATUS] => Confirmed
+            [L_PAYMENTREQUEST_0_NAME0] => EPIC Credits
+            [L_PAYMENTREQUEST_0_NUMBER0] => EPIC1
+            [L_PAYMENTREQUEST_0_QTY0] => 15
+            [L_PAYMENTREQUEST_0_TAXAMT0] => 0.00
+            [L_PAYMENTREQUEST_0_AMT0] => 2.50
+            [PAYMENTREQUESTINFO_0_ERRORCODE] => 0
+        )
+
+    [__pid] => 1753
+)
+
+2016-04-20T10:53:49+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [DoExpressCheckoutPayment] => Array
+        (
+            [TOKEN] => EC-4F241823CW731293H
+            [PAYERID] => 8FXPK48ALHRWY
+            [PAYMENTACTION] => Authorization
+            [AMT] => 45.00
+            [CURRENCYCODE] => GBP
+            [BUTTONSOURCE] => Magento_Cart_Community
+            [NOTIFYURL] => https://www.discassessment.co.uk/paypal/ipn/
+            [RETURNFMFDETAILS] => 1
+            [ITEMAMT] => 37.50
+            [TAXAMT] => 7.50
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 15
+            [L_AMT0] => 2.50
+            [METHOD] => DoExpressCheckoutPayment
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-4F241823CW731293H
+            [SUCCESSPAGEREDIRECTREQUESTED] => false
+            [TIMESTAMP] => 2016-04-20T10:51:09Z
+            [CORRELATIONID] => 78e3894829050
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 21463915
+            [TRANSACTIONID] => 7DG72913YY8294424
+            [TRANSACTIONTYPE] => cart
+            [PAYMENTTYPE] => instant
+            [ORDERTIME] => 2016-04-20T10:51:08Z
+            [AMT] => 45.00
+            [TAXAMT] => 7.50
+            [CURRENCYCODE] => GBP
+            [PAYMENTSTATUS] => Pending
+            [PENDINGREASON] => authorization
+            [REASONCODE] => None
+            [PROTECTIONELIGIBILITY] => Ineligible
+            [INSURANCEOPTIONSELECTED] => false
+            [SHIPPINGOPTIONISDEFAULT] => false
+            [PAYMENTINFO_0_TRANSACTIONID] => 7DG72913YY8294424
+            [PAYMENTINFO_0_TRANSACTIONTYPE] => cart
+            [PAYMENTINFO_0_PAYMENTTYPE] => instant
+            [PAYMENTINFO_0_ORDERTIME] => 2016-04-20T10:51:08Z
+            [PAYMENTINFO_0_AMT] => 45.00
+            [PAYMENTINFO_0_TAXAMT] => 7.50
+            [PAYMENTINFO_0_CURRENCYCODE] => GBP
+            [PAYMENTINFO_0_PAYMENTSTATUS] => Pending
+            [PAYMENTINFO_0_PENDINGREASON] => authorization
+            [PAYMENTINFO_0_REASONCODE] => None
+            [PAYMENTINFO_0_PROTECTIONELIGIBILITY] => Ineligible
+            [PAYMENTINFO_0_SECUREMERCHANTACCOUNTID] => 92ALXAB9W69TS
+            [PAYMENTINFO_0_ERRORCODE] => 0
+            [PAYMENTINFO_0_ACK] => Success
+        )
+
+    [__pid] => 1752
+)
+
+2016-04-20T10:53:59+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 45.00
+            [auth_exp] => 03:51:08 May 19, 2016 PDT
+            [auth_id] => 7DG72913YY8294424
+            [auth_status] => Pending
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => Orla
+            [invoice] => 100004751
+            [ipn_track_id] => 78e3894829050
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => Feeney
+            [mc_currency] => GBP
+            [mc_gross] => 45.00
+            [mc_gross_1] => 37.50
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 
+            [payer_email] => orlafeeney@hotmail.com
+            [payer_id] => 8FXPK48ALHRWY
+            [payer_status] => verified
+            [payment_date] => 03:51:08 Apr 20, 2016 PDT
+            [payment_gross] => 
+            [payment_status] => Pending
+            [payment_type] => instant
+            [pending_reason] => authorization
+            [protection_eligibility] => Ineligible
+            [quantity1] => 15
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 10
+            [residence_country] => GB
+            [tax] => 7.50
+            [tax1] => 0.00
+            [transaction_entity] => auth
+            [transaction_subject] => 
+            [txn_id] => 7DG72913YY8294424
+            [txn_type] => cart
+            [verify_sign] => ANQ-SoLP8ghQC5IsaxLVDxbpzxN6AjyzuTuWYmeECvfbQCxnRbRdqOmN
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 9997
+)
+
+2016-04-20T14:45:34+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 3.00
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004752
+            [SOLUTIONTYPE] => Mark
+            [NOSHIPPING] => 1
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [ITEMAMT] => 2.50
+            [TAXAMT] => 0.50
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 1
+            [L_AMT0] => 2.50
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-60322228GD251124H
+            [TIMESTAMP] => 2016-04-20T14:42:54Z
+            [CORRELATIONID] => 8d2395d8e4676
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 21463915
+        )
+
+    [__pid] => 4331
+)
+
+2016-05-06T05:17:58+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 210.00
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004759
+            [SOLUTIONTYPE] => Mark
+            [NOSHIPPING] => 1
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [ITEMAMT] => 210.00
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EDW1
+            [L_NAME0] => Everything DiSC Workplace® Profile
+            [L_QTY0] => 4
+            [L_AMT0] => 52.50
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-2XU71719DG020430F
+            [TIMESTAMP] => 2016-05-06T05:14:47Z
+            [CORRELATIONID] => eba2c81543e4c
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 21799703
+        )
+
+    [__pid] => 2176
+)
+
+2016-05-07T00:05:33+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 78.75
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004763
+            [SOLUTIONTYPE] => Mark
+            [NOSHIPPING] => 1
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [ITEMAMT] => 78.75
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 75
+            [L_AMT0] => 1.05
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-2CM41856YF298794R
+            [TIMESTAMP] => 2016-05-07T00:02:21Z
+            [CORRELATIONID] => d2381ea5d8050
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 21799703
+        )
+
+    [__pid] => 2174
+)
+
+2016-05-07T00:05:50+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [GetExpressCheckoutDetails] => Array
+        (
+            [TOKEN] => EC-2CM41856YF298794R
+            [METHOD] => GetExpressCheckoutDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-2CM41856YF298794R
+            [PHONENUM] => +52 5535064357
+            [BILLINGAGREEMENTACCEPTEDSTATUS] => 0
+            [CHECKOUTSTATUS] => PaymentActionNotInitiated
+            [TIMESTAMP] => 2016-05-07T00:02:38Z
+            [CORRELATIONID] => bb6463237078
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 21799703
+            [EMAIL] => edgarramirez@ologycoaching.com.mx
+            [PAYERID] => VWTREZBE5C8NS
+            [PAYERSTATUS] => verified
+            [FIRSTNAME] => EDGAR
+            [LASTNAME] => RAMIREZ
+            [COUNTRYCODE] => MX
+            [ADDRESSSTATUS] => Confirmed
+            [CURRENCYCODE] => GBP
+            [AMT] => 78.75
+            [ITEMAMT] => 78.75
+            [SHIPPINGAMT] => 0.00
+            [HANDLINGAMT] => 0.00
+            [TAXAMT] => 0.00
+            [INVNUM] => 100004763
+            [INSURANCEAMT] => 0.00
+            [SHIPDISCAMT] => 0.00
+            [INSURANCEOPTIONOFFERED] => false
+            [L_NAME0] => EPIC Credits
+            [L_NUMBER0] => EPIC1
+            [L_QTY0] => 75
+            [L_TAXAMT0] => 0.00
+            [L_AMT0] => 1.05
+            [PAYMENTREQUEST_0_CURRENCYCODE] => GBP
+            [PAYMENTREQUEST_0_AMT] => 78.75
+            [PAYMENTREQUEST_0_ITEMAMT] => 78.75
+            [PAYMENTREQUEST_0_SHIPPINGAMT] => 0.00
+            [PAYMENTREQUEST_0_HANDLINGAMT] => 0.00
+            [PAYMENTREQUEST_0_TAXAMT] => 0.00
+            [PAYMENTREQUEST_0_INVNUM] => 100004763
+            [PAYMENTREQUEST_0_INSURANCEAMT] => 0.00
+            [PAYMENTREQUEST_0_SHIPDISCAMT] => 0.00
+            [PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID] => david@disc-uk.co.uk
+            [PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED] => false
+            [PAYMENTREQUEST_0_ADDRESSSTATUS] => Confirmed
+            [L_PAYMENTREQUEST_0_NAME0] => EPIC Credits
+            [L_PAYMENTREQUEST_0_NUMBER0] => EPIC1
+            [L_PAYMENTREQUEST_0_QTY0] => 75
+            [L_PAYMENTREQUEST_0_TAXAMT0] => 0.00
+            [L_PAYMENTREQUEST_0_AMT0] => 1.05
+            [PAYMENTREQUESTINFO_0_ERRORCODE] => 0
+        )
+
+    [__pid] => 2179
+)
+
+2016-05-07T08:17:09+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 90.00
+            [auth_exp] => 01:13:33 May 07, 2016 PDT
+            [auth_id] => 6M378666FJ708102N
+            [auth_status] => Expired
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => Tara
+            [invoice] => 100004731
+            [ipn_track_id] => adccf16293c98
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => Fennessy
+            [mc_currency] => GBP
+            [mc_gross] => 90.00
+            [mc_gross_1] => 75.00
+            [mc_handling] => 0.00
+            [mc_handling1] => 0.00
+            [mc_shipping] => 0.00
+            [mc_shipping1] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 
+            [payer_business_name] => Leadership Skills Training Limited
+            [payer_email] => tara@leadershipskills.co.uk
+            [payer_id] => PXB774XNB5JBU
+            [payer_status] => verified
+            [payment_date] => 01:13:33 Apr 08, 2016 PDT
+            [payment_gross] => 
+            [payment_status] => Expired
+            [payment_type] => instant
+            [protection_eligibility] => Ineligible
+            [quantity1] => 30
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 0
+            [residence_country] => GB
+            [tax] => 15.00
+            [tax1] => 0.00
+            [transaction_entity] => auth
+            [transaction_subject] => 
+            [txn_id] => 6M378666FJ708102N
+            [txn_type] => cart
+            [verify_sign] => AFcWxV21C7fd0v3bYYYRCpSSRl31AaDa80Lw9-uRmI12EIgvRDe4TlRh
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 27074
+)
+
+2016-05-07T10:38:34+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 330.75
+            [auth_exp] => 16:16:45 May 18, 2016 PDT
+            [auth_id] => 4WD11292RS9040518
+            [auth_status] => Completed
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => EDGAR
+            [invoice] => 100004750
+            [ipn_track_id] => 8defbe2631245
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => RAMIREZ
+            [mc_currency] => GBP
+            [mc_fee] => 17.40
+            [mc_gross] => 330.75
+            [mc_gross_1] => 330.75
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 4WD11292RS9040518
+            [payer_email] => edgarramirez@ologycoaching.com.mx
+            [payer_id] => VWTREZBE5C8NS
+            [payer_status] => verified
+            [payment_date] => 03:35:15 May 07, 2016 PDT
+            [payment_fee] => 
+            [payment_gross] => 
+            [payment_status] => Completed
+            [payment_type] => instant
+            [protection_eligibility] => Ineligible
+            [quantity1] => 315
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 0
+            [residence_country] => MX
+            [tax] => 0.00
+            [transaction_entity] => payment
+            [transaction_subject] => 
+            [txn_id] => 1N9533858S567113R
+            [txn_type] => cart
+            [verify_sign] => AZenMl5LsTknAP1wvQY.IJnuNDytAFQccIAMUfwpzFfWvePX-3AfqRFd
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 2183
+)
+
+2016-05-07T10:40:01+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 338.40
+            [auth_exp] => 10:30:56 May 07, 2016 PDT
+            [auth_id] => 3U814714GM490944E
+            [auth_status] => Completed
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => Rosemary
+            [invoice] => 100004735
+            [ipn_track_id] => de1a5153b2d9c
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => Doyle
+            [mc_currency] => GBP
+            [mc_fee] => 11.71
+            [mc_gross] => 338.40
+            [mc_gross_1] => 282.00
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 3U814714GM490944E
+            [payer_email] => rdoyle@blueyonder.co.uk
+            [payer_id] => SWA8PFCZS6H6Y
+            [payer_status] => verified
+            [payment_date] => 03:36:44 May 07, 2016 PDT
+            [payment_fee] => 
+            [payment_gross] => 
+            [payment_status] => Completed
+            [payment_type] => instant
+            [protection_eligibility] => Ineligible
+            [quantity1] => 120
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 0
+            [residence_country] => GB
+            [tax] => 56.40
+            [transaction_entity] => payment
+            [transaction_subject] => 
+            [txn_id] => 5XH44406EJ568810X
+            [txn_type] => cart
+            [verify_sign] => APCqVycfAgSclzRER7gC2tKNz6J8ApsS.EFWhf0P1s.X6dYAKrsEt-5O
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 2176
+)
+
+2016-05-07T10:40:56+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 30.00
+            [auth_exp] => 06:50:11 May 12, 2016 PDT
+            [auth_id] => 9BT35572G5390032A
+            [auth_status] => Completed
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => Michael
+            [invoice] => 100004742
+            [ipn_track_id] => 6fdfb4122bdfd
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => Reece
+            [mc_currency] => GBP
+            [mc_fee] => 1.22
+            [mc_gross] => 30.00
+            [mc_gross_1] => 25.00
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 9BT35572G5390032A
+            [payer_email] => mikereece@coach4business.co.uk
+            [payer_id] => 28D94L3Z5VE7Q
+            [payer_status] => verified
+            [payment_date] => 03:37:37 May 07, 2016 PDT
+            [payment_fee] => 
+            [payment_gross] => 
+            [payment_status] => Completed
+            [payment_type] => instant
+            [protection_eligibility] => Ineligible
+            [quantity1] => 10
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 0
+            [residence_country] => GB
+            [tax] => 5.00
+            [transaction_entity] => payment
+            [transaction_subject] => 
+            [txn_id] => 5S627404CY022135B
+            [txn_type] => cart
+            [verify_sign] => AXBLrVJmA-PFtzNaYXEgSK0UIgknAxzGuEMrpJKC7xRtxias3HlG0PWJ
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 11655
+)
+
+2016-05-07T10:41:31+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 90.00
+            [auth_exp] => 05:37:17 May 18, 2016 PDT
+            [auth_id] => 9AL94631WX138783C
+            [auth_status] => Completed
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => Tara
+            [invoice] => 100004748
+            [ipn_track_id] => 65c4ea9041ee9
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => Fennessy
+            [mc_currency] => GBP
+            [mc_fee] => 3.26
+            [mc_gross] => 90.00
+            [mc_gross_1] => 75.00
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 9AL94631WX138783C
+            [payer_business_name] => Leadership Skills Training Limited
+            [payer_email] => tara@leadershipskills.co.uk
+            [payer_id] => PXB774XNB5JBU
+            [payer_status] => verified
+            [payment_date] => 03:38:12 May 07, 2016 PDT
+            [payment_fee] => 
+            [payment_gross] => 
+            [payment_status] => Completed
+            [payment_type] => instant
+            [protection_eligibility] => Ineligible
+            [quantity1] => 30
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 0
+            [residence_country] => GB
+            [tax] => 15.00
+            [transaction_entity] => payment
+            [transaction_subject] => 
+            [txn_id] => 0GP723375S465601P
+            [txn_type] => cart
+            [verify_sign] => AGLrrSRZMM1d-2h15bc.MLFXy52cAcQu8gq9aKwWHzq12EZvHS7rFJVb
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 6176
+)
+
+2016-05-07T10:42:13+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 45.00
+            [auth_exp] => 03:51:08 May 19, 2016 PDT
+            [auth_id] => 7DG72913YY8294424
+            [auth_status] => Completed
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [discount] => 0.00
+            [first_name] => Orla
+            [insurance_amount] => 0.00
+            [invoice] => 100004751
+            [ipn_track_id] => 11732be6d9573
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => Feeney
+            [mc_currency] => GBP
+            [mc_fee] => 1.73
+            [mc_gross] => 45.00
+            [mc_gross_1] => 37.50
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 7DG72913YY8294424
+            [payer_email] => orlafeeney@hotmail.com
+            [payer_id] => 8FXPK48ALHRWY
+            [payer_status] => verified
+            [payment_date] => 03:38:51 May 07, 2016 PDT
+            [payment_fee] => 
+            [payment_gross] => 
+            [payment_status] => Completed
+            [payment_type] => instant
+            [protection_eligibility] => Ineligible
+            [quantity1] => 15
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 0
+            [residence_country] => GB
+            [shipping_discount] => 0.00
+            [shipping_method] => Default
+            [tax] => 7.50
+            [transaction_entity] => payment
+            [transaction_subject] => 
+            [txn_id] => 5DP12099X6418250C
+            [txn_type] => cart
+            [verify_sign] => AviJQ1kAHsh8Z4yfLqRSQJL7qwBuA6y2bCASFkvUBQC98T6eGxDZJu9F
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 2186
+)
+
+2016-05-09T17:07:35+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 78.75
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004763
+            [SOLUTIONTYPE] => Mark
+            [NOSHIPPING] => 1
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [ITEMAMT] => 78.75
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 75
+            [L_AMT0] => 1.05
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-68Y42210VT911770K
+            [TIMESTAMP] => 2016-05-09T17:04:17Z
+            [CORRELATIONID] => c9ecc0ba5be72
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 000000
+        )
+
+    [__pid] => 2937
+)
+
+2016-05-09T17:08:14+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [GetExpressCheckoutDetails] => Array
+        (
+            [TOKEN] => EC-68Y42210VT911770K
+            [METHOD] => GetExpressCheckoutDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-68Y42210VT911770K
+            [PHONENUM] => +52 5535064357
+            [BILLINGAGREEMENTACCEPTEDSTATUS] => 0
+            [CHECKOUTSTATUS] => PaymentActionNotInitiated
+            [TIMESTAMP] => 2016-05-09T17:04:57Z
+            [CORRELATIONID] => ba9c0ac252106
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 000000
+            [EMAIL] => edgarramirez@ologycoaching.com.mx
+            [PAYERID] => VWTREZBE5C8NS
+            [PAYERSTATUS] => verified
+            [FIRSTNAME] => EDGAR
+            [LASTNAME] => RAMIREZ
+            [COUNTRYCODE] => MX
+            [ADDRESSSTATUS] => Confirmed
+            [CURRENCYCODE] => GBP
+            [AMT] => 78.75
+            [ITEMAMT] => 78.75
+            [SHIPPINGAMT] => 0.00
+            [HANDLINGAMT] => 0.00
+            [TAXAMT] => 0.00
+            [INVNUM] => 100004763
+            [INSURANCEAMT] => 0.00
+            [SHIPDISCAMT] => 0.00
+            [INSURANCEOPTIONOFFERED] => false
+            [L_NAME0] => EPIC Credits
+            [L_NUMBER0] => EPIC1
+            [L_QTY0] => 75
+            [L_TAXAMT0] => 0.00
+            [L_AMT0] => 1.05
+            [PAYMENTREQUEST_0_CURRENCYCODE] => GBP
+            [PAYMENTREQUEST_0_AMT] => 78.75
+            [PAYMENTREQUEST_0_ITEMAMT] => 78.75
+            [PAYMENTREQUEST_0_SHIPPINGAMT] => 0.00
+            [PAYMENTREQUEST_0_HANDLINGAMT] => 0.00
+            [PAYMENTREQUEST_0_TAXAMT] => 0.00
+            [PAYMENTREQUEST_0_INVNUM] => 100004763
+            [PAYMENTREQUEST_0_INSURANCEAMT] => 0.00
+            [PAYMENTREQUEST_0_SHIPDISCAMT] => 0.00
+            [PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID] => david@disc-uk.co.uk
+            [PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED] => false
+            [PAYMENTREQUEST_0_ADDRESSSTATUS] => Confirmed
+            [L_PAYMENTREQUEST_0_NAME0] => EPIC Credits
+            [L_PAYMENTREQUEST_0_NUMBER0] => EPIC1
+            [L_PAYMENTREQUEST_0_QTY0] => 75
+            [L_PAYMENTREQUEST_0_TAXAMT0] => 0.00
+            [L_PAYMENTREQUEST_0_AMT0] => 1.05
+            [PAYMENTREQUESTINFO_0_ERRORCODE] => 0
+        )
+
+    [__pid] => 2942
+)
+
+2016-05-09T17:08:31+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [DoExpressCheckoutPayment] => Array
+        (
+            [TOKEN] => EC-68Y42210VT911770K
+            [PAYERID] => VWTREZBE5C8NS
+            [PAYMENTACTION] => Authorization
+            [AMT] => 78.75
+            [CURRENCYCODE] => GBP
+            [BUTTONSOURCE] => Magento_Cart_Community
+            [NOTIFYURL] => https://www.discassessment.co.uk/paypal/ipn/
+            [RETURNFMFDETAILS] => 1
+            [ITEMAMT] => 78.75
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 75
+            [L_AMT0] => 1.05
+            [METHOD] => DoExpressCheckoutPayment
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-68Y42210VT911770K
+            [SUCCESSPAGEREDIRECTREQUESTED] => false
+            [TIMESTAMP] => 2016-05-09T17:05:14Z
+            [CORRELATIONID] => 59926f1cbe499
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 000000
+            [TRANSACTIONID] => 7VC35757P6962864E
+            [TRANSACTIONTYPE] => cart
+            [PAYMENTTYPE] => instant
+            [ORDERTIME] => 2016-05-09T17:05:14Z
+            [AMT] => 78.75
+            [TAXAMT] => 0.00
+            [CURRENCYCODE] => GBP
+            [PAYMENTSTATUS] => Pending
+            [PENDINGREASON] => authorization
+            [REASONCODE] => None
+            [PROTECTIONELIGIBILITY] => Ineligible
+            [INSURANCEOPTIONSELECTED] => false
+            [SHIPPINGOPTIONISDEFAULT] => false
+            [PAYMENTINFO_0_TRANSACTIONID] => 7VC35757P6962864E
+            [PAYMENTINFO_0_TRANSACTIONTYPE] => cart
+            [PAYMENTINFO_0_PAYMENTTYPE] => instant
+            [PAYMENTINFO_0_ORDERTIME] => 2016-05-09T17:05:14Z
+            [PAYMENTINFO_0_AMT] => 78.75
+            [PAYMENTINFO_0_TAXAMT] => 0.00
+            [PAYMENTINFO_0_CURRENCYCODE] => GBP
+            [PAYMENTINFO_0_PAYMENTSTATUS] => Pending
+            [PAYMENTINFO_0_PENDINGREASON] => authorization
+            [PAYMENTINFO_0_REASONCODE] => None
+            [PAYMENTINFO_0_PROTECTIONELIGIBILITY] => Ineligible
+            [PAYMENTINFO_0_SECUREMERCHANTACCOUNTID] => 92ALXAB9W69TS
+            [PAYMENTINFO_0_ERRORCODE] => 0
+            [PAYMENTINFO_0_ACK] => Success
+        )
+
+    [__pid] => 2921
+)
+
+2016-05-09T17:08:38+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 78.75
+            [auth_exp] => 10:05:14 Jun 07, 2016 PDT
+            [auth_id] => 7VC35757P6962864E
+            [auth_status] => Pending
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => EDGAR
+            [invoice] => 100004763
+            [ipn_track_id] => 59926f1cbe499
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => RAMIREZ
+            [mc_currency] => GBP
+            [mc_gross] => 78.75
+            [mc_gross_1] => 78.75
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 
+            [payer_email] => edgarramirez@ologycoaching.com.mx
+            [payer_id] => VWTREZBE5C8NS
+            [payer_status] => verified
+            [payment_date] => 10:05:14 May 09, 2016 PDT
+            [payment_gross] => 
+            [payment_status] => Pending
+            [payment_type] => instant
+            [pending_reason] => authorization
+            [protection_eligibility] => Ineligible
+            [quantity1] => 75
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 10
+            [residence_country] => MX
+            [tax] => 0.00
+            [tax1] => 0.00
+            [transaction_entity] => auth
+            [transaction_subject] => 
+            [txn_id] => 7VC35757P6962864E
+            [txn_type] => cart
+            [verify_sign] => AaNDepTW5rTroIpKm6UPJDd.4j1SAvUH1m5YwSd2Y1M7tWH8mgjaC2st
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 2940
+)
+
+2016-05-09T17:10:19+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 94.50
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004765
+            [SOLUTIONTYPE] => Mark
+            [NOSHIPPING] => 1
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [ITEMAMT] => 94.50
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 90
+            [L_AMT0] => 1.05
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-8B798526G9557420Y
+            [TIMESTAMP] => 2016-05-09T17:07:02Z
+            [CORRELATIONID] => 4413cb252a7a0
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 000000
+        )
+
+    [__pid] => 2929
+)
+
+2016-05-09T17:10:44+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [GetExpressCheckoutDetails] => Array
+        (
+            [TOKEN] => EC-8B798526G9557420Y
+            [METHOD] => GetExpressCheckoutDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-8B798526G9557420Y
+            [PHONENUM] => +52 5535064357
+            [BILLINGAGREEMENTACCEPTEDSTATUS] => 0
+            [CHECKOUTSTATUS] => PaymentActionNotInitiated
+            [TIMESTAMP] => 2016-05-09T17:07:26Z
+            [CORRELATIONID] => 354c98e178c2e
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 000000
+            [EMAIL] => edgarramirez@ologycoaching.com.mx
+            [PAYERID] => VWTREZBE5C8NS
+            [PAYERSTATUS] => verified
+            [FIRSTNAME] => EDGAR
+            [LASTNAME] => RAMIREZ
+            [COUNTRYCODE] => MX
+            [ADDRESSSTATUS] => Confirmed
+            [CURRENCYCODE] => GBP
+            [AMT] => 94.50
+            [ITEMAMT] => 94.50
+            [SHIPPINGAMT] => 0.00
+            [HANDLINGAMT] => 0.00
+            [TAXAMT] => 0.00
+            [INVNUM] => 100004765
+            [INSURANCEAMT] => 0.00
+            [SHIPDISCAMT] => 0.00
+            [INSURANCEOPTIONOFFERED] => false
+            [L_NAME0] => EPIC Credits
+            [L_NUMBER0] => EPIC1
+            [L_QTY0] => 90
+            [L_TAXAMT0] => 0.00
+            [L_AMT0] => 1.05
+            [PAYMENTREQUEST_0_CURRENCYCODE] => GBP
+            [PAYMENTREQUEST_0_AMT] => 94.50
+            [PAYMENTREQUEST_0_ITEMAMT] => 94.50
+            [PAYMENTREQUEST_0_SHIPPINGAMT] => 0.00
+            [PAYMENTREQUEST_0_HANDLINGAMT] => 0.00
+            [PAYMENTREQUEST_0_TAXAMT] => 0.00
+            [PAYMENTREQUEST_0_INVNUM] => 100004765
+            [PAYMENTREQUEST_0_INSURANCEAMT] => 0.00
+            [PAYMENTREQUEST_0_SHIPDISCAMT] => 0.00
+            [PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID] => david@disc-uk.co.uk
+            [PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED] => false
+            [PAYMENTREQUEST_0_ADDRESSSTATUS] => Confirmed
+            [L_PAYMENTREQUEST_0_NAME0] => EPIC Credits
+            [L_PAYMENTREQUEST_0_NUMBER0] => EPIC1
+            [L_PAYMENTREQUEST_0_QTY0] => 90
+            [L_PAYMENTREQUEST_0_TAXAMT0] => 0.00
+            [L_PAYMENTREQUEST_0_AMT0] => 1.05
+            [PAYMENTREQUESTINFO_0_ERRORCODE] => 0
+        )
+
+    [__pid] => 2937
+)
+
+2016-05-09T17:10:56+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [DoExpressCheckoutPayment] => Array
+        (
+            [TOKEN] => EC-8B798526G9557420Y
+            [PAYERID] => VWTREZBE5C8NS
+            [PAYMENTACTION] => Authorization
+            [AMT] => 94.50
+            [CURRENCYCODE] => GBP
+            [BUTTONSOURCE] => Magento_Cart_Community
+            [NOTIFYURL] => https://www.discassessment.co.uk/paypal/ipn/
+            [RETURNFMFDETAILS] => 1
+            [ITEMAMT] => 94.50
+            [TAXAMT] => 0.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 90
+            [L_AMT0] => 1.05
+            [METHOD] => DoExpressCheckoutPayment
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-8B798526G9557420Y
+            [SUCCESSPAGEREDIRECTREQUESTED] => false
+            [TIMESTAMP] => 2016-05-09T17:07:39Z
+            [CORRELATIONID] => 5816ffd9e8251
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 000000
+            [TRANSACTIONID] => 89139347Y37900632
+            [TRANSACTIONTYPE] => cart
+            [PAYMENTTYPE] => instant
+            [ORDERTIME] => 2016-05-09T17:07:39Z
+            [AMT] => 94.50
+            [TAXAMT] => 0.00
+            [CURRENCYCODE] => GBP
+            [PAYMENTSTATUS] => Pending
+            [PENDINGREASON] => authorization
+            [REASONCODE] => None
+            [PROTECTIONELIGIBILITY] => Ineligible
+            [INSURANCEOPTIONSELECTED] => false
+            [SHIPPINGOPTIONISDEFAULT] => false
+            [PAYMENTINFO_0_TRANSACTIONID] => 89139347Y37900632
+            [PAYMENTINFO_0_TRANSACTIONTYPE] => cart
+            [PAYMENTINFO_0_PAYMENTTYPE] => instant
+            [PAYMENTINFO_0_ORDERTIME] => 2016-05-09T17:07:39Z
+            [PAYMENTINFO_0_AMT] => 94.50
+            [PAYMENTINFO_0_TAXAMT] => 0.00
+            [PAYMENTINFO_0_CURRENCYCODE] => GBP
+            [PAYMENTINFO_0_PAYMENTSTATUS] => Pending
+            [PAYMENTINFO_0_PENDINGREASON] => authorization
+            [PAYMENTINFO_0_REASONCODE] => None
+            [PAYMENTINFO_0_PROTECTIONELIGIBILITY] => Ineligible
+            [PAYMENTINFO_0_SECUREMERCHANTACCOUNTID] => 92ALXAB9W69TS
+            [PAYMENTINFO_0_ERRORCODE] => 0
+            [PAYMENTINFO_0_ACK] => Success
+        )
+
+    [__pid] => 2924
+)
+
+2016-05-09T17:11:07+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 94.50
+            [auth_exp] => 10:07:39 Jun 07, 2016 PDT
+            [auth_id] => 89139347Y37900632
+            [auth_status] => Pending
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => EDGAR
+            [invoice] => 100004765
+            [ipn_track_id] => 5816ffd9e8251
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => RAMIREZ
+            [mc_currency] => GBP
+            [mc_gross] => 94.50
+            [mc_gross_1] => 94.50
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 
+            [payer_email] => edgarramirez@ologycoaching.com.mx
+            [payer_id] => VWTREZBE5C8NS
+            [payer_status] => verified
+            [payment_date] => 10:07:39 May 09, 2016 PDT
+            [payment_gross] => 
+            [payment_status] => Pending
+            [payment_type] => instant
+            [pending_reason] => authorization
+            [protection_eligibility] => Ineligible
+            [quantity1] => 90
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 10
+            [residence_country] => MX
+            [tax] => 0.00
+            [tax1] => 0.00
+            [transaction_entity] => auth
+            [transaction_subject] => 
+            [txn_id] => 89139347Y37900632
+            [txn_type] => cart
+            [verify_sign] => AxpYDfrZEOWfawzZkLN7tKCy.BvJAIs8Y8ao7vphigVtXUDcHGiehDC4
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 2928
+)
+
+2016-05-13T10:57:50+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 78.75
+            [auth_exp] => 10:05:14 Jun 07, 2016 PDT
+            [auth_id] => 7VC35757P6962864E
+            [auth_status] => Completed
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => EDGAR
+            [invoice] => 100004763
+            [ipn_track_id] => 394dc54da15d
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => RAMIREZ
+            [mc_currency] => GBP
+            [mc_fee] => 4.30
+            [mc_gross] => 78.75
+            [mc_gross_1] => 78.75
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 7VC35757P6962864E
+            [payer_email] => edgarramirez@ologycoaching.com.mx
+            [payer_id] => VWTREZBE5C8NS
+            [payer_status] => verified
+            [payment_date] => 03:54:21 May 13, 2016 PDT
+            [payment_fee] => 
+            [payment_gross] => 
+            [payment_status] => Completed
+            [payment_type] => instant
+            [protection_eligibility] => Ineligible
+            [quantity1] => 75
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 0
+            [residence_country] => MX
+            [tax] => 0.00
+            [transaction_entity] => payment
+            [transaction_subject] => 
+            [txn_id] => 6MJ48026WL9785325
+            [txn_type] => cart
+            [verify_sign] => AFlriDVAEuS5BixOsim6H3-zXWP0AdAvCl9cHZUKXoXRFN3WjFsDxHuz
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 10245
+)
+
+2016-05-13T10:58:33+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 94.50
+            [auth_exp] => 10:07:39 Jun 07, 2016 PDT
+            [auth_id] => 89139347Y37900632
+            [auth_status] => Completed
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => EDGAR
+            [invoice] => 100004765
+            [ipn_track_id] => 80246af4c1c71
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => RAMIREZ
+            [mc_currency] => GBP
+            [mc_fee] => 5.11
+            [mc_gross] => 94.50
+            [mc_gross_1] => 94.50
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 89139347Y37900632
+            [payer_email] => edgarramirez@ologycoaching.com.mx
+            [payer_id] => VWTREZBE5C8NS
+            [payer_status] => verified
+            [payment_date] => 03:55:03 May 13, 2016 PDT
+            [payment_fee] => 
+            [payment_gross] => 
+            [payment_status] => Completed
+            [payment_type] => instant
+            [protection_eligibility] => Ineligible
+            [quantity1] => 90
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 0
+            [residence_country] => MX
+            [tax] => 0.00
+            [transaction_entity] => payment
+            [transaction_subject] => 
+            [txn_id] => 6DX43689AS783013X
+            [txn_type] => cart
+            [verify_sign] => ALlTuxSAW7oJhZ-ZXZiH-aviXMr6AYhRWBkOZdQvLGRwhB5UIznUY9hw
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 19965
+)
+
+2016-05-13T15:23:39+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 90.00
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004770
+            [SOLUTIONTYPE] => Mark
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [ITEMAMT] => 75.00
+            [TAXAMT] => 15.00
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => P-034
+            [L_NAME0] => QuikDiSC® Card Game
+            [L_QTY0] => 1
+            [L_AMT0] => 75.00
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-1W73376586057102P
+            [TIMESTAMP] => 2016-05-13T15:20:14Z
+            [CORRELATIONID] => 5aa5991d32edd
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 22120179
+        )
+
+    [__pid] => 26502
+)
+
+2016-05-17T15:39:22+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 105.00
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004776
+            [SOLUTIONTYPE] => Mark
+            [NOSHIPPING] => 1
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [ITEMAMT] => 87.50
+            [TAXAMT] => 17.50
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EDWoL1
+            [L_NAME0] => Everything DiSC® Work of Leaders Profile
+            [L_QTY0] => 1
+            [L_AMT0] => 87.50
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-8KT323395M387140M
+            [TIMESTAMP] => 2016-05-17T15:35:49Z
+            [CORRELATIONID] => b768031051915
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 22120179
+        )
+
+    [__pid] => 28009
+)
+
+2016-05-17T15:40:10+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [GetExpressCheckoutDetails] => Array
+        (
+            [TOKEN] => EC-8KT323395M387140M
+            [METHOD] => GetExpressCheckoutDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-8KT323395M387140M
+            [BILLINGAGREEMENTACCEPTEDSTATUS] => 0
+            [CHECKOUTSTATUS] => PaymentActionNotInitiated
+            [TIMESTAMP] => 2016-05-17T15:36:37Z
+            [CORRELATIONID] => c081c4187a9cf
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 22120179
+            [EMAIL] => beckihoulston@hotmail.co.uk
+            [PAYERID] => YASSSF34EWXVU
+            [PAYERSTATUS] => verified
+            [FIRSTNAME] => rebecca
+            [LASTNAME] => Houlston
+            [COUNTRYCODE] => GB
+            [ADDRESSSTATUS] => Confirmed
+            [CURRENCYCODE] => GBP
+            [AMT] => 105.00
+            [ITEMAMT] => 87.50
+            [SHIPPINGAMT] => 0.00
+            [HANDLINGAMT] => 0.00
+            [TAXAMT] => 17.50
+            [INVNUM] => 100004776
+            [INSURANCEAMT] => 0.00
+            [SHIPDISCAMT] => 0.00
+            [INSURANCEOPTIONOFFERED] => false
+            [L_NAME0] => Everything DiSC® Work of Leaders Profile
+            [L_NUMBER0] => EDWoL1
+            [L_QTY0] => 1
+            [L_TAXAMT0] => 0.00
+            [L_AMT0] => 87.50
+            [PAYMENTREQUEST_0_CURRENCYCODE] => GBP
+            [PAYMENTREQUEST_0_AMT] => 105.00
+            [PAYMENTREQUEST_0_ITEMAMT] => 87.50
+            [PAYMENTREQUEST_0_SHIPPINGAMT] => 0.00
+            [PAYMENTREQUEST_0_HANDLINGAMT] => 0.00
+            [PAYMENTREQUEST_0_TAXAMT] => 17.50
+            [PAYMENTREQUEST_0_INVNUM] => 100004776
+            [PAYMENTREQUEST_0_INSURANCEAMT] => 0.00
+            [PAYMENTREQUEST_0_SHIPDISCAMT] => 0.00
+            [PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID] => david@disc-uk.co.uk
+            [PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED] => false
+            [PAYMENTREQUEST_0_ADDRESSSTATUS] => Confirmed
+            [L_PAYMENTREQUEST_0_NAME0] => Everything DiSC® Work of Leaders Profile
+            [L_PAYMENTREQUEST_0_NUMBER0] => EDWoL1
+            [L_PAYMENTREQUEST_0_QTY0] => 1
+            [L_PAYMENTREQUEST_0_TAXAMT0] => 0.00
+            [L_PAYMENTREQUEST_0_AMT0] => 87.50
+            [PAYMENTREQUESTINFO_0_ERRORCODE] => 0
+        )
+
+    [__pid] => 3691
+)
+
+2016-05-17T15:40:31+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [DoExpressCheckoutPayment] => Array
+        (
+            [TOKEN] => EC-8KT323395M387140M
+            [PAYERID] => YASSSF34EWXVU
+            [PAYMENTACTION] => Authorization
+            [AMT] => 105.00
+            [CURRENCYCODE] => GBP
+            [BUTTONSOURCE] => Magento_Cart_Community
+            [NOTIFYURL] => https://www.discassessment.co.uk/paypal/ipn/
+            [RETURNFMFDETAILS] => 1
+            [ITEMAMT] => 87.50
+            [TAXAMT] => 17.50
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EDWoL1
+            [L_NAME0] => Everything DiSC® Work of Leaders Profile
+            [L_QTY0] => 1
+            [L_AMT0] => 87.50
+            [METHOD] => DoExpressCheckoutPayment
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-8KT323395M387140M
+            [SUCCESSPAGEREDIRECTREQUESTED] => false
+            [TIMESTAMP] => 2016-05-17T15:36:58Z
+            [CORRELATIONID] => 60a3b43cbdc36
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 22120179
+            [TRANSACTIONID] => 7BA070458L304372A
+            [TRANSACTIONTYPE] => cart
+            [PAYMENTTYPE] => instant
+            [ORDERTIME] => 2016-05-17T15:36:58Z
+            [AMT] => 105.00
+            [TAXAMT] => 17.50
+            [CURRENCYCODE] => GBP
+            [PAYMENTSTATUS] => Pending
+            [PENDINGREASON] => authorization
+            [REASONCODE] => None
+            [PROTECTIONELIGIBILITY] => Ineligible
+            [INSURANCEOPTIONSELECTED] => false
+            [SHIPPINGOPTIONISDEFAULT] => false
+            [PAYMENTINFO_0_TRANSACTIONID] => 7BA070458L304372A
+            [PAYMENTINFO_0_TRANSACTIONTYPE] => cart
+            [PAYMENTINFO_0_PAYMENTTYPE] => instant
+            [PAYMENTINFO_0_ORDERTIME] => 2016-05-17T15:36:58Z
+            [PAYMENTINFO_0_AMT] => 105.00
+            [PAYMENTINFO_0_TAXAMT] => 17.50
+            [PAYMENTINFO_0_CURRENCYCODE] => GBP
+            [PAYMENTINFO_0_PAYMENTSTATUS] => Pending
+            [PAYMENTINFO_0_PENDINGREASON] => authorization
+            [PAYMENTINFO_0_REASONCODE] => None
+            [PAYMENTINFO_0_PROTECTIONELIGIBILITY] => Ineligible
+            [PAYMENTINFO_0_SECUREMERCHANTACCOUNTID] => 92ALXAB9W69TS
+            [PAYMENTINFO_0_ERRORCODE] => 0
+            [PAYMENTINFO_0_ACK] => Success
+        )
+
+    [__pid] => 3680
+)
+
+2016-05-17T15:40:39+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 105.00
+            [auth_exp] => 08:36:58 Jun 15, 2016 PDT
+            [auth_id] => 7BA070458L304372A
+            [auth_status] => Pending
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => rebecca
+            [invoice] => 100004776
+            [ipn_track_id] => 60a3b43cbdc36
+            [item_name1] => Everything DiSC� Work of Leaders Profile
+            [item_number1] => EDWoL1
+            [last_name] => Houlston
+            [mc_currency] => GBP
+            [mc_gross] => 105.00
+            [mc_gross_1] => 87.50
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 
+            [payer_email] => beckihoulston@hotmail.co.uk
+            [payer_id] => YASSSF34EWXVU
+            [payer_status] => verified
+            [payment_date] => 08:36:58 May 17, 2016 PDT
+            [payment_gross] => 
+            [payment_status] => Pending
+            [payment_type] => instant
+            [pending_reason] => authorization
+            [protection_eligibility] => Ineligible
+            [quantity1] => 1
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 10
+            [residence_country] => GB
+            [tax] => 17.50
+            [tax1] => 0.00
+            [transaction_entity] => auth
+            [transaction_subject] => 
+            [txn_id] => 7BA070458L304372A
+            [txn_type] => cart
+            [verify_sign] => AXl15mWr.PGF-aZheGpZoLwRHc3cApC0PPt01pKFq76K1mRnllOGsP-g
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 7122
+)
+
+2016-05-18T12:01:08+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [SetExpressCheckout] => Array
+        (
+            [PAYMENTACTION] => Authorization
+            [AMT] => 45.00
+            [CURRENCYCODE] => GBP
+            [RETURNURL] => https://www.discassessment.co.uk/paypal/express/return/
+            [CANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [INVNUM] => 100004777
+            [SOLUTIONTYPE] => Mark
+            [NOSHIPPING] => 1
+            [GIROPAYCANCELURL] => https://www.discassessment.co.uk/paypal/express/cancel/
+            [GIROPAYSUCCESSURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [BANKTXNPENDINGURL] => https://www.discassessment.co.uk/checkout/onepage/success/
+            [LOCALECODE] => en_GB
+            [BILLINGTYPE] => MerchantInitiatedBilling
+            [ITEMAMT] => 37.50
+            [TAXAMT] => 7.50
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 15
+            [L_AMT0] => 2.50
+            [METHOD] => SetExpressCheckout
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-4UG73503NT113451Y
+            [TIMESTAMP] => 2016-05-18T11:57:34Z
+            [CORRELATIONID] => 22790fa3ce279
+            [ACK] => SuccessWithWarning
+            [VERSION] => 72.0
+            [BUILD] => 000000
+            [L_ERRORCODE0] => 11452
+            [L_SHORTMESSAGE0] => Merchant not enabled for reference transactions
+            [L_LONGMESSAGE0] => Merchant not enabled for reference transactions
+            [L_SEVERITYCODE0] => Warning
+        )
+
+    [__pid] => 7120
+)
+
+2016-05-18T12:02:28+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [GetExpressCheckoutDetails] => Array
+        (
+            [TOKEN] => EC-4UG73503NT113451Y
+            [METHOD] => GetExpressCheckoutDetails
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-4UG73503NT113451Y
+            [BILLINGAGREEMENTACCEPTEDSTATUS] => 0
+            [CHECKOUTSTATUS] => PaymentActionNotInitiated
+            [TIMESTAMP] => 2016-05-18T11:58:54Z
+            [CORRELATIONID] => 31dcade2e9da0
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 000000
+            [EMAIL] => orlafeeney@hotmail.com
+            [PAYERID] => 8FXPK48ALHRWY
+            [PAYERSTATUS] => verified
+            [FIRSTNAME] => Orla
+            [LASTNAME] => Feeney
+            [COUNTRYCODE] => GB
+            [ADDRESSSTATUS] => Confirmed
+            [CURRENCYCODE] => GBP
+            [AMT] => 45.00
+            [ITEMAMT] => 37.50
+            [SHIPPINGAMT] => 0.00
+            [HANDLINGAMT] => 0.00
+            [TAXAMT] => 7.50
+            [INVNUM] => 100004777
+            [INSURANCEAMT] => 0.00
+            [SHIPDISCAMT] => 0.00
+            [INSURANCEOPTIONOFFERED] => false
+            [L_NAME0] => EPIC Credits
+            [L_NUMBER0] => EPIC1
+            [L_QTY0] => 15
+            [L_TAXAMT0] => 0.00
+            [L_AMT0] => 2.50
+            [PAYMENTREQUEST_0_CURRENCYCODE] => GBP
+            [PAYMENTREQUEST_0_AMT] => 45.00
+            [PAYMENTREQUEST_0_ITEMAMT] => 37.50
+            [PAYMENTREQUEST_0_SHIPPINGAMT] => 0.00
+            [PAYMENTREQUEST_0_HANDLINGAMT] => 0.00
+            [PAYMENTREQUEST_0_TAXAMT] => 7.50
+            [PAYMENTREQUEST_0_INVNUM] => 100004777
+            [PAYMENTREQUEST_0_INSURANCEAMT] => 0.00
+            [PAYMENTREQUEST_0_SHIPDISCAMT] => 0.00
+            [PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID] => david@disc-uk.co.uk
+            [PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED] => false
+            [PAYMENTREQUEST_0_ADDRESSSTATUS] => Confirmed
+            [L_PAYMENTREQUEST_0_NAME0] => EPIC Credits
+            [L_PAYMENTREQUEST_0_NUMBER0] => EPIC1
+            [L_PAYMENTREQUEST_0_QTY0] => 15
+            [L_PAYMENTREQUEST_0_TAXAMT0] => 0.00
+            [L_PAYMENTREQUEST_0_AMT0] => 2.50
+            [PAYMENTREQUESTINFO_0_ERRORCODE] => 0
+        )
+
+    [__pid] => 3691
+)
+
+2016-05-18T12:02:49+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.paypal.com/nvp
+    [DoExpressCheckoutPayment] => Array
+        (
+            [TOKEN] => EC-4UG73503NT113451Y
+            [PAYERID] => 8FXPK48ALHRWY
+            [PAYMENTACTION] => Authorization
+            [AMT] => 45.00
+            [CURRENCYCODE] => GBP
+            [BUTTONSOURCE] => Magento_Cart_Community
+            [NOTIFYURL] => https://www.discassessment.co.uk/paypal/ipn/
+            [RETURNFMFDETAILS] => 1
+            [ITEMAMT] => 37.50
+            [TAXAMT] => 7.50
+            [SHIPPINGAMT] => 0.00
+            [L_NUMBER0] => EPIC1
+            [L_NAME0] => EPIC Credits
+            [L_QTY0] => 15
+            [L_AMT0] => 2.50
+            [METHOD] => DoExpressCheckoutPayment
+            [VERSION] => 72.0
+            [USER] => ****
+            [PWD] => ****
+            [SIGNATURE] => ****
+        )
+
+    [response] => Array
+        (
+            [TOKEN] => EC-4UG73503NT113451Y
+            [SUCCESSPAGEREDIRECTREQUESTED] => false
+            [TIMESTAMP] => 2016-05-18T11:59:14Z
+            [CORRELATIONID] => cab8731a6bd6a
+            [ACK] => Success
+            [VERSION] => 72.0
+            [BUILD] => 000000
+            [TRANSACTIONID] => 94R32859U2458014P
+            [TRANSACTIONTYPE] => cart
+            [PAYMENTTYPE] => instant
+            [ORDERTIME] => 2016-05-18T11:59:14Z
+            [AMT] => 45.00
+            [TAXAMT] => 7.50
+            [CURRENCYCODE] => GBP
+            [PAYMENTSTATUS] => Pending
+            [PENDINGREASON] => authorization
+            [REASONCODE] => None
+            [PROTECTIONELIGIBILITY] => Ineligible
+            [INSURANCEOPTIONSELECTED] => false
+            [SHIPPINGOPTIONISDEFAULT] => false
+            [PAYMENTINFO_0_TRANSACTIONID] => 94R32859U2458014P
+            [PAYMENTINFO_0_TRANSACTIONTYPE] => cart
+            [PAYMENTINFO_0_PAYMENTTYPE] => instant
+            [PAYMENTINFO_0_ORDERTIME] => 2016-05-18T11:59:14Z
+            [PAYMENTINFO_0_AMT] => 45.00
+            [PAYMENTINFO_0_TAXAMT] => 7.50
+            [PAYMENTINFO_0_CURRENCYCODE] => GBP
+            [PAYMENTINFO_0_PAYMENTSTATUS] => Pending
+            [PAYMENTINFO_0_PENDINGREASON] => authorization
+            [PAYMENTINFO_0_REASONCODE] => None
+            [PAYMENTINFO_0_PROTECTIONELIGIBILITY] => Ineligible
+            [PAYMENTINFO_0_SECUREMERCHANTACCOUNTID] => 92ALXAB9W69TS
+            [PAYMENTINFO_0_ERRORCODE] => 0
+            [PAYMENTINFO_0_ACK] => Success
+        )
+
+    [__pid] => 3681
+)
+
+2016-05-18T12:02:57+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 45.00
+            [auth_exp] => 04:59:14 Jun 16, 2016 PDT
+            [auth_id] => 94R32859U2458014P
+            [auth_status] => Pending
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => Orla
+            [invoice] => 100004777
+            [ipn_track_id] => cab8731a6bd6a
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => Feeney
+            [mc_currency] => GBP
+            [mc_gross] => 45.00
+            [mc_gross_1] => 37.50
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 
+            [payer_email] => orlafeeney@hotmail.com
+            [payer_id] => 8FXPK48ALHRWY
+            [payer_status] => verified
+            [payment_date] => 04:59:14 May 18, 2016 PDT
+            [payment_gross] => 
+            [payment_status] => Pending
+            [payment_type] => instant
+            [pending_reason] => authorization
+            [protection_eligibility] => Ineligible
+            [quantity1] => 15
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 10
+            [residence_country] => GB
+            [tax] => 7.50
+            [tax1] => 0.00
+            [transaction_entity] => auth
+            [transaction_subject] => 
+            [txn_id] => 94R32859U2458014P
+            [txn_type] => cart
+            [verify_sign] => A7M8Ljn42v0jYkJjjb8.2wQEDl7EAI8BCZDYEvQ5AI894MsMYJYEHB1b
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 23351
+)
+
+2016-05-19T08:33:11+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 105.00
+            [auth_exp] => 08:36:58 Jun 15, 2016 PDT
+            [auth_id] => 7BA070458L304372A
+            [auth_status] => Completed
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => rebecca
+            [invoice] => 100004776
+            [ipn_track_id] => 7dce3b9ba8e84
+            [item_name1] => Everything DiSC® Work of Leaders Profile
+            [item_number1] => EDWoL1
+            [last_name] => Houlston
+            [mc_currency] => GBP
+            [mc_fee] => 3.77
+            [mc_gross] => 105.00
+            [mc_gross_1] => 87.50
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 7BA070458L304372A
+            [payer_email] => beckihoulston@hotmail.co.uk
+            [payer_id] => YASSSF34EWXVU
+            [payer_status] => verified
+            [payment_date] => 01:29:28 May 19, 2016 PDT
+            [payment_fee] => 
+            [payment_gross] => 
+            [payment_status] => Completed
+            [payment_type] => instant
+            [protection_eligibility] => Ineligible
+            [quantity1] => 1
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 0
+            [residence_country] => GB
+            [tax] => 17.50
+            [transaction_entity] => payment
+            [transaction_subject] => 
+            [txn_id] => 4GM89762DJ120403P
+            [txn_type] => cart
+            [verify_sign] => AzZt9YX-5DFY.kuU2b0y7QA4d7ciAs9ceyX6aZALw2a5oeOlHfVaDXHb
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 7002
+)
+
+2016-05-19T08:33:46+00:00 DEBUG (7): Array
+(
+    [ipn] => Array
+        (
+            [auth_amount] => 45.00
+            [auth_exp] => 04:59:14 Jun 16, 2016 PDT
+            [auth_id] => 94R32859U2458014P
+            [auth_status] => Completed
+            [business] => david@disc-uk.co.uk
+            [charset] => windows-1252
+            [custom] => 
+            [first_name] => Orla
+            [invoice] => 100004777
+            [ipn_track_id] => 77d90e9f96db
+            [item_name1] => EPIC Credits
+            [item_number1] => EPIC1
+            [last_name] => Feeney
+            [mc_currency] => GBP
+            [mc_fee] => 1.73
+            [mc_gross] => 45.00
+            [mc_gross_1] => 37.50
+            [mc_handling] => 0.00
+            [mc_shipping] => 0.00
+            [notify_version] => 3.8
+            [num_cart_items] => 1
+            [parent_txn_id] => 94R32859U2458014P
+            [payer_email] => orlafeeney@hotmail.com
+            [payer_id] => 8FXPK48ALHRWY
+            [payer_status] => verified
+            [payment_date] => 01:30:05 May 19, 2016 PDT
+            [payment_fee] => 
+            [payment_gross] => 
+            [payment_status] => Completed
+            [payment_type] => instant
+            [protection_eligibility] => Ineligible
+            [quantity1] => 15
+            [receiver_email] => david@disc-uk.co.uk
+            [receiver_id] => 92ALXAB9W69TS
+            [remaining_settle] => 0
+            [residence_country] => GB
+            [tax] => 7.50
+            [transaction_entity] => payment
+            [transaction_subject] => 
+            [txn_id] => 5G8772125M4727903
+            [txn_type] => cart
+            [verify_sign] => AZsMAD7lpF53UaZFve4baDUmTCMDA56Pzz-r47p7aA8SYUZ-vhTQwqP2
+        )
+
+    [postback_to] => https://www.paypal.com/cgi-bin/webscr
+    [__pid] => 6998
+)
+

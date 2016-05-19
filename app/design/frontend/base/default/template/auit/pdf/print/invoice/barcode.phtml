@@ -1,0 +1,93 @@
+<?php
+	$bshowPos = Mage::getStoreConfigFlag('auit_pdf/invoice/table_show_pos');
+	$baddSku = Mage::getStoreConfigFlag('auit_pdf/invoice/table_add_sku');
+//	$bshowSku = Mage::getStoreConfigFlag('auit_pdf/invoice/table_show_sku');
+	$cols=6;
+	if ( !$bshowPos )
+		$cols--;
+?>
+<?php $_order = $this->getOrder() ?>
+<?php $_invoice = $this->getInvoice() ?>
+<?php if($_invoice): ?>
+    <?php $_invoices = array($_invoice); ?>
+<?php else: ?>
+    <?php $_invoices = $_order->getInvoiceCollection() ?>
+<?php endif; ?>
+<?php if ( $text = $this->getBuilBeforeTableText()) :?>
+	<div class="text-before"><?php echo $text; ?></div>
+<?php endif;?>
+<?php foreach ($_invoices as $_invoice): ?>
+    <table class="data-table invoice" border="0" cellpadding="2" cellspacing="0">
+    	<thead>
+            <tr class="head">
+            	<?php if ( $bshowPos ) :?>
+            	<th class="col-position " ><?php echo $this->__('Pos.') ?></th>
+            	<?php endif;?>
+            	<th class="col-barcode" > </th>
+                <th class="col-name" ><?php echo $this->__('Product Name') ?></th>
+                <th class="col-price"><?php echo $this->__('Price') ?></th>
+                <th class="col-qty"><?php echo $this->__('Qty') ?></th>
+                <th class="col-subtotal"><?php echo $this->__('Subtotal') ?></th>
+            </tr>
+		</thead>
+        <?php $_items = $_invoice->getItemsCollection(); ?>
+        <?php $_count = 0; $rowNr=0;
+	        foreach ($_items as $_item)
+	        {
+	        	if ($_item->getOrderItem()->getParentItem()) continue;
+	        	$_count++;
+	        }
+        ?>
+        <?php foreach ($_items as $_item): ?>
+        <?php if ($_item->getOrderItem()->getParentItem()) continue; ?>
+            <?php
+            	$rowNr++;
+            	$trClass = (($rowNr % 2) == 1)?'odd':'even';
+            	if ( $rowNr == $_count )
+            		$trClass .= ' lastx';
+            	$row = $this->getItemHtml($_item);
+            	$countTr = preg_match_all("|<tr[^>]*>(.*)</tr[^>]*>|usiU",$row,$resultTR, PREG_PATTERN_ORDER);
+			?>
+			<?php if ( $countTr > 0 ) foreach ( $resultTR[0] as $trIdx => $tr ) : ?>
+				<?php
+	            	$count = preg_match_all("|<td[^>]*>(.*)</td[^>]*>|usiU",$tr,$result, PREG_PATTERN_ORDER);
+
+	            	if ( $count )
+	            	{
+		            	foreach ( $result[1] as &$td)
+	            			$td = trim(str_replace(array("\n",'  ','display:none'),'',$td));
+	            	}
+	            ?>
+	            <?php if ( $count && count($result[1]) >= 5 ) : ?>
+	            <tr class="<?php  echo $trClass; ?>" nobr="true">
+	           	<?php if ( $bshowPos ) :?>
+	            	<td class="col-position " ><?php if ( $trIdx == 0 )  echo $rowNr; ?></td>
+	           	<?php endif;?>
+	                <td class="col-barcode" >
+	                	<?php if ( $trIdx == 0) :?>
+	                	<img mode="barcode" type="C128" code="<?php echo addslashes($result[1][1]) ?>" text="true" position="S" border="0" padding="2"/>
+	                	<?php endif;?>
+	               	</td>
+	            	<td class="col-name" ><?php echo $result[1][0]; ?></td>
+	                <td class="col-price"><?php echo ($result[1][2]) ?></td>
+	                <td class="col-qty"><?php echo ($result[1][3]) ?></td>
+	                <td class="col-subtotal"><?php echo ($result[1][4]) ?></td>
+	            </tr>
+	            <?php else : ?>
+	            	<?php echo $row; ?>
+	            <?php endif;?>
+	        <?php endforeach; ?>
+        <?php endforeach; ?>
+		<tr class="last">
+			<td colspan="<?php echo $cols?>"></td>
+		</tr>
+		<?php
+			$row = $this->getInvoiceTotalsHtml($_invoice);
+			echo Mage::helper('auit_pdf')->replaceInvoiceTotalsHtml($_invoice,$row,$cols);
+		?>
+</table>
+<?php if ( $text = $this->getBuildAfterTableText()) :?>
+	<br />
+	<div class="text-after"><?php echo $text; ?></div>
+<?php endif;?>
+<?php endforeach; ?>

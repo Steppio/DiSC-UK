@@ -1,0 +1,17 @@
+<?php
+	/* Example for barcodes */
+	$invoice=$this->getInvoice();
+	$address = $invoice->getOrder()->getShippingAddress();
+	if ( $address )
+	{
+		$Text2D = '';
+		if ( $address )
+		{
+			$Text2D = addslashes($address->format('oneline'));
+			$Text2D = addslashes($address->format('text'));
+			$Text2D = str_replace("\r", '', $Text2D);
+			$Text2D = str_replace("\n", '[\n]', $Text2D);
+			//$Text2D = 'text äöüÄÖÜß - '.$Text2D;
+			echo '<img mode="barcode2d" type="QRCODE" code="'.$Text2D.'" width="25mm"/>';
+		}
+	}

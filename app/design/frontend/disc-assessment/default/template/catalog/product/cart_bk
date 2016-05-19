@@ -1,0 +1,282 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/**
+ * Product view template
+ *
+ * @see Mage_Catalog_Block_Product_View
+ * @see Mage_Review_Block_Product_View
+ */
+?>
+<?php $_helper = $this->helper('catalog/output'); ?>
+<?php $_product = $this->getProduct(); ?>
+<script type="text/javascript">
+    var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+</script>
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
+<div class="product-view">
+
+    <div class="product-name">
+        <span class="h1"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></span>
+    </div>
+
+    <div class="price-info">
+    <?php
+    $hideCategories = '67';
+
+    $productCategoryIds = $_product->getCategoryIds();
+
+    foreach ($productCategoryIds AS $productCategoryId) {
+
+        if (in_array($hideCategories, $productCategoryIds)) {
+
+            if($this->helper('customer')->isLoggedIn()) {
+
+                echo $this->getPriceHtml($_product); 
+                echo $this->getChildHtml('bundle_prices');
+                echo $this->getTierPriceHtml();
+
+                break;
+
+            }
+            else {
+
+                echo "Price Hidden - Please Log In";
+
+                break;
+                
+            }
+
+        }
+        else {
+
+            echo $this->getPriceHtml($_product); 
+            echo $this->getChildHtml('bundle_prices');
+            echo $this->getTierPriceHtml();
+
+            break;
+
+        }
+
+        $epic = '';
+
+        if(($hideCategories == '67') && ($this->helper('customer')->isLoggedIn())) {
+            $epic = 'true';
+        }
+
+    }
+
+    ?>
+        
+    </div>
+
+    <div class="extra-info">
+        <?php echo $this->getReviewsSummaryHtml($_product, 'default', false)?>
+        <?php echo $this->getChildHtml('product_type_availability'); ?>
+    </div>
+
+    <div class="add-to-cart-wrapper">
+        <?php echo $this->getChildHtml('product_type_data') ?>
+        <?php echo $this->getChildHtml('extrahint') ?>
+
+        <?php if (!$this->hasOptions()):?>
+            <div class="add-to-box">
+                <?php if($_product->isSaleable()): ?>
+                    <?php echo $this->getChildHtml('addtocart') ?>
+
+                <?php endif; ?>
+
+            </div>
+            <div class="epic-wrapper">
+                <label for="cost">Cost:</label>
+                <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Qty" class="input-text qty" disabled></input>
+            </div>            
+            <?php echo $this->getChildHtml('extra_buttons') ?>
+
+        <?php endif; ?>
+    </div>
+
+    <h2>Product Description</h2>
+
+    <div class="product-collateral toggle-content tabs">
+        <?php if ($detailedInfoGroup = $this->getChildGroup('detailed_info', 'getChildHtml')):?>
+            <dl id="collateral-tabs" class="collateral-tabs">
+                <?php foreach ($detailedInfoGroup as $alias => $html):?>
+                    <dt class="tab"><span><?php echo $this->escapeHtml($this->getChildData($alias, 'title')) ?></span></dt>
+                    <dd class="tab-container">
+                        <div class="tab-content"><?php echo $html ?></div>
+                    </dd>
+                <?php endforeach;?>
+            </dl>
+        <?php endif; ?>
+    </div>
+
+    <div class="product-essential">
+        <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+            <?php echo $this->getBlockHtml('formkey') ?>
+            <div class="no-display">
+                <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
+                <input type="hidden" name="related_product" id="related-products-field" value="" />
+            </div>
+
+            <div class="product-shop">
+
+
+                <?php echo $this->getChildHtml('alert_urls') ?>
+
+                <?php if ($_product->getShortDescription()):?>
+                    <div class="short-description">
+                        <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
+                    </div>
+                <?php endif;?>
+
+
+                <?php echo $this->getChildHtml('other');?>
+
+                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                    <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
+                <?php endif;?>
+
+            </div>
+
+
+            
+
+            <div class="clearer"></div>
+            <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+            <?php endif;?>
+        </form>
+        <script type="text/javascript">
+        //<![CDATA[
+        
+        if(jQuery('body').hasClass('product-epic-credits')) {
+
+            var tier_0_price = jQuery('.price-info .tier-0 .price:first-child').text(),
+                tier_0_price = tier_0_price.replace(/\£/g, ' '),
+                tier_1_price = jQuery('.price-info .tier-1 .price:first-child').text(),
+                tier_1_price = tier_1_price.replace(/\£/g, ' '),                
+                tier_2_price = jQuery('.price-info .tier-2 .price:first-child').text(),
+                tier_2_price = tier_2_price.replace(/\£/g, ' '),
+                tier_3_price = jQuery('.price-info .tier-3 .price:first-child').text(),
+                tier_3_price = tier_3_price.replace(/\£/g, ' '),
+                tier_4_price = jQuery('.price-info .tier-4 .price:first-child').text(),
+                tier_4_price = tier_4_price.replace(/\£/g, ' '),
+                tier_5_price = jQuery('.price-info .tier-5 .price:first-child').text(),
+                tier_5_price = tier_5_price.replace(/\£/g, ' '),
+                price = 0;
+
+            jQuery('.qty-wrapper #qty').change(function(event) {
+                quantity = parseInt(jQuery('.qty-wrapper #qty').val());
+
+                switch (true) {
+                    case (quantity > 0 && quantity <= 99):
+                        price = 2.50;
+                        break;
+                    case (quantity >= 100 && quantity <= 499):
+                        price = tier_0_price;
+                        break;
+                    case (quantity >= 500 && quantity <= 999):
+                        price = tier_1_price;
+                        break;
+                    case (quantity >= 1000 && quantity <= 2499):
+                        price = tier_2_price;
+                        break;
+                    case (quantity >= 2500 && quantity <= 4999):
+                        price = tier_3_price;
+                        break;
+                    case (quantity >= 5000 && quantity <= 9999):
+                        price = tier_4_price;
+                        break;
+                    case (quantity > 10000):
+                        price = tier_5_price;
+                        break;
+                }
+
+                amount = '£' + (quantity * price).toFixed(2);
+
+                jQuery('.epic-wrapper').css('display', 'block');
+                jQuery('.epic-wrapper #qty').val(amount);
+
+            });
+
+        }
+
+            var productAddToCartForm = new VarienForm('product_addtocart_form');
+            productAddToCartForm.submit = function(button, url) {
+                if (this.validator.validate()) {
+                    var form = this.form;
+                    var oldUrl = form.action;
+
+                    if (url) {
+                       form.action = url;
+                    }
+                    var e = null;
+                    try {
+                        this.form.submit();
+                    } catch (e) {
+                    }
+                    this.form.action = oldUrl;
+                    if (e) {
+                        throw e;
+                    }
+
+                    if (button && button != 'undefined') {
+                        button.disabled = true;
+                    }
+                }
+            }.bind(productAddToCartForm);
+
+            productAddToCartForm.submitLight = function(button, url){
+                if(this.validator) {
+                    var nv = Validation.methods;
+                    delete Validation.methods['required-entry'];
+                    delete Validation.methods['validate-one-required'];
+                    delete Validation.methods['validate-one-required-by-name'];
+                    // Remove custom datetime validators
+                    for (var methodName in Validation.methods) {
+                        if (methodName.match(/^validate-datetime-.*/i)) {
+                            delete Validation.methods[methodName];
+                        }
+                    }
+
+                    if (this.validator.validate()) {
+                        if (url) {
+                            this.form.action = url;
+                        }
+                        this.form.submit();
+                    }
+                    Object.extend(Validation.methods, nv);
+                }
+            }.bind(productAddToCartForm);
+        //]]>
+        </script>
+    </div>
+
+    <?php echo $this->getChildHtml('upsell_products') ?>
+    <?php echo $this->getChildHtml('product_additional_data') ?>
+
+</div>

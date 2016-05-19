@@ -1,0 +1,79 @@
+<?php
+	$bshowPos = Mage::getStoreConfigFlag('auit_pdf/shipment/table_show_pos');
+	$baddSku = Mage::getStoreConfigFlag('auit_pdf/shipment/table_add_sku');
+	$bshowSku = Mage::getStoreConfigFlag('auit_pdf/shipment/table_show_sku');
+	$cols=4;
+	if ( !$bshowPos )
+		$cols--;
+	if ( !$bshowSku )
+		$cols--;
+?>
+<?php $_order = $this->getOrder() ?>
+
+<?php if ( $text = $this->getBuilBeforeTableText()) :?>
+	<div class="text-before"><?php echo $text; ?></div>
+<?php endif;?>
+<?php foreach ($this->getShipmentsCollection() as $shipment): ?>
+    <table class="data-table shipment" border="0" cellpadding="2" cellspacing="0">
+    	<thead>
+            <tr class="head">
+            	<?php if ( $bshowPos ) :?>
+            	<th class="col-position " ><?php echo $this->__('Pos.') ?></th>
+            	<?php endif;?>
+                <th class="col-name" ><?php echo $this->__('Product Name') ?></th>
+                <?php if ( $bshowSku ) :?>
+                <th class="col-sku"><?php echo $this->__('SKU') ?></th>
+                <?php endif;?>
+                <th class="col-qty"><?php echo $this->__('Qty') ?></th>
+            </tr>
+		</thead>
+        <?php $_items = $this->getShipmentItems($shipment); ?>
+        <?php $_count = 0; $rowNr=0;
+	        foreach ($_items as $_item)
+	        {
+	        	if ($_item->getOrderItem()->getParentItem()) continue;
+	        	$_count++;
+	        }
+        ?>
+        <?php foreach ($_items as $_item): ?>
+        <?php if ($_item->getOrderItem()->getParentItem()) continue; ?>
+            <?php 
+            	$rowNr++;
+            	$trClass = (($rowNr % 2) == 1)?'odd':'even';
+            	if ( $rowNr == $_count )
+            		$trClass .= ' lastx'; 
+            	$row = $this->getItemHtml($_item);
+            	$countTr = preg_match_all("|<tr[^>]*>(.*)</tr[^>]*>|usiU",$row,$resultTR, PREG_PATTERN_ORDER);
+			?>
+			<?php if ( $countTr > 0 ) foreach ( $resultTR[0] as $trIdx => $tr ) : ?>
+				<?php
+            	$count = preg_match_all("|<td[^>]*>(.*)</td[^>]*>|usiU",$tr,$result, PREG_PATTERN_ORDER);
+            	if ( $count )
+            	{
+	            	foreach ( $result[1] as &$td)
+            			$td = trim(str_replace(array("\n",'  ','display:none'),'',$td));
+            	}
+	            ?>
+	            <?php if ( $count && count($result[1]) >= 3 ) : ?>
+	            <tr class="<?php  echo $trClass; ?>" nobr="true">
+	           	<?php if ( $bshowPos ) :?>
+	            	<td class="col-position " ><?php if ( $trIdx == 0 ) echo $rowNr; ?></td>
+	           	<?php endif;?>
+	                <td class="col-name" ><?php echo ($result[1][0]) ?>
+	                <?php echo Mage::helper('auit_pdf')->showSKULine($baddSku,$result[1][1]);?></td>
+				<?php if ( $bshowSku ) :?>
+	                <td class="col-sku"><?php echo ($result[1][1]) ?></td>
+	            <?php endif;?>
+	                <td class="col-qty"><?php echo ($result[1][2]) ?></td>
+	            </tr>
+	            <?php else : ?>
+	            	<?php echo $row; ?>
+	            <?php endif;?>
+            <?php endforeach; ?>
+        <?php endforeach; ?>
+</table>
+<?php if ( $text = $this->getBuildAfterTableText()) :?>
+	<br />
+	<div class="text-after"><?php echo $text; ?></div>
+<?php endif;?>
+<?php endforeach; ?>

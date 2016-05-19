@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>css/tm/testimonials.css</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/tm/testimonials.js</name></action>
+        </reference>
+        <reference name="top.links">
+            <action method="addLink" translate="label title" module="testimonials" ifconfig="testimonials/general/top_links">
+                <label>Testimonials</label>
+                <url>testimonials</url>
+                <title>Testimonials</title>
+                <prepare/>
+                <urlParams/>
+                <position>200</position>
+            </action>
+        </reference>
+        <reference name="footer_links">
+            <action method="addLink" translate="label title" module="testimonials" ifconfig="testimonials/general/footer_links">
+                <label>Testimonials</label>
+                <url>testimonials</url>
+                <title>Testimonials</title>
+                <prepare/>
+                <urlParams/>
+                <position>200</position>
+            </action>
+        </reference>
+    </default>
+    <tm_testimonials_index_new>
+        <reference name="content">
+            <block type="testimonials/form_container" name="testimonials.form.container"
+                       template="tm/testimonials/form/container.phtml">
+            	<block type="testimonials/form_form" name="testimonials.form"
+            		   template="tm/testimonials/form/form.phtml" as="testimonials_form">
+                    <block type="captcha/captcha" name="captcha">
+                        <reference name="head">
+                            <action method="addJs"><file>mage/captcha.js</file></action>
+                        </reference>
+                        <action method="setFormId">
+                            <formId>testimonials_form</formId>
+                        </action>
+                        <action method="setImgWidth">
+                            <width>230</width>
+                        </action>
+                        <action method="setImgHeight">
+                            <width>50</width>
+                        </action>
+                    </block>
+                </block>
+            </block>
+        </reference>
+    </tm_testimonials_index_new>
+    <tm_testimonials_index_index>
+        <reference name="content">
+            <block type="testimonials/list_content" name="testimonials.list.content"
+                   template="tm/testimonials/list/content.phtml">
+                <block type="testimonials/list_title" name="testimonials.list.title"
+                       template="tm/testimonials/list/title.phtml">
+                </block>
+                <block type="testimonials/list_bottom" name="testimonials.list.bottom"
+                       template="tm/testimonials/list/bottom.phtml">
+                </block>
+            </block>
+        </reference>
+    </tm_testimonials_index_index>
+</layout>

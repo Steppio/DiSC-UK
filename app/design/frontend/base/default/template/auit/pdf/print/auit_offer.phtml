@@ -1,0 +1,129 @@
+<?php
+	$bshowPos = Mage::getStoreConfigFlag('auit_pdf/auit_offer/table_show_pos');
+	$baddSku = Mage::getStoreConfigFlag('auit_pdf/auit_offer/table_add_sku');
+	$bshowSku = Mage::getStoreConfigFlag('auit_pdf/auit_offer/table_show_sku');
+	$bshowQtyAsNumber = Mage::getStoreConfigFlag('auit_pdf/auit_offer/table_show_qty_number');
+	
+	
+	//print pdf offer im frontend
+	
+	$cols=6;
+	if ( !$bshowPos )
+		$cols--;
+	if ( !$bshowSku )
+		$cols--;
+?>
+<?php $_order = $this->getOrder() ?>
+
+<?php if ( $text = $this->getBuilBeforeTableText()) :?>
+	<div class="text-before"><?php echo $text; ?></div>
+<?php endif;?>
+
+    <table class="data-table offer" border="0" cellpadding="2" cellspacing="0">
+    	<thead>
+            <tr class="head">
+            	<?php if ( $bshowPos ) :?>
+            	<th class="col-position " ><?php echo $this->__('Pos.') ?></th>
+            	<?php endif;?>
+                <th class="col-name" ><?php echo $this->__('Product Name') ?></th>
+                <?php if ( $bshowSku ) :?>
+                <th class="col-sku"><?php echo $this->__('SKU') ?></th>
+                <?php endif;?>
+                <th class="col-price"><?php echo $this->__('Price') ?></th>
+                <th class="col-qty"><?php echo $this->__('Qty') ?></th>
+                <th class="col-subtotal"><?php echo $this->__('Subtotal') ?></th>
+            </tr>
+		</thead>
+        <?php $_items = $_order->getItemsCollection(); 
+        
+        
+        
+        ?>
+        <?php $_count = 0; $rowNr=0;
+	        foreach ($_items as $_item)
+	        {
+	        	if ($_item->getParentItem()) continue;
+	        	$_count++;
+	        }
+        ?>
+        <?php foreach ($_items as $_item): ?>
+        <?php /* @var $_item Mage_Sales_Model_Order_Invoice_Item */  ?>
+        <?php if ( $_item->getParentItem()) continue; ?>
+            <?php 
+            	$rowNr++;
+            	$trClass = (($rowNr % 2) == 1)?'odd':'even';
+            	if ( $rowNr == $_count )
+            		$trClass .= ' lastx'; 
+            	$row = $this->getItemHtml($_item);
+            	$countTr = preg_match_all("|<tr[^>]*>(.*)</tr[^>]*>|usiU",$row,$resultTR, PREG_PATTERN_ORDER);
+			?>
+			<?php if ( $countTr > 0 ) foreach ( $resultTR[0] as $trIdx => $tr ) : ?>
+				<?php
+	            	$orderItemId = 0;
+	            	if ( preg_match_all("|<tr[^i]*id=\"order-item-row-([0-9]*)\"[^>]*>|usiU",$tr,$result, PREG_PATTERN_ORDER) )
+	            		$orderItemId = $result[1][0];
+
+					$count = preg_match_all("|<td[^>]*>(.*)</td[^>]*>|usiU",$tr,$result, PREG_PATTERN_ORDER);
+	            	if ( $count )
+	            	{
+		            	foreach ( $result[1] as &$td)
+	            			$td = trim(str_replace(array("\n",'  ','display:none'),'',$td));
+	            	}
+	            ?>
+	            <?php if ( $count && count($result[1]) >= 5 ) : ?>
+	            <tr class="<?php  echo $trClass; ?>" nobr="true">
+	           	<?php if ( $bshowPos ) :?>
+	            	<td class="col-position " ><?php if ( $trIdx == 0 ) echo $rowNr; ?></td>
+	           	<?php endif;?>
+	                <td class="col-name" ><?php echo ($result[1][0]) ?>
+	                <?php echo Mage::helper('auit_pdf')->showSKULine($baddSku,$result[1][1]);?></td>
+				<?php if ( $bshowSku ) :?>
+	                <td class="col-sku"><?php echo ($result[1][1]) ?></td>
+	            <?php endif;?>
+	                <td class="col-price"><?php echo ($result[1][2]) ?></td>
+				<?php if ( 0 ) :?>
+	                <td class="col-sku"><?php echo sprintf('%s%%', 0 + $_item->getTaxPercent()); ?></td>
+	            <?php endif;?>
+	                <td class="col-qty"><?php
+	                	if ( $bshowQtyAsNumber )
+	                		echo Mage::helper('auit_pdf')->getOfferQtyOrdered($_items,$_item,$orderItemId);
+	                	else 
+	                		echo $result[1][3];
+	                ?></td>
+	                <td class="col-subtotal"><?php echo ($result[1][4]) ?></td>
+	            </tr>
+	            <?php else : ?>
+	            	<?php echo $row; ?>
+	            <?php endif;?>
+			<?php endforeach; ?>
+        <?php endforeach; ?>
+		<tr class="last">
+			<td colspan="<?php echo $cols?>"></td>
+		</tr>
+		<?php 
+			$row = $this->getChildHtml('order_totals');
+			$row = str_replace('colspan="4"','colspan="'.($cols-1).'"',$row);
+			$row = trim(str_replace(array("\n",'  ','display:none'),'',$row));
+			$row = preg_replace('|(onclick="[^"]*")|','',$row);
+			$row = preg_replace('|(&[^a])|','&amp; ',$row);
+			$row = str_replace('<br /></td>','</td>',$row);
+			
+		?>
+		<?php echo $row; ?>
+</table>
+<?php if ( $text = $this->getBuildAfterTableText()) :?>
+	<br />
+	<div class="text-after"><?php echo $text; ?></div>
+<?php endif;?>
+
+
+
+
+
+
+
+
+
+
+
+

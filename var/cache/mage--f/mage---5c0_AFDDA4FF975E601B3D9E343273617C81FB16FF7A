@@ -1,0 +1,321 @@
+<section class="frontpage-testimonials rs-l rs-r cf">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="document-image">
+                                       <img src="https://www.discassessment.co.uk/media/wysiwyg/document.png" alt="" />
+				</div>
+				<div class="testimonials-list col-sm-12">
+            <div class="page-title">
+            <h1>Testimonials</h1>
+            <div class="submit-testimonial">
+                <button class="button" onclick="setLocation('https://www.discassessment.co.uk/testimonials/index/new/?___SID=U')">
+                    <span><span>Submit Your Testimonial</span></span>
+                </button>
+            </div>
+        </div>
+        <div class="testimonials">                            <div class="testimonial">
+                                <div class="testimonial-image" style="width: 285px">
+                    <img src="https://www.discassessment.co.uk/media/testimonials/pictures/resized/275_150_empty.gif"
+                    alt="Profile image" />
+                </div>
+                                <div class="testimonial-right" style="width: auto; margin-left: 285px">
+                    <div class="content-wrapper">
+                        <div class="message-wrapper">
+                            <div class="message">
+                                <p>I attended a DiSC Certification course in 2015 and enjoyed an excellent day. Our trainer had an easy manner that got across the concepts in an easy to digest way, and I left the course confident in how I could apply what I had learned back in the business.</p>
+                                <span class="author-info">
+                                    Training Manager - Nordic Region, EMEA & Latin America                                                                        </span>
+
+                                                            </div>
+                        </div>
+                        <div style="margin: 10px 0 0 40px">
+                            <div class="rating-wrapper ratings-table">
+                                                                <div class="rating-title">Rating</div>
+                                <div class="rating-box"><div class="rating" style="width: -20%;"></div></div>
+                                                            </div>
+                            <div class="testimonial-date">
+                                <span>Placed on</span>
+                                <span class="nobr">8 December 2015</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="testimonial">
+                                <div class="testimonial-image" style="width: 285px">
+                    <img src="https://www.discassessment.co.uk/media/testimonials/pictures/resized/275_150_empty.gif"
+                    alt="Profile image" />
+                </div>
+                                <div class="testimonial-right" style="width: auto; margin-left: 285px">
+                    <div class="content-wrapper">
+                        <div class="message-wrapper">
+                            <div class="message">
+                                <p>Very enthusiastic and helpful trainer. Patient, knowledgable, and helped ensure the DiSC model and material was understood in a very productive adult learning environment.</p>
+                                <span class="author-info">
+                                    Executive Development Director at Cranfield School of Management                                                                        </span>
+
+                                                            </div>
+                        </div>
+                        <div style="margin: 10px 0 0 40px">
+                            <div class="rating-wrapper ratings-table">
+                                                                <div class="rating-title">Rating</div>
+                                <div class="rating-box"><div class="rating" style="width: -20%;"></div></div>
+                                                            </div>
+                            <div class="testimonial-date">
+                                <span>Placed on</span>
+                                <span class="nobr">8 December 2015</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="testimonial">
+                                <div class="testimonial-image" style="width: 285px">
+                    <img src="https://www.discassessment.co.uk/media/testimonials/pictures/resized/275_150_empty.gif"
+                    alt="Profile image" />
+                </div>
+                                <div class="testimonial-right" style="width: auto; margin-left: 285px">
+                    <div class="content-wrapper">
+                        <div class="message-wrapper">
+                            <div class="message">
+                                <p>I attended the DiSC training session and found it extremely useful. Not only was the presenter an excellent, very knowledgeable and personable trainer, but I received great support both before and after the course with the interpretation of DiSC assessments and general company mediation issues.</p>
+                                <span class="author-info">
+                                    HR Manager                                                                        </span>
+
+                                                            </div>
+                        </div>
+                        <div style="margin: 10px 0 0 40px">
+                            <div class="rating-wrapper ratings-table">
+                                                                <div class="rating-title">Rating</div>
+                                <div class="rating-box"><div class="rating" style="width: -20%;"></div></div>
+                                                            </div>
+                            <div class="testimonial-date">
+                                <span>Placed on</span>
+                                <span class="nobr">8 December 2015</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="testimonial">
+                                <div class="testimonial-image" style="width: 285px">
+                    <img src="https://www.discassessment.co.uk/media/testimonials/pictures/resized/275_150_empty.gif"
+                    alt="Profile image" />
+                </div>
+                                <div class="testimonial-right" style="width: auto; margin-left: 285px">
+                    <div class="content-wrapper">
+                        <div class="message-wrapper">
+                            <div class="message">
+                                <p>I found the DISC UK guys to be extremely helpful and practical while obtaining my DiSC certification. The session exceeded my expectations and I would highly recommend them to other organisations.</p>
+                                <span class="author-info">
+                                    Learning & Development Manager at Warner Bros                                                                        </span>
+
+                                                            </div>
+                        </div>
+                        <div style="margin: 10px 0 0 40px">
+                            <div class="rating-wrapper ratings-table">
+                                                                <div class="rating-title">Rating</div>
+                                <div class="rating-box"><div class="rating" style="width: -20%;"></div></div>
+                                                            </div>
+                            <div class="testimonial-date">
+                                <span>Placed on</span>
+                                <span class="nobr">8 December 2015</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="testimonial">
+                                <div class="testimonial-image" style="width: 285px">
+                    <img src="https://www.discassessment.co.uk/media/testimonials/pictures/resized/275_150_empty.gif"
+                    alt="Profile image" />
+                </div>
+                                <div class="testimonial-right" style="width: auto; margin-left: 285px">
+                    <div class="content-wrapper">
+                        <div class="message-wrapper">
+                            <div class="message">
+                                <p>We had a fantastic trainer who was able to provide me with great insight into the DiSC model and how it can be applied practically in any given context with regards to understanding your own behavioural style and that of others. He was friendly, energetic, and very easy to work with, and always willing to do whatever he can to help no matter how many questions...</p>
+                                <span class="author-info">
+                                    GCOO Operational Risk Management Analyst                                                                        </span>
+
+                                                            </div>
+                        </div>
+                        <div style="margin: 10px 0 0 40px">
+                            <div class="rating-wrapper ratings-table">
+                                                                <div class="rating-title">Rating</div>
+                                <div class="rating-box"><div class="rating" style="width: -20%;"></div></div>
+                                                            </div>
+                            <div class="testimonial-date">
+                                <span>Placed on</span>
+                                <span class="nobr">8 December 2015</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="testimonial">
+                                <div class="testimonial-image" style="width: 285px">
+                    <img src="https://www.discassessment.co.uk/media/testimonials/pictures/resized/275_150_empty.gif"
+                    alt="Profile image" />
+                </div>
+                                <div class="testimonial-right" style="width: auto; margin-left: 285px">
+                    <div class="content-wrapper">
+                        <div class="message-wrapper">
+                            <div class="message">
+                                <p>Our excellent trainer provided deep knowledge and insight into the DiSC model and how to effectively use this as a development tool in any organisation.</p>
+                                <span class="author-info">
+                                    Vice President, Head of Learning & Development for IM EMEA                                                                        </span>
+
+                                                            </div>
+                        </div>
+                        <div style="margin: 10px 0 0 40px">
+                            <div class="rating-wrapper ratings-table">
+                                                                <div class="rating-title">Rating</div>
+                                <div class="rating-box"><div class="rating" style="width: -20%;"></div></div>
+                                                            </div>
+                            <div class="testimonial-date">
+                                <span>Placed on</span>
+                                <span class="nobr">8 December 2015</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="testimonial">
+                                <div class="testimonial-image" style="width: 285px">
+                    <img src="https://www.discassessment.co.uk/media/testimonials/pictures/resized/275_150_empty.gif"
+                    alt="Profile image" />
+                </div>
+                                <div class="testimonial-right" style="width: auto; margin-left: 285px">
+                    <div class="content-wrapper">
+                        <div class="message-wrapper">
+                            <div class="message">
+                                <p>We had an excellent facilitator and trainer of DISC. The approach was extremely effective and quickly tuned into others within the group to maximise their learning potential. All of the DISC UK team have a fantastic knowledge of Everything DiSC and combine this with a pragmatic approach to make the subject area come alive. I would recommend them to deliver a value-added training for any organisation.</p>
+                                <span class="author-info">
+                                    HR Director                                                                        </span>
+
+                                                            </div>
+                        </div>
+                        <div style="margin: 10px 0 0 40px">
+                            <div class="rating-wrapper ratings-table">
+                                                                <div class="rating-title">Rating</div>
+                                <div class="rating-box"><div class="rating" style="width: -20%;"></div></div>
+                                                            </div>
+                            <div class="testimonial-date">
+                                <span>Placed on</span>
+                                <span class="nobr">26 November 2015</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="testimonial">
+                                <div class="testimonial-image" style="width: 285px">
+                    <img src="https://www.discassessment.co.uk/media/testimonials/pictures/resized/275_150_empty.gif"
+                    alt="Profile image" />
+                </div>
+                                <div class="testimonial-right" style="width: auto; margin-left: 285px">
+                    <div class="content-wrapper">
+                        <div class="message-wrapper">
+                            <div class="message">
+                                <p>Our trainer was very patient with the group and explained things in detail, using various analogies to make the work understood. He positively encouraged participation and debate and made for a thoroughly enjoyable, interesting and informative day.</p>
+                                <span class="author-info">
+                                    Learning and Development Manager                                                                        </span>
+
+                                                            </div>
+                        </div>
+                        <div style="margin: 10px 0 0 40px">
+                            <div class="rating-wrapper ratings-table">
+                                                                <div class="rating-title">Rating</div>
+                                <div class="rating-box"><div class="rating" style="width: -20%;"></div></div>
+                                                            </div>
+                            <div class="testimonial-date">
+                                <span>Placed on</span>
+                                <span class="nobr">26 November 2015</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="testimonial">
+                                <div class="testimonial-image" style="width: 285px">
+                    <img src="https://www.discassessment.co.uk/media/testimonials/pictures/resized/275_150_empty.gif"
+                    alt="Profile image" />
+                </div>
+                                <div class="testimonial-right" style="width: auto; margin-left: 285px">
+                    <div class="content-wrapper">
+                        <div class="message-wrapper">
+                            <div class="message">
+                                <p>Our trainer created a really good atmosphere in the training room; he was flexible, patient and adapted his style to the needs of participants. He was absolutely professional; his knowledge of DISC extensive and his enthusiasm infectious! I thoroughly enjoyed the training day and I left feeling confident and well prepared for delivering DISC in the future.</p>
+                                <span class="author-info">
+                                    Director at Acanthus Associates Ltd                                                                        </span>
+
+                                                            </div>
+                        </div>
+                        <div style="margin: 10px 0 0 40px">
+                            <div class="rating-wrapper ratings-table">
+                                                                <div class="rating-title">Rating</div>
+                                <div class="rating-box"><div class="rating" style="width: -20%;"></div></div>
+                                                            </div>
+                            <div class="testimonial-date">
+                                <span>Placed on</span>
+                                <span class="nobr">26 November 2015</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                    <div class="testimonial">
+                                <div class="testimonial-image" style="width: 285px">
+                    <img src="https://www.discassessment.co.uk/media/testimonials/pictures/resized/275_150_screen_shot_2015-07-08_at_12.54.17.jpg"
+                    alt="Profile image" />
+                </div>
+                                <div class="testimonial-right" style="width: auto; margin-left: 285px">
+                    <div class="content-wrapper">
+                        <div class="message-wrapper">
+                            <div class="message">
+                                <p>Really enjoyed our DISC training, the guys made it very easy to understand and to apply within our organisation, we are using it now with great success!</p>
+                                <span class="author-info">
+                                    Senior L&D and Engagement Manager at Age UK                                                                        </span>
+
+                                                            </div>
+                        </div>
+                        <div style="margin: 10px 0 0 40px">
+                            <div class="rating-wrapper ratings-table">
+                                                                <div class="rating-title">Rating</div>
+                                <div class="rating-box"><div class="rating" style="width: -20%;"></div></div>
+                                                            </div>
+                            <div class="testimonial-date">
+                                <span>Placed on</span>
+                                <span class="nobr">8 July 2015</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <script type="text/javascript">
+        //<![CDATA[
+            if ($('viewMore')) $('viewMore').hide();
+        //]]>
+        </script>
+            </div>
+    <a class="button" target="blank" href="https://www.discassessment.co.uk/testimonials">View testimonials</a>
+    <div class="copyright">
+        <!-- This extension is available under Creative Commons License http://creativecommons.org/licenses/by/3.0/. Removing links to is similarly prohibited. -->
+        Magento testimonial extension by <a href="http://templates-master.com/magento-extensions.html" title="Magento extensions by Templates-master.com" rel="nofollow" target="_blank">templates-master.com</a>
+        <!-- Removing links to is similarly prohibited.  -->
+    </div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+    // var testimonials = new Testimonials("https://www.discassessment.co.uk/testimonials/index/index/?___SID=U",
+                                        // '.testimonials');
+    // $('viewMore').observe('click', testimonials.makeAjaxCall.bind(testimonials));
+            // $('viewMore').hide();
+    //]]>
+</script>
+			</div>
+		</div>
+	</div>
+</section>

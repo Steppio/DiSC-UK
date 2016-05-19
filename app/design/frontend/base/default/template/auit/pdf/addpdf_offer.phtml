@@ -1,0 +1,34 @@
+<?php
+	if ( $this->getProcessor() && $this->getProcessor()->getMail() && $this->getOrder()  )
+	{
+		if ( Mage::getStoreConfigFlag('auit_pdf/general/attach_to_email_offer',$this->getOrder()->getStoreId()) )
+		{
+
+			//AITOC Rewrite Probleme
+			$mail = $this->getProcessor()->getMail();
+			$parts = $mail->getParts();
+
+			$pdf_filename = Mage::helper('auit_pdf')->getPdfFName('fname_to_email_offer',array($this->getOrder()));
+			$bfound=false;
+			foreach ( $parts as $part )
+			{
+				/** @var Zend_Mime_Part $part */
+				if ( $part->filename == $pdf_filename )
+				{
+					$bfound=true;
+					break;
+				}
+			}
+			if ( !$bfound )
+			{
+				$pdf = Mage::getModel('auit_pdf/offer')->getPdf(array($this->getOrder()) );
+				$mail->createAttachment($pdf->render(),Zend_Mime::TYPE_OCTETSTREAM,Zend_Mime::DISPOSITION_ATTACHMENT,Zend_Mime::ENCODING_BASE64, $pdf_filename);
+				Mage::helper('auit_pdf')->addAttachments('email_attachments_order',$mail,array($this->getOrder()));
+				if ( $this->getProcessor()->getQueue() )
+				{
+					$this->getProcessor()->setQueue(null);
+				}
+			}
+		}
+	}
+?>

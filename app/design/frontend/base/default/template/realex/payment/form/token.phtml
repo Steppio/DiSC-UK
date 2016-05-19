@@ -1,0 +1,55 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category    Yoma
+ * @package     Yoma_Realex
+ * @copyright   Copyright (c) 2014 YOMA LIMITED (http://www.yoma.co.uk)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+<?php
+$code = $this->getPaymentMethodCode();
+$tokenCards = $this->getAvailableTokenCards();
+$cTokens  = ($tokenCards->getSize()>0 && $this->canUseTokens());
+if($cTokens > 0):
+    $defToken = $this->helper('realex')->getDefaultToken();
+    ?>
+    <ul class="form-list tokenrealex" id="payment_form_<?php echo $code; ?>" style="display:none;">
+        <?php
+        foreach($tokenCards as $_tcard):
+            $radioId = $code  . '_tokencard_' . $_tcard->getId();
+            //$isDef = $_tcard->getId() == $defToken->getId();
+            $isDef = false;
+            ?>
+            <li class="tokencard-radio control">
+                <input<?php if($isDef): ?> checked="checked"<?php endif; ?> type="radio" id="<?php echo $radioId; ?>" name="payment[realex_token_cc_id]" title="<?php echo $this->__('Credit Card Number') ?>" class="input-radio" value="<?php echo $_tcard->getId(); ?>" onclick="switchToken(this);" />
+                <span class="token-icon token-icon-<?php echo strtolower($_tcard->getMagentoCardType()); ?>"><?php echo $_tcard->getCardType(); ?></span>
+                <label class="token" for="<?php echo $radioId; ?>"><?php echo $this->__('%s, Exp. %s', $_tcard->getCcNumber(), $_tcard->getExpireDate()); ?></label>
+                <?php if($this->requireTokenCvv()):?>
+                    <div class="tokencvv"<?php if(!$isDef): ?> style="display:none"<?php endif; ?>>
+                        <label class="required" for="<?php echo $code ?>_token_cvv_<?php echo $_tcard->getId(); ?>"><em>*</em><?php echo $this->__('Security Code'); ?></label>
+                        <input<?php if(!$isDef): ?> disabled="disabled"<?php endif; ?> type="text" id="<?php echo $code ?>_token_cvv_<?php echo $_tcard->getId(); ?>" name="payment[token_cvv]" title="<?php echo $this->__('Credit Card Security Code') ?>" class="input-text required-entry validate-digits cvv tokencvv  validate-realex-cvn" onfocus="tokenRadioCheck('<?php echo $radioId; ?>', this);" />
+                        <input<?php if(!$isDef): ?> disabled="disabled"<?php endif; ?> type="hidden" id="<?php echo $code ?>_cc_type_<?php echo $_tcard->getId(); ?>" name="payment[cc_type]" value="<?php echo $_tcard->getCardType();//echo $this->getMagentoCardType($_tcard) ?>" class="tokencctype"/>
+                    </div>
+                <?php endif; ?>
+                <!--<img width="35" src="<?php // echo $this->helper('realex')->getCcImage($this->helper('realex')->getCardLabel($_tcard->getCardType(), false)); ?>" />-->&nbsp;&nbsp;&nbsp;
+            </li>
+        <?php endforeach; ?>
+    </ul>
+
+<?php else: ?>
+    <ul class="form-list tokenrealex" id="payment_form_<?php echo $code; ?>">
+        <li>No Cards Stored</li>
+    </ul>
+<?php endif; ?>

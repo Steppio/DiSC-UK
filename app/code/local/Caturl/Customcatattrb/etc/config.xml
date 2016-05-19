@@ -1,0 +1,20 @@
+<config>
+  <modules>
+    <Caturl_Customcatattrb>
+      <version>0.0.1</version>
+    </Caturl_Customcatattrb>
+  </modules>
+    <global>
+      <resources>
+          <customcatattrb_setup>
+            <setup>
+              <module>Caturl_Customcatattrb</module>
+              <class>Mage_Eav_Model_Entity_Setup</class>
+            </setup>
+            <connection>
+              <use>default_setup</use>
+            </connection>
+          </customcatattrb_setup>
+      </resources>
+    </global>
+</config>

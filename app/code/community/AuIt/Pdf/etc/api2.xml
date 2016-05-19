@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<config>
+	<api2>
+		<resource_groups>
+			<auit_pdf translate="title" module="auit_pdf">
+				<title>pdfPRINT API</title>
+				<sort_order>10</sort_order>
+			</auit_pdf>
+		</resource_groups>
+		<resources>
+			<auit_pdf translate="title" module="auit_pdf">
+				<group>auit_pdf</group>
+				<model>auit_pdf/api2_pdfprint</model>
+				<title>Loader</title>
+				<sort_order>10</sort_order>
+				<privileges>
+					<admin>
+						<retrieve>1</retrieve>
+					</admin>
+                    <!-- 
+                    <customer>
+                        <retrieve>1</retrieve>
+                    </customer>
+					<guest>
+						<retrieve>1</retrieve>
+					</guest>
+					 -->
+				</privileges>
+				<attributes>
+					<id>Id</id>
+					<type>Type (order|invoice|shipment|creditmemo)</type>
+					<fname>Filename</fname>
+					<data64>Pdf data base64</data64>
+				</attributes>
+				<routes>
+					<route_order>
+						<route>/pdfprint/order/:order_id</route>
+						<action_type>entity</action_type>
+					</route_order>
+					<route_invoice>
+						<route>/pdfprint/invoice/:invoice_id</route>
+						<action_type>entity</action_type>
+					</route_invoice>
+					<route_shipment>
+						<route>/pdfprint/shipment/:shipment_id</route>
+						<action_type>entity</action_type>
+					</route_shipment>
+					<route_creditmemo>
+						<route>/pdfprint/creditmemo/:creditmemo_id</route>
+						<action_type>entity</action_type>
+					</route_creditmemo>
+				</routes>
+				<versions>1</versions>
+			</auit_pdf>
+			<!-- 
+			<auit_pdf_test translate="title" module="auit_pdf">
+				<group>auit_pdf</group>
+				<model>auit_pdf/api2_test</model>
+				<title>Test</title>
+				<sort_order>10</sort_order>
+				<privileges>
+					<admin>
+						<retrieve>1</retrieve>
+					</admin>
+				</privileges>
+				<attributes>
+					<test>Test</test>
+				</attributes>
+				<routes>
+					<route>
+						<route>/pdfprint_test/invoice/:invoice_id</route>
+						<action_type>collection</action_type>
+					</route>
+				</routes>
+				<versions>1</versions>
+			</auit_pdf_test>
+			 -->
+		</resources>
+	</api2>
+</config>

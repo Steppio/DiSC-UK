@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <acbanners_adminhtml_acbanners_index>
+        <reference name="content">
+            <block type="acbanners/adminhtml_acbanners" name="acbanners" />
+        </reference>
+    </acbanners_adminhtml_acbanners_index>
+</layout>

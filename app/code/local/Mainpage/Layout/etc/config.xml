@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Mainpage_Layout>
+			<version>0.0.1</version>
+		</Mainpage_Layout>
+	</modules>
+	<global>
+		<page>
+			<layouts>
+				<mainpage module="page" translate="label">
+					<label>mainpage</label>
+					<template>page/1column-mainpage.phtml</template>
+					<layout_handle>mainpage</layout_handle>
+				</mainpage>
+			</layouts>
+		</page>
+	</global>
+</config>

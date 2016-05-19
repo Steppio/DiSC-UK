@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Talentmanagement_Layout>
+			<version>0.0.1</version>
+		</Talentmanagement_Layout>
+	</modules>
+	<global>
+		<page>
+			<layouts>
+				<talentmanagement module="page" translate="label">
+					<label>talentmanagement</label>
+					<template>page/1column-talentmanagement.phtml</template>
+					<layout_handle>talentmanagement</layout_handle>
+				</talentmanagement>
+			</layouts>
+		</page>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<talentmanagement_layout>
+					<file>talentmanagement_layout.xml</file>
+				</talentmanagement_layout>
+			</updates>
+		</layout>
+	</frontend>
+</config>

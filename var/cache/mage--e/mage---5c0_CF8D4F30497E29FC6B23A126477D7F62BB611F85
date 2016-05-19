@@ -1,0 +1,11 @@
+<section class="about-us-header-image image-resize-target cf" id="about-us-header-image" style="background-image: url(https://www.discassessment.co.uk/media/wysiwyg/placeholder.png)">
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 header-icon-container">
+				<img src="https://www.discassessment.co.uk/media/wysiwyg/about-us-vector.png" alt="" />
+			</div>
+		</div>
+	</div>
+
+</section>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<News_Layout>
+			<version>0.0.1</version>
+		</News_Layout>
+	</modules>
+	<global>
+		<page>
+			<layouts>
+				<newslayout module="page" translate="label">
+					<label>newslayout</label>
+					<template>page/1column-news.phtml</template>
+					<layout_handle>newslayout</layout_handle>
+				</newslayout>
+			</layouts>
+		</page>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<news_layout>
+					<file>news_layout.xml</file>
+				</news_layout>
+			</updates>
+		</layout>
+	</frontend>
+</config>

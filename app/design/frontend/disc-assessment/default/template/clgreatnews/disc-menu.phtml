@@ -1,0 +1,57 @@
+<?php $dates = $this->getNewsDates(); ?>
+
+<?php var_dump($dates); ?>
+
+<? die(); ?>
+
+<?php if (count($categories)): ?>
+<div class="block news-categories">
+    <div class="head block-title">
+        <strong><span><?php echo $this->__(Mage::getStoreConfig('clnews/news_general/title'));?></span></strong>
+        <span class="chevron">
+            <i class="fa fa-chevron-down">&nbsp;</i>
+        </span>
+    </div>
+    <div class="block-content">
+        <div id="commercelab_categories_container" class="menu-categories">
+            <h5><?php echo $this->__('Categories');?></h5>
+            <ul id="commercelab_categories_div">
+                <?php $count = 0; ?>
+                <?php $level = 0; ?>
+                <?php $children = 0; ?>
+                <?php foreach ($categories as $category): ?>
+                    <?php if ($count > 0 && $category->getLevel() == $level): ?>
+                        </li><li id="category_<?php echo $category->getId() ?>"><a href="<?php echo $category->getUrl() ?>" ><?php echo $category->getTitle();?></a>
+                    <?php elseif ($count > 0 && $category->getLevel() != $level && ($category->getLevel() > $level)): ?>
+                        <?php $level = $category->getLevel(); ?>
+                        <ul><li id="category_<?php echo $category->getId() ?>"><a href="<?php echo $category->getUrl() ?>" ><?php echo $category->getTitle();?></a>
+                    <?php elseif ($count > 0 && $category->getLevel() != $level && ($category->getLevel() < $level)): ?>
+                        <?php $difference = $level - $category->getLevel() ?>
+                        <?php for ($i = 0; $i < $difference; $i++): ?>
+                            </li></ul>
+                        <?php endfor; ?>
+                        <?php $level = $category->getLevel(); ?>
+                            </li><li id="category_<?php echo $category->getId() ?>"><a href="<?php echo $category->getUrl() ?>" ><?php echo $category->getTitle();?></a>
+                    <?php elseif ($count==0): ?>
+                            <?php $level = $category->getLevel(); ?>
+                            <li id="category_<?php echo $category->getId() ?>"><a href="<?php echo $category->getUrl() ?>" ><?php echo $category->getTitle();?></a>
+                    <?php endif; ?>
+                    <?php $count++; ?>
+                <?php endforeach; ?>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+</div>
+<?php endif ?>
+<script type="text/javascript">
+    <?php if ($path = $this->getCategoryPath()): ?>
+    jQuery(document).ready(function() {
+        <?php foreach($path as $value): ?>
+        jQuery('#category_<?php echo $value ?> > div:first-child').click();
+        <?php endforeach ?>
+        jQuery('#category_<?php echo $path[count($path)-1] ?> > a').addClass("category_selected");
+    });
+    <?php endif ?>
+</script>

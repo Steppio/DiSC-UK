@@ -1,0 +1,88 @@
+<?php
+	/* Example for maunell list  */
+	/*
+	 * {{block type='core/template' area='frontend' template='auit/pdf/test/examples.phtml' order=$order}
+	 */
+	$order=$this->getOrder();
+	if ( !$order)
+	{
+		echo "<br/>Please define the order object";
+		return;
+	}
+	/* @var $order Mage_Sales_Model_Order */
+	if ( !($order instanceof Mage_Sales_Model_Order) )
+	{
+		echo "<br/>The order object is not a instance of Mage_Sales_Model_Order";
+		return;
+	}
+?>
+<div class="demo">
+	OrderId: <?php echo $order->getIncrementId();?><br/>
+	<?php foreach ( $order->getInvoiceCollection() as $invoice) :?>
+	<?php /* @var $invoice Mage_Sales_Model_Order_Invoice */?>
+	Invoice: <?php echo $invoice->getIncrementId();?><br/>
+	<table cellspacing="0" cellpadding="0" border="0" >
+    	<thead>
+        	<tr>
+				<th><?php echo $this->__('Sku')?></th><th><?php echo $this->__('Name')?></th>
+			</tr>
+		</thead>
+		<?php $i=0; foreach ( $invoice->getAllItems() as $item ) :?>
+    		<?php if($item->getOrderItem()->getParentItem()) continue; else $i++; ?>
+    		<?php /* @var $item Mage_Sales_Model_Order_Invoice_Item */?>
+			<tbody>
+		    	<tr>
+		    		<td><?php echo $item->getSku()?></td>
+					<td><?php echo $item->getName()?></td>
+		    	</tr>
+		    </tbody>
+		<?php endforeach; ?>
+	</table>
+	<?php endforeach; ?>
+
+	<?php foreach ( $order->getShipmentsCollection() as $shipment) :?>
+	<?php /* @var $shipment Mage_Sales_Model_Order_Shipment */?>
+	Shipment: <?php echo $shipment->getIncrementId();?><br/>
+	<table cellspacing="0" cellpadding="0" border="0" >
+    	<thead>
+        	<tr>
+				<th><?php echo $this->__('Sku')?></th><th><?php echo $this->__('Name')?></th>
+			</tr>
+		</thead>
+		<?php $i=0; foreach ( $shipment->getAllItems() as $item ) :?>
+    		<?php if($item->getOrderItem()->getParentItem()) continue; else $i++; ?>
+    		<?php /* @var $item Mage_Sales_Model_Order_Invoice_Item */?>
+			<tbody>
+		    	<tr>
+		    		<td><?php echo $item->getSku()?></td>
+					<td><?php echo $item->getName()?></td>
+		    	</tr>
+		    </tbody>
+		<?php endforeach; ?>
+	</table>
+	<?php endforeach; ?>
+
+
+	<?php foreach ( $order->getCreditmemosCollection() as $creditmemo) :?>
+	<?php /* @var $shipment Mage_Sales_Model_Order_Shipment */?>
+	Creditmemo: <?php echo $creditmemo->getIncrementId();?><br/>
+	<table cellspacing="0" cellpadding="0" border="0" >
+    	<thead>
+        	<tr>
+				<th><?php echo $this->__('Sku')?></th><th><?php echo $this->__('Name')?></th>
+			</tr>
+		</thead>
+		<?php $i=0; foreach ( $creditmemo->getAllItems() as $item ) :?>
+    		<?php if($item->getOrderItem()->getParentItem()) continue; else $i++; ?>
+    		<?php /* @var $item Mage_Sales_Model_Order_Invoice_Item */?>
+			<tbody>
+		    	<tr>
+		    		<td><?php echo $item->getSku()?></td>
+					<td><?php echo $item->getName()?></td>
+		    	</tr>
+		    </tbody>
+		<?php endforeach; ?>
+	</table>
+	<?php endforeach; ?>
+
+</div>

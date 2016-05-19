@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Contact_Layout>
+			<version>0.0.1</version>
+		</Contact_Layout>
+	</modules>
+	<global>
+		<page>
+			<layouts>
+				<contact module="page" translate="label">
+					<label>contact</label>
+					<template>page/1column-contact.phtml</template>
+					<layout_handle>contact</layout_handle>
+				</contact>
+			</layouts>
+		</page>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<contact_layout>
+					<file>contact_layout.xml</file>
+				</contact_layout>
+			</updates>
+		</layout>
+	</frontend>
+</config>

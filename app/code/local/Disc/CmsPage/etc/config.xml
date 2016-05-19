@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Disc_CmsPage>
+			<version>1.0.0</version>
+		</Disc_CmsPage>
+	</modules>
+	<frontend>
+		<routers>
+			<cmspage>
+				<use>standard</use>
+				<args>
+					<module>Disc_CmsPage</module>
+					<frontName>cmspage</frontName>
+				</args>
+			</cmspage>
+		</routers>
+		<layout>
+			<updates>
+				<cmspage>
+					<file>cmspage.xml</file>
+				</cmspage>
+			</updates>
+		</layout>
+	</frontend>
+	<global>
+		<blocks>
+			<cmspage>
+				<class>Disc_CmsPage_Block</class>
+			</cmspage>
+		</blocks>
+	</global>
+</config>

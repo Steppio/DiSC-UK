@@ -1,0 +1,718 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Magento
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Open Software License (OSL 3.0)
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/osl-3.0.php
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to license@magentocommerce.com so we can send you a copy immediately.
+*
+* @category    Yoma
+* @package     Yoma_Realex
+* @copyright   Copyright (c) 2014 YOMA LIMITED (http://www.yoma.co.uk)
+* @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+-->
+<config>
+    <sections>
+        <realex translate="label" module="realex">
+            <label>Realex Payments</label>
+            <tab>sales</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>345</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <realex translate="label comment" module="realex">
+                    <label>Realex Payments Account Information [Global Settings]</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <logs translate="label">
+                            <label>Enable Logs</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <config_path>payment/realex/logs</config_path>
+                            <comment><![CDATA[Location of the log files: "{{MagentoBaseDir}}/var/log/realex/"]]></comment>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </logs>
+                        <secret translate="label">
+                            <label>Shared Secret</label>
+                            <frontend_type>password</frontend_type>
+                            <config_path>payment/realex/secret</config_path>
+                            <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </secret>
+                        <vendor translate="label">
+                            <label>Merchant ID</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/realex/vendor</config_path>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </vendor>
+                        <rebate_pass translate="label">
+                            <label>Rebate Password</label>
+                            <frontend_type>password</frontend_type>
+                            <config_path>payment/realex/rebate_pass</config_path>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </rebate_pass>
+
+                    </fields>
+                </realex>
+                <cleanup translate="label" module="realex">
+                    <label>Order Clean-Up</label>
+                    <sort_order>11</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <cleanup_active translate="label">
+                            <label>Clean-Up Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <config_path>payment/cleanup/cleanup_active</config_path>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </cleanup_active>
+                        <cleanup_timeframe translate="label comment">
+                            <label>Order Timeframe</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/cleanup/cleanup_timeframe</config_path>
+                            <sort_order>91</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment>This is the amount of time, in hours, to allow an order to be in the payment_review/on_hold state, before it is automatically cancelled. You must have Magento’s cron job scheduled on your server to use this service.</comment>
+                        </cleanup_timeframe>
+                    </fields>
+                </cleanup>
+                <realexredirect translate="label comment" module="realex">
+                    <label>HPP (Hosted Payment Page)</label>
+                    <sort_order>670</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <config_path>payment/realexredirect/active</config_path>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+                        <payment_action translate="label">
+                            <label>Payment Action</label>
+                            <frontend_type>select</frontend_type>
+                            <config_path>payment/realexredirect/payment_action</config_path>
+                            <source_model>realex/realex_source_paymentAction</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </payment_action>
+                        <order_status translate="label">
+                            <label>New order status</label>
+                            <frontend_type>select</frontend_type>
+                            <config_path>payment/realexredirect/order_status</config_path>
+                            <source_model>realex/realex_source_status</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </order_status>
+                        <title translate="label">
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/realexredirect/title</config_path>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </title>
+                        <mode translate="label">
+                            <label>Mode</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>realex/realex_source_paymentMode</source_model>
+                            <config_path>payment/realexredirect/mode</config_path>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </mode>
+                        <live_url translate="label">
+                            <label>Live URL</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/realexredirect/live_url</config_path>
+                            <sort_order>51</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </live_url>
+                        <sandbox_url translate="label">
+                            <label>Sandbox URL</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/realexredirect/sandbox_url</config_path>
+                            <sort_order>52</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </sandbox_url>
+                        <iframe translate="label">
+                            <label>Use iFrame</label>
+                            <frontend_type>select</frontend_type>
+                            <config_path>payment/realexredirect/iframe</config_path>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </iframe>
+                        <iframe_size translate="label">
+                            <label>iFrame Size</label>
+                            <frontend_type>select</frontend_type>
+                            <config_path>payment/realexredirect/iframe_size</config_path>
+                            <source_model>realex/realex_source_iframeSize</source_model>
+                            <sort_order>61</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <iframe>1</iframe>
+                            </depends>
+                        </iframe_size>
+                        <iframe_display>
+                            <label>Display iFrame on checkout page</label>
+                            <comment><![CDATA[Set No  for OSC Module]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <config_path>payment/realexredirect/iframe_display</config_path>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>62</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <iframe>1</iframe>
+                            </depends>
+                        </iframe_display>
+                        <iframe_inline translate="label">
+                            <label>Display iFrame Inline</label>
+                            <frontend_type>select</frontend_type>
+                            <config_path>payment/realexredirect/iframe_inline</config_path>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>63</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <iframe_display>1</iframe_display>
+                            </depends>
+                        </iframe_inline>
+                        <sub_account translate="label">
+                            <label>Default Sub Account</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/realexredirect/sub_account</config_path>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[Leave this value blank to use the default sub account.]]></comment>
+                        </sub_account>
+                        <cctypes translate="label">
+                            <label>Allowed Card Types</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>realex/realex_source_cards</source_model>
+                            <config_path>payment/realexredirect/cctypes</config_path>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </cctypes>
+                        <allowspecific translate="label">
+                            <label>Payment from applicable countries</label>
+                            <frontend_type>allowspecific</frontend_type>
+                            <config_path>payment/realexredirect/allowspecific</config_path>
+                            <sort_order>211</sort_order>
+                            <source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </allowspecific>
+                        <specificcountry translate="label">
+                            <label>Payment from Specific countries</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <config_path>payment/realexredirect/specificcountry</config_path>
+                            <sort_order>212</sort_order>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </specificcountry>
+                        <sort_order translate="label">
+                            <label>Sort order</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/realexredirect/sort_order</config_path>
+                            <sort_order>250</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </sort_order>
+                    </fields>
+                </realexredirect>
+                <realexdirect translate="label comment" module="realex">
+                    <label>API (Remote)</label>
+                    <sort_order>670</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <config_path>payment/realexdirect/active</config_path>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+                        <payment_action translate="label">
+                            <label>Payment Action</label>
+                            <frontend_type>select</frontend_type>
+                            <config_path>payment/realexdirect/payment_action</config_path>
+                            <source_model>realex/realex_source_paymentAction</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </payment_action>
+                        <order_status translate="label">
+                            <label>New order status</label>
+                            <frontend_type>select</frontend_type>
+                            <config_path>payment/realexdirect/order_status</config_path>
+                            <source_model>realex/realex_source_status</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </order_status>
+                        <title translate="label">
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/realexdirect/title</config_path>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </title>
+                        <mode translate="label">
+                            <label>Mode</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>realex/realex_source_paymentMode</source_model>
+                            <config_path>payment/realexdirect/mode</config_path>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </mode>
+                        <live_url translate="label">
+                            <label>Live URL</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/realexdirect/live_url</config_path>
+                            <sort_order>51</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </live_url>
+                        <sub_account translate="label">
+                            <label>Default Sub Account</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/realexdirect/sub_account</config_path>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[Leave this value blank to use the default sub account.]]></comment>
+                        </sub_account>
+
+                        <sub_account_rules translate="label comment">
+                            <label>Sub Account Rules</label>
+                            <frontend_model>realex/adminhtml_system_config_renderer_subAccount_direct</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <config_path>payment/realexdirect/sub_account_rules</config_path>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Custom sub account routing.]]></comment>
+                        </sub_account_rules>
+
+                        <cctypes translate="label">
+                            <label>Allowed Card Types</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>realex/realex_source_cards</source_model>
+                            <config_path>payment/realexdirect/cctypes</config_path>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </cctypes>
+                        <use_threed_secure translate="label">
+                            <label>Use 3D Secure</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <config_path>payment/realexdirect/use_threed_secure</config_path>
+                            <sort_order>121</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </use_threed_secure>
+                        <iframe translate="label">
+                            <label>Use iframe</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <config_path>payment/realexdirect/iframe</config_path>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <use_threed_secure>1</use_threed_secure>
+                            </depends>
+                        </iframe>
+                        <iframe_display>
+                            <label>Display iFrame on checkout page</label>
+                            <frontend_type>select</frontend_type>
+                            <comment><![CDATA[Set No  for OSC Module]]></comment>
+                            <config_path>payment/realexdirect/iframe_display</config_path>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>131</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <iframe>1</iframe>
+                                <use_threed_secure>1</use_threed_secure>
+                            </depends>
+                        </iframe_display>
+                        <threed_url translate="label">
+                            <label>3d Secure URL</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/realexdirect/threed_url</config_path>
+                            <sort_order>121</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <use_threed_secure>1</use_threed_secure>
+                            </depends>
+                        </threed_url>
+                        <require_liability_shift translate="label">
+                            <label>Require Liability Shift</label>
+                            <frontend_type>select</frontend_type>
+                            <config_path>payment/realexdirect/require_liability_shift</config_path>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <use_threed_secure>1</use_threed_secure>
+                            </depends>
+                            <comment><![CDATA[By setting this to 'No' more transactions will be allowed, however you are more liable to fraud.]]></comment>
+                        </require_liability_shift>
+                        <allowspecific translate="label">
+                            <label>Payment from applicable countries</label>
+                            <frontend_type>allowspecific</frontend_type>
+                            <config_path>payment/realexdirect/allowspecific</config_path>
+                            <sort_order>211</sort_order>
+                            <source_model>adminhtml/system_config_source_payment_allspecificcountries</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </allowspecific>
+                        <specificcountry translate="label">
+                            <label>Payment from Specific countries</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <config_path>payment/realexdirect/specificcountry</config_path>
+                            <sort_order>212</sort_order>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </specificcountry>
+                        <sort_order translate="label">
+                            <label>Sort order</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/realexdirect/sort_order</config_path>
+                            <sort_order>250</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </sort_order>
+                    </fields>
+                </realexdirect>
+
+                <realvault translate="label comment" module="realex">
+                    <label>Tokenistation - RealVault</label>
+                    <sort_order>1000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <config_path>payment/realvault/active</config_path>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+                        <payment_action translate="label">
+                            <label>Payment Action</label>
+                            <frontend_type>select</frontend_type>
+                            <config_path>payment/realvault/payment_action</config_path>
+                            <source_model>realex/realex_source_paymentAction</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </payment_action>
+                        <title translate="label">
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/realvault/title</config_path>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </title>
+                        <store_card translate="label">
+                            <label>Store Card Option</label>
+                            <frontend_type>select</frontend_type>
+                            <comment>Supply the option on the frontend for users to store their card.</comment>
+                            <config_path>payment/realvault/store_card</config_path>
+                            <source_model>realex/system_config_source_storecard</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </store_card>
+
+                        <store_label translate="label">
+                            <label>Store Card Label</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>If the store card option is set his label will be shown to the user on the frontend.</comment>
+                            <sort_order>4</sort_order>
+                            <config_path>payment/realvault/store_label</config_path>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <store_card>1</store_card>
+                                <active>1</active>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </store_label>
+
+                        <auto_store_label translate="label">
+                            <label>Always Store Card Label</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <config_path>payment/realvault/auto_store_label</config_path>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <store_card>0</store_card>
+                            </depends>
+                        </auto_store_label>
+
+                        <payer_type translate="label">
+                            <label>Payer Type</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>Realex Payments Payer Group</comment>
+                            <sort_order>6</sort_order>
+                            <config_path>payment/realvault/payer_type</config_path>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </payer_type>
+
+                        <allow_delete translate="label">
+                            <label>Allow Delete Cards</label>
+                            <frontend_type>select</frontend_type>
+                            <comment>Allow customers to delete their cards?</comment>
+                            <sort_order>6</sort_order>
+                            <config_path>payment/realvault/allow_delete</config_path>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <active>1</active>
+                            </depends>
+                        </allow_delete>
+
+                        <max_saved translate="label">
+                            <label>Max Saved Cards Allowed</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>Max saved cards per customer</comment>
+                            <sort_order>6</sort_order>
+                            <config_path>payment/realvault/max_saved</config_path>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <active>1</active>
+                            </depends>
+                        </max_saved>
+                        <require_cvv>
+                            <label>Require Security Code</label>
+                            <comment>Request Security Code on saved cards</comment>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>7</sort_order>
+                            <config_path>payment/realvault/require_cvv</config_path>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </require_cvv>
+                        <mode translate="label">
+                            <label>Mode</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>realex/realex_source_paymentMode</source_model>
+                            <config_path>payment/realvault/mode</config_path>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </mode>
+                        <live_url translate="label">
+                            <label>Live URL</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/realvault/live_url</config_path>
+                            <sort_order>51</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </live_url>
+                        <sub_account translate="label">
+                            <label>Default Sub Account</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/realvault/sub_account</config_path>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <comment><![CDATA[Leave this value blank to use the default sub account.]]></comment>
+                        </sub_account>
+                        <sub_account_rules translate="label comment">
+                            <label>Sub Account Rules</label>
+                            <frontend_model>realex/adminhtml_system_config_renderer_subAccount_direct</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <config_path>payment/realvault/sub_account_rules</config_path>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Custom sub account routing.]]></comment>
+                        </sub_account_rules>
+                        <use_threed_secure translate="label">
+                            <label>Use 3D Secure</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <config_path>payment/realvault/use_threed_secure</config_path>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </use_threed_secure>
+                        <iframe translate="label">
+                            <label>Use iframe</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <config_path>payment/realvault/iframe</config_path>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <use_threed_secure>1</use_threed_secure>
+                            </depends>
+                        </iframe>
+                        <iframe_display>
+                            <label>Display iFrame on checkout page</label>
+                            <frontend_type>select</frontend_type>
+                            <comment><![CDATA[Set No  for OSC Module]]></comment>
+                            <config_path>payment/realvault/iframe_display</config_path>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>131</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <use_threed_secure>1</use_threed_secure>
+                                <iframe>1</iframe>
+                            </depends>
+                        </iframe_display>
+                        <threed_url translate="label">
+                            <label>3d Secure URL</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>payment/realvault/threed_url</config_path>
+                            <sort_order>121</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <use_threed_secure>1</use_threed_secure>
+                            </depends>
+                        </threed_url>
+                        <require_liability_shift translate="label">
+                            <label>Require Liability Shift</label>
+                            <frontend_type>select</frontend_type>
+                            <config_path>payment/realvault/require_liability_shift</config_path>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <use_threed_secure>1</use_threed_secure>
+                            </depends>
+                            <comment><![CDATA[By setting this to 'No' more transactions will be allowed, however you are more liable to fraud.]]></comment>
+                        </require_liability_shift>
+                    </fields>
+                </realvault>
+            </groups>
+        </realex>
+
+    </sections>
+</config>

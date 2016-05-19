@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <slider_adminhtml_slider_index>
+        <reference name="content">
+            <block type="slider/adminhtml_slider" name="slider" />
+        </reference>
+    </slider_adminhtml_slider_index>
+    <slider_adminhtml_slider_edit>
+        <update handle="editor"/>     
+    </slider_adminhtml_slider_edit>
+</layout>

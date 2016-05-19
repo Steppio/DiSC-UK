@@ -1,0 +1,55 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category    Yoma
+ * @package     Yoma_Realex
+ * @copyright   Copyright (c) 2014 YOMA LIMITED (http://www.yoma.co.uk)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8" content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta charset="UTF-8" content="IE=9" http-equiv="X-UA-Compatible">
+	<meta charset="UTF-8" content="IE=8" http-equiv="X-UA-Compatible">
+	</head>
+<body>
+<div>
+<?php $data = $this->getMessageData()?>
+<?php $redirectUrl = $this->getTermUrl();?>
+<?php if ($redirectUrl != ''):?>
+<form action="<?php echo $redirectUrl; ?>" name="realexform" id="realexform" method="POST" style="width:100%; text-align:center;">
+	<?php foreach ($data as $_fieldName => $_value): ?>
+		<input type="hidden" name="<?php echo $_fieldName; ?>" value="<?php echo $_value ?>" >
+	<?php endforeach; ?>
+	<input type="submit" value="<?php echo $this->__('Please click here if you are not automatically redirected after a few seconds...'); ?>" >
+</form>
+<script type="text/javascript">
+function postTransaction() {
+	document.realexform.submit();
+}
+if (window.addEventListener) {
+	window.addEventListener('load', postTransaction, false);
+}else if (window.attachEvent){
+	window.attachEvent('onload', postTransaction);
+}else {
+	window.onload = postTransaction;
+}
+</script>
+<?php else: ?>
+	<p><?php echo $this->__($this->getNoRedirectUrlMessage()) ?></p>
+<?php endif; ?>
+</div>
+</body></html>

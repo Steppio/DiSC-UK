@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Epic_Layout>
+			<version>0.0.1</version>
+		</Epic_Layout>
+	</modules>
+	<global>
+		<page>
+			<layouts>
+				<epic module="page" translate="label">
+					<label>epic</label>
+					<template>page/1column-epic.phtml</template>
+					<layout_handle>epic</layout_handle>
+				</epic>
+			</layouts>
+		</page>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<epic_layout>
+					<file>epic_layout.xml</file>
+				</epic_layout>
+			</updates>
+		</layout>
+	</frontend>
+</config>

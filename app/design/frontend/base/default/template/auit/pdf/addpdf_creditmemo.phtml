@@ -1,0 +1,43 @@
+<?php
+	if ( $this->getProcessor() && $this->getProcessor()->getMail() && $this->getOrder()  )
+	{
+		if ( Mage::getStoreConfigFlag('auit_pdf/general/attach_to_email_creditmemo',$this->getOrder()->getStoreId()) )
+		{
+			//AITOC Rewrite Probleme
+			$mail = $this->getProcessor()->getMail();
+			$parts = $mail->getParts();
+
+			// 10.11.2015
+			$models = array();
+			$processVariables = $this->getProcessor()->getProcessVariables();
+			if ( $processVariables && isset($processVariables['creditmemo']) )
+				$models =array($processVariables['creditmemo']);
+			else
+				$models =$this->getOrder()->getCreditmemosCollection()  ;
+				
+			$pdf_filename = Mage::helper('auit_pdf')->getPdfFName('fname_to_email_creditmemo',$models);
+			$bfound=false;
+			foreach ( $parts as $part )
+			{
+				/** @var Zend_Mime_Part $part */
+				if ( $part->filename == $pdf_filename )
+				{
+					$bfound=true;
+					break;
+				}
+			}
+			if ( !$bfound )
+			{
+				$processVariables = $this->getProcessor()->getProcessVariables();
+				if ( $processVariables && isset($processVariables['creditmemo']) )
+				{
+					$pdf = Mage::getModel('auit_pdf/creditmemo')->getPdf(array($processVariables['creditmemo']));
+				}else {
+					$pdf = Mage::getModel('auit_pdf/creditmemo')->getPdf($this->getOrder()->getCreditmemosCollection() );
+				}
+				$mail->createAttachment($pdf->render(),Zend_Mime::TYPE_OCTETSTREAM,Zend_Mime::DISPOSITION_ATTACHMENT,Zend_Mime::ENCODING_BASE64, $pdf_filename);
+				Mage::helper('auit_pdf')->addAttachments('email_attachments_creditmemo',$mail,$this->getOrder()->getCreditmemosCollection());
+			}
+		}
+	}
+?>

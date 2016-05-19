@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <cms_index_index>
+		<reference name="head">
+            <action method="addCss"><stylesheet>affinitycloud/acbanners/css/acbanners.css</stylesheet></action>
+            <action method="addCss"><stylesheet>affinitycloud/acbanners/css/nivoslider.css</stylesheet></action>
+            <action method="addCss"><stylesheet>affinitycloud/acbanners/css/nivo-theme/default.css</stylesheet></action>
+        </reference>
+        <reference name="footer">
+            <block type="page/html" name="banner.scripts" as="banner.scripts" template="affinitycloud/acbanners/banner-scripts.phtml" />
+        </reference>
+        <reference name="root">
+            <block before="-" type="acbanners/slider" name="slider" template="affinitycloud/acbanners/slider.phtml" />
+            <block after="slider" type="acbanners/buttons" name="buttons" template="affinitycloud/acbanners/buttons.phtml" />
+        </reference>
+    </cms_index_index>
+    <default>
+        <reference name="left">
+            <block type="acbanners/sidebanners" name="sidebanners" template="affinitycloud/acbanners/side-banners.phtml" />
+        </reference>
+    </default>
+</layout>

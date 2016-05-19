@@ -1,0 +1,35 @@
+<?php
+	/* Example for maunell list called from invoice */
+	/*
+	 * {{block type='core/template' area='frontend' template='auit/pdf/test/examples.phtml' invoice=$invoice }}
+	 *
+	 */
+
+	$invoice=$this->getInvoice();
+	if ( !$invoice)
+		return;
+	if ( !($invoice instanceof Mage_Sales_Model_Order_Invoice) )
+		return;
+	/* @var $invoice Mage_Sales_Model_Order_Invoice */
+
+
+?>
+<div class="retoure">
+	<table cellspacing="0" cellpadding="0" border="0" >
+    	<thead>
+        	<tr>
+				<th><?php echo $this->__('Sku')?></th><th><?php echo $this->__('Name')?></th>
+			</tr>
+		</thead>
+		<?php $i=0; foreach ( $invoice->getAllItems() as $item ) :?>
+    		<?php if($item->getOrderItem()->getParentItem()) continue; else $i++; ?>
+    		<?php /* @var $item Mage_Sales_Model_Order_Invoice_Item */?>
+			<tbody>
+		    	<tr>
+		    		<td><?php echo $item->getSku()?></td>
+					<td><?php echo $item->getName()?></td>
+		    	</tr>
+		    </tbody>
+		<?php endforeach; ?>
+	</table>
+</div>

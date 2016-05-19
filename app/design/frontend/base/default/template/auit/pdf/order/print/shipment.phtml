@@ -1,0 +1,5 @@
+<?php
+	Mage::helper('auit_pdf')->printFrontendPdf('fname_to_email_shipment','sales/order_pdf_shipment',
+		$this->getShipment()?array($this->getShipment()):$this->getOrder()->getShipmentsCollection()
+	);
+?>

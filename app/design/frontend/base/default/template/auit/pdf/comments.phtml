@@ -1,0 +1,15 @@
+<?php
+	if ( $this->entity instanceof Mage_Sales_Model_Order )
+		$_collection = $this->entity->getStatusHistoryCollection();
+	else 
+		$_collection = $this->entity->getCommentsCollection()
+?>
+<?php foreach ($_collection as $_comment): ?>
+	<?php if ( $_comment->getIsVisibleOnFront() ) :?>
+		<div class="comments">
+			<span class="date"><?php echo $this->helper('core')->formatDate($_comment->getCreatedAtDate(), 'medium') ?></span><span class="time"> <?php echo $this->helper('core')->formatTime($_comment->getCreatedAtDate(), 'medium') ?></span>
+			<br /> 
+			<?php echo $this->escapeHtml($_comment->getComment(), array('b','br','strong','i','u')) ?>
+		</div>
+	<?php endif;?>
+<?php endforeach; ?>

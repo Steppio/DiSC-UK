@@ -1,0 +1,5 @@
+<?php
+	Mage::helper('auit_pdf')->printFrontendPdf('fname_to_email','sales/order_pdf_invoice',
+		$this->getInvoice()?array($this->getInvoice()):$this->getOrder()->getInvoiceCollection()
+	);
+?>

@@ -1,0 +1,33 @@
+<?php
+	if ( $this->entity instanceof Mage_Sales_Model_Order )
+		$_order = $this->entity;
+	else 
+		$_order = $this->entity->getOrder();
+	if ( $_order )
+	{
+		$customer = $_order->getCustomer();
+		if ( !$customer )
+		{
+			$customer = Mage::getModel('customer/customer')->load($_order->getCustomerId());
+		}
+		$obj = $customer;
+		$address=null;
+		if ( trim($this->address)  )
+		{
+			$address = $obj = $customer->getPrimaryAddress(trim($this->address));
+		}
+		if ($address && $this->field == 'country_id') {
+			echo $address->getCountryModel()->getName();
+			
+		} else if ($address && $this->field == 'region') {
+			echo $address->getRegion();
+		} else {
+			if ( $obj && ($attribute = $obj->getAttribute($this->field)) )
+			{
+				if ( $attribute->getSource() )
+				{
+					echo $attribute->getSource()->getOptionText($obj->getData($this->field));
+				}
+			}
+		}
+	}

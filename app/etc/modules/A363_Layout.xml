@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<A363_Layout>
+			<active>true</active>
+			<codePool>local</codePool>
+			<depends>
+				<Mage_Page />
+			</depends>
+		</A363_Layout>
+	</modules>
+</config>

@@ -1,0 +1,25 @@
+<?php
+	$buttons = $this->getButtons();
+	
+	if ( ! empty($buttons))
+	{
+		echo '<div id="top_button">';
+		foreach ($buttons as $button)
+		{
+			echo '<div class="grid_3" style="background-color:'.$button['colour'].';">';
+			if ($button['url']) { echo '<a class="button_block" href="'.$button['url'].'" title="'.$button['title'].'">'; }
+			// echo '<img src="'.$button['imageUrl'].'" alt="'.$button['title'].'" />';
+			echo '<span class="info">';
+			echo '<span class="wrapper">';
+			echo '<h3 class="title">'.$button['title'].'</h3>';
+			echo '<span class="description">'.$button['description'].'</span>';
+			echo '</span>';
+			echo '</span>';
+			if ($button['url']) { echo '</a>'; }
+			echo '</div>';
+		}
+		echo '<div class="clear">&nbsp;</div>';
+		echo '</div>';
+		echo '<div class="clear">&nbsp;</div>';
+	}
+?>

@@ -1,0 +1,11 @@
+<section class="contactus-header-image image-resize-target cf" id="contact-background" style="background-image: url(https://www.discassessment.co.uk/media/wysiwyg/placeholder.png)">
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-lg-12 header-icon-container">
+				<img src="https://www.discassessment.co.uk/media/wysiwyg/contact-us-vector.png" alt="" />
+			</div>
+		</div>
+	</div>
+
+</section>

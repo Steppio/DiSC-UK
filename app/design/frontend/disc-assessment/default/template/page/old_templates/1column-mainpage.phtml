@@ -1,0 +1,140 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]> <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js"> <!--<![endif]-->
+
+<head>
+<?php echo $this->getChildHtml('head') ?>
+</head>
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+<?php echo $this->getChildHtml('after_body_start') ?>
+<div class="wrapper">
+    <?php echo $this->getChildHtml('global_notices') ?>
+    <?php echo $this->getChildHtml('global_messages') ?>
+    <div class="page">
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('disc_slideshow')->toHtml() ?>
+        <?php echo $this->getChildHtml('header') ?>
+        <div class="main-container col1-layout">
+            <div class="main">
+                <?php echo $this->getChildHtml('breadcrumbs') ?>
+                <div class="col-main">
+                        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('certfication')->toHtml() ?>
+                        <h2>Our Products and Services</h2>
+                    <section class="product-slider">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-1 visible-lg-block">&nbsp;</div>
+                                <div class="col-xs-12 col-lg-10">
+                                    <div class="slick-initialise">
+                                        <?php 
+                                        $parentCategoryId = 42;
+                                        $cat = Mage::getModel('catalog/category')->load($parentCategoryId);
+                                        $subcats = $cat->getChildren();
+
+                                        foreach(explode(',',$subcats) as $subCatid)
+                                        {
+                                            $_category = Mage::getModel('catalog/category')->load($subCatid);
+
+                                            if(isset($_category['alternative_url'])) {
+                                                $url = $_category['alternative_url'];
+                                            }
+                                            else {
+                                                $url = $_category->getURL();
+                                            }
+
+                                            if($_category->getIsActive()) {
+                                                echo '<a href="'. $url .'"><img src="'.$_category->getImageUrl().'"></img>';
+                                                echo '<span>' . $_category->getName().'</span></a>';
+                                            }
+                                        }
+
+                                        ?>    
+                                    </div>  
+                                </div>
+                                <div class="col-lg-1 hidden-sm hidden-md visible-lg-block">&nbsp;</div>
+                            </div>
+                        </div> 
+                    </section>        
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('epic_credits')->toHtml() ?>
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('disc_definition_block')->toHtml() ?>
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('disc-certifcation_and_disc-profiles_container')->toHtml() ?>         
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('training-systems-and-talent-development-container')->toHtml() ?>        
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('disc-training-aids-and-five-behaviours-container')->toHtml() ?>
+                    <section class="product-slider2">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-1 visible-lg-block">&nbsp;</div>
+                                <div class="col-xs-12 col-lg-10">
+                                    <div class="slick-initialise">
+                                        <?php 
+                                        $parentCategoryId = 74;
+                                        $cat = Mage::getModel('catalog/category')->load($parentCategoryId);
+                                        $subcats = $cat->getChildren();
+
+                                        foreach(explode(',',$subcats) as $subCatid)
+                                        {
+                                            $_category = Mage::getModel('catalog/category')->load($subCatid);
+
+                                            if($_category->getIsActive()) {
+                                                echo '<span><img src="'.$_category->getImageUrl().'"></img></span>'; 
+                                            }
+                                        }
+
+                                        ?>    
+                                    </div>  
+                                </div>
+                                <div class="col-lg-1 hidden-sm hidden-md visible-lg-block">&nbsp;</div>
+                            </div>
+                        </div> 
+                    </section>   
+
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('testimonials')->toHtml() ?>
+
+                </div>
+            </div>
+        </div>
+        <?php echo $this->getChildHtml('footer_before') ?>
+        <?php echo $this->getChildHtml('footer') ?>
+        <?php echo $this->getChildHtml('global_cookie_notice') ?>
+        <?php echo $this->getChildHtml('before_body_end') ?>
+    </div>
+</div>
+<?php echo $this->getAbsoluteFooter() ?>
+</body>
+</html>
+

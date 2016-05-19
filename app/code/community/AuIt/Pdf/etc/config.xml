@@ -1,0 +1,510 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <AuIt_Pdf>
+            <version>2.6.2</version>
+        </AuIt_Pdf>
+    </modules>
+    
+    <admin>
+        <routers>
+            <adminhtml>
+				<args>
+					<modules>
+						<AuIt_Pdf before="Mage_Adminhtml">AuIt_Pdf</AuIt_Pdf>
+					</modules>
+				</args>
+			</adminhtml>
+        </routers>
+    </admin>
+    <!--      
+    <admin>
+        <routers>
+            <auit_pdf>
+                <use>admin</use>
+                <args>
+                    <module>AuIt_Pdf</module>
+                    <frontName>auit_pdf</frontName>
+                </args>
+            </auit_pdf>
+        </routers>
+        
+    </admin>
+-->
+    <adminhtml>
+		<translate>
+            <modules>
+                <AuIt_Pdf>
+                    <files>
+                        <default>AuIt_pdfprint.csv</default>
+                    </files>
+                </AuIt_Pdf>
+            </modules>
+        </translate>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <auit_pdf>
+                                            <title>SNM PDF</title>
+                                        </auit_pdf>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+        <layout>
+            <updates>
+                <auit_pdf>
+                    <file>auit_pdf.xml</file>
+                </auit_pdf>
+            </updates>
+        </layout>
+        
+    </adminhtml>
+    <frontend>
+		<translate>
+            <modules>
+                <AuIt_Pdf>
+                    <files>
+                        <default>AuIt_pdfprint.csv</default>
+                    </files>
+                </AuIt_Pdf>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <auit_pdf>
+                    <file>auit_pdf.xml</file>
+                </auit_pdf>
+            </updates>
+        </layout>
+	</frontend>
+    <global>
+        <pdf>
+            <auit_offer>
+                <default></default>
+                <grouped></grouped>
+            </auit_offer>
+    	</pdf>
+        <models>
+            <auit_pdf>
+                <class>AuIt_Pdf_Model</class>
+            </auit_pdf>
+			<sales>
+				<rewrite>
+					<order_pdf_invoice>AuIt_Pdf_Model_Invoice</order_pdf_invoice>
+					<order_pdf_creditmemo>AuIt_Pdf_Model_Creditmemo</order_pdf_creditmemo>
+					<order_pdf_shipment>AuIt_Pdf_Model_Shipment</order_pdf_shipment>
+				</rewrite>
+			</sales>
+			<core>
+		        <rewrite>
+		          <email_template>AuIt_Pdf_Model_Rewrite_Email_Template</email_template>
+		        </rewrite>
+			</core>
+        </models>
+        <blocks>
+            <auit_pdf>
+                <class>AuIt_Pdf_Block</class>
+            </auit_pdf>
+			<adminhtml>
+				<rewrite>
+					<!-- 
+					<sales_order_view>AuIt_Pdf_Block_Adminhtml_Sales_Order_View</sales_order_view>
+					<sales_order_grid>AuIt_Pdf_Block_Adminhtml_Sales_Order_Grid</sales_order_grid>
+					 -->
+				</rewrite>
+			</adminhtml>
+        </blocks>
+        <helpers>
+            <auit_pdf>
+                <class>AuIt_Pdf_Helper</class>
+            </auit_pdf>
+        </helpers>
+        <events>
+            <model_load_after>
+                <observers><auit_pdf_observer><type>singleton</type><class>auit_pdf/observer</class><method>modelLoad</method></auit_pdf_observer></observers>
+            </model_load_after>
+		</events>
+        <events>
+            <adminhtml_block_html_before>
+                <observers><auit_pdf_observer><type>singleton</type><class>auit_pdf/observer</class><method>adminhtmlBefore</method></auit_pdf_observer></observers>
+            </adminhtml_block_html_before>
+		</events>
+        <events>
+			<controller_action_predispatch_adminhtml_sales_order_pdfinvoices>
+            <observers>
+                <auit_pdf_observer_pdfinvoices>
+                    <class>auit_pdf/observer</class>
+                    <method>pdfinvoicesPredispatch</method>
+                </auit_pdf_observer_pdfinvoices>
+            </observers>
+        	</controller_action_predispatch_adminhtml_sales_order_pdfinvoices>
+			<controller_action_predispatch_adminhtml_sales_order_pdfshipments>
+            <observers>
+                <auit_pdf_observer_pdfshipments>
+                    <class>auit_pdf/observer</class>
+                    <method>pdfshipmentsPredispatch</method>
+                </auit_pdf_observer_pdfshipments>
+            </observers>
+        	</controller_action_predispatch_adminhtml_sales_order_pdfshipments>
+			<controller_action_predispatch_adminhtml_sales_order_pdfcreditmemos>
+            <observers>
+                <auit_pdf_observer_pdfcreditmemos>
+                    <class>auit_pdf/observer</class>
+                    <method>pdfcreditmemosPredispatch</method>
+                </auit_pdf_observer_pdfcreditmemos>
+            </observers>
+        	</controller_action_predispatch_adminhtml_sales_order_pdfcreditmemos>
+			<controller_action_predispatch_adminhtml_sales_order_pdfdocs>
+            <observers>
+                <auit_pdf_observer_pdfdocs>
+                    <class>auit_pdf/observer</class>
+                    <method>pdfdocsPredispatch</method>
+                </auit_pdf_observer_pdfdocs>
+            </observers>
+        	</controller_action_predispatch_adminhtml_sales_order_pdfdocs>
+		</events>
+    </global>
+    <auit>
+    	<pdf>
+    		<auit_offer>
+	    		<table_templates>
+	    			<template2><label>Article with image</label><value>auit_offer/image.phtml</value></template2>
+	    		</table_templates>
+    		</auit_offer>
+    		<invoice>
+	    		<table_templates>
+	    			<template1><label>Article with barcode</label><value>invoice/barcode.phtml</value></template1>
+	    			<template2><label>Article with image</label><value>invoice/image.phtml</value></template2>
+	    			<template3><label>Article with tax</label><value>invoice/with_tax.phtml</value></template3>
+	    		</table_templates>
+    		</invoice>
+    		<shipment>
+	    		<table_templates>
+	    			<template1><label>Article with barcode</label><value>shipment/barcode.phtml</value></template1>
+	    			<template2><label>Article with image</label><value>shipment/image.phtml</value></template2>
+	    			<template3><label>Qty in the first column</label><value>shipment/qtyone.phtml</value></template3>
+	    		</table_templates>
+    		</shipment>
+    		<creditmemo>
+	    		<table_templates>
+	    		<!-- 
+	    			<template1><label>With Extended Columns</label><value>creditmemo/creditmemo2.phtml</value></template1>
+	    			 -->
+	    		</table_templates>
+    		</creditmemo>
+    	</pdf>
+    </auit>
+    <default>
+    	<auit_pdf>
+    		<general>
+    			<license></license>
+    			<attach_to_email>0</attach_to_email>
+    			<attach_to_email_offer>0</attach_to_email_offer>
+    			<attach_to_email_shipment>0</attach_to_email_shipment>
+    			<attach_to_email_creditmemo>0</attach_to_email_creditmemo>
+    			
+    			<fname_to_email_offer>Offer_</fname_to_email_offer>
+    			<fname_to_email_offer_name>0</fname_to_email_offer_name>
+    			<fname_to_email>Invoice_</fname_to_email>
+    			<fname_to_email_name>0</fname_to_email_name>
+    			<fname_to_email_creditmemo>Creditmemo_</fname_to_email_creditmemo>
+    			<fname_to_email_creditmemo_name>0</fname_to_email_creditmemo_name>
+    			<fname_to_email_shipment>Shipment_</fname_to_email_shipment>
+    			<fname_to_email_shipment_name>0</fname_to_email_shipment_name>
+
+    			<print_pdf_frontend_invoice>0</print_pdf_frontend_invoice>
+    			<print_pdf_frontend_shipment>0</print_pdf_frontend_shipment>
+    			<print_pdf_frontend_creditmemo>0</print_pdf_frontend_creditmemo>
+    			<print_pdf_frontend_offer>0</print_pdf_frontend_offer>
+    			<show_bundle_price_row_one>1</show_bundle_price_row_one>
+    			<show_bundle_qty_row_one>0</show_bundle_qty_row_one>
+    			<amount_prefix>-</amount_prefix>
+    		</general>
+<!--
+*** Offer
+-->
+            <auit_offer>
+            	<table_template></table_template>
+            	<template>stores/default/en_order.pdf</template>
+            	<append>stores/default/template_agb.pdf</append>
+                <text_billingaddress><![CDATA[
+{{depend prefix}}{{var prefix}} {{/depend}}{{var firstname}} {{depend middlename}}{{var middlename}} {{/depend}}{{var lastname}}{{depend suffix}} {{var suffix}}{{/depend}}<br />
+{{depend company}}{{var company}}<br />{{/depend}}
+{{if street1}}{{var street1}}<br />{{/if}}
+{{depend street2}}{{var street2}}<br />{{/depend}}
+{{depend street3}}{{var street3}}<br />{{/depend}}
+{{depend street4}}{{var street4}}<br />{{/depend}}
+<br />
+<b>{{if postcode}}{{var postcode}}{{/if}} {{if city}}{{var city}}  {{/if}}</b><br />
+{{var country}}<br />
+]]></text_billingaddress>
+                <text_shippingaddress><![CDATA[
+{{depend prefix}}{{var prefix}} {{/depend}}{{var firstname}} {{depend middlename}}{{var middlename}} {{/depend}}{{var lastname}}{{depend suffix}} {{var suffix}}{{/depend}}<br />
+{{depend company}}{{var company}}<br />{{/depend}}
+{{if street1}}{{var street1}}<br />{{/if}}
+{{depend street2}}{{var street2}}<br />{{/depend}}
+{{depend street3}}{{var street3}}<br />{{/depend}}
+{{depend street4}}{{var street4}}<br />{{/depend}}
+<br />
+<b>{{if postcode}}{{var postcode}}{{/if}} {{if city}}{{var city}}  {{/if}}</b><br />
+{{var country}}<br />
+]]></text_shippingaddress>
+<text_before_table><![CDATA[
+Dear Mr(Ms) {{depend billingaddress.prefix}}{{var billingaddress.prefix}} {{/depend}}{{var billingaddress.firstname}} {{depend billingaddress.middlename}}{{var billingaddress.middlename}} {{/depend}}{{var billingaddress.lastname}},<br />
+referring to your order ({{var  order.real_order_id }}) we provide you with the following items into account:<br/>
+Sehr geehrte(r) {{depend billingaddress.prefix}}{{var billingaddress.prefix}} {{/depend}}{{var billingaddress.firstname}} {{depend billingaddress.middlename}}{{var billingaddress.middlename}} {{/depend}}{{var billingaddress.lastname}},<br />
+bezugnehmend auf Ihre Bestellung ({{var  order.real_order_id }}) erlauben wir uns folgendes Angebot zu unterbreiten<br/><br/>]]></text_before_table>
+<text_after_table><![CDATA[
+Questions? Errors? Uncertainties? You can contact to us via e-mail {{config path="trans_email/ident_general/email"}}.<br />
+Fragen? Irrtümer? Unklarheiten? Unsere Buchhaltung steht Ihnen jederzeit gerne zur Verfügung. Sie können
+diese direkt über Ihr Kundenmenü oder via E-Mail an {{config path="trans_email/ident_general/email"}} erreichen.<br />
+<br />
+<br />
+<b>Thank you</b><br />
+<b>Vielen Dank</b><br />
+{{config path="general/store_information/name"}}]]></text_after_table>
+           	<table_show_pos>1</table_show_pos>
+           	<table_add_sku>0</table_add_sku>
+           	<table_show_sku>1</table_show_sku>
+           	<table_show_qty_number>0</table_show_qty_number>
+		</auit_offer>
+
+<!--
+*** Invoice
+-->
+            <invoice>
+            	<table_template></table_template>
+            	<template>stores/default/en_invoice.pdf</template>
+            	<append>stores/default/template_agb.pdf</append>
+                <text_billingaddress><![CDATA[
+{{depend prefix}}{{var prefix}} {{/depend}}{{var firstname}} {{depend middlename}}{{var middlename}} {{/depend}}{{var lastname}}{{depend suffix}} {{var suffix}}{{/depend}}<br />
+{{depend company}}{{var company}}<br />{{/depend}}
+{{if street1}}{{var street1}}<br />{{/if}}
+{{depend street2}}{{var street2}}<br />{{/depend}}
+{{depend street3}}{{var street3}}<br />{{/depend}}
+{{depend street4}}{{var street4}}<br />{{/depend}}
+<br />
+<b>{{if postcode}}{{var postcode}}{{/if}} {{if city}}{{var city}}  {{/if}}</b><br />
+{{var country}}<br />
+]]></text_billingaddress>
+                <text_shippingaddress><![CDATA[
+{{depend prefix}}{{var prefix}} {{/depend}}{{var firstname}} {{depend middlename}}{{var middlename}} {{/depend}}{{var lastname}}{{depend suffix}} {{var suffix}}{{/depend}}<br />
+{{depend company}}{{var company}}<br />{{/depend}}
+{{if street1}}{{var street1}}<br />{{/if}}
+{{depend street2}}{{var street2}}<br />{{/depend}}
+{{depend street3}}{{var street3}}<br />{{/depend}}
+{{depend street4}}{{var street4}}<br />{{/depend}}
+<br />
+<b>{{if postcode}}{{var postcode}}{{/if}} {{if city}}{{var city}}  {{/if}}</b><br />
+{{var country}}<br />
+]]></text_shippingaddress>
+<text_before_table><![CDATA[Dear Mr(Ms) {{depend billingaddress.prefix}}{{var billingaddress.prefix}} {{/depend}}{{var billingaddress.firstname}} {{depend billingaddress.middlename}}{{var billingaddress.middlename}} {{/depend}}{{var billingaddress.lastname}},<br />
+referring to your order ({{var  order.real_order_id }}) we provide you with the following items into account:<br/>
+Sehr geehrte(r) {{depend billingaddress.prefix}}{{var billingaddress.prefix}} {{/depend}}{{var billingaddress.firstname}} {{depend billingaddress.middlename}}{{var billingaddress.middlename}} {{/depend}}{{var billingaddress.lastname}},<br />
+bezugnehmend auf Ihre Bestellung ({{var  order.real_order_id }}) erlauben wir uns, Ihnen folgende Positionen in Rechnung zu stellen:<br/>
+
+{{if helper.hasGiftMessage() }}
+<b>Gift message</b> from {{var giftmessage.sender}} to {{var giftmessage.recipient}}<br/>
+<b>Geschenknachricht</b> von {{var giftmessage.sender}} an {{var giftmessage.recipient}}<br/>
+{{var helper.nl2br(giftmessage.message)}}<br/>
+{{/if}}
+
+<br/><br/>]]></text_before_table>
+<text_after_table><![CDATA[
+{{if helper.isEUVATTaxFree(order.tax_amount,shippingaddress.country_id,shippingaddress.vat_id,
+billingaddress.country_id,billingaddress.vat_id,order.customer_taxvat) }}
+Tax free intracommunity delivery.<br/>
+Value added tax identification number: {{var shippingaddress.country_id}}{{var shippingaddress.vat_id}}<br/>
+Steuerfrei nach § 4 Nr. 1 b Umsatzsteuergesetz (UStG);innergemeinschalftliche Lieferung/Intra-Community Delivery.<br/>
+Die USt-ID des Unternehmers lautet: {{var helper.getVatID(shippingaddress.country_id,
+shippingaddress.vat_id,
+billingaddress.country_id,
+billingaddress.vat_id,
+order.customer_taxvat)}}<br/>
+<br/>
+{{/if}}
+
+{{if helper.isWorldTaxFree(order.tax_amount,shippingaddress.country_id,billingaddress.country_id) }}
+Tax-exempt export delivery<br/>
+Nach §6 UStG in Verb. mit §4 Nr. 1a UStG handelt es sich um eine steuerfreie Ausfuhr.<br/>
+{{/if}}
+
+{{if helper.gt(order.base_grand_total,1) }}
+Delivery Month: {{var helper.date(invoice.created_at_date,3,'MM/y') }}<br/>
+Liefermonat: {{var helper.date(invoice.created_at_date,3,'MM/y') }}<br/>
+{{/if}}
+
+<b>Payment:</b> {{var payment_info}}<br />
+<b>Zahlungsart:</b> {{var payment_info}}<br />
+<b>Shipping Method:</b> {{var order.getShippingDescription()}}<br />
+<b>Versandart:</b> {{var order.getShippingDescription()}}<br />
+
+{{if helper.hasVisibleComments() }}
+<b>Comments:</b> <b>Bemerkungen:</b>
+{{block type='core/template' area='frontend' template='auit/pdf/comments.phtml' entity=$entity}}
+{{/if}}
+<br />
+Questions? Errors? Uncertainties? You can contact to us via e-mail {{config path="trans_email/ident_general/email"}}.<br />
+Fragen? Irrtümer? Unklarheiten? Unsere Buchhaltung steht Ihnen jederzeit gerne zur Verfügung. Sie können
+diese direkt über Ihr Kundenmenü oder via E-Mail an {{config path="trans_email/ident_general/email"}} erreichen.<br />
+<br />
+<br />
+<b>Thank you for your order!</b><br />
+<b>Vielen Dank für Ihre Bestellung!</b>
+<br />{{config path="general/store_information/name"}}
+]]></text_after_table>
+           	<table_show_pos>1</table_show_pos>
+           	<table_add_sku>0</table_add_sku>
+           	<table_show_sku>1</table_show_sku>
+           	<bundle_template>1</bundle_template>
+		</invoice>
+
+<!--
+*** Shipment
+-->
+            <shipment>
+            	<table_template>shipment/barcode.phtml</table_template>
+            	<template>stores/default/en_packingslip.pdf</template>
+            	<append>stores/default/template_coupon.pdf</append>
+                <text_billingaddress></text_billingaddress>
+                <text_shippingaddress><![CDATA[
+{{depend prefix}}{{var prefix}} {{/depend}}{{var firstname}} {{depend middlename}}{{var middlename}} {{/depend}}{{var lastname}}{{depend suffix}} {{var suffix}}{{/depend}}<br />
+{{depend company}}{{var company}}<br />{{/depend}}
+{{if street1}}{{var street1}}<br />{{/if}}
+{{depend street2}}{{var street2}}<br />{{/depend}}
+{{depend street3}}{{var street3}}<br />{{/depend}}
+{{depend street4}}{{var street4}}<br />{{/depend}}
+<br />
+<b>{{if postcode}}{{var postcode}}{{/if}} {{if city}}{{var city}}  {{/if}}</b><br />
+{{var country}}<br />
+]]></text_shippingaddress>
+<text_before_table><![CDATA[
+{{if tracking_info}}
+<b>Tracking Information:</b><br />
+{{var tracking_info}}
+{{/if}}
+]]></text_before_table>
+
+<text_after_table><![CDATA[
+Please check for completeness!<br />
+Bitte überprüfen Sie die Vollständigkeit der Ware.<br />
+<br /><br />
+<b>Thank you for your order!</b><br />
+<b>Vielen Dank für Ihren Auftrag!</b><br />
+{{config path="general/store_information/name"}}<br /><br />
+]]></text_after_table>
+           	<table_show_pos>1</table_show_pos>
+           	<table_add_sku>0</table_add_sku>
+           	<table_show_sku>1</table_show_sku>
+		</shipment>
+
+
+
+
+<!--
+*** creditmemo
+-->
+            <creditmemo>
+            	<template>stores/default/en_creditmemo.pdf</template>
+            	<append></append>
+                <text_billingaddress><![CDATA[
+{{depend prefix}}{{var prefix}} {{/depend}}{{var firstname}} {{depend middlename}}{{var middlename}} {{/depend}}{{var lastname}}{{depend suffix}} {{var suffix}}{{/depend}}<br />
+{{depend company}}{{var company}}<br />{{/depend}}
+{{if street1}}{{var street1}}<br />{{/if}}
+{{depend street2}}{{var street2}}<br />{{/depend}}
+{{depend street3}}{{var street3}}<br />{{/depend}}
+{{depend street4}}{{var street4}}<br />{{/depend}}
+<br />
+<b>{{if postcode}}{{var postcode}}{{/if}} {{if city}}{{var city}}  {{/if}}</b><br />
+{{var country}}<br />
+]]></text_billingaddress>
+<text_shippingaddress></text_shippingaddress>
+
+
+	<text_after_table><![CDATA[
+{{if helper.eq(payment_method, 'debit') }}
+{{/if}}
+The amount will be credited to your account.<br />
+Der Betrag wird Ihrem Konto gutgeschrieben.<br />
+<br />
+Questions? Errors? Uncertainties? You can contact to us via e-mail {{config path="trans_email/ident_general/email"}}.<br />
+Fragen? Irrtümer? Unklarheiten? Unsere Buchhaltung steht Ihnen jederzeit gerne zur Verfügung. Sie können
+diese direkt über Ihr Kundenmenü oder via E-Mail an {{config path="trans_email/ident_general/email"}} erreichen.<br />
+<br /><br />
+<b>Vielen Dank für Ihren Auftrag!</b><br />
+{{config path="general/store_information/name"}}<br />
+]]></text_after_table>
+           	<table_show_pos>1</table_show_pos>
+           	<table_add_sku>0</table_add_sku>
+           	<table_show_sku>1</table_show_sku>
+           	<bundle_template>1</bundle_template>
+		</creditmemo>
+
+
+            <style>
+            	<global><![CDATA[
+.default 		{color: #000000;	font-family: freeserif;	font-size: 9pt;	text-align: left; }
+.billingaddress {color: #000000;	font-family: freeserif;	font-size: 10pt;	text-align: left;}
+.shippingaddress{color: #000000;	font-family: freeserif;	font-size: 10pt;	text-align: left;}
+.big			{color: #000000;	font-family: freeserif;	font-size: 12pt;	text-align: left;}
+.creator 		{color: #333333;	font-family: freeserif;	font-size: 6pt;	text-align: left;}
+.pagenr			{text-align: right; font-family: helvetica;}
+
+.col-position	{width:10mm;text-align: center;}
+.col-name		{width:70mm;}
+.col-image		{width:30mm;}
+.shipment .col-name		{width:125mm;}
+.shipment-barcode .col-name		{width:105mm;}
+.col-sku		{width:40mm;}
+.col-price		{width:20mm;text-align: right;auto-stretching:1;}
+.col-qty		{width:15mm;text-align: center;}
+.col-subtotal	{width:30mm;text-align: right;}
+
+table.data-table	{	color: #333333;	font-family: freeserif;	font-size: 8pt;}
+
+table.data-table th {	font-size: 9pt;	font-weight: bold;}
+
+tr.odd	{	background-color: #f5f5f5;}
+tr.even	{	}
+tr.last {page-break-after:40mm; }
+tr.last td {font-size:0.1;}
+
+td.col-sku		{font-size: 7pt;}
+.price-excl-tax {font-size: 7pt;}
+.price-incl-tax {font-size: 7pt;}
+tr.summary-details td {font-size: 6pt;}
+
+.item-options	{font-size: 7pt;}
+h4 				{font-weight:bold;line-height-after:0.2;}
+h3              {font-size: 8pt;  line-height-after:0.2;}
+div.sku			{font-size: 6pt; line-height-before:0.1; auto-stretching:1;}
+dl 				{font-size: 7pt;}
+dt 				{font-size: 7pt;font-weight:bold;font-style:italic;}
+dd 				{font-size: 7pt;}
+.a-right		{text-align: right;}
+tr.grand_total 	{font-size: 12pt;	font-weight: bold;  }
+tr.grand_total td.last 		{ border-top: 1px solid #000000;}
+.text-after		{page-break-before:40mm; font-size: 9pt;}
+.text-before	{font-size: 9pt;line-height-before:0;}
+
+table.trackinginfo {}
+table.trackinginfo td.title {width:40mm;  font-weight: bold; }
+table.trackinginfo td.number {}
+
+]]></global>
+	<list_ident></list_ident>
+            </style>
+
+    	</auit_pdf>
+    </default>
+</config>

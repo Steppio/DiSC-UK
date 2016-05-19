@@ -1,0 +1,167 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]> <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js"> <!--<![endif]-->
+
+<head>
+<?php echo $this->getChildHtml('head') ?>
+</head>
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+<?php echo $this->getChildHtml('after_body_start') ?>
+<div class="wrapper">
+    <?php echo $this->getChildHtml('global_notices') ?>
+
+    <div id="messages_product_view">
+        <?php Mage::app()->getLayout()->getMessagesBlock()->setMessages(Mage::getSingleton('customer/session')->getMessages(true)); ?>
+        <?php echo $this->getMessagesBlock()->getGroupedHtml(); ?>
+    </div>
+
+    <div class="page">
+        <?php echo $this->getChildHtml('header') ?>
+        <div class="main-container col1-layout">
+            <div class="main">
+                <?php echo $this->getChildHtml('breadcrumbs') ?>
+                <div class="col-main">     
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('epic_credits')->toHtml() ?>
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('epic_credits_page-how_many')->toHtml() ?>      
+
+                </div>
+            </div>
+        </div>
+
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('epic_credits_page-how_does_it_work')->toHtml() ?>          
+        
+        <div class="main-container no-head-padding">
+            <div class="main">
+                <div class="col-main">    
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('epic_credits_page-half-points')->toHtml() ?>
+                </div>
+            </div>
+        </div>
+
+        <section class="enhanced-report" style="background-image: url('<?php Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);?>media/epic/enchanced.jpg'); background-size: cover;">
+            <div class="main-container no-head-padding">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6">
+                            <div class="col-left sidebar"><?php echo $this->getChildHtml('left') ?></div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 enhanced-report-content">
+                            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('epic_credits_page-enhanced_report')->toHtml() ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <div class="main-container no-head-padding">
+            <div class="main">
+                <div class="col-main">   
+
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('testimonials')->toHtml() ?>
+
+                </div>
+            </div>
+        </div>
+        <?php echo $this->getChildHtml('footer_before') ?>
+        <?php echo $this->getChildHtml('footer') ?>
+        <?php echo $this->getChildHtml('global_cookie_notice') ?>
+        <?php echo $this->getChildHtml('before_body_end') ?>
+    </div>
+</div>
+
+<!-- Trigger the modal with a button -->
+<button id="button-click" style="opacity: 0;" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <h4>Register</h4>
+                    <p>Create an account with us and you'll be able to:</p>
+                    <ul>    
+                        <li>Check out faster</li>
+                        <li>Save multiple shipping addresses</li>
+                        <li>Access your order history</li>
+                        <li>Track new orders</li>
+                        <li>Save items to your wish list</li>
+                    </ul>
+                    <div class="buttons-set">
+                        <button type="button" title="<?php echo $this->__('Create an Account') ?>" class="button" onclick="window.location='<?php echo $this->getCreateAccountUrl() ?>';"><span><span><?php echo $this->__('Create an Account') ?></span></span></button>
+                    </div>                    
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <h4>Login</h4>
+                    <?php echo $this->getChildHtml('right') ?>
+                </div>
+            </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+jQuery(document).ready(function() {
+    
+    jQuery('#button-click').trigger( "click" );
+
+});
+</script>
+
+<?php echo $this->getAbsoluteFooter() ?>
+</body>
+</html>
+

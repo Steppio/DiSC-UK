@@ -1,0 +1,8 @@
+8.8  Fixed getAllItems call as wasn't working in admin
+8.9  Fixed preg replace to stop replacing spaces with underscore and converting shipping method to lowercase.
+8.10 Resolved issue if shipping price wasn't set in product listing, the extension was saying it was set and not using the default cost.
+9.0  Added new functionality to allow highest price totalling
+10.0 Added support for common library
+10.1 Changed attribute logic to not require 'used_in_product_listing'
+10.2 Removed unwanted Mage::log();
+12.0 moved extn to community folder

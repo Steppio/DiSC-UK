@@ -1,0 +1,24 @@
+<?php $paymentInfo = $this->getPaymentInfo(); ?>
+<?php if (count($paymentInfo) > 0): ?>
+    <fieldset>
+        <?php foreach ($paymentInfo as $_label => $_value): ?>
+            <div class="realex_payment_info_item">
+                <h5><?php echo $this->__($_label); ?></h5>
+                <?php if (is_array($_value)): ?>
+                    <table cellspacing="5">
+                        <tbody>
+                        <?php foreach ($_value as $__key => $__value): ?>
+                            <tr>
+                                <td><?php echo $__key; ?>:</td>
+                                <td><?php echo $__value; ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                <?php else: ?>
+                    <?php echo $_value; ?>
+                <?php endif; ?>
+            </div>
+        <?php endforeach; ?>
+    </fieldset>
+<?php endif; ?>

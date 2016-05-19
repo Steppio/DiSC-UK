@@ -1,0 +1,266 @@
+<?php
+/**
+ * Ajzele
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ *
+ * @category   Ajzele
+ * @package    Ajzele_Photic
+ * @copyright  Copyright (c) Branko Ajzele (http://ajzele.net)
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+$photicProductAttributeName = 'ajzele_photic3'; 
+
+$_product = Mage::helper('catalog')->getProduct();
+$_internalMap2Color = unserialize($_product->getData($photicProductAttributeName));
+//echo '<pre>'; print_r($_internalMap2Color); echo '</pre>';
+
+?>
+<?php
+$_block = $this;
+/* @var $_block Ajzele_Photic_Block_Adminhtml_Catalog_Product_Helper_Form_Gallery_Content */
+?>
+<div id="<?php echo $_block->getHtmlId() ?>" >
+<ul class="messages">
+    <li class="notice-msg">
+        <ul>
+            <li>
+            <?php echo Mage::helper('catalog')->__('Image type and information need to be specified for each store view.'); ?>
+            </li>
+        </ul>
+    </li>
+</ul>
+<div class="grid">
+<table cellspacing="0" class="data border" id="<?php echo $_block->getHtmlId() ?>_grid" width="100%">
+    <col width="120" />
+    <col />
+    <col width="100" />
+    <?php foreach ($_block->getImageTypes() as $typeId=>$type): ?>
+    <col />
+    <?php endforeach; ?>
+    <col width="70" />
+    <col width="70" />
+    <thead>
+        <tr class="headings">
+            <th><?php echo Mage::helper('catalog')->__('Image') ?></th>
+            <th><?php echo Mage::helper('catalog')->__('Label') ?></th>
+
+
+
+
+			<?php /* START Custom added */ ?>
+			<th><?php echo Mage::helper('catalog')->__('Photic') ?></th>
+			<?php /* END Custom added */ ?>
+
+
+
+
+            <th><?php echo Mage::helper('catalog')->__('Sort Order') ?></th>
+            <?php foreach ($_block->getImageTypes() as $typeId=>$type): ?>
+            <th><?php echo $type['label'] ?></th>
+            <?php endforeach; ?>
+            <th><?php echo Mage::helper('catalog')->__('Exclude') ?></th>
+            <th class="last"><?php echo Mage::helper('catalog')->__('Remove') ?></th>
+        </tr>
+    </thead>
+    <tbody id="<?php echo $_block->getHtmlId() ?>_list">
+        <tr id="<?php echo $_block->getHtmlId() ?>_template" class="template no-display">
+                <td class="cell-image"><div class="place-holder" onmouseover="<?php echo $_block->getJsObjectName(); ?>.loadImage('__file__')"><span><?php echo Mage::helper('catalog')->__('Roll Over for preview') ?></span></div><img src="<?php echo $this->getSkinUrl('images/spacer.gif')?>" width="100" style="display:none;" alt="" /></td>
+                <td class="cell-label"><input type="text" <?php if($_block->getElement()->getReadonly()):?> disabled="disabled"<?php endif;?> class="input-text" onkeyup="<?php echo $_block->getJsObjectName(); ?>.updateImage('__file__')" onchange="<?php echo $_block->getJsObjectName(); ?>.updateImage('__file__')" /></td>
+
+
+
+
+
+
+
+
+
+
+				<?php /* START Custom added */ ?>
+				<?php 
+				
+				$attribute = Mage::getModel('eav/entity_attribute')->loadByCode('catalog_product', 'color');
+				$sourceTable = Mage::getModel('eav/entity_attribute_source_table')->setAttribute($attribute);
+				
+				/**
+				 * $sourceTable
+				 * 
+					Array
+					(
+					    [0] => Array
+					        (
+					            [label] => 
+					            [value] => 
+					        )
+					
+					    [1] => Array
+					        (
+					            [value] => 4
+					            [label] => Blue
+					        )
+					
+					    [2] => Array
+					        (
+					            [value] => 3
+					            [label] => Red
+					        )
+					
+					)
+				 */
+				
+				$map2ColorOptions = $sourceTable->getAllOptions();
+
+				 
+				//foreach($map2ColorOptions as $optionItem) {
+					/** @var $optionItem Mage_Eav_Model_Entity_Attribute_Option */
+					//$optionItem = new Mage_Eav_Model_Entity_Attribute_Option();
+				 
+					/**
+					 * var_dump($optionItem->debug());
+						array
+						  'option_id' => string '60' (length=2)
+						  'attribute_id' => string '272' (length=3)
+						  'sort_order' => string '0' (length=1)
+						  'value' => string 'White' (length=5)
+				 
+						array
+						  'option_id' => string '23' (length=2)
+						  'attribute_id' => string '272' (length=3)
+						  'sort_order' => string '0' (length=1)
+						  'value' => string 'Silver' (length=6)
+				 
+						array
+						  'option_id' => string '26' (length=2)
+						  'attribute_id' => string '272' (length=3)
+						  'sort_order' => string '0' (length=1)
+						  'value' => string 'Red' (length=3)
+				 
+					 */
+				//}
+				 
+
+				 
+				?>
+				 
+				<td>
+					<select class="map2ColorSelects" id="map2Color__value_id__" name="map2Color[__value_id__]" style="width:60px;">
+						<option value=""><?php echo $this->__('') ?></option>
+						<?php foreach($map2ColorOptions as $map2ColorItem): ?>
+							<?php if(isset($map2ColorItem['value']) && !empty($map2ColorItem['value'])): ?>
+								<option value="<?php echo $map2ColorItem['value'] ?>"><?php echo $map2ColorItem['label'] ?></option>
+							<?php endif; ?>
+						<?php endforeach; ?>
+					</select>
+				</td>
+				<?php /* END Custom added */ ?>
+
+
+
+
+
+
+
+
+
+
+
+                <td class="cell-position"><input type="text" <?php if($_block->getElement()->getReadonly()):?> disabled="disabled"<?php endif;?> class="input-text validate-number" onkeyup="<?php echo $_block->getJsObjectName(); ?>.updateImage('__file__')" onchange="<?php echo $_block->getJsObjectName(); ?>.updateImage('__file__')" /></td>
+                <?php foreach ($_block->getImageTypes() as $typeId=>$type): ?>
+                <td class="cell-<?php echo $typeId ?> a-center"><input <?php if($_block->getElement()->getAttributeReadonly($typeId)) :?> disabled="disabled" <?php endif;?> type="radio" name="<?php echo $type['field'] ?>" onclick="<?php echo $_block->getJsObjectName(); ?>.setProductImages('__file__')" value="__file__" /></td>
+                <?php endforeach; ?>
+                <td class="cell-disable a-center"><input type="checkbox" <?php if($_block->getElement()->getReadonly()):?> disabled="disabled"<?php endif;?> onclick="<?php echo $_block->getJsObjectName(); ?>.updateImage('__file__')" /></td>
+                <td class="cell-remove a-center last"><input type="checkbox" <?php if($_block->getElement()->getReadonly()):?> disabled="disabled"<?php endif;?> onclick="<?php echo $_block->getJsObjectName(); ?>.updateImage('__file__')" /></td>
+        </tr>
+        <?php if($_block->hasUseDefault()): ?>
+        <tr id="<?php echo $_block->getHtmlId() ?>_default">
+                <td><?php echo Mage::helper('catalog')->__('Use Default Value') ?></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <?php foreach ($_block->getMediaAttributes() as $_attribute): ?>
+                <td class="a-center">
+                <?php if($_block->getElement()->canDisplayUseDefault($_attribute)): ?>
+                <input class="default-checkbox" name="use_default[]" type="checkbox" <?php if($_block->getElement()->getAttributeReadonly($_attribute->getAttributeCode())):?> disabled="disabled" <?php endif;?>  onclick="<?php echo $_block->getJsObjectName(); ?>.updateUseDefault()"
+<?php if($_block->getElement()->usedDefault($_attribute)): ?>checked<?php endif; ?> value="<?php echo $_attribute->getAttributeCode() ?>" />
+                <?php endif ?>
+                </td>
+                <?php endforeach; ?>
+                <td>&nbsp;</td>
+                <td class="last">&nbsp;</td>
+        </tr>
+    <?php endif ?>
+        <tr id="<?php echo $_block->getHtmlId() ?>-image-0">
+                <td class="cell-image"><?php echo Mage::helper('catalog')->__('No image') ?></td>
+                <td class="cell-label"><input type="hidden" />&nbsp;</td>
+                <td class="cell-position"><input type="hidden" />&nbsp;</td>
+                <?php foreach ($_block->getImageTypes() as $typeId=>$type): ?>
+                <td class="cell-<?php echo $typeId ?> a-center"><input type="radio" <?php if($_block->getElement()->getAttributeReadonly($typeId)) :?> disabled="disabled" <?php endif;?> name="<?php echo $type['field'] ?>" onclick="<?php echo $_block->getJsObjectName(); ?>.setProductImages('no_selection')" value="no_selection" /></td>
+                <?php endforeach; ?>
+                <td class="cell-disable"><input type="hidden" />&nbsp;</td>
+                <td class="cell-remove last"><input type="hidden" />&nbsp;</td>
+        </tr>
+    </tbody>
+<?php if (!$_block->getElement()->getReadonly()):?>
+    <tfoot>
+        <tr>
+            <td colspan="100" class="last" style="padding:8px">
+                <?php echo $_block->getUploaderHtml() ?>
+            </td>
+        </tr>
+    </tfoot>
+<?php endif;?>
+</table>
+</div>
+</div>
+<input type="hidden" id="<?php echo $_block->getHtmlId() ?>_save" name="<?php echo $_block->getElement()->getName() ?>[images]" value="<?php echo $_block->htmlEscape($_block->getImagesJson()) ?>" />
+<input type="hidden" id="<?php echo $_block->getHtmlId() ?>_save_image" name="<?php echo $_block->getElement()->getName() ?>[values]" value="<?php echo $_block->htmlEscape($_block->getImagesValuesJson()) ?>" />
+<script type="text/javascript">
+//<![CDATA[
+var <?php echo $_block->getJsObjectName(); ?> = new Product.Gallery('<?php echo $_block->getHtmlId() ?>', <?php if ($_block->getElement()->getReadonly()):?>null<?php else:?><?php echo $_block->getUploader()->getJsObjectName() ?><?php endif;?>, <?php echo $_block->getImageTypesJson() ?>);
+//]]>
+</script>
+
+
+
+
+<?php /* START Custom added */ ?>
+<script type="text/javascript">
+//<![CDATA[
+ 
+<?php if(!empty($_internalMap2Color)): ?>
+var colorMap2ColorVarValue = new Array();
+ 
+<?php foreach ($_internalMap2Color as $colorVarKey => $colorVarValue): ?>
+colorMap2ColorVarValue[<?php echo $colorVarKey ?>] = "<?php echo $colorVarValue ?>";
+<?php endforeach; ?>
+ 
+<?php endif; ?>
+ 
+var idNamePrefix = 'map2Color';
+ 
+$$('select.map2ColorSelects').each(function(data) {
+	if(data.id != 'map2Color__value_id__') {
+		//"Select" element type and its id value
+		var fullElementIdValue = String(data.id);
+ 
+		if(idNamePrefix.indexOf(fullElementIdValue)) {
+			var numericId = fullElementIdValue.substring(idNamePrefix.length);
+			var options = data.options;
+ 
+			for(i = 0; i < options.length; i++) {
+				if(options[i].value == colorMap2ColorVarValue[numericId]) {
+					$(fullElementIdValue).selectedIndex = i;
+				}
+			}
+		}
+	}
+});
+//]]>
+</script>
+<?php /* END Custom added */ ?>

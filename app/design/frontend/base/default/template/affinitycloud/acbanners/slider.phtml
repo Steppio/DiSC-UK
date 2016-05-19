@@ -1,0 +1,9 @@
+<?php if ( ! empty($banners = $this->getBanners())) { ?>
+	<div class="theme-default">
+		<div id="slider" class="nivoSlider">
+		<?php foreach ($banners as $banner) {
+			echo '<a href="'.$banner['url'].'" title="'.$banner['title'].'" class="nivo-imageLink"><img src="'.$banner['imageUrl'].'" alt="'.$banner['title'].'" /></a>';
+		} ?>
+		</div>
+	</div>
+<?php } ?>

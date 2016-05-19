@@ -1,0 +1,25 @@
+<?php
+	$banners = $this->getSideBanners();
+	
+	if ( ! empty($banners))
+	{
+		echo '<a id="ban_next" class="next arows" href="#"><span>Next</span></a>';
+		echo '<a id="ban_prev" class="prev arows" href="#"><span>Prev</span></a>';
+		echo '<div class="list_carousel">';
+		echo '<ul id="list_banners">';
+		foreach ($banners as $banner)
+		{
+			// var_dump($banner); die();
+			echo '<li class="banner">';
+			if ($banner['url']) { echo '<a href="'.$banner['url'].'" title="'.$banner['title'].'">'; }
+			echo '<div class="prev">';
+			echo '<img src="'.$banner['imageUrl'].'" alt="'.$banner['title'].'" />';
+			echo '</div>';
+			if ($banner['url']) { echo '</a>'; }
+			echo '</li>';
+		}
+		echo '</ul>';
+		echo '</div>';
+		echo '<div class="clear">&nbsp;</div>';
+	}
+?>

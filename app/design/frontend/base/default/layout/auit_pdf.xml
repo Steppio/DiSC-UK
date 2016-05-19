@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <sales_order_printinvoice >
+        <reference name="sales.order.print.invoice" >
+            <action method="setTemplate" ifconfig="auit_pdf/general/print_pdf_frontend_invoice"><template>auit/pdf/order/print/invoice.phtml</template></action>
+        </reference>
+    </sales_order_printinvoice>
+    <sales_order_printshipment >
+        <reference name="sales.order.print.shipment" >
+            <action method="setTemplate" ifconfig="auit_pdf/general/print_pdf_frontend_shipment"><template>auit/pdf/order/print/shipment.phtml</template></action>
+        </reference>
+    </sales_order_printshipment>
+    <sales_order_printcreditmemo >
+        <reference name="sales.order.print.creditmemo" >
+            <action method="setTemplate" ifconfig="auit_pdf/general/print_pdf_frontend_creditmemo"><template>auit/pdf/order/print/creditmemo.phtml</template></action>
+        </reference>
+    </sales_order_printcreditmemo>
+
+    <sales_order_print>
+        <reference name="sales.order.print" >
+            <action method="setTemplate" ifconfig="auit_pdf/general/print_pdf_frontend_offer"><template>auit/pdf/order/print/order.phtml</template></action>
+        </reference>
+	</sales_order_print>
+
+
+    <sales_guest_printinvoice>
+        <reference name="sales.order.print.invoice" >
+            <action method="setTemplate" ifconfig="auit_pdf/general/print_pdf_frontend_invoice"><template>auit/pdf/order/print/invoice.phtml</template></action>
+        </reference>
+    </sales_guest_printinvoice>
+
+    <sales_guest_printshipment >
+        <reference name="sales.order.print.shipment" >
+            <action method="setTemplate" ifconfig="auit_pdf/general/print_pdf_frontend_shipment"><template>auit/pdf/order/print/shipment.phtml</template></action>
+        </reference>
+    </sales_guest_printshipment>
+    <sales_guest_printcreditmemo >
+        <reference name="sales.order.print.creditmemo" >
+            <action method="setTemplate" ifconfig="auit_pdf/general/print_pdf_frontend_creditmemo"><template>auit/pdf/order/print/creditmemo.phtml</template></action>
+        </reference>
+    </sales_guest_printcreditmemo>
+
+    <sales_guest_print>
+        <reference name="sales.order.print" >
+            <action method="setTemplate" ifconfig="auit_pdf/general/print_pdf_frontend_offer"><template>auit/pdf/order/print/order.phtml</template></action>
+        </reference>
+	</sales_guest_print>
+
+</layout>

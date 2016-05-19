@@ -1,0 +1,62 @@
+var Iframe = Class.create();
+Iframe.prototype = {
+    initialize: function(closeUrl, contentUrl, srcUrl, width, height){
+        this.closeUrl = closeUrl;
+        this.contentUrl = contentUrl;
+        this.srcUrl = srcUrl;
+        this.onShow = this.showForm.bindAsEventListener(this);
+        this.onClose = this.closeForm.bindAsEventListener(this);
+        this.width = typeof width !== 'undefined' ? width : 460;
+        this.height = typeof height !== 'undefined' ? height: 600;
+    },
+    show: function(){
+        Event.observe(window, 'beforeunload', this.register.bind(this));
+        var request = new Ajax.Request(
+            this.contentUrl,
+            {
+                method:'post',
+                onSuccess: this.onShow,
+                onFailure: this.onClose
+            }
+        );
+    },
+    showForm: function(transport){
+        if (transport && transport.responseText) {
+            result = transport.responseText;
+            if(result !== ''){
+                try{
+                    var iframe = document.createElement('iframe');
+
+                    iframe.src = this.srcUrl;
+                    iframe.id = 'iframeId';
+                    document.body.appendChild(iframe);
+                    iframe.contentWindow.document.open('text/htmlreplace');
+                    iframe.contentWindow.document.write(result.str.trim());
+                    iframe.contentWindow.document.close();
+
+                    var iHeight = iframe.contentWindow.document.body.scrollHeight;
+
+                    var wm = new Control.Modal('iframeId',{
+                        className: 'modal',
+                        closeOnClick: true,
+                        width: this.width ,
+                        height: this.height,
+                        fade: true,
+                        afterClose: this.onClose
+                    });
+                    wm.open();
+                }catch (_error){
+                    this.onClose;
+                }
+            }else{
+                this.onClose;
+            }
+        }
+    },
+    closeForm: function(){
+        window.location=this.closeUrl;
+    },
+    register: function (evt) {
+        console.log(evt);
+    }
+}

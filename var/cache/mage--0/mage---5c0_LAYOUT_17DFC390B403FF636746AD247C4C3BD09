@@ -1,0 +1,47 @@
+<reference name="content">
+   <block type="sales/order_print_creditmemo" name="sales.order.print.creditmemo" template="sales/order/print/creditmemo.phtml">
+      <action method="addItemRender">
+         <type>default</type>
+         <block>sales/order_item_renderer_default</block>
+         <template>sales/order/creditmemo/items/renderer/default.phtml</template>
+      </action>
+      <action method="addItemRender">
+         <type>grouped</type>
+         <block>sales/order_item_renderer_grouped</block>
+         <template>sales/order/creditmemo/items/renderer/default.phtml</template>
+      </action>
+      <block type="sales/order_creditmemo_totals" name="creditmemo_totals" template="sales/order/totals.phtml">
+         <action method="setLabelProperties">
+            <value>colspan=&quot;6&quot; class=&quot;a-right&quot;</value>
+         </action>
+         <action method="setValueProperties">
+            <value>class=&quot;a-right&quot;</value>
+         </action>
+         <block type="tax/sales_order_tax" name="tax" template="tax/order/tax.phtml">
+            <action method="setIsPlaneMode">
+               <value>1</value>
+            </action>
+         </block>
+      </block>
+   </block>
+</reference>
+<block type="core/text_list" name="additional.product.info"/>
+<reference name="sales.order.print.creditmemo">
+   <action method="addItemRender">
+      <type>bundle</type>
+      <block>bundle/sales_order_items_renderer</block>
+      <template>bundle/sales/order/creditmemo/items/renderer.phtml</template>
+   </action>
+</reference>
+<reference name="sales.order.print.creditmemo">
+   <action method="addItemRender">
+      <type>downloadable</type>
+      <block>downloadable/sales_order_item_renderer_downloadable</block>
+      <template>downloadable/sales/order/creditmemo/items/renderer/downloadable.phtml</template>
+   </action>
+</reference>
+<reference name="sales.order.print.creditmemo">
+   <action method="setTemplate" ifconfig="auit_pdf/general/print_pdf_frontend_creditmemo">
+      <template>auit/pdf/order/print/creditmemo.phtml</template>
+   </action>
+</reference>

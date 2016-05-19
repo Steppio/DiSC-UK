@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Disc_WidgetLinks>
+      <version>0.0.1</version>
+    </Disc_WidgetLinks>
+  </modules>
+  <global>
+    <helpers>
+      <widgetlinks>
+        <class>Disc_WidgetLinks_Helper</class>
+      </widgetlinks>
+    </helpers>
+    <blocks>
+      <widgetlinks>
+        <class>Disc_WidgetLinks_Block</class>
+      </widgetlinks>
+    </blocks>
+    <models>
+      <widgetlinks>
+        <class>Disc_WidgetLinks_Model</class>
+      </widgetlinks>
+    </models>
+  </global>
+</config>

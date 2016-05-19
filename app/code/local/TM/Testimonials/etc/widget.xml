@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<widgets>
+    <testimonials_list type="testimonials/widget_list" translate="name" module="testimonials">
+        <name>Testimonials: List of testimonials (for side panel)</name>
+        <description type="desc">Shows changing testimonials list in side panel</description>
+        <parameters>
+            <show_block_design translate="label">
+                <required>0</required>
+                <visible>1</visible>
+                <label>Display block title and link</label>
+                <description>Disable if you want to use your own title design or link</description>
+                <type>select</type>
+                <source_model>adminhtml/system_config_source_yesno</source_model>
+                <value>1</value>
+            </show_block_design>
+            <items_number translate="label">
+                <required>1</required>
+                <visible>1</visible>
+                <label>Number of testimonials</label>
+                <type>text</type>
+                <value>5</value>
+            </items_number>
+            <view_time translate="label">
+                <required>1</required>
+                <visible>1</visible>
+                <label>Show next testimonial after, ms</label>
+                <type>text</type>
+                <value>10000</value>
+            </view_time>
+            <anim_duration translate="label">
+                <required>1</required>
+                <visible>1</visible>
+                <label>Change animation duration, ms</label>
+                <type>text</type>
+                <value>1000</value>
+            </anim_duration>
+        </parameters>
+    </testimonials_list>
+    <testimonials_review type="testimonials/widget_review" translate="name" module="testimonials">
+        <name>Testimonials: Review block (for side panel)</name>
+        <description type="desc">Shows number of testimonials and average testimonial rating in side panel</description>
+        <parameters>
+            <show_block_design translate="label">
+                <required>0</required>
+                <visible>1</visible>
+                <label>Display block title and link</label>
+                <description>Disable if you want to use your own title design or link</description>
+                <type>select</type>
+                <source_model>adminhtml/system_config_source_yesno</source_model>
+                <value>1</value>
+            </show_block_design>
+        </parameters>
+    </testimonials_review>
+    <testimonials_form type="testimonials/widget_form" translate="name" module="testimonials">
+        <name>Testimonials: Submit Form</name>
+        <description type="desc">Shows testimonials submit form</description>
+    </testimonials_form>
+    <testimonials_listFull type="testimonials/widget_listFull" translate="name" module="testimonials">
+        <name>Testimonials: Full testimonials list</name>
+        <description type="desc">Shows full testimonials list</description>
+        <parameters>
+            <show_title translate="label">
+                <required>0</required>
+                <visible>1</visible>
+                <label>Show list title</label>
+                <type>select</type>
+                <source_model>adminhtml/system_config_source_yesno</source_model>
+                <value>1</value>
+            </show_title>
+        </parameters>
+    </testimonials_listFull>
+</widgets>

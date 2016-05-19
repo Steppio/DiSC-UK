@@ -1,0 +1,425 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/**
+ * Product view template
+ *
+ * @see Mage_Catalog_Block_Product_View
+ * @see Mage_Review_Block_Product_View
+ */
+?>
+<?php $_helper = $this->helper('catalog/output'); ?>
+<?php $_product = $this->getProduct(); ?>
+<script type="text/javascript">
+    var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+</script>
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
+<div class="product-view">
+    <div class="product-essential">
+    <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+        <?php echo $this->getBlockHtml('formkey') ?>
+        <div class="no-display">
+            <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
+            <input type="hidden" name="related_product" id="related-products-field" value="" />
+        </div>
+
+        <div class="product-shop">
+            <div class="col-xs-12 padding-0">
+                <div class="product-name">
+                    <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+                </div>
+            </div>
+            <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
+            <?php echo $this->getChildHtml('alert_urls') ?>
+            <?php echo $this->getChildHtml('product_type_data') ?>
+            <?php echo $this->getTierPriceHtml() ?>
+            <?php echo $this->getChildHtml('extrahint') ?>
+
+            <?php
+            $hideCategories = '43';
+
+            $productCategoryIds = $_product->getCategoryIds();
+
+            if (in_array($hideCategories, $productCategoryIds)) {
+
+                ?>
+
+                    <p style="clear: both; padding: 15px; margin: 30px 0;" class="bg-warning">EPIC Account holders please follow <a href="<?php echo Mage::getBaseUrl() . 'products/epic/epic-credits.html'; ?>">this link</a> to purchase credits.</p>
+
+                <?php 
+
+            }
+            ?>
+
+
+            <div class="col-xs-12 col-sm-6 float-right padding-0">
+                <div class="price-info">
+                <?php
+                $hideCategories = '67';
+
+                $productCategoryIds = $_product->getCategoryIds();
+
+                foreach ($productCategoryIds AS $productCategoryId) {
+
+                    if (in_array($hideCategories, $productCategoryIds)) {
+
+                        $epic_true = true;
+
+                        if($this->helper('customer')->isLoggedIn()) {
+
+                            echo $this->getPriceHtml($_product); 
+                            echo $this->getChildHtml('bundle_prices');
+                            echo $this->getTierPriceHtml();
+
+                            break;
+
+                        }
+                        else {
+
+                            echo "<h3>Price Hidden - <a id='clickToGo' style='cursor: pointer;' type='button' data-toggle='modal' data-target='#myModal2'>Please Log In</a></h3>";
+
+                            break;
+                            
+                        }
+
+                    }
+                    else {
+
+                        echo $this->getPriceHtml($_product); 
+                        echo $this->getChildHtml('bundle_prices');
+                        echo $this->getTierPriceHtml();
+
+                        break;
+
+                    }
+
+                    $epic = '';
+
+                    if(($hideCategories != '67') && ($this->helper('customer')->isLoggedIn())) {
+                        $epic = 'true';
+                    }
+
+                }
+
+                ?>
+                    
+                </div>
+
+                <?php if (!$this->hasOptions()):?>
+                    <div class="add-to-box">
+                        <p>Input quantity and press Enter</p>
+                        <?php if($_product->isSaleable()): ?>
+                            <?php echo $this->getChildHtml('addtocart') ?>
+                            <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
+                                <span class="or"><?php echo $this->__('OR') ?></span>
+                            <?php endif; ?>
+                        <?php endif; ?>
+                        <?php echo $this->getChildHtml('addto') ?>
+                        <?php if (in_array($hideCategories, $productCategoryIds)) { ?>
+                        <div class="epic-wrapper">
+                            <label for="cost">Cost:</label>
+                            <input type="text" name="qty" id="qty" maxlength="12" value="1" title="Qty" class="input-text qty" disabled></input>
+                        </div>
+                        <?php } ?>                      
+                    </div>
+                <?php elseif (!$_product->isSaleable()): ?>
+                    <div class="add-to-box">
+                        <?php echo $this->getChildHtml('addto') ?>
+                    </div>
+                <?php endif; ?>   
+
+            <div class="link-to-table">
+
+                <?php $cheese = $this->getLayout()->getBlockSingleton('Uni_Fileuploader_Block_Fileuploader'); ?>
+
+                <?php
+                $_product = Mage::registry('current_product');
+                $attachments = $cheese->getProductAttachments($_product->getId());
+                if (count($attachments) > 0):
+                ?>             
+                    <?php foreach ($attachments as $attachment): ?>   
+                    <td class="label"><?php echo $attachment['file']; ?></td>
+                    <?php endforeach; ?>
+                <?php endif; ?>                
+
+
+                <?php 
+                if(Mage::getSingleton('customer/session')->isLoggedIn()){
+                      $groupId = Mage::getSingleton('customer/session')->getCustomerGroupId();
+                      $group = Mage::getModel('customer/group')->load($groupId);
+                      if(($group === "epic_account") || ($epic_true == true)) { ?>
+
+                        <button id="button-click" style="opacity: 1; display: block;" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Number of Credits Charged for Reports</button>  
+
+                      <?php }
+                }
+                ?>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 float-left padding-0">
+                <div class="product-img-box">
+                    <?php echo $this->getChildHtml('media') ?>
+                </div>
+            </div>
+            
+            <div class="col-xs-12 padding-0">
+                <?php if ($_product->getShortDescription()):?>
+                    <div class="short-description">
+                        <h2><?php echo $this->__('Quick Overview') ?></h2>
+                        <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
+                    </div>
+                <?php endif;?>
+
+                <?php echo $this->getChildHtml('other');?>
+
+                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                    <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
+                <?php endif;?>
+            </div>
+
+        </div>
+
+        <div class="clearer"></div>
+        <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+            <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+        <?php endif;?>
+    </form>
+    <script type="text/javascript">
+    //<![CDATA[
+    
+        if(jQuery('body').hasClass('product-epic-credits')) {
+
+            if(jQuery('.price-info .price-excluding-tax .price:contains("£1.05")').length > 0 || jQuery('.price-info .price-excluding-tax .price:contains("£1.95")').length > 0) {
+                
+                var different = true;
+                var value = jQuery('.price-info .price-excluding-tax .price').text().replace('£', '');
+
+                jQuery('.price-info .price-box').css('display', 'block');
+
+                console.log(value.trim());
+
+                var JVprice = jQuery(value.trim());
+
+            }
+
+            jQuery('.epic-wrapper').css('display', 'block');
+
+            var tier_0_price = jQuery('.float-right .tier-0 .price:first-child').text(),
+                tier_0_price = tier_0_price.replace(/\£/g, ' '),
+                tier_1_price = jQuery('.float-right .tier-1 .price:first-child').text(),
+                tier_1_price = tier_1_price.replace(/\£/g, ' '),                
+                tier_2_price = jQuery('.float-right .tier-2 .price:first-child').text(),
+                tier_2_price = tier_2_price.replace(/\£/g, ' '),
+                tier_3_price = jQuery('.float-right .tier-3 .price:first-child').text(),
+                tier_3_price = tier_3_price.replace(/\£/g, ' '),
+                tier_4_price = jQuery('.float-right .tier-4 .price:first-child').text(),
+                tier_4_price = tier_4_price.replace(/\£/g, ' '),
+                tier_5_price = jQuery('.float-right .tier-5 .price:first-child').text(),
+                tier_5_price = tier_5_price.replace(/\£/g, ' '),
+                price = 0;
+
+            jQuery('.qty-wrapper #qty').change(function(event) {
+                quantity = parseInt(jQuery('.qty-wrapper #qty').val());
+
+                if(different == true) {
+
+                    price = JVprice.selector;
+
+                    console.log(price);
+
+                }
+                else {
+
+                    switch (true) {
+                        case (quantity > 0 && quantity <= 99):
+                            price = 2.50;
+                            break;
+                        case (quantity >= 100 && quantity <= 499):
+                            price = tier_0_price;
+                            break;
+                        case (quantity >= 500 && quantity <= 999):
+                            price = tier_1_price;
+                            break;
+                        case (quantity >= 1000 && quantity <= 2499):
+                            price = tier_2_price;
+                            break;
+                        case (quantity >= 2500 && quantity <= 4999):
+                            price = tier_3_price;
+                            break;
+                        case (quantity >= 5000 && quantity <= 9999):
+                            price = tier_4_price;
+                            break;
+                        case (quantity > 10000):
+                            price = tier_5_price;
+                            break;
+                    }
+
+                }
+
+                // console.log(tier_0_price);
+                // console.log(price);
+
+                console.log(quantity);
+                console.log(price);
+                console.log((quantity * price).toFixed(2));
+
+                amount = '£' + (quantity * price).toFixed(2);
+
+
+
+                jQuery('.epic-wrapper').css('display', 'block');
+                jQuery('.epic-wrapper #qty').val(amount);
+
+            });
+
+        }
+
+        var productAddToCartForm = new VarienForm('product_addtocart_form');
+        productAddToCartForm.submit = function(button, url) {
+            if (this.validator.validate()) {
+                var form = this.form;
+                var oldUrl = form.action;
+
+                if (url) {
+                   form.action = url;
+                }
+                var e = null;
+                try {
+                    this.form.submit();
+                } catch (e) {
+                }
+                this.form.action = oldUrl;
+                if (e) {
+                    throw e;
+                }
+
+                if (button && button != 'undefined') {
+                    button.disabled = true;
+                }
+            }
+        }.bind(productAddToCartForm);
+
+        productAddToCartForm.submitLight = function(button, url){
+            if(this.validator) {
+                var nv = Validation.methods;
+                delete Validation.methods['required-entry'];
+                delete Validation.methods['validate-one-required'];
+                delete Validation.methods['validate-one-required-by-name'];
+                // Remove custom datetime validators
+                for (var methodName in Validation.methods) {
+                    if (methodName.match(/^validate-datetime-.*/i)) {
+                        delete Validation.methods[methodName];
+                    }
+                }
+
+                if (this.validator.validate()) {
+                    if (url) {
+                        this.form.action = url;
+                    }
+                    this.form.submit();
+                }
+                Object.extend(Validation.methods, nv);
+            }
+        }.bind(productAddToCartForm);
+    //]]>
+    </script>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+
+            <div class="container-fluid">
+                <div class="row">
+
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('static_credit_guide')->toHtml() ?>
+                    
+                </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+<?php
+if(!$this->helper('customer')->isLoggedIn()) {
+?>
+<!-- Modal -->
+
+    <!-- Login Modal -->
+    <div id="myModal2" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+
+            <div class="container-fluid">
+                <div class="row">
+
+                    <?php echo $this->getChildHtml('login') ?>
+                    
+                </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+<?php } ?>
+
+    <script>
+        jQuery( document ).ready(function() {
+
+            if(jQuery(window).width() < 1024) {
+
+                var url = '<?php echo Mage::helper('core/url')->getHomeUrl(); ?>customer/account/login';
+
+                jQuery('#clickToGo').removeAttr('data-toggle');
+                jQuery('#clickToGo').removeAttr('data-target');
+                jQuery('#clickToGo').attr("href", url);
+
+            }
+
+        });
+    </script>
+
+</div>

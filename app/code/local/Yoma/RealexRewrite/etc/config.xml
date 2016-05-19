@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Yoma_RealexRewrite>
+            <version>1.1.0</version>
+        </Yoma_RealexRewrite>
+    </modules>
+    <global>
+        <models>
+            <sales>
+                <rewrite>
+                    <order_payment>Yoma_RealexRewrite_Model_Sales_Order_Payment</order_payment>
+                    <order_payment_transaction>Yoma_RealexRewrite_Model_Sales_Order_Payment_Transaction</order_payment_transaction>
+                    <order_creditmemo>Yoma_RealexRewrite_Model_Sales_Order_Creditmemo</order_creditmemo>
+                </rewrite>
+            </sales>
+        </models>
+        <!--
+        <blocks>
+            <adminhtml>
+                <rewrite>
+                    <sales_order_invoice_totals>Yoma_RealexRewrite_Block_Adminhtml_Sales_Order_Invoice_Settle</sales_order_invoice_totals>
+                    <sales_order_creditmemo_totals>Yoma_RealexRewrite_Block_Adminhtml_Sales_Order_Creditmemo_Rebate</sales_order_creditmemo_totals>
+                </rewrite>
+            </adminhtml>
+        </blocks>
+        -->
+        <helpers>
+            <realexRewrite>
+                <class>Yoma_RealexRewrite_Helper</class>
+            </realexRewrite>
+        </helpers>
+    </global>
+</config>

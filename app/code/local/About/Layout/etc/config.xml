@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<About_Layout>
+			<version>0.0.1</version>
+		</About_Layout>
+	</modules>
+	<global>
+		<page>
+			<layouts>
+				<lookbook module="page" translate="label">
+					<label>lookbook</label>
+					<template>page/1column-lookbook.phtml</template>
+					<layout_handle>lookbook</layout_handle>
+				</lookbook>
+			</layouts>
+		</page>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<about_layout>
+					<file>about_layout.xml</file>
+				</about_layout>
+			</updates>
+		</layout>
+	</frontend>
+</config>
