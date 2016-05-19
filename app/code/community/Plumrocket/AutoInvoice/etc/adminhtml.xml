@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+	<config>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<autoinvoice translate="title" module="autoinvoice">
+											<title>Plumrocket Auto Invoice Section</title>
+											<sort_order>1600</sort_order>
+										</autoinvoice>
+									</children>
+								</config>
+							</children>
+						</system>
+						<plumrocket>
+							<title>Plumrocket</title>
+							<sort_order>80</sort_order>
+							<children>
+								<autoinvoice>
+									<title>Auto Invoice</title>
+									<sort_order>270</sort_order>
+								</autoinvoice>
+							</children>
+						</plumrocket>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		<menu>
+			<plumrocket>
+				<title>Plumrocket</title>
+				<sort_order>80</sort_order>
+				<children>
+					<autoinvoice>
+						<title>Auto Invoice</title>
+						<sort_order>270</sort_order>
+						<action>adminhtml/system_config/edit/section/autoinvoice</action>
+					</autoinvoice>
+				</children>
+			</plumrocket>
+		</menu>
+	</config>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Fivebehaviours_Layout>
+			<version>0.0.1</version>
+		</Fivebehaviours_Layout>
+	</modules>
+	<global>
+		<page>
+			<layouts>
+				<fivebehaviours module="page" translate="label">
+					<label>fivebehaviours</label>
+					<template>page/1column-fivebehaviours.phtml</template>
+					<layout_handle>fivebehaviours</layout_handle>
+				</fivebehaviours>
+			</layouts>
+		</page>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<fivebehaviours_layout>
+					<file>fivebehaviours_layout.xml</file>
+				</fivebehaviours_layout>
+			</updates>
+		</layout>
+	</frontend>
+</config>

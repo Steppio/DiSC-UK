@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<layout>
+	<certification translate="label">
+		<label>Certification</label>
+		<reference name="left">
+			<block type="core/messages" name="grab_messages" />
+		    <block type="sidenav/navigation" template="codnitive/sidenav/navigation.phtml"/>
+		    <block type="core/template" name="contactForm" form_action="/contacts/index/post" template="contacts/custom-form.phtml" />
+		</reference>		
+		<reference name="root">
+			<action method="setTemplate">
+				<template>page/1column-certification.phtml</template>
+			</action>
+			<action method="setIsHandle">
+				<applied>
+					1
+				</applied>
+			</action>			
+		</reference>
+	</certification>
+</layout>

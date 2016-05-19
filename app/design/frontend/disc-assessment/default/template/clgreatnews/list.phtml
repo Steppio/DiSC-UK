@@ -1,0 +1,114 @@
+<h2><?php echo $this->__(Mage::getStoreConfig('clnews/news_general/title')) ?>
+<?php if (Mage::getStoreConfig('clnews/rss/enable')): ?>
+    <?php if ($this->getCurrentCategory()): ?>
+    <?php $categoryId = $this->getCurrentCategory()->getId() ?>
+    <?php endif ?>
+    <a href="<?php echo Mage::Helper('clnews')->getRssLink() ?>">
+        <img src="<?php echo $this->getSkinUrl('css/clnews/images/rss.gif') ?>">
+    </a>
+<?php endif ?>
+</h2>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+<?php $items = $this->getNewsItems() ?>
+<?php if ($this->getViewMode()=='grid'): ?>
+    <?php foreach ($items as $item): ?>
+        <?php if ($item->getImageShortContentShow() && $item->getImageShortContent()): ?>
+        <div class="news-item-grid" style="height:118px;">
+            <a href="<?php echo $item->getUrl($this->getCategory()) ?>" style="height:118px;">
+                <div class="news_image_grid"><img title="<?php echo $item->getTitle() ?>" alt="<?php echo $item->getTitle() ?>" src="<?php echo Mage::helper('clnews')->resizeImage(str_replace('clnews/', '', $item->getImageShortContent()), 210, 118, 'clnews', true); ?>" /></div>
+                <div class="underlayer_grid">
+                    <h5><?php echo $item->getTitle() ?></h5> - 
+                    <span class="date"><?php echo Mage::helper('clnews')->formatDate($item->getNewsTime()) ?></span>
+                </div>
+            </a>
+        </div>
+        <?php else: ?>
+        <div class="news-item-grid">
+            <a href="<?php echo $item->getUrl($this->getCategory()) ?>" >
+                <div class="news_text_grid"><?php echo $this->prepareShortContent(Mage::helper('clnews')->contentFilter(strip_tags($item->getShortContent()))) ?></div>
+                <div class="underlayer_grid">
+                    <h5><?php echo $item->getTitle() ?></h5> - 
+                    <span class="date"><?php echo Mage::helper('clnews')->formatDate($item->getNewsTime()) ?></span>
+                </div>
+            </a>
+        </div>
+        <?php endif ?>
+    <?php endforeach ?>
+<?php else: ?>
+    <?php foreach ($items as $item): ?>
+        <div class="news-item cf">
+            <?php if ($item->getImageShortContentShow() && $item->getImageShortContent()): ?>
+                <?php $imageSize = $this->getShortImageSize($item) ?>
+                <div class="news_image"><img title="<?php echo $item->getTitle() ?>" alt="<?php echo $item->getTitle() ?>" src="<?php echo Mage::helper('clnews')->resizeImage(str_replace('clnews/', '', $item->getImageShortContent()), $imageSize['width'], $imageSize['height'], 'clnews'); ?>" /></div>
+            <?php endif; ?>
+            <h5><a href="<?php echo $item->getUrl($this->getCategory()) ?>" ><?php echo $item->getTitle() ?></a></h5>
+            <?php if (Mage::helper('clnews')->showDate()): ?>
+                <span class="date"><?php echo Mage::helper('clnews')->formatDate($item->getNewsTime()) ?></span>
+            <?php endif ?>
+            <?php if (Mage::helper('clnews')->showCategory()): ?>
+                <?php if ($this->getCategoryByNews($item->getID())->getData('title') != ''): ?>
+                    <span class="date">&nbsp;|&nbsp; <?php echo $this->getCategoryByNews($item->getID())->getData('title') ?></span>
+                <?php endif; ?>
+            <?php endif; ?>
+            <?php if ($item->getAuthor()): ?>
+            <span class="date">&nbsp;<?php if (Mage::helper('clnews')->showAuthor()): ?>|&nbsp; <?php echo $item->getAuthor() ?><?php endif;?></span>
+            <?php endif ?>
+            <div class="description">
+                <?php echo Mage::helper('clnews')->contentFilter($item->getShortContent()) ?>
+
+                <?php if(Mage::helper('clnews')->enableLinkRoute()): ?>
+                <?php if($link = Mage::helper('clnews')->getLinkRoute()): ?>
+                    <a href="<?php echo $item->getUrl($this->getCategory()) ?>" class="more"><?php echo $link . '&raquo;';?></a>
+                <?php else: ?>
+                    <a href="<?php echo $item->getUrl($this->getCategory()) ?>" class="more"><?php echo $this->__('view more') . '&raquo;';?></a>
+                <?php endif; ?>
+            <?php endif; ?>
+            <a href="<?php echo $item->getUrl($this->getCategory()) ?>" class="button">View More</a>
+            </div>
+        
+            <div>
+                <?php if($item->getCommentsEnabled()): ?>
+                    <a href="<?php echo $item->getUrl($this->getCategory()) ?>#commentBox" class="comment"><?php echo $item->getCommentsCount(); ?> <?php echo $this->__('Comment(s)') ?></a>
+                <?php endif; ?>
+            </div>
+        </div>
+    <?php endforeach ?>
+<?php endif ?>
+
+<div class="clearing"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<?php if($this->getLastPageNum()>1): ?>
+<div class="pager">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="page">
+                <?php if (!$this->isFirstPage()): ?>
+                    <a class="prev-arrow pagination" href="<?php echo $this->getPreviousPageUrl() ?>"><i class="fa fa-chevron-left">&nbsp;</i></a>
+                <?php endif;?>
+                <?php foreach ($this->getPages() as $_page): ?>
+                    <?php if ($this->isPageCurrent($_page)): ?>
+                        <span class="pagination"><?php echo $_page ?></span>
+                    <?php else: ?>
+                        <a class="pagination" href="<?php echo $this->getPageUrl($_page) ?>"><?php echo $_page ?></a>
+                    <?php endif ?>
+                <?php endforeach; ?>
+                <?php if (!$this->isLastPage()): ?>
+                    <a class="next-arrow pagination" href="<?php echo $this->getNextPageUrl() ?>"><i class="fa fa-chevron-right">&nbsp;</i></a>
+                <?php endif ?>
+                </p>
+            </div>
+        </div>
+    </div>                
+</div>
+<?php endif;?>

@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Magento
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Open Software License (OSL 3.0)
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/osl-3.0.php
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to license@magentocommerce.com so we can send you a copy immediately.
+*
+* @category    Yoma
+* @package     Yoma_Realex
+* @copyright   Copyright (c) 2014 YOMA LIMITED (http://www.yoma.co.uk)
+* @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+*/
+-->
+<config>
+    <menu>
+        <sales>
+            <depends>
+                <module>Yoma_Realex</module>
+            </depends>
+            <children>
+                <realex translate="title" module="realex">
+                    <title>Realex Payments</title>
+                    <sort_order>999</sort_order>
+                    <children>
+                        <logs translate="title" module="realex">
+                            <title>Logs</title>
+                            <sort_order>41</sort_order>
+                            <action>realexAdmin/adminhtml_log</action>
+                        </logs>
+                        <tokencard translate="title" module="realex">
+                            <title>Token Manager</title>
+                            <sort_order>42</sort_order>
+                            <action>realexAdmin/adminhtml_tokencard</action>
+                        </tokencard>
+                        <transaction translate="title" module="realex">
+                            <title>Incomplete Transactions</title>
+                            <sort_order>42</sort_order>
+                            <action>realexAdmin/adminhtml_transaction</action>
+                        </transaction>
+                    </children>
+                </realex>
+            </children>
+        </sales>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <realex>
+                                        <title>Yoma Realex</title>
+                                    </realex>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <sales>
+                        <children>
+                            <realex>
+                                <title>Realex Payments</title>
+                                <children>
+                                    <logs translate="title">
+                                        <title>Magento log browser</title>
+                                    </logs>
+                                </children>
+                            </realex>
+                        </children>
+                    </sales>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </config>

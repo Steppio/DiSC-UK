@@ -1,0 +1,156 @@
+<?php
+    $slider = $this->getcustomerslider();
+
+    if($slider->getData())
+    {
+        $width = Mage::getStoreConfig('slider/slider/width') ? Mage::getStoreConfig('slider/slider/width') : 900;
+        $height = Mage::getStoreConfig('slider/slider/height') ? Mage::getStoreConfig('slider/slider/height') : 450;
+        $imagewidth = Mage::getStoreConfig('slider/slider/imagewidth') ? Mage::getStoreConfig('slider/slider/imagewidth') : 900;
+        $imageheight = Mage::getStoreConfig('slider/slider/imageheight') ? Mage::getStoreConfig('slider/slider/imageheight') : 450;
+        $title = Mage::getStoreConfig('slider/slider/title') ? Mage::getStoreConfig('slider/slider/title') : false;
+        $square = Mage::getStoreConfig('slider/slider/square') ? Mage::getStoreConfig('slider/slider/square') : false;
+        $button = Mage::getStoreConfig('slider/slider/button') ? Mage::getStoreConfig('slider/slider/button') : 2;
+        $content = Mage::getStoreConfig('slider/slider/content') ? Mage::getStoreConfig('slider/slider/content') : false;
+        $auto = Mage::getStoreConfig('slider/slider/auto') ? Mage::getStoreConfig('slider/slider/time') : 0;
+        $left = Mage::getStoreConfig('slider/slider/left') ? Mage::getStoreConfig('slider/slider/left') : 590;
+        $left = ($left > $width) ? 590 : $left;
+        if(!$content)
+        {
+            $imagewidth = $width;
+            $imageheight = $height;
+        }
+		else
+		{
+        	$imagewidth = ($imagewidth >= $width) ? $width - 200 : $imagewidth;
+        	$imageheight = ($imageheight >= $height) ? $height : $imageheight;
+        	$contentwidth = $width - $imagewidth - 50;
+        	$contentheight = $height - 100;
+		}
+?>
+
+        <script type="text/javascript" language="javascript">
+
+            function mycarousel_initCallback(carousel) {
+                carousel.buttonNext.bind('click', function() {
+                    carousel.startAuto(0);
+                });
+                carousel.buttonPrev.bind('click', function() {
+                    carousel.startAuto(0);
+                });
+                carousel.clip.hover(function() {
+                    carousel.stopAuto();
+                }, function() {
+                    carousel.startAuto();
+                });
+            };
+
+            jQuery(document).ready(function()
+            {
+        		function primopiano_itemLastInCallback(carousel, item, idx, state) {
+        			jQuery("#gooeymenu li a").removeClass("active");
+        			jQuery("#gooeymenu li#link_primopiano_"+idx+" a").addClass("active");
+                    jQuery("#primopiano_menu li").removeClass("active");
+        			jQuery("#primopiano_menu li#link_primopiano_"+idx).addClass("active");
+        		};
+
+                function primopiano_initCallback(carousel) {
+        			jQuery('#gooeymenu a').bind('click', function() {
+        				carousel.scroll(jQuery.jcarousel.intval(jQuery(this).attr("rel")));
+        				carousel.stopAuto();
+        				return false;
+        			});
+        			carousel.clip.hover(function() {
+        				carousel.stopAuto();
+        			}, function() {
+        				carousel.startAuto();
+        			});
+
+                    jQuery('#primopiano_menu a').bind('click', function() {
+        				carousel.scroll(jQuery.jcarousel.intval(jQuery(this).attr("rel")));
+        				carousel.stopAuto();
+        				return false;
+        			});
+        			carousel.clip.hover(function() {
+        				carousel.stopAuto();
+        			}, function() {
+        				carousel.startAuto();
+        			});
+        		};
+
+                var button = <?php echo $button?>;
+
+        		jQuery('#primopiano_slide').jcarousel({
+        			auto: <?php echo $auto?>,
+        			scroll:1,
+        			wrap: 'both',
+                    animation: 500,
+                    buttonNextHTML: (button == 1) ? '<div></div>' : '',
+                    buttonPrevHTML: (button == 1) ? '<div></div>' : '',
+        			initCallback: primopiano_initCallback,
+        			itemLastInCallback: {
+        				onBeforeAnimation: primopiano_itemLastInCallback
+        			}
+        		});
+            });
+            jQuery.noConflict();
+        </script>
+
+        <div id="primopiano_big" style="width:<?php echo $width?>px; height:<?php echo $height?>px;">
+            <div class="jcarousel-container jcarousel-container-horizontal" style="display: block;">
+                <?php if($button == 1) { ?>
+                    <div class="jcarousel-prev jcarousel-prev-horizontal" style="display: block;" disabled="false"></div>
+                    <div class="jcarousel-next jcarousel-next-horizontal" style="display: block;" disabled="false"></div>
+                <?php } ?>
+                <div class="jcarousel-clip jcarousel-clip-horizontal">
+                    <ul id="primopiano_slide" class="jcarousel-list jcarousel-list-horizontal" >
+                        <?php $i=1;foreach($slider as $item):?>
+                            <li id="primopiano_<?php echo $i?>" jcarouselindex="<?php echo $i?>">
+								<?php if($item->getSliderUrl()){ ?>
+                                	<a href="<?php echo $item->getSliderUrl() ?>" target="_blank">
+								<?php } ?>
+									<img src="<?php echo Mage::getBaseUrl('media') . 'customerslider/slider/' . $item->getFilename(); ?>" height="<?php echo $imageheight?>" width="<?php echo $imagewidth?>"/>
+								<?php if($item->getSliderUrl()){ ?>
+									</a>
+								<?php } ?>
+                                <?php if($content) { ?>
+                                    <div class="text" style="width:<?php echo $contentwidth?>px; height:<?php echo ($height-15) ?>px;">
+                                        <h2><?php echo $item->getTitle();?></h2>
+                                        <div style="height:<?php echo $contentheight?>px;">
+                                            <?php echo $item->getContent();?>
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                            </li>
+                        <?php $i++;endforeach;?>
+                    </ul>
+                </div>
+            </div>
+<?php if($square) { ?>
+            <ul id="primopiano_menu" style="left: <?php echo $left?>px;">
+                <?php $i=1;foreach($slider as $item):?>
+                    <li id="link_primopiano_<?php echo $i?>">
+                        <a rel="<?php echo $i?>" href="#">&nbsp;</a>
+                    </li>
+                <?php $i++;endforeach;?>
+            </ul>
+        <?php } ?>
+ </div>
+
+
+        <?php if($title) { ?>
+            <div class="paging banscrollbg" id="mygaltop" style="width: <?php echo ($width-12) ;?>px;">
+                <ul id="gooeymenu" class="solidblockmenu">
+                    <?php $i=1;foreach($slider as $item):?>
+                        <li id="link_primopiano_<?php echo $i?>">
+                            <a href="#" rel="<?php echo $i; ?>"><?php echo $item->getTitle(); ?></a>
+                        </li>
+                    <?php if($i%5 == 0 && $i < count($slider) ) { ?>
+                        </ul>
+                    </div>
+                    <div class="paging banscrollbg" id="mygaltop" style="width: <?php echo ($width-12) ;?>px; margin-top: -11px">
+                        <ul id="gooeymenu" class="solidblockmenu">
+                    <?php } $i++; endforeach; ?>
+                </ul>
+            </div>
+        <?php } ?>
+<?php } ?>

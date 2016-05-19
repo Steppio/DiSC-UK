@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <tatva translate="label" module="slider">
+            <label>Tatvasoft</label>
+            <sort_order>101</sort_order>
+        </tatva>
+    </tabs>
+    <sections>
+        <slider translate="label" module="slider">
+            <label>Slider Configuration</label>
+            <class>separator-top</class>
+            <tab>tatva</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <slider translate="label" module="slider">
+                    <label>Slider Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <title translate="label" module="slider">
+                            <label>Display Titles</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                        <square translate="label" module="slider">
+                            <label>Display Squares</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </square>
+                        <button translate="label" module="slider">
+                            <label>Display Next-Previous Buttons</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </button>
+                        <auto translate="label" module="slider">
+                            <label>Auto Slide</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </auto>
+                        <time translate="label" module="slider">
+                            <label>Delay Between Two Slides</label>
+                            <comment>In Seconds</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-digits validate-greater-than-zero</validate>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </time>
+                        <content translate="label" module="slider">
+                            <label>Display Content Of Slide</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </content>
+                        <maxlimit translate="label" module="slider">
+                            <label>Maximum No Of Slides To Display</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-digits validate-greater-than-zero</validate>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </maxlimit>
+                        <width translate="label" module="slider">
+                            <label>Slider Width</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-digits validate-greater-than-zero</validate>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </width>
+                        <height translate="label" module="slider">
+                            <label>Slider Height</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-digits validate-greater-than-zero</validate>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </height>
+                        <imagewidth translate="label" module="slider">
+                            <label>Image Width</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-digits validate-greater-than-zero</validate>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </imagewidth>
+                        <imageheight translate="label" module="slider">
+                            <label>Image Height</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-digits validate-greater-than-zero</validate>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </imageheight>
+                        <left translate="label" module="slider">
+                            <label>Left Position For Squares</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-digits validate-greater-than-zero</validate>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </left>
+                    </fields>
+                </slider>
+            </groups>
+        </slider>
+    </sections>
+</config>

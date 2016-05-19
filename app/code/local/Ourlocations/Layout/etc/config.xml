@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Ourlocations_Layout>
+			<version>0.0.1</version>
+		</Ourlocations_Layout>
+	</modules>
+	<global>
+		<page>
+			<layouts>
+				<ourlocations module="page" translate="label">
+					<label>ourlocations</label>
+					<template>page/1column-ourlocations.phtml</template>
+					<layout_handle>ourlocations</layout_handle>
+				</ourlocations>
+			</layouts>
+		</page>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<ourlocations_layout>
+					<file>ourlocations_layout.xml</file>
+				</ourlocations_layout>
+			</updates>
+		</layout>
+	</frontend>
+</config>

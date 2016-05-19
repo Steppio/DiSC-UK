@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * DISCLAIMER
+ *
+ * Use at your own risk
+ *
+ * @author      Branko Ajzele, http://activecodeline.com
+ * @category    Ajzele
+ * @package     Ajzele_MailTransport
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Ajzele_MailTransport>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Core />
+            </depends>            
+        </Ajzele_MailTransport>
+    </modules>
+</config>

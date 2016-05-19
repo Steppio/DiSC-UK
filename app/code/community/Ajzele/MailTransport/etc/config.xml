@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * DISCLAIMER
+ *
+ * Use at your own risk
+ *
+ * @author      Branko Ajzele, http://activecodeline.com
+ * @category    Ajzele
+ * @package     Ajzele_MailTransport
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Ajzele_MailTransport>
+        <version>1.0.0</version>
+        </Ajzele_MailTransport>
+    </modules>
+    <global>
+        <models>
+            <core>
+                <rewrite>
+                    <email_template>Ajzele_MailTransport_Model_Core_Email_Template</email_template>
+                </rewrite>
+            </core>
+        </models>
+    </global>
+</config>

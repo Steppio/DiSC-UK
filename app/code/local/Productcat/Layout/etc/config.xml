@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Productcat_Layout>
+			<version>0.0.1</version>
+		</Productcat_Layout>
+	</modules>
+	<global>
+		<page>
+			<layouts>
+				<productcat module="page" translate="label">
+					<label>productcat</label>
+					<template>page/1column-product-cat.phtml</template>
+					<layout_handle>productcat</layout_handle>
+				</productcat>
+			</layouts>
+		</page>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<productcat_layout>
+					<file>productcat_layout.xml</file>
+				</productcat_layout>
+			</updates>
+		</layout>
+	</frontend>
+</config>

@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento Webshopapps Shipping Module
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category   Webshopapps
+ * @package    Webshopapps_Productrate
+ * @copyright  Copyright (c) 2008 Auction Maid (http://www.webshopapps.com)
+ * @license    http://www.webshopapps.com/license/license.txt
+ * @author     Karen Baker <enquiries@webshopapps.com>
+*/
+-->
+<config>
+   <modules>
+        <Webshopapps_Productrate>
+          <version>0.0.2</version>
+           <depends>
+               <Mage_Shipping />
+           </depends>
+    </Webshopapps_Productrate>
+    </modules>
+ <global>
+    <models>
+      <productrate>
+        <class>Webshopapps_Productrate_Model</class>
+      </productrate>
+    </models>
+ 
+    <resources>
+     <productrate_setup>
+        <setup>
+          <module>Webshopapps_Productrate</module>
+		  <class>Mage_Eav_Model_Entity_Setup</class>
+        </setup>
+        <connection>
+          <use>core_setup</use>
+        </connection>
+      </productrate_setup>
+    </resources>
+    <sales>
+	<shipping>
+	    <carriers>
+		<productrate>
+		    <class>Webshopapps_Productrate_Model_Carrier_Productrate</class>
+		</productrate>
+	    </carriers>
+	</shipping>
+    </sales>
+    <sales>
+      <quote>
+        <item>
+          <product_attributes>
+            <shipping_price/>
+            <shipping_addon/>
+            <shipping_is_percent/>
+          </product_attributes>
+        </item>
+      </quote>
+    </sales>
+  </global>
+    <default>
+        <carriers>
+            <productrate>
+                <active>0</active>
+                <sallowspecific>0</sallowspecific>
+                <model>productrate/carrier_productrate</model>
+                <name>Shipping Cost</name>
+                <title>Product Rate</title>
+                <default_shipping_cost>0</default_shipping_cost> 
+             	<serial>6845e1f542614bbb7125756ecbb3523ba417addd</serial>
+                <specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this shipping method, please contact us.</specificerrmsg> 
+                <totalling_algorithm>S</totalling_algorithm>     
+            </productrate>
+        </carriers>
+    </default>
+</config>

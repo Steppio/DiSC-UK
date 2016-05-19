@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Certification_Layout>
+			<version>0.0.1</version>
+		</Certification_Layout>
+	</modules>
+	<global>
+		<page>
+			<layouts>
+				<certification module="page" translate="label">
+					<label>certification</label>
+					<template>page/1column-certification.phtml</template>
+					<layout_handle>certification</layout_handle>
+				</certification>
+			</layouts>
+		</page>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<certification_layout>
+					<file>certification_layout.xml</file>
+				</certification_layout>
+			</updates>
+		</layout>
+	</frontend>
+</config>

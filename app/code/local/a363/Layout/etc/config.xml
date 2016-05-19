@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<a363_Layout>
+			<version>0.0.1</version>
+		</a363_Layout>
+	</modules>
+	<global>
+		<page>
+			<layouts>
+				<a363 module="page" translate="label">
+					<label>a363</label>
+					<template>page/1column-a363.phtml</template>
+					<layout_handle>a363</layout_handle>
+				</a363>
+			</layouts>
+		</page>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<a363_layout>
+					<file>a363_layout.xml</file>
+				</a363_layout>
+			</updates>
+		</layout>
+	</frontend>
+</config>

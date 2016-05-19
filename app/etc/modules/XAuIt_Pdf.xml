@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+      <AuIt_Pdf>
+        <active>true</active>
+        <codePool>community</codePool>
+        <!-- 
+        <depends>
+        	<Aschroder_SMTPPro/>
+        </depends>
+         -->
+      </AuIt_Pdf>
+    </modules>
+</config>

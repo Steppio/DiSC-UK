@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Ajzele
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ *
+ * @category   Ajzele
+ * @package    Ajzele_Photic
+ * @copyright  Copyright (c) Branko Ajzele (http://ajzele.net)
+ * @license    http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Ajzele_Photic>
+            <version>1.0.0</version>
+        </Ajzele_Photic>
+    </modules>   
+    
+    <global>
+        <models>
+            <photic>
+                <class>Ajzele_Photic_Model</class>
+                <resourceModel>photic_mysql4</resourceModel>
+            </photic>
+            
+            <photic_mysql4>
+                <class>Ajzele_Photic_Model_Mysql4</class>
+                <entities>
+                    <photic>
+                        <table>photic_mapper</table>
+                    </photic>
+                </entities>                
+            </photic_mysql4>            
+            
+        </models>
+        <blocks>
+            <photic>
+                <class>Ajzele_Photic_Block</class>
+            </photic>
+            
+            <adminhtml>
+            	<rewrite>
+            		<catalog_product_helper_form_gallery_content>Ajzele_Photic_Block_Adminhtml_Catalog_Product_Helper_Form_Gallery_Content</catalog_product_helper_form_gallery_content>
+            		<catalog_product_attribute_edit_tab_options>Ajzele_Photic_Block_Adminhtml_Catalog_Product_Attribute_Edit_Tab_Options</catalog_product_attribute_edit_tab_options>
+            		<catalog_product_attribute_edit_form>Ajzele_Photic_Block_Adminhtml_Catalog_Product_Attribute_Edit_Form</catalog_product_attribute_edit_form>
+            	</rewrite>
+            </adminhtml>    
+
+            
+
+        </blocks>
+        <helpers>
+            <photic>
+                <class>Ajzele_Photic_Helper</class>
+            </photic>
+        </helpers> 
+          
+		<resources>
+		   <photic_setup>
+		       <setup>
+		           <module>Ajzele_Photic</module>
+		           <class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+		       </setup>
+		       <connection>
+		           <use>core_setup</use>
+		       </connection>
+		   </photic_setup>
+		   
+		   
+            <photic_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </photic_read>            
+            
+            <photic_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </photic_write> 		   
+		   
+		</resources>    
+    </global>
+    
+	<adminhtml>
+		<events>
+			<catalog_product_new_action>
+			    <observers>
+			        <photic_observer_catalog_product_new_action>
+			            <type>singleton</type>
+			            <class>photic/observer</class>
+			            <method>hookIntoCatalogProductNewAction</method>
+			        </photic_observer_catalog_product_new_action>
+			    </observers>
+			</catalog_product_new_action>
+			<catalog_product_edit_action>
+			    <observers>
+			        <photic_observer_catalog_product_edit_action>
+			            <type>singleton</type>
+			            <class>photic/observer</class>
+			            <method>hookIntoCatalogProductEditAction</method>
+			        </photic_observer_catalog_product_edit_action>
+			    </observers>
+			</catalog_product_edit_action>			
+            <catalog_product_prepare_save>
+                <observers>
+                	<photic_observer_catalog_product_prepare_save>
+			            <type>singleton</type>
+			            <class>photic/observer</class>
+			            <method>hookIntoCatalogProductPrepareSave</method>
+			        </photic_observer_catalog_product_prepare_save>
+                </observers>
+            </catalog_product_prepare_save>
+            <catalog_product_delete_before>
+                <observers>
+                	<photic_observer_catalog_product_delete_before>
+			            <type>singleton</type>
+			            <class>photic/observer</class>
+			            <method>hookIntoCatalogProductDeleteBefore</method>
+			        </photic_observer_catalog_product_delete_before>
+                </observers>
+            </catalog_product_delete_before>            
+            <catalog_product_save_after>
+                <observers>
+                	<photic_observer_catalog_product_save_after>
+			            <type>singleton</type>
+			            <class>photic/observer</class>
+			            <method>hookIntoCatalogProductSaveAfter</method>
+			        </photic_observer_catalog_product_save_after>
+                </observers>
+            </catalog_product_save_after>
+            <catalog_product_status_update>
+                <observers>
+                	<photic_observer_catalog_product_status_update>
+			            <type>singleton</type>
+			            <class>photic/observer</class>
+			            <method>hookIntoCatalogProductStatusUpdate</method>
+			        </photic_observer_catalog_product_status_update>
+                </observers>
+            </catalog_product_status_update>            
+            
+            
+            
+            
+            <sales_order_item_save_after>
+                <observers>
+                	<photic_observer_sales_order_item_save_after>
+			            <type>singleton</type>
+			            <class>photic/observer</class>
+			            <method>hookIntoSalesOrderItemSaveAfter</method>
+			        </photic_observer_sales_order_item_save_after>
+                </observers>
+            </sales_order_item_save_after>
+            <sales_order_save_before>
+                <observers>
+                	<photic_observer_sales_order_save_before>
+			            <type>singleton</type>
+			            <class>photic/observer</class>
+			            <method>hookIntoSalesOrderSaveBefore</method>
+			        </photic_observer_sales_order_save_before>
+                </observers>
+            </sales_order_save_before>            
+            <sales_order_save_after>
+                <observers>
+                	<photic_observer_sales_order_save_after>
+			            <type>singleton</type>
+			            <class>photic/observer</class>
+			            <method>hookIntoSalesOrderSaveAfter</method>
+			        </photic_observer_sales_order_save_after>
+                </observers>
+            </sales_order_save_after>
+            <catalogrule_before_apply>
+                <observers>
+                	<photic_observer_catalogrule_before_apply>
+			            <type>singleton</type>
+			            <class>photic/observer</class>
+			            <method>hookIntoCatalogruleBeforeApply</method>
+			        </photic_observer_catalogrule_before_apply>
+                </observers>
+            </catalogrule_before_apply>
+            <catalogrule_after_apply>
+                <observers>
+                	<photic_observer_catalogrule_after_apply>
+			            <type>singleton</type>
+			            <class>photic/observer</class>
+			            <method>hookIntoCatalogruleAfterApply</method>
+			        </photic_observer_catalogrule_after_apply>
+                </observers>
+            </catalogrule_after_apply>
+            <catalog_entity_attribute_save_before>
+                <observers>
+                    <photic_observer_catalog_entity_attribute_save_before>
+                        <type>model</type>
+                        <class>photic/observer</class>
+                        <method>hookIntoCatalogEntityAttributeSaveBefore</method>
+                    </photic_observer_catalog_entity_attribute_save_before>
+                </observers>
+            </catalog_entity_attribute_save_before>            
+            <catalog_entity_attribute_save_after>
+                <observers>
+                	<photic_observer_catalog_entity_attribute_save_after>
+			            <type>singleton</type>
+			            <class>photic/observer</class>
+			            <method>hookIntoCatalogEntityAttributeSaveAfter</method>
+			        </photic_observer_catalog_entity_attribute_save_after>
+                </observers>
+            </catalog_entity_attribute_save_after>
+            <catalog_product_delete_after_done>
+                <observers>
+                	<photic_observer_catalog_product_delete_after_done>
+			            <type>singleton</type>
+			            <class>photic/observer</class>
+			            <method>hookIntoCatalogProductDeleteAfterDone</method>
+			        </photic_observer_catalog_product_delete_after_done>
+                </observers>
+            </catalog_product_delete_after_done>
+
+            <customer_login>
+                <observers>
+                	<photic_observer_customer_login>
+			            <type>singleton</type>
+			            <class>photic/observer</class>
+			            <method>hookIntoCustomerLogin</method>
+			        </photic_observer_customer_login>
+                </observers>
+            </customer_login>
+            <customer_logout>
+                <observers>
+                	<photic_observer_customer_logout>
+			            <type>singleton</type>
+			            <class>photic/observer</class>
+			            <method>hookIntoCustomerLogout</method>
+			        </photic_observer_customer_logout>
+                </observers>
+            </customer_logout>
+            <sales_quote_save_after>
+                <observers>
+                	<photic_observer_sales_quote_save_after>
+			            <type>singleton</type>
+			            <class>photic/observer</class>
+			            <method>hookIntoSalesQuoteSaveAfter</method>
+			        </photic_observer_sales_quote_save_after>
+                </observers>
+            </sales_quote_save_after>
+            <catalog_product_collection_load_after>
+                <observers>
+                	<photic_observer_catalog_product_collection_load_after>
+			            <type>singleton</type>
+			            <class>photic/observer</class>
+			            <method>hookIntoCatalogProductCollectionLoadAfter</method>
+			        </photic_observer_catalog_product_collection_load_after>
+                </observers>
+            </catalog_product_collection_load_after>
+		</events>
+		
+		
+		
+		
+		
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <catalog translate="title" module="catalog">
+                                            <title>Photic Section by Branko</title>
+                                            <sort_order>50</sort_order>
+                                        </catalog>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+		
+		
+		
+		
+		
+		
+		
+	</adminhtml>  
+	
+	<admin>
+	 <routers>
+	   <adminhtml>
+	     <args>
+	       <modules>
+	         <sintax before="Mage_Adminhtml">Ajzele_Photic_Adminhtml</sintax>
+	       </modules>
+	     </args>
+	   </adminhtml>
+	 </routers>
+	</admin>	
+	  
+</config>

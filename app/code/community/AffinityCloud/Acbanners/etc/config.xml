@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <modules>
+        <AffinityCloud_Acbanners>
+            <version>0.0.1</version>
+        </AffinityCloud_Acbanners>
+    </modules>
+    <frontend>
+        <routers>
+            <acbanners>
+                <use>standard</use>
+                <args>
+                    <module>AffinityCloud_Acbanners</module>
+                    <frontName>Banners</frontName>
+                </args>
+            </acbanners>
+        </routers>
+        <layout>
+            <updates>
+                <acbanners>
+                    <file>acbanners.xml</file>
+                </acbanners>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <acbanners before="Mage_Adminhtml">AffinityCloud_Acbanners_Adminhtml</acbanners>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <menu>
+            <acbanners module="acbanners">
+                <title>Banners</title>
+                <sort_order>71</sort_order>               
+                <children>
+                    <menueitem1 module="acbanners">
+                        <title>Manage Banners</title>
+                        <sort_order>20</sort_order>
+                        <action>adminhtml/acbanners</action>
+                    </menueitem1>
+                    <menueitem2 module="acbanners">
+                        <title>Manage Banner Buttons</title>
+                        <sort_order>40</sort_order>
+                        <action>adminhtml/acbannerbuttons</action>
+                    </menueitem2>
+                    <menueitem3 module="acbanners">
+                        <title>Manage Side Banners</title>
+                        <sort_order>60</sort_order>
+                        <action>adminhtml/acsidebanners</action>
+                    </menueitem3>
+                </children>
+            </acbanners>
+        </menu>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <acbanners>
+                            <title>Banners Module</title>
+                            <sort_order>200</sort_order>
+                        </acbanners>
+                    </children>
+                </admin>
+            </resources>   
+        </acl>
+        <layout>
+            <updates>
+                <acbanners>
+                    <file>acbanners.xml</file>
+                </acbanners>
+            </updates>
+        </layout>
+    </adminhtml>  
+    <global>
+        <models>
+            <acbanners>
+                <class>AffinityCloud_Acbanners_Model</class>
+                <resourceModel>acbanners_mysql4</resourceModel>
+            </acbanners>
+            <acbanners_mysql4>
+                <class>AffinityCloud_Acbanners_Model_Mysql4</class>
+                <entities>
+                    <acbanners>
+                        <table>acbanners</table>
+                    </acbanners>
+                    <acbannerbuttons>
+                        <table>acbannerbuttons</table>
+                    </acbannerbuttons>
+                    <acsidebanners>
+                        <table>acsidebanners</table>
+                    </acsidebanners>
+                </entities>
+            </acbanners_mysql4>
+        </models>
+        <resources>
+            <acbanners_setup>
+                <setup>
+                    <module>AffinityCloud_Acbanners</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </acbanners_setup>
+            <acbanners_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </acbanners_write>
+            <acbanners_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </acbanners_read>
+        </resources>
+        <blocks>
+            <acbanners>
+                <class>AffinityCloud_Acbanners_Block</class>
+            </acbanners>
+        </blocks>
+        <helpers>
+            <acbanners>
+                <class>AffinityCloud_Acbanners_Helper</class>
+            </acbanners>
+        </helpers>
+    </global>
+</config>

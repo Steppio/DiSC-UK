@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<widgets>
+	<newsfeed_links type="newsfeed/links" translate="name description" module="newsfeed">
+		<name>Print and Inquiry Options</name>
+		<description>Allows to add Print and Inquiry links options</description>
+		<parameters>
+			<link_options>
+				<label>Link Options</label>
+				<visible>1</visible>
+				<required>1</required>
+				<type>multiselect</type>
+				<source_model>newsfeed/options</source_model>
+			</link_options>
+		</parameters>
+	</newsfeed_links>
+</widgets>

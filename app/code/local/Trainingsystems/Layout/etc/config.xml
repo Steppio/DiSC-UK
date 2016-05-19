@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Trainingsystems_Layout>
+			<version>0.0.1</version>
+		</Trainingsystems_Layout>
+	</modules>
+	<global>
+		<page>
+			<layouts>
+				<trainingsystems module="page" translate="label">
+					<label>trainingsystems</label>
+					<template>page/1column-trainingsystems.phtml</template>
+					<layout_handle>trainingsystems</layout_handle>
+				</trainingsystems>
+			</layouts>
+		</page>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<trainingsystems_layout>
+					<file>trainingsystems_layout.xml</file>
+				</trainingsystems_layout>
+			</updates>
+		</layout>
+	</frontend>
+</config>

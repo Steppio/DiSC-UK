@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+ <modules>
+      <New_Mage>
+           <active>true</active>
+           <codePool>local</codePool>
+      </New_Mage>
+  </modules>
+</config>

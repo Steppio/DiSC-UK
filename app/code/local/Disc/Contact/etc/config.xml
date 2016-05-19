@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Disc_Contact>
+            <version>0.1.0</version>
+        </Disc_Contact>
+    </modules>
+
+    <frontend>
+        <routers>
+            <contacts>
+                <args>
+                    <modules>
+                        <disc_contact before="Mage_Contacts">Disc_Contact</disc_contact>
+                    </modules>
+                </args>
+            </contacts>
+        </routers>
+    </frontend>
+</config>

@@ -1,0 +1,73 @@
+@media screen and ("min-width: 480px") { 
+
+	.slideshow-container .slideshow img {
+		left: 0px;
+	}
+
+	// .cms-page-view {
+	// 	.certification-image {
+	// 		img {
+	// 			margin: 0 auto;
+	// 		}
+	// 	}
+	// }
+
+	.cms-contact .main-container .custom-form-header {
+		margin-top: 0px;
+	}
+
+	.buttons-set {
+		.required {
+			display: none;
+		}
+		.button {
+			width: 100%;
+		}
+	}
+
+	.epic_credits .button, .static-content-block .button {
+		width: 94%;
+	}
+	.epic_credits .button, .disc_definition .button {
+		width: 100%;
+	}
+
+	.disc-definition-block {
+		max-height: 135px;
+	}
+
+	.header-attached {
+	    margin: 0px 0 20px;
+	    top: 0px;
+	    padding: 20px;
+	    background-color: white;		
+	}
+
+	#nav ol li > ul {
+		// display: none;
+	}
+
+	.frontend_news_block_and_support {
+		#news_background > div {
+			max-width: 1300px;
+	    	margin: 0 auto;
+	    	float: none;		
+		}
+	}
+
+	.catalog-category-view {
+		.col-main {
+			.products-list .product-shop {
+				.product-secondary {
+					padding-right: 0px;
+				}
+			}
+		}
+	}
+
+	#contactForm {
+		input, select {
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Yoma_RealexRewrite>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Yoma_Realex />
+            </depends>
+        </Yoma_RealexRewrite>
+    </modules>
+</config>

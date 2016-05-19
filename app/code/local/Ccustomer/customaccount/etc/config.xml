@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+    <config>
+        <modules>
+            <Ccustomer_customaccount>
+                <version>0.1.0</version>
+            </Ccustomer_customaccount>
+        </modules>
+        <global>
+
+            <resources>
+                <Ccustomer_customaccount_setup>
+                    <setup>
+                        <module>Ccustomer_customaccount</module>
+                        <class>Mage_Customer_Model_Entity_Setup</class>
+                    </setup>
+                    <connection>
+                        <use>core_setup</use>
+                    </connection>
+                </Ccustomer_customaccount_setup>
+                <Ccustomer_customaccount_write>
+                    <connection>
+                        <use>core_write</use>
+                    </connection>
+                </Ccustomer_customaccount_write>
+                <Ccustomer_customaccount_read>
+                    <connection>
+                        <use>core_read</use>
+                    </connection>
+                </Ccustomer_customaccount_read>
+            </resources>
+        </global>
+
+    </config>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Disc_LogIn>
+            <version>0.1.0</version>
+        </Disc_LogIn>
+    </modules>
+
+    <frontend>
+        <routers>
+            <customer>
+                <args>
+                    <modules>
+                        <disc_logIn before="Mage_Customer">Disc_LogIn</disc_logIn>
+                    </modules>
+                </args>
+            </customer>
+        </routers>
+    </frontend>
+</config>

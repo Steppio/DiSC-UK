@@ -1,0 +1,1 @@
+delete  FROM `core_config_data` WHERE `path` LIKE 'auit_pdf%';

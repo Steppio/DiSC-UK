@@ -1,0 +1,122 @@
+@media only screen and (min-width: 1300px) {
+
+	/* @group Home - Overrides */
+	.slide-full-width {
+		background: #e3e4e6;
+	}
+	.benefits, .five-behaviours, .frontpage_support, .frontend_news_block {
+		border-bottom: 0px;
+	}
+	.page-header {
+		margin: 0 auto;
+	}
+
+	.cms-home {
+		/* @group Home - Slideshow */
+		.slideshow-container {
+			.slideshow {
+				img {
+					width: 2000px !important;
+					height: 450px;
+					// max-width: 100% !important;
+					// width: 100% !important;
+				}
+				.header-description {
+					h3, p {
+						width: 35%;
+					}
+					a {
+						max-width: 150px;
+					}
+					max-width: 1300px;
+					margin: 0 auto;
+					display: block;
+					left: 0;
+					width: 100%;
+					right: 0;
+				}
+				// width: 100%;
+			}
+			border: 0px !important;
+			// max-width: none;
+			margin: 0 auto;
+			height: 450px;
+		}
+	}
+	.product-slider {
+		.slick-slider {
+			.slick-prev {
+				left: -40px;
+			}
+			.slick-next {
+				right: -40px;
+			}				
+		}
+	}	
+
+	/* @group Home - Five Behaviours / Benefits */
+	.five-behaviours-and-benefits, .disc-certifcation_and_disc-profiles_container {
+		background: $benefits-of-using-disc;
+		margin-bottom: 10px;
+	}
+
+	.certification {
+		a.button {
+		    position: absolute;
+		    top: -15px;
+		    right: 20px;			
+		}		
+		padding: 15px 0px;
+		position: relative;
+	}
+
+	/* @group Home - News / Support */
+	.frontend_news_block_and_support {
+		background: $do-you-have-a-question;
+		margin-bottom: 5px;
+	}
+
+	/* @group Home - Footer */
+	.footer, .links.disclaimer {
+		// max-width: 1300px;
+		margin: 0 auto;
+	}
+
+	/* @group About */
+	.about-us-header-image {
+		.col-xs-12 {
+			img {
+			    margin-top: 180px;
+			    // margin-left: 60px;
+			}
+		}
+		min-height: 450px;
+		height: 450px;
+	}
+
+	.cms-epic-credits.cms-page-view  {
+		.epic_credits .section-content .col-sm-6 img {
+			margin: 75px auto;
+		}
+		.macbook-image {
+			img {
+				left: 0px;
+			}
+		}			
+		#contactForm #comment {
+			height: 100px;
+		}
+		.epic_credits_page-how_does_it_work {
+			min-height: 525px;
+		}
+	}
+	
+
+	/* @group Contact */
+	
+
+	.footer-container {
+		max-width: none;
+	}
+
+}

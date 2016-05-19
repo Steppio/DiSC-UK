@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Plumrocket_AutoInvoice>
+      <active>true</active>
+      <codePool>community</codePool>
+      <version>1.0.2</version>
+      <wiki>http://wiki.plumrocket.com/wiki/Magento_Auto_Invoice_v1.x_Extension</wiki>
+    </Plumrocket_AutoInvoice>
+  </modules>
+</config>

@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<history>
+	<item>
+		<date>2015-07-29</date>
+		<version>2.6.2</version>
+		<description>
+			filename for email attachment and sub invocies
+			SUPEE-6788
+		</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2015-07-29</date>
+		<version>2.6.1</version>
+		<description>
+			optimize massaction for order printing
+			SUPEE-6788
+		</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2015-04-14</date>
+		<version>2.5.10/2.5.11</version>
+		<description>
+			FIX MAgento PATCH + isEUVATTaxFree fix
+		</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2015-04-14</date>
+		<version>2.5.8</version>
+		<description>
+			Fix Helper, Constant error
+			empty helper.eq(a,'') not work
+
+		</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2015-03-19</date>
+		<version>2.5.7</version>
+		<description>
+			Fix Attach PDF to shipment and DHL
+		</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2015-03-03</date>
+		<version>2.5.6</version>
+		<description>
+			Fix Helper
+			empty helper.eq(a,'') not work
+		</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2015-01-28</date>
+		<version>2.5.5</version>
+		<description>
+			Fix for 1.9.1.0
+			Email Queue > no Attachments
+		</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2014-12-16</date>
+		<version>2.5.4</version>
+		<description>
+			Fix for 1.9.1.0
+			File delete + HTTPS Connect
+		</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2014-11-24</date>
+		<version>2.5.3</version>
+		<description>
+			Change Namespace for TCPDF, kompatiple with other extension
+			Change default font name : freeserif
+		</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2013-09-26</date>
+		<version>2.4.5</version>
+		<description>
+			check for Magento 1.8
+			new shipment template
+		</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2013-07-09</date>
+		<version>2.4.4</version>
+		<description>
+			{{if helper.eq(payment_method, 'invoice') }}XXXXX{{/if}}
+			Access to object variable as constant
+		</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2013-05-10</date>
+		<version>2.4.3</version>
+		<description>
+			Rewrite for admin view replaced
+		</description>
+		<comment></comment>
+	</item>
+	
+	<item>
+		<date>2012-03-14</date>
+		<version>2.4.2</version>
+		<description>
+			Problem funktion helper.date timezone
+			deactivation of rewriting for sales_order_view and sales_order_grid
+		</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2012-01-29</date>
+		<version>2.4.1</version>
+		<description>
+			REST API 
+		</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2012-11-20</date>
+		<version>2.3.3</version>
+		<description>
+			add MassAction "Print Orders" 
+			Bug Fix 2D-barcode Shipment-Address
+		</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2012-11-20</date>
+		<version>2.3.2</version>
+		<description>
+			function roundPrice($price)
+			function round($price,$anzahl=2)
+			function formatPrice($price,$addBrackets=0)
+			wieder aufgenommen
+			fix order ohne billing adresse
+		</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2012-08-14</date>
+		<version>2.2.3</version>
+		<description>
+			fix function : helper.date(n days)
+			New Helper-Methods:
+			function roundPrice($price)
+			function round($price,$anzahl=2)
+			function formatPrice($price,$addBrackets=0)
+
+			payment_info:(M2E pro)
+
+			Unterstützung Guest-Print:
+			http://magento/sales/guest/form/
+
+		</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2012-08-14</date>
+		<version>2.2.2</version>
+		<description>
+			fix tabel-border and margins
+			New Helper-Methods:
+
+			helper.isCountryInEU:
+
+			{{if helper.isCountryInEU(billingaddress.country_id) }}
+				Welcome EU
+				{{var order.customer_taxvat}}
+			{{/if}}
+			getCustomerGroupName:
+			{{var helper.getCustomerGroupName(order.customer_group_id) }}
+		</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2012-08-03</date>
+		<version>2.2.1</version>
+		<description>
+			fix Adress areas after table
+			Margins for Page 1 and Page 2+n separate
+
+			New style tags for distances between the blocks
+			line-height-after and line-height-before
+			Example:
+			h3 {font-size: 9pt; font-weight:bold;line-height-after:0.2; }
+			dl {font-size: 7pt;line-height-after:0;}
+		</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2012-06-25</date>
+		<version>2.1.4</version>
+		<description>Fix 1.7.0.1 System config</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2012-05-10</date>
+		<version>2.1.3</version>
+		<description>Problem config save</description>
+		<comment></comment>
+	</item>
+
+	<item>
+		<date>2012-04-26</date>
+		<version>2.1.2</version>
+		<description>Problem for Magento 1.7 mediaDir</description>
+		<comment></comment>
+	</item>
+
+	<item>
+		<date>2012-02-10</date>
+		<version>1.6.0</version>
+		<description>Print order as pdf in frontend</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2012-02-10</date>
+		<version>1.6.0</version>
+		<description>Bug: qty for bundle product</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2011-10-21</date>
+		<version>1.6.0</version>
+		<description>Neue Option : show_bundle_qty_row_one</description>
+		<comment>Erlaubt die Menge pro Item beim Versandschein bei Bundle-Produkte</comment>
+	</item>
+	<item>
+<![CDATA[
+	Fax:{{var customer.DefaultBillingAddress.fax}}<br/>
+Company:{{var customer.DefaultBillingAddress.company}}<br/>
+{{var payment_info}}
+
+PDF-Print:
+shipment = invoice objet
+Email anhängen ohne template
+
+Liferschein Menge als spalte Bundle
+
+LIeferschein mit extra mengen splate
+<img src="{{skin url='images/logo_est.png'  area='frontend'}}"/>
+
+die Variable payment_info steht leider erst zum Zeitpunkt der Textblöcke bereit.
+
+Cache lib/snm/tcpdf/cache/
+<img src="{{skin url='images/callout-1.jpg'  area='frontend'  _theme='bayern' }}"/>
+
+
+pdf anhängen ohne temple
+]]>
+	</item>
+	<item>
+		<date>2011-12-06</date>
+		<version>1.6.6</version>
+		<description>bug totals gutschrift</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2011-12-21</date>
+		<version>1.6.7</version>
+		<description>Problem with AITOC Rewriting PDF attachment 5x</description>
+		<comment></comment>
+	</item>
+	<item>
+		<date>2011-02-06</date>
+		<version>2.0.1</version>
+		<description>Angebots-PDF</description>
+		<comment></comment>
+	</item>
+</history>

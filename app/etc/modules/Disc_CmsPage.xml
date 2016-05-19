@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Disc_CmsPage>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Disc_CmsPage>
+	</modules>
+</config>

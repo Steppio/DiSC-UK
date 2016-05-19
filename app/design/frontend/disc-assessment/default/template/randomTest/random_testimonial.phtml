@@ -1,0 +1,13 @@
+<?php
+$_block = $this->getLayout()->createBlock('cms/block')->setBlockId($this->getIdentifier().mt_rand(1, $this->getNumber()));
+if ($_block) :
+?>
+<div class="block block-testimonial">
+    <div class="block-title">
+        <strong><?php echo $this->getTitle(); ?></strong>
+    </div>
+    <div class="block-content">
+    <?php echo $_block->toHtml(); ?>
+    </div>
+</div>
+<?php endif; ?>

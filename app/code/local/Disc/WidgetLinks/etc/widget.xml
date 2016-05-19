@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<widgets>
+  <widgetlinks_links type="widgetlinks/links" translate="name description" module="widgetlinks">
+    <name>DiSC Date Enquiry Button</name>
+    <description>Please add dates in the following format DD Month Year, e.g: 08th April 2016</description>
+    <parameters>
+      <link_options>
+        <label>Date</label>
+        <visible>1</visible>
+        <required>1</required>
+        <type>text</type>
+        <source_model>widgetlinks/options</source_model>
+      </link_options>
+    </parameters>
+  </widgetlinks_links>
+</widgets>

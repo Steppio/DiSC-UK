@@ -1,0 +1,188 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]> <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="<?php echo $this->getLang(); ?>" id="top" class="no-js"> <!--<![endif]-->
+
+<head>
+<?php echo $this->getChildHtml('head') ?>
+</head>
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+<?php echo $this->getChildHtml('after_body_start') ?>
+<div class="wrapper">
+    <?php echo $this->getChildHtml('global_notices') ?>
+
+    <div class="page about-us-section large-product-descriptions">
+                <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('about-us-header-image')->toHtml() ?>        
+        <?php echo $this->getChildHtml('header') ?>
+
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
+
+        <div class="main-container col2-left-layout training-systems">
+            <div class="main">
+
+                <?php $_messageCollection = $this->getMessagesBlock()->getMessageCollection() ?>
+
+                <div id="messages_product_view2">
+                <?php if ($_messageCollection->count()): ?>
+                <div>
+                <?php
+                    echo $this->getMessagesBlock()->getGroupedHtml();
+                    $_messageCollection->clear();
+                ?>
+                </div>
+                <?php endif; ?>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-4">
+
+                    <div class="page-title custom-form-header visible-sm-block hidden-sm rs-r rs-l">
+                        <h2><?php echo Mage::helper('contacts')->__('Do you have a question?') ?></h2>
+                    </div>
+
+                    <div class="col-left sidebar about-dropdown">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <?php echo $this->getChildHtml('left') ?>     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-6 col-md-8 col-lg-8">
+
+                    <?php // This left_first block will display above the main content on smaller viewports ?>
+
+                    <div class="col-main">
+                        <div class="container-fluid">
+                            <div class="">
+                                <div class="tabs-and-content">
+
+                                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('training-systems-header'); ?>
+                                    <?php echo $this->getChildHtml('global_messages') ?>
+
+                                    <?php echo $this->getChildHtml('content') ?>
+
+                                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('training-certification-header'); ?>
+
+
+                                        <div class="row">
+                                            <div class="col-xs-12 col-md-4">
+                                                <a class="btn btn-primary" role="button" data-toggle="collapse" href="#work-for-leader" aria-expanded="false" aria-controls="work-for-leader"><span class="training-heading">Public Course </span><span class="training-header-description">Foundational knowledge about <br />Everything DiSC</span></a>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4">                                   
+                                                <a class="btn btn-primary" role="button" data-toggle="collapse" href="#a363" aria-expanded="false" aria-controls="a363"><span class="training-heading">In-Company</span><span class="training-header-description">If you have a team of people <br />looking to become accredited</span></a>
+                                            </div>
+                                            <div class="col-xs-12 col-md-4">   
+                                                <a class="btn btn-primary" role="button" data-toggle="collapse" href="#workplace" aria-expanded="false" aria-controls="workplace"><span class="training-heading">Online</span><span class="training-header-description">Four week online course <br />will give you a foundational knowledge <br />about Everything DiSC</span></a>
+                                            </div>
+                                        </div>
+
+                                        <div id="slideToMe">&nbsp;</div>
+
+                                        <div class="training-systems collapse" id="work-for-leader"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('disc_trainer_certification-public_course')->toHtml() ?></div>
+
+                                        <div class="training-systems collapse" id="a363"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('disc_trainer_certification_in_company_course')->toHtml() ?></div>
+
+                                        <div class="training-systems collapse" id="workplace">
+                                            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('everything_disc_workplace_certification_online')->toHtml() ?>
+                                            </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+
+                <script>
+
+                    jQuery('.tabs-and-content .btn-primary').hover(function() {
+                        jQuery(this).find('.training-heading').css('display', 'none');
+                        jQuery(this).find('.training-header-description').css('display', 'table-cell');
+                    }, function() {
+                        jQuery(this).find('.training-heading').css('display', 'table-cell');
+                        jQuery(this).find('.training-header-description').css('display', 'none');
+                    });
+
+                    jQuery('#work-for-leader #myTabs a').click(function (e) {
+                      e.preventDefault()
+                      jQuery(this).tab('show')
+                    });
+                    jQuery('#a365 #myTabs a').click(function (e) {
+                      e.preventDefault()
+                      jQuery(this).tab('show')
+                    });  
+                    jQuery('#workplace #myTabs a').click(function (e) {
+                      e.preventDefault()
+                      jQuery(this).tab('show')
+                    });                                                                                               
+
+                    jQuery('.training-systems .btn-primary').click(function(e) {
+                        jQuery('.collapse').css('display', 'none');
+                    });
+                </script>
+
+                <div class="page-title custom-form-header rs-r rs-l">
+                    <h2><?php echo Mage::helper('contacts')->__('Do you have a question?') ?></h2>
+                </div>
+
+                <div class="col-left sidebar about-contact-us contact-form-mob">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <?php echo $this->getChildHtml('left') ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>                   
+            </div>
+        </div>
+        <?php echo $this->getChildHtml('footer_before') ?>
+        <?php echo $this->getChildHtml('footer') ?>
+        <?php echo $this->getChildHtml('global_cookie_notice') ?>
+        <?php echo $this->getChildHtml('before_body_end') ?>
+    </div>
+</div>
+<?php echo $this->getAbsoluteFooter() ?>
+</body>
+</html>
