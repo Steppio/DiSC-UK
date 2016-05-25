@@ -7146,3 +7146,6 @@
 [Sun May 15 19:58:41 2016] [error] [client 141.212.122.113] client sent HTTP/1.1 request without hostname (see RFC2616 section 14.23): /x
 [Mon May 16 05:38:24 2016] [error] [client 118.193.27.2] request failed: error reading the headers
 [Mon May 16 22:46:53 2016] [error] [client 131.253.25.136] File does not exist: /var/www/disc-uk/skin/frontend/disc-assessment/default/css/img, referer: http://www.discassessment.co.uk/everything-discr-group-culture-report.html
+[Tue May 24 09:35:56 2016] [error] [client 169.229.3.91] Invalid URI in request 4\x13G\xe7\xcb\xec\xb8\x18&\x8e\xcei\x9e\xff4\xdc.g\xaa\xa0\xb5.Ln$l\x0e\xf5\x12N\xd1\x98\x1d\v\xce\xd8\x89\xa0\xe3\xb0T\xb7\xa1=U_\xd8\\\x16=\x11^H\x92
+[Wed May 25 01:10:49 2016] [error] [client 190.142.5.228] request failed: error reading the headers
+[Wed May 25 06:00:00 2016] [error] [client 202.47.24.180] request failed: error reading the headers
