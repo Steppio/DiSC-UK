@@ -7149,3 +7149,4 @@
 [Tue May 24 09:35:56 2016] [error] [client 169.229.3.91] Invalid URI in request 4\x13G\xe7\xcb\xec\xb8\x18&\x8e\xcei\x9e\xff4\xdc.g\xaa\xa0\xb5.Ln$l\x0e\xf5\x12N\xd1\x98\x1d\v\xce\xd8\x89\xa0\xe3\xb0T\xb7\xa1=U_\xd8\\\x16=\x11^H\x92
 [Wed May 25 01:10:49 2016] [error] [client 190.142.5.228] request failed: error reading the headers
 [Wed May 25 06:00:00 2016] [error] [client 202.47.24.180] request failed: error reading the headers
+[Wed May 25 08:21:17 2016] [error] [client 169.229.3.91] Invalid URI in request \xf5m\xbaZ\x92\xa4\x8at\x0cT\x01\xc5
