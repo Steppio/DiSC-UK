@@ -71,13 +71,19 @@ class Inchoo_AdminOrderNotifier_Helper_Data extends Mage_Core_Helper_Abstract
         return Mage::getStoreConfig(self::XML_PATH_NOTIFY_CUSTOM2_EMAIL, $store);
     }
 
-    // Custom function for DiSC
+    // Custom functions for DiSC
     public function getOrderUrl($store = null) 
     {
         $order_id = Mage::getModel('sales/order')->getCollection()->setOrder('increment_id','DESC')->setPageSize(1)->setCurPage(1);
         $order = Mage::getModel('sales/order')->loadByIncrementId($order_id->getFirstItem()->getEntityId())->getId();
         return Mage::helper('adminhtml')->getUrl('adminhtml/sales_order/view', array('order_id' => $order));
     }
+    public function getDiscOrderDetail($store = null) 
+    {
+        $order_id = Mage::getModel('sales/order')->getCollection()->setOrder('increment_id','DESC')->setPageSize(1)->setCurPage(1);
+        $order = Mage::getModel('sales/order')->loadByIncrementId($order_id->getFirstItem()->getEntityId());
+        return Mage::helper('adminhtml')->getUrl('adminhtml/sales_order/view', array('order_id' => $order));
+    }    
 
     public function getNotifyEmails($store = null)
     {
