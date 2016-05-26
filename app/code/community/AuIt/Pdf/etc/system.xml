@@ -282,7 +282,7 @@
 					<fields>
                         <template translate="label">
                             <label>PDF template (pdf file)</label>
-                            <frontend_type>auitfile</frontend_type>
+                            <!-- <frontend_type>auitfile</frontend_type> -->
                             <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
                             <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
@@ -293,7 +293,7 @@
                         </template>
                         <append translate="label">
                             <label>PDF Appendix (pdf file)</label>
-                            <frontend_type>auitfile</frontend_type>
+                            <!-- <frontend_type>auitfile</frontend_type> -->
                             <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
                             <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
@@ -492,7 +492,7 @@
 					<fields>
                         <template translate="label">
                             <label>PDF template (pdf file)</label>
-                            <frontend_type>auitfile</frontend_type>
+                            <!-- <frontend_type>auitfile</frontend_type> -->
                             <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
                             <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
@@ -503,7 +503,7 @@
                         </template>
                         <append translate="label">
                             <label>PDF Appendix (pdf file)</label>
-                            <frontend_type>auitfile</frontend_type>
+                            <!-- <frontend_type>auitfile</frontend_type> -->
                             <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
                             <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
@@ -707,7 +707,7 @@
 					<fields>
                         <template translate="label">
                             <label>PDF template (pdf file)</label>
-                            <frontend_type>auitfile</frontend_type>
+                            <!-- <frontend_type>auitfile</frontend_type> -->
                             <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
                             <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
@@ -718,7 +718,7 @@
                         </template>
                         <append translate="label">
                             <label>PDF Appendix (pdf file)</label>
-                            <frontend_type>auitfile</frontend_type>
+                            <!-- <frontend_type>auitfile</frontend_type> -->
                             <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
                             <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
@@ -918,7 +918,7 @@
 					<fields>
                         <template translate="label">
                             <label>PDF template (pdf file)</label>
-                            <frontend_type>auitfile</frontend_type>
+                            <!-- <frontend_type>auitfile</frontend_type> -->
                             <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
                             <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
@@ -929,7 +929,7 @@
                         </template>
                         <append translate="label">
                             <label>PDF Appendix (pdf file)</label>
-                            <frontend_type>auitfile</frontend_type>
+                            <!-- <frontend_type>auitfile</frontend_type> -->
                             <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
                             <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
@@ -1163,7 +1163,7 @@
                         </pdf_1_enabled>
                         <pdf_1 translate="label">
                             <label>PDF Attachment 1</label>
-                            <frontend_type>auitfile</frontend_type>
+                            <!-- <frontend_type>auitfile</frontend_type> -->
                             <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
                             <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
@@ -1183,7 +1183,7 @@
                         </pdf_2_enabled>
                         <pdf_2 translate="label">
                             <label>PDF Attachment 2</label>
-                            <frontend_type>auitfile</frontend_type>
+                            <!-- <frontend_type>auitfile</frontend_type> -->
                             <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
                             <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
@@ -1239,7 +1239,7 @@
                         </pdf_1_enabled>
                         <pdf_1 translate="label">
                             <label>PDF Attachment 1</label>
-                            <frontend_type>auitfile</frontend_type>
+                            <!-- <frontend_type>auitfile</frontend_type> -->
                             <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
                             <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
@@ -1259,7 +1259,7 @@
                         </pdf_2_enabled>
                         <pdf_2 translate="label">
                             <label>PDF Attachment 2</label>
-                            <frontend_type>auitfile</frontend_type>
+                            <!-- <frontend_type>auitfile</frontend_type> -->
                             <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
                             <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
@@ -1304,7 +1304,7 @@
                         </pdf_1_enabled>
                         <pdf_1 translate="label">
                             <label>PDF Attachment 1</label>
-                            <frontend_type>auitfile</frontend_type>
+                            <!-- <frontend_type>auitfile</frontend_type> -->
                             <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
                             <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
@@ -1324,7 +1324,7 @@
                         </pdf_2_enabled>
                         <pdf_2 translate="label">
                             <label>PDF Attachment 2</label>
-                            <frontend_type>auitfile</frontend_type>
+                            <!-- <frontend_type>auitfile</frontend_type> -->
                             <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
                             <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
@@ -1369,7 +1369,7 @@
                         </pdf_1_enabled>
                         <pdf_1 translate="label">
                             <label>PDF Attachment 1</label>
-                            <frontend_type>auitfile</frontend_type>
+                            <!-- <frontend_type>auitfile</frontend_type> -->
                             <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
                             <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>
@@ -1389,7 +1389,7 @@
                         </pdf_2_enabled>
                         <pdf_2 translate="label">
                             <label>PDF Attachment 2</label>
-                            <frontend_type>auitfile</frontend_type>
+                            <!-- <frontend_type>auitfile</frontend_type> -->
                             <backend_model>auit_pdf/adminhtml_system_config_backend_image_pdf</backend_model>
                             <upload_dir config="system/filesystem/media" scope_info="1">snm-portal/sales/pdf</upload_dir>
                             <base_url type="media" scope_info="1">snm-portal/sales/pdf</base_url>

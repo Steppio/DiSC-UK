@@ -19,8 +19,8 @@ class AuIt_Pdf_Model_Pdf_Style extends Varien_Object
     			break;
     		case 'libertine':
 	    		switch ( $weight){
-	    			case 'bold': $font = Zend_Pdf_Font::fontWithPath(Mage::getBaseDir() . '/lib/LinLibertineFont/LinLibertine_Bd-2.8.1.ttf');break;
-	    			default:	 $font = Zend_Pdf_Font::fontWithPath(Mage::getBaseDir() . '/lib/LinLibertineFont/LinLibertineC_Re-2.8.0.ttf');break;
+	    			case 'bold': $font = Zend_Pdf_Font::fontWithPath(Zend_Pdf_Font::FONT_HELVETICA_BOLD);break;
+	    			default:	 $font = Zend_Pdf_Font::fontWithPath(Zend_Pdf_Font::FONT_HELVETICA);break;
 	    		}
     			break;
     		default:
@@ -35,6 +35,8 @@ class AuIt_Pdf_Model_Pdf_Style extends Varien_Object
 	public function getFont()
 	{
 		$font = $this->getData('font');
+		// var_dump($font);
+		die();
 		if ( !is_object($font) )
 		{
 			$font = self::buildFont($font, $this->getData('font_weight'));
