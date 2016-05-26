@@ -24351,3 +24351,7 @@ input.other:-moz-placeholder {
     max-width: none;
   }
 }
+
+.catalog-category-view .paypal-logo {
+  display: none;
+}
