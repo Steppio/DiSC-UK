@@ -948,7 +948,7 @@ abstract class Mage_Sales_Model_Order_Pdf_Abstract extends Varien_Object
                         }
                     }
 
-                    if (!is_array($column['text'])) {
+                    // if (!is_array($column['text'])) {
                         $column['text'] = array($column['text']);
                     }
 
