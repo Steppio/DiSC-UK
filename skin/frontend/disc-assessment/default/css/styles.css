@@ -7655,3 +7655,7 @@ input.other:-moz-placeholder { color: #003054; }
   .cms-epic-credits.cms-page-view .epic_credits_page-how_does_it_work { min-height: 525px; }
   /* @group Contact */
   .footer-container { max-width: none; } }
+
+.product-view .add-to-cart-buttons .paypal-logo {
+  display: none !important;
+}

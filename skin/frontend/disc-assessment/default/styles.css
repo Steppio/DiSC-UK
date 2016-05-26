@@ -24352,6 +24352,6 @@ input.other:-moz-placeholder {
   }
 }
 
-.catalog-category-view .paypal-logo {
-  display: none;
+.product-view .add-to-cart-buttons .paypal-logo {
+  display: none !important;
 }
