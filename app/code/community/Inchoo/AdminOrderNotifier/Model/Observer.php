@@ -88,6 +88,7 @@ class Inchoo_AdminOrderNotifier_Model_Observer extends Mage_Core_Helper_Abstract
 
             $url_order = Mage::getModel('sales/order')->loadByIncrementId($order->increment_id)->getId();
             $orderDetail = Mage::helper('adminhtml')->getUrl('adminhtml/sales_order/view', array('order_id' => $url_order));
+            $orderStatus = Mage::helper('adminhtml')->getDiscOrderDetail('adminhtml/sales_order/view', array('order_id' => $url_order));
 
             $mailer->setSender(array(
                 'name' => $helper->getStoreEmailAddressSenderOption('general', 'name'),
