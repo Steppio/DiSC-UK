@@ -114,8 +114,8 @@ class Mage_Core_Model_Email_Template extends Mage_Core_Model_Email_Template_Abst
                 'port' => '587', 
                 'auth' => 'login',
                 'ssl' => 'tls',
-                'username' => 'disctest001@gmail.com',
-                'password' => '12QWasZX'
+                'username' => 'no-reply@disc-uk.co.uk',
+                'password' => 'Discuk001'
             ];
             
             $transport = new Zend_Mail_Transport_Smtp('smtp.gmail.com', $config);
