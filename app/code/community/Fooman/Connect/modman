@@ -1,0 +1,6 @@
+../../../../../app/code/community/Fooman/Connect/                             /app/code/community/Fooman/Connect/
+../../../../../app/code/community/Fooman/ConnectLicense/                      /app/code/community/Fooman/ConnectLicense/
+../../../../../app/design/adminhtml/default/default/layout/foomanconnect.xml  /app/design/adminhtml/default/default/layout/foomanconnect.xml
+../../../../../app/design/adminhtml/default/default/template/fooman/connect/  /app/design/adminhtml/default/default/template/fooman/connect/
+../../../../../app/etc/modules/Fooman_Connect.xml                             /app/etc/modules/Fooman_Connect.xml
+../../../../../app/etc/modules/Fooman_ConnectLicense.xml                      /app/etc/modules/Fooman_ConnectLicense.xml

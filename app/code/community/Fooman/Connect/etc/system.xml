@@ -1,0 +1,596 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <foomancommon>
+            <groups>
+                <extensions>
+                    <fields>
+                        <foomanconnect translate="label" module="foomanconnect">
+                            <label>Fooman Connect: Xero</label>
+                            <frontend_type>label</frontend_type>
+                            <frontend_model>foomanconnect/adminhtml_extensioninfo</frontend_model>
+                            <sort_order>16</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </foomanconnect>
+                    </fields>
+                </extensions>
+            </groups>
+        </foomancommon>
+        <foomanconnect translate="label" module="foomanconnect">
+            <label>Fooman Connect</label>
+            <tab>fooman</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>800</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <settings translate="label">
+                    <label>Xero - General</label>
+                    <comment><![CDATA[<br />
+                    <div class="box">
+                    <p>For detailed instructions please refer to the Fooman Connect:Xero User Manual <a href="http://cdn.fooman.co.nz/media/custom/upload/SetUpGuideandUserManual-FoomanConnectXero.pdf">here</a>.</p>
+                    </div>
+                    ]]>
+                    </comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <xeroenabled translate="label">
+                            <label>Enabled</label>
+                            <tooltip>Select "Yes" to enable Fooman Connect</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </xeroenabled>
+                        <consumerkey translate="label">
+                            <label>Consumer Key</label>
+                            <tooltip>Copy and paste the Xero Oauth Consumer Key from step 2 of the user manual into this field.</tooltip>
+                            <comment/>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </consumerkey>
+                        <consumersecret translate="label">
+                            <label>Consumer Secret</label>
+                            <tooltip>Copy and paste the Xero Oauth Consumer Secret from step 2 of the user manual into this field.</tooltip>
+                            <comment/>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </consumersecret>
+                        <privatekey translate="label">
+                            <label>Private Key</label>
+                            <tooltip>This will be automatically populated in step 1 of the user manual. Alternatively you can create your own SSL certificate and enter the private key here.</tooltip>
+                            <frontend_type>textarea</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                            <sort_order>26</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </privatekey>
+                        <privatekeypassword translate="label">
+                            <label>Password of Private Key</label>
+                            <tooltip>Leave this field empty if you followed the directions in step 1 of the user manual. If you chose to use your own SSL certificate, paste the password of the private key here, if applicable.</tooltip>
+                            <frontend_type>text</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_encrypted</backend_model>
+                            <sort_order>27</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </privatekeypassword>
+                        <xeroversion translate="label">
+                            <label>Xero Version</label>
+                            <tooltip>Select the Xero version you are using from the drop down list.</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_xeroVersionsOptions</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </xeroversion>
+                        <xeronumbering translate="label">
+                            <label>Use Xero Numbers</label>
+                            <tooltip><![CDATA[
+                                When set to "Yes", orders/credit memos exported to Xero will use the Xero
+                                assigned number rather than the Magento assigned number.]]>
+                            </tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </xeronumbering>
+                        <xerotransfercurrency translate="label">
+                            <label>Transfer Currency</label>
+                            <tooltip>Choose to export orders/credit memos in store base currency or order currency.</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_currencyOptions</source_model>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </xerotransfercurrency>
+                        <usecompany translate="label">
+                            <label>Prefer Company as Contact</label>
+                            <tooltip>When set to "Yes" and the billing address contains a company this will be used as the contact name in Xero instead of First Name + Last Name of the customer.</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </usecompany>
+                        <xerotracking translate="label">
+                            <label>Tracking</label>
+                            <tooltip>Use this setting if you already use tracking categories in Xero and want to track your online sales channel.
+                                Choose a tracking option to record online
+                                transactions exported to Xero. </tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_trackingOptions</source_model>
+                            <sort_order>200</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </xerotracking>
+                        <xerologenabled translate="label">
+                            <label>Enable Logging</label>
+                            <tooltip>If Magento logging is enabled and this option is enabled log messages are written to /var/log/xero.log</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1000</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </xerologenabled>
+                        <xeroenablereset translate="label">
+                            <label>Enable Reset</label>
+                            <tooltip>When set to "Yes", an extra button will be created on the Fooman Connect:
+                                Xero pages allowing you to reset the export status and link to the
+                                invoice/credit memo in Xero (for example, after finishing test exports to a
+                                Xero demo company).</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </xeroenablereset>
+                    </fields>
+                </settings>
+                <xeroaccount>
+                    <label>Xero - Account Mapping</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <codesale translate="label">
+                            <label>Sales Account</label>
+                            <tooltip><![CDATA[
+                                Select the Xero account where you want to record sales. This setting
+                                applies on a per store level, and can be manually overridden on an
+                                individual product level by doing the following:<br/>
+                                &bullet; Go to <b>Catalog > Manage Products</b><br/>
+                                &bullet; Click into the product that you wish to individually configure a
+                                different Xero Sales Account for<br/>
+                                &bullet; In the newly added field "Xero Sales Account Code", select the
+                                Xero account where you want to record sales for this item<br/>
+                                &bullet; Repeat for every product you wish to manually override]]></tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_salesAccountOptions</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </codesale>
+                        <codeshipping translate="label">
+                            <label>Shipping Account</label>
+                            <tooltip>Select the Xero account where you want to record shipping.</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_shippingAccountOptions</source_model>
+                            <sort_order>200</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </codeshipping>
+                        <shippingisexpenseaccount translate="label">
+                            <label>Shipping is an Expense Account</label>
+                            <tooltip>Enable this if the account above is an expense account in Xero - also requires payments to be enabled to this account.</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shippingisexpenseaccount>
+                        <!-- @deprecated discounts are now directly recorded with the line item
+                        <codediscounts translate="label">
+                            <label>Discount Account</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_discountAccountOptions</source_model>
+                            <sort_order>300</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </codediscounts>
+                        -->
+                        <coderefunds translate="label">
+                            <label>Refund Adjustment Account</label>
+                            <tooltip>Select the Xero account where you want to record adjustments on credit memos.</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_discountAccountOptions</source_model>
+                            <sort_order>400</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </coderefunds>
+                        <codesurcharge translate="label">
+                            <if_module_enabled>Fooman_Surcharge</if_module_enabled>
+                            <label>Surcharge Account</label>
+                            <tooltip>Select the Xero account where you want to record surcharges.</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_shippingAccountOptions</source_model>
+                            <sort_order>500</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </codesurcharge>
+                        <codemwrewardspointsdiscount>
+                            <if_module_enabled>MW_RewardPoints</if_module_enabled>
+                            <label>Rewards Points Account (MW)</label>
+                            <tooltip>Select the Xero account where you want to record rewards points by MW.</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_shippingAccountOptions</source_model>
+                            <sort_order>510</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </codemwrewardspointsdiscount>
+                        <vaimoklarnafeeaccount>
+                            <if_module_enabled>Vaimo_Klarna</if_module_enabled>
+                            <label>Invoice Fee Account (Vaimo)</label>
+                            <tooltip>Select the Xero account where you want to record the Klarna invoice fee (Vaimo).</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_shippingAccountOptions</source_model>
+                            <sort_order>520</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </vaimoklarnafeeaccount>
+                        <coderounding translate="label">
+                            <label>Rounding Account</label>
+                            <tooltip>Confirm the Xero account to record rounding entries.</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_roundingAccountOptions</source_model>
+                            <sort_order>600</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </coderounding>
+                    </fields>
+                </xeroaccount>
+                <tax>
+                    <label>Xero - Tax Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <xerooverridetax translate="label">
+                            <label>Tax Calculation</label>
+                            <tooltip><![CDATA[
+                                Unfortunately Magento and Xero do not always agree on how to calculate, differences exist in
+                                tax, rounding, bugs, etc. Xero will reject any data which does not match its expectations.
+                                Choose any of the following options:<br/><br/>
+
+                                &bullet; Magento Calculated = take Magento's value directly - requires it to calculate exactly like Xero to not get rejected<br/>
+                                &bullet; Magento re-calculated =  attempt to bridge the gap by creating rounding entries<br/>
+                                &bullet; Magento merged = Combine multiple line items into one per tax type<br/>
+                                &bullet; Xero re-calculated = let Xero recalculate completely based on the line total, could change qty to 1 if unit amounts with more than 3 digits
+                                can't be aligned]]>
+                            </tooltip>
+                            <comment/>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_taxOverrideOptions</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </xerooverridetax>
+                        <xerodefaultzerotaxrate translate="label">
+                            <label>Default Tax Rate for None Taxed Items</label>
+                            <tooltip>Select the tax rate to use when the item has no other tax rule applied and the tax amount is zero.</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_taxZeroOptions</source_model>
+                            <sort_order>200</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </xerodefaultzerotaxrate>
+                        <xeroexpensezerotaxrate translate="label">
+                            <label>Tax Rate for None Taxed Items (Expenses)</label>
+                            <tooltip>Select the tax rate to use when the item has no other tax rule applied and the tax amount is zero, only applicable for Expense Accounts</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_taxZeroOptions</source_model>
+                            <sort_order>200</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </xeroexpensezerotaxrate>
+                        <xeroshipping translate="label">
+                            <label>Shipping Tax Rate</label>
+                            <tooltip>Choose your shipping tax rate.</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_shippingTaxOptions</source_model>
+                            <sort_order>300</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </xeroshipping>
+                        <xerosurcharge translate="label">
+                            <if_module_enabled>Fooman_Surcharge</if_module_enabled>
+                            <label>Surcharge Tax Rate</label>
+                            <tooltip>Choose your surcharge tax rate.</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_taxOptions</source_model>
+                            <sort_order>400</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </xerosurcharge>
+                        <xerosurchargezero translate="label">
+                            <if_module_enabled>Fooman_Surcharge</if_module_enabled>
+                            <label>Surcharge Tax Rate (Zero)</label>
+                            <tooltip>Choose your surcharge tax rate if no tax applies to the surcharge.</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_taxZeroOptions</source_model>
+                            <sort_order>450</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </xerosurchargezero>
+                    </fields>
+                </tax>
+                <order>
+                    <label>Xero - Order/Invoice Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>40</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <exportmode>
+                            <label>Export Mode</label>
+                            <tooltip>The integration can either work by exporting Magento orders to Xero invoices
+                                (useful if Magento does not create the invoices straight away and with delayed payments)
+                                or by exporting Magento invoices to Xero invoices.</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_exportMode</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </exportmode>
+                        <exportwithstatus translate="label">
+                            <label>Export Orders with Status</label>
+                            <tooltip>Choose which order status/statuses will be considered for the export to Xero. The first
+                                time a new order reaches this status, it will be exported to Xero. Multiple
+                                statuses can be selected (CTRL+click), as each order will only be exported once.
+                                Choose the status/statuses that best match the workflow of your payment
+                                methods and corresponds to money hitting your Xero accounts. Choosing
+                                to export orders with 'complete' status will be sufficient for most store's
+                                needs. However, please note that your payment method may use a
+                                different workflow to standard Magento so you should consider this.
+                                Compare your payment method workflow to standard Magento workflows
+                                using the information from the manual.</tooltip>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>foomanconnect/system_orderStatusOptions</source_model>
+                            <sort_order>61</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <exportmode>order</exportmode>
+                            </depends>
+                        </exportwithstatus>
+                        <exportwithstatusinvoices translate="label">
+                            <label>Export Invoices with Status</label>
+                            <tooltip>Choose which invoice status/statuses will be considered for the export to Xero. The first
+                                time a new invoice reaches this status, it will be exported to Xero. Multiple
+                                statuses can be selected (CTRL+click), as each invoice will only be exported once.</tooltip>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>foomanconnect/system_invoiceStatusOptions</source_model>
+                            <sort_order>61</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <exportmode>invoice</exportmode>
+                            </depends>
+                        </exportwithstatusinvoices>
+                        <xerostatus translate="label">
+                            <label>Status in Xero</label>
+                            <tooltip>We recommend keeping this as draft while testing the integration.</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_initialInvoiceStatus</source_model>
+                            <sort_order>65</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </xerostatus>
+                        <exportzero translate="label">
+                            <label>Export with Zero Amounts</label>
+                            <tooltip>When set to "Yes", zero amount orders (free products/items) will also be exported to Xero.</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>65</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </exportzero>
+                        <startdate translate="label">
+                            <label>Start Date</label>
+                            <tooltip>If you wish to backdate automatic exporting of orders, enter
+                                a date in this field. Dates should be entered in UTC (GMT) format. If no date is
+                                entered, automatic exporting will commence from the time of the process
+                                being set up and will not be backdated</tooltip>
+                            <comment>only applies to automatic export</comment>
+                            <frontend_type>date</frontend_type>
+                            <frontend_model>foomanconnect/adminhtml_system_date</frontend_model>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </startdate>
+                        <xeropayments translate="label">
+                            <label>Show Xero payments on View page</label>
+                            <tooltip><![CDATA[When set to "Yes", a new tab called "Fooman Connect" will be shown in
+                                each individual order view page in Magento with:<br/>
+                                <ol>
+                                    <li>If the order has been exported to Xero</li>
+                                    <li>If and on which date payment has been received (ie. whether the
+                                        payment has been reconciled in Xero</li>
+                                </ol>]]>
+                            </tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </xeropayments>
+                    </fields>
+                </order>
+                <creditmemo>
+                    <label>Xero - Credit memo settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>60</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <startdate translate="label">
+                            <label>Start Date</label>
+                            <tooltip>If you wish to backdate automatic exporting of credit memos, enter
+                                a date in this field. Dates should be entered in UTC (GMT) format. If no date is
+                                entered, automatic exporting will commence from the time of the process
+                                being set up and will not be backdated</tooltip>
+                            <comment>only applies to automatic export</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>foomanconnect/adminhtml_system_date</frontend_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </startdate>
+                        <xeroprefix translate="label">
+                            <label>Credit Note Prefix</label>
+                            <tooltip>Enter your chosen prefix to differentiate credit memo numbers from order
+                                numbers. While these numbers are the same in Magento, Xero requires
+                                these numbers to be unique. </tooltip>
+                            <comment>Can't be empty</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>200</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </xeroprefix>
+                        <xerostatus translate="label">
+                            <label>Status in Xero</label>
+                            <tooltip>We recommend keeping this as draft while testing the integration.</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_initialInvoiceStatus</source_model>
+                            <sort_order>300</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </xerostatus>
+                        <cashrefund translate="label">
+                            <label>Create Cash Refund</label>
+                            <tooltip>Automatically create a cash refund in Xero.</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>400</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <xerostatus>AUTHORISED</xerostatus>
+                            </depends>
+                        </cashrefund>
+                        <cashrefundbankaccount translate="label">
+                            <label>Bank Account for Cash Refund</label>
+                            <tooltip>This is the bank account the cash refund is taken from. For credit cards this is the bank account funds are transferred into.</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>foomanconnect/system_bankAccountOptions</source_model>
+                            <sort_order>420</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <xerostatus>AUTHORISED</xerostatus>
+                                <cashrefund>1</cashrefund>
+                            </depends>
+                        </cashrefundbankaccount>
+                    </fields>
+                </creditmemo>
+                <cron translate="label">
+                    <label>Xero - Automatic</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <xeroautomatic translate="label">
+                            <label>Enable Automatic Exports</label>
+                            <comment><![CDATA[
+                            Please ensure you have configured a cronjob for Magento - <a href="http://devdocs.magento.com/guides/m1x/install/installing_install.html#install-cron">read more.</a></p>
+                            ]]>
+                            </comment>
+                            <tooltip>Even though the automatic export is scheduled to be run every 10 minutes,
+                                it cannot run faster than the system cron job. It is important to verify that a
+                                Magento cronjob was correctly configured during the initial set up of your
+                                Magento store, as this is essential to the automatic export function of
+                                Fooman Connect. If in doubt, please check with your web host or system
+                                administrator to confirm this.</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </xeroautomatic>
+                        <!--<xerocronexpr>
+                            <label>Cron Schedule</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[All configurations are cron expressions. (E.g. "20 * * * *")]]></comment>
+                        </xerocronexpr>-->
+                    </fields>
+                </cron>
+            </groups>
+        </foomanconnect>
+    </sections>
+</config>

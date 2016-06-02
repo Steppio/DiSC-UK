@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <foomanconnect translate="title" module="foomanconnect">
+            <title>Fooman Connect</title>
+            <sort_order>71</sort_order>
+            <children>
+                <xero_order translate="title" module="foomanconnect">
+                    <title>Xero - Orders</title>
+                    <action>adminhtml/xero_order</action>
+                    <sort_order>20</sort_order>
+                </xero_order>
+                <xero_creditmemo translate="title" module="foomanconnect">
+                    <title>Xero - Credit Memos</title>
+                    <action>adminhtml/xero_creditmemo</action>
+                    <sort_order>40</sort_order>
+                </xero_creditmemo>
+            </children>
+        </foomanconnect>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <foomanconnect>
+                        <title>Fooman Connect</title>
+                        <sort_order>10</sort_order>
+                        <children>
+                            <xero_order translate="title">
+                                <title>Xero - Orders</title>
+                            </xero_order>
+                            <xero_creditmemo translate="title">
+                                <title>Xero - Credit Memos</title>
+                            </xero_creditmemo>
+                        </children>
+                    </foomanconnect>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <foomanconnect>
+                                        <title>Fooman Connect</title>
+                                    </foomanconnect>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

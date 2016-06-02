@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Fooman_ConnectLicense>
+            <version>2.0.0</version>
+        </Fooman_ConnectLicense>
+    </modules>
+    <global>
+        <helpers>
+            <fooman_connectlicense>
+                <class>Fooman_ConnectLicense_Helper</class>
+            </fooman_connectlicense>
+        </helpers>
+    </global>
+</config>
+
