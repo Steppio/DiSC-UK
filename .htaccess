@@ -26,6 +26,7 @@
 
     DirectoryIndex index.php
 
+
 <IfModule mod_php5.c>
 
 ############################################
