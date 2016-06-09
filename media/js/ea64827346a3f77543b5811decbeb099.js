@@ -17256,9 +17256,9 @@ jQuery( document ).ready(function() {
 
                 }
 
+                console.log(price);
+
                 amount = currency + (quantity * price).toFixed(2);
-
-
 
                 jQuery('.epic-wrapper').css('display', 'block');
                 jQuery('.epic-wrapper #qty').val(amount);
