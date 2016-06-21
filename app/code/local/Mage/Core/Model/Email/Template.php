@@ -113,9 +113,9 @@ class Mage_Core_Model_Email_Template extends Mage_Core_Model_Email_Template_Abst
         // $smtp_password = Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('smtp_password');
         // $smtp_port = Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('smtp_port');
 
-        $smtp_username = '587';
-        $smtp_password = 'no-reply@disc-uk.co.uk';
-        $smtp_port = 'Discuk001';
+        $smtp_username = 'no-reply@disc-uk.co.uk';
+        $smtp_password = 'Discuk001';
+        $smtp_port = '587';
 
         if (is_null($this->_mail)) {
             $config = [
