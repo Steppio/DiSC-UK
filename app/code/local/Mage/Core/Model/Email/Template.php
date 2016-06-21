@@ -109,9 +109,13 @@ class Mage_Core_Model_Email_Template extends Mage_Core_Model_Email_Template_Abst
     // }
     public function getMail()
     {
-        $smtp_username = Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('smtp_username');
-        $smtp_password = Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('smtp_password');
-        $smtp_port = Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('smtp_port');
+        // $smtp_username = Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('smtp_username');
+        // $smtp_password = Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('smtp_password');
+        // $smtp_port = Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('smtp_port');
+
+        $smtp_username = '587';
+        $smtp_password = 'no-reply@disc-uk.co.uk';
+        $smtp_port = 'Discuk001';
 
         if (is_null($this->_mail)) {
             $config = [
@@ -129,6 +133,30 @@ class Mage_Core_Model_Email_Template extends Mage_Core_Model_Email_Template_Abst
 
         return $this->_mail;
     }
+
+
+    // public function getMail()
+    // {
+    //     $smtp_username = Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('smtp_username');
+    //     $smtp_password = Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('smtp_password');
+    //     $smtp_password = Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('smtp_password');
+
+    //     if (is_null($this->_mail)) {
+    //         $config = [
+    //             'port' => '587', 
+    //             'auth' => 'login',
+    //             'ssl' => 'tls',
+    //             'username' => 'no-reply@disc-uk.co.uk',
+    //             'password' => 'Discuk001'
+    //         ];
+            
+    //         $transport = new Zend_Mail_Transport_Smtp('smtp.gmail.com', $config);
+    //         Zend_Mail::setDefaultTransport($transport);
+    //         $this->_mail = new Zend_Mail('utf-8');
+    //     }
+
+    //     return $this->_mail;
+    // }
 
 
     /**
