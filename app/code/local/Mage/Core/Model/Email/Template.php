@@ -109,13 +109,17 @@ class Mage_Core_Model_Email_Template extends Mage_Core_Model_Email_Template_Abst
     // }
     public function getMail()
     {
+        $smtp_username = Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('smtp_username');
+        $smtp_password = Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('smtp_password');
+        $smtp_port = Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('smtp_port');
+
         if (is_null($this->_mail)) {
             $config = [
-                'port' => '587', 
+                'port' => $smtp_port, 
                 'auth' => 'login',
                 'ssl' => 'tls',
-                'username' => 'no-reply@disc-uk.co.uk',
-                'password' => 'Discuk001'
+                'username' => $smtp_username,
+                'password' => $smtp_password
             ];
             
             $transport = new Zend_Mail_Transport_Smtp('smtp.gmail.com', $config);
