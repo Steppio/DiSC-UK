@@ -13,6 +13,7 @@ class Uni_Fileuploader_Block_Fileuploader extends Mage_Core_Block_Template {
     }
 
     public function getProductAttachments($productId=0) {
+        die('got here');
         $attach = array();
         $_helper = Mage::helper('fileuploader');
         $data = Mage::getModel('fileuploader/fileuploader')->getFilesByProductId($productId);
