@@ -8,7 +8,7 @@
         <h3><?php echo Mage::helper('contacts')->__('Contact Us') ?></h3>
     </div>
 
-    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('contact_form_block'); ?>
+    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('contact_form_block')->toHtml() ?>
 
     <script type="text/javascript" src="http://www.googleadservices.com/pagead/conversion_async.js" charset="utf-8"></script>
 
