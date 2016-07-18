@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <modules>
+    <Pdf_WysiwygFiles>
+      <version>1.0.0</version>
+    </Pdf_WysiwygFiles>
+  </modules>
+  <adminhtml>
+    <cms>
+      <browser>
+        <extensions>
+          <allowed>
+            <pdf>1</pdf>
+          </allowed>
+        </extensions>
+      </browser>
+    </cms>
+  </adminhtml>
+</config>

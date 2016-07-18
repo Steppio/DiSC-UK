@@ -7659,3 +7659,12 @@ input.other:-moz-placeholder { color: #003054; }
 .product-view .add-to-cart-buttons .paypal-logo {
   display: none !important;
 }
+
+a[href$=".pdf"]:after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../images/icon_pdf.png) no-repeat;
+  margin-left: 5px;
+}
