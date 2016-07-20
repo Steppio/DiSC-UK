@@ -7669,3 +7669,25 @@ a[href$=".pdf"]:after {
   margin-left: 5px;
 }
 
+
+#hbspt-form-1469008816342 .hs-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #00c389 url("http://magento-test.local/skin/frontend/disc-assessment/default/css/img/icon-select.png") no-repeat 90% 50%;
+    color: white !important;
+}
+
+#hbspt-form-1469008816342 {
+    padding: 0 20px;
+    border: 1px solid #0057b8;
+}
+
+#hbspt-form-1469008816342 label {
+  color: #0057b8;
+}
+
+#hbspt-form-1469008816342 input {
+  color: #003054 !important;
+}
