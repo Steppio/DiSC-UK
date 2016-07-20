@@ -7671,11 +7671,22 @@ a[href$=".pdf"]:after {
 
 .hbspt-form .hs-input {
     border: 1px solid #ccc;
-    width: 100%;
+    width: 100% !important;
     border-radius: 3px;
     overflow: hidden;
     /*background: #00c389 url("http://magento-test.local/skin/frontend/disc-assessment/default/css/img/icon-select.png") no-repeat 90% 50%;*/
     color: white !important;
+}
+
+.hbspt-form button {
+    background: #0057b8;
+    border-radius: 3px;
+    padding: 13px 15px;
+    margin-bottom: 30px;
+}
+
+#product-ba7c2306-f964-437d-91f4-b47166c65464 {
+  background: #00c389 url("http://magento-test.local/skin/frontend/disc-assessment/default/css/img/icon-select.png") no-repeat 90% 50%;
 }
 
 .hbspt-form {
