@@ -7678,7 +7678,7 @@ a[href$=".pdf"]:after {
     color: white !important;
 }
 
-.hbspt-form button {
+.hbspt-form .hs-button.primary.large {
     background: #0057b8;
     border-radius: 3px;
     padding: 13px 15px;
