@@ -7701,6 +7701,10 @@ a[href$=".pdf"]:after {
   color: #0057b8;
 }
 
+.hbspt-form .form-columns-1:first-child {
+  margin-top: 20px;
+}
+
 .hs-form fieldset.form-columns-1 .input {
   margin-right: 0px !important;
 }

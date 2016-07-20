@@ -7675,7 +7675,6 @@ a[href$=".pdf"]:after {
     border-radius: 3px;
     overflow: hidden;
     /*background: #00c389 url("http://magento-test.local/skin/frontend/disc-assessment/default/css/img/icon-select.png") no-repeat 90% 50%;*/
-    color: white !important;
 }
 
 .hbspt-form .hs-button.primary.large {
@@ -7689,6 +7688,7 @@ a[href$=".pdf"]:after {
 
 #product-ba7c2306-f964-437d-91f4-b47166c65464 {
   margin-bottom: 20px !important;
+  color: white !important;
   background: #00c389 url("http://magento-test.local/skin/frontend/disc-assessment/default/css/img/icon-select.png") no-repeat 90% 50%;
 }
 
