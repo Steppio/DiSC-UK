@@ -7686,7 +7686,7 @@ a[href$=".pdf"]:after {
     margin-top: 20px !important;    
 }
 
-#product-ba7c2306-f964-437d-91f4-b47166c65464 {
+#product-ba7c2306-f964-437d-91f4-b47166c65464, .hbspt-form select {
   margin-bottom: 20px !important;
   color: white !important;
   background: #00c389 url("http://magento-test.local/skin/frontend/disc-assessment/default/css/img/icon-select.png") no-repeat 90% 50%;
